@@ -7,6 +7,7 @@ import HomeContext from '@/pages/api/home/home.context';
 import { ModelSelect } from '@/components/Chat/ModelSelect';
 
 import { SettingDialog } from '@/components/Settings/SettingDialog';
+import { AuthContext } from "../../../contexts/authContext";
 
 import { Import } from '../../Settings/Import';
 import { Key } from '../../Settings/Key';
@@ -17,6 +18,8 @@ import { PluginKeys } from './PluginKeys';
 
 export const ChatbarSettings = () => {
   const { t } = useTranslation('sidebar');
+  const { user, login, logout } = useContext(AuthContext);
+
   const [showSettings, setShowSettings] = useState<boolean>(false);
   const [isSettingDialogOpen, setIsSettingDialog] = useState<boolean>(false);
   const [isOptionOpen, setIsOptionOpen]=useState<boolean>(false);
@@ -83,6 +86,8 @@ export const ChatbarSettings = () => {
 
       />
 
+{!user && <button onClick={login}>Login/Signup</button>}
+      {user && <button onClick={logout}>Logout</button>}
        <SidebarButton
         text={t('Theme settings')}
         icon={<IconSettings2 size={18} />}
