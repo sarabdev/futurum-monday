@@ -25,7 +25,7 @@ import { ChatBody, Conversation, Message } from '@/types/chat';
 import { Plugin } from '@/types/plugin';
 
 import HomeContext from '@/pages/api/home/home.context';
-
+import { AuthContext } from '@/contexts/authContext';
 import Spinner from '../Spinner';
 import { ChatInput } from './ChatInput';
 import { ChatLoader } from './ChatLoader';
@@ -60,6 +60,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
     handleUpdateConversation,
     dispatch: homeDispatch,
   } = useContext(HomeContext);
+  const { user, login, logout } = useContext(AuthContext);
 
   const [currentMessage, setCurrentMessage] = useState<Message>();
   const [autoScrollEnabled, setAutoScrollEnabled] = useState<boolean>(true);
@@ -383,6 +384,9 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
             <div className="mb-2">
             "Futurum One — Revolutionizing today. Shaping tomorrow."
             </div>
+            {!user && <div className=''>
+              <button className='bg-gradient-to-l from-pink-500 via-blue-300 to-orange-400 text-white text-bold mt-3 bg-clip-text text-transparent text-[15px] bg-white' style={{backgroundColor:"white",padding:'10px', border:"1px solid white", borderRadius:'10px', fontWeight:'bold'}} onClick={login}>Signup / Login</button>
+              </div>}
             {/* <div className="mb-2">
               {t(
                 'Please set your OpenAI API key in the bottom left of the sidebar.',

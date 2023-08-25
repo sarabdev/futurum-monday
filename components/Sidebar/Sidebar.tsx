@@ -1,7 +1,6 @@
 import { IconFolderPlus, IconMistOff, IconPlus } from '@tabler/icons-react';
 import { ReactNode, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
-
 import {
   CloseSidebarButton,
   OpenSidebarButton,
@@ -9,7 +8,7 @@ import {
 
 import Search from '../Search';
 import HomeContext from '@/pages/api/home/home.context';
-
+import { AuthContext } from '@/contexts/authContext';
 interface Props<T> {
   isOpen: boolean;
   addItemButtonTitle: string;
@@ -53,6 +52,8 @@ const Sidebar = <T,>({
     },
     dispatch: homeDispatch,
   } = useContext(HomeContext);
+  const { user ,login} = useContext(AuthContext);
+
   const { t } = useTranslation('promptbar');
 
   const allowDrop = (e: any) => {
@@ -66,8 +67,7 @@ const Sidebar = <T,>({
   const removeHighlight = (e: any) => {
     e.target.style.background = 'none';
   };
-
-  return isOpen ? (
+  return user && (isOpen ? (
     <div>
       <div
 style={{
@@ -150,7 +150,7 @@ style={{
     </div>
   ) : (
     <OpenSidebarButton onClick={toggleOpen} side={side} />
-  );
+  ));
 };
 
 export default Sidebar;

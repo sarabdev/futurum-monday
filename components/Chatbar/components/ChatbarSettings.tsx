@@ -86,8 +86,6 @@ export const ChatbarSettings = () => {
 
       />
 
-{!user && <button onClick={login}>Login/Signup</button>}
-      {user && <button onClick={logout}>Logout</button>}
        <SidebarButton
         text={t('Theme settings')}
         icon={<IconSettings2 size={18} />}
@@ -108,7 +106,12 @@ export const ChatbarSettings = () => {
       ) : null}
 
       {!serverSidePluginKeysSet ? <PluginKeys  /> : null}
-
+      {user && <SidebarButton
+        text={t('Logout')}
+        icon={<IconSettings2 size={18} />}
+        onClick={logout}
+        lightMode={lightMode}
+      />}
       <SettingDialog
         open={isSettingDialogOpen}
         onClose={() => {
