@@ -9,16 +9,15 @@ exports.handler = async function(event, context, callback) {
   // // subscribe the new customer to the free plan
   await stripe.subscriptions.create({
     customer: customer.id,
-    items: [{ price: 'price_1NjFlHEpEL3jFdarAGB6XUBh'}],
+    items: [{ price: process.env.STRIPE_DEFAULT_PRICE_PLAN}],
   });
 
-  const responseBody = {
-    app_metadata: {
-      roles: ["registered"]
-    }
-  };
-  callback(null, {
+  return {
     statusCode: 200,
-    body: JSON.stringify(responseBody)
-  });
+    body: JSON.stringify({
+      app_metadata: {
+        roles: ['free'],
+      },
+    }),
+  };
 };
