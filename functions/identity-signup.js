@@ -1,55 +1,14 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const fetch = require('node-fetch');
-
-const faunaFetch = async ({ query, variables }) => {
-    return await fetch('https://graphql.fauna.com/graphql', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${process.env.FAUNA_SERVER_KEY}`,
-      },
-      body: JSON.stringify({
-        query,
-        variables,
-      }),
-    })
-      .then((res) => res.json())
-      .catch((err) => console.error(JSON.stringify(err, null, 2)));
+exports.handler = function(event, context, callback) {
+  const data = JSON.parse(event.body);
+  const { user } = data;
+    
+  const responseBody = {
+    app_metadata: {
+      roles: ["registered"]
+    }
   };
-
-exports.handler = async (event) => {
-  const { user } = JSON.parse(event.body);
-
-  // create a new customer in Stripe
-  const customer = await stripe.customers.create({ email: user.email });
-
-  // subscribe the new customer to the free plan
-  await stripe.subscriptions.create({
-    customer: customer.id,
-    items: [{ price: process.env.STRIPE_DEFAULT_PRICE_PLAN }],
-  });
-
-  // store the Netlify and Stripe IDs in Fauna
-  await faunaFetch({
-    query: `
-      mutation ($netlifyID: ID!, $stripeID: ID!) {
-        createUser(data: { netlifyID: $netlifyID, stripeID: $stripeID }) {
-          netlifyID
-          stripeID
-        }
-      }
-    `,
-    variables: {
-      netlifyID: user.id,
-      stripeID: customer.id,
-    },
-  });
-
-  return {
+  callback(null, {
     statusCode: 200,
-    body: JSON.stringify({
-      app_metadata: {
-        roles: ['free'],
-      },
-    }),
-  };
+    body: JSON.stringify(responseBody)
+  });
 };
