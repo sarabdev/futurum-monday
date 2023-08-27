@@ -63,7 +63,7 @@ exports.handler = async (event) => {
   } catch (e) {
     return {
       statusCode: 200,
-      body: JSON.stringify({ error: true, userRole: "free" }),
+      body: JSON.stringify({ error: true, userRole: "free" ,error:e}),
     };
   }
 };
