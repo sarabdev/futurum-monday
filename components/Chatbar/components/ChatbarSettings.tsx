@@ -15,7 +15,7 @@ import { SidebarButton } from '../../Sidebar/SidebarButton';
 import ChatbarContext from '../Chatbar.context';
 import { ClearConversations } from './ClearConversations';
 import { PluginKeys } from './PluginKeys';
-
+import axios from "axios"
 export const ChatbarSettings = () => {
   const { t } = useTranslation('sidebar');
   const { user, login, logout } = useContext(AuthContext);
@@ -58,6 +58,8 @@ export const ChatbarSettings = () => {
       });
     }
   };
+
+ 
   return (
     <>
     <div 
@@ -98,8 +100,7 @@ export const ChatbarSettings = () => {
         onClick={() => onClearAll()}
         lightMode={lightMode}
       />
-
-           
+             
 
       {!serverSideApiKeyIsSet ? (
         <Key apiKey={apiKey} onApiKeyChange={handleApiKeyChange} lightMode={lightMode} />

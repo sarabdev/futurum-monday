@@ -6,22 +6,24 @@ export const AuthContext = createContext({
   login: () => {},
   logout: () => {},
   authReady: false,
+  userRole:null
 });
 
 const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-
-const callFunction=async()=>{
+  const [userRole,setUserRole]=useState(null)
+const callFunction=async(email,name)=>{
   try {
-    const response = await axios.post("https://moonlit-taiyaki-61f6f1.netlify.app/.netlify/functions/store-in-db", {
-      
+    const response = await axios.post("http://localhost:3002/create-subscription", {
+      email,
+      name
+  
     });
 
-    if (response.status === 200) {
-      console.log(response.data.message);
-    } else {
-      console.log("Error storing data");
-    }
+    
+      console.log(response);
+      setUserRole(response?.data?.userRole)
+    
   } catch (error) {
     console.log(error)
     console.log("An error occurred");
@@ -31,8 +33,9 @@ const callFunction=async()=>{
       // on login
     netlifyIdentity.on("login", (user) => {
       setUser(user);
-      console.log("hi")
-      callFunction()
+      console.log(user)
+      callFunction(user.email,user.user_metadata.full_name)
+    
       netlifyIdentity.close();
     });
 
@@ -60,6 +63,7 @@ const callFunction=async()=>{
     login,
     logout,
     user,
+    userRole
   };
 
 

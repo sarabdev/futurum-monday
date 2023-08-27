@@ -52,7 +52,7 @@ const Sidebar = <T,>({
     },
     dispatch: homeDispatch,
   } = useContext(HomeContext);
-  const { user ,login} = useContext(AuthContext);
+  const { user ,login, userRole} = useContext(AuthContext);
 
   const { t } = useTranslation('promptbar');
 
@@ -67,7 +67,7 @@ const Sidebar = <T,>({
   const removeHighlight = (e: any) => {
     e.target.style.background = 'none';
   };
-  return user && (isOpen ? (
+  return (user && userRole=="pro") && (isOpen ? (
     <div>
       <div
 style={{

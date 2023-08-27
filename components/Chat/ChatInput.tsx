@@ -71,6 +71,12 @@ export const ChatInput = ({
 
   const promptListRef = useRef<HTMLUListElement | null>(null);
 
+  const handleMenus=()=>{
+    homeDispatch({ field: 'showChatbar', value:false });
+    homeDispatch({ field: 'showPromptbar', value:false });
+
+
+  }
   const filteredPrompts = prompts.filter((prompt) =>
     prompt.name.toLowerCase().includes(promptInputValue.toLowerCase()),
   );
@@ -351,6 +357,7 @@ const defaultOption = options[0];
 
           <textarea
             ref={textareaRef}
+            onClick={handleMenus}
             className="m-0 w-full resize-none border-0 bg-transparent p-0 py-2 pr-8 pl-10 text-black dark:bg-transparent dark:text-white md:py-3 md:pl-10"
             style={{
               resize: 'none',
