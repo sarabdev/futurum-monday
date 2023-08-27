@@ -7,12 +7,16 @@ exports.handler = async function (event, context) {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-
+    const userSchema = new mongoose.Schema({
+        email: String,
+      });
     // Use your existing Mongoose model
-    const Data = mongoose.model("Users"); // Replace with your model name
+    const Data = mongoose.model("Users",userSchema); // Replace with your model name
 
+   
+      
     // Create a new document
-    const newData = new Data({ key: "someKey", value: "someValue" });
+    const newData = new Data({ email:"test" });
 
     // Save the document to the database
     await newData.save();

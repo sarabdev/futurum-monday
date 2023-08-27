@@ -13,7 +13,7 @@ const AuthContextProvider = ({ children }) => {
 
 const callFunction=async()=>{
   try {
-    const response = await axios.post("/.netlify/functions/store-in-db", {
+    const response = await axios.post("https://moonlit-taiyaki-61f6f1.netlify.app/.netlify/functions/store-in-db", {
       key,
       value,
     });
@@ -24,6 +24,7 @@ const callFunction=async()=>{
       console.log("Error storing data");
     }
   } catch (error) {
+    console.log(error)
     console.log("An error occurred");
   }
 }
@@ -31,6 +32,7 @@ const callFunction=async()=>{
       // on login
     netlifyIdentity.on("login", (user) => {
       setUser(user);
+      console.log("hi")
       callFunction()
       netlifyIdentity.close();
     });

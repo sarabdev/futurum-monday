@@ -1,4 +1,4 @@
-const stripe = require('stripe')("sk_test_51Na6KqEpEL3jFdarNkEe9kJENhhwpDY2R4u9IrS6mrDrNHFN8zABC79u8SRE5aEpzjhtNhSpwBw5tw4i7OzBRQtX00Hwr1Armb");
+const stripe = require('stripe')("");
 
 exports.handler = async (event, context, callback)=> {
   const data = JSON.parse(event.body);
