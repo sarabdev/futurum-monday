@@ -14,8 +14,7 @@ const AuthContextProvider = ({ children }) => {
 const callFunction=async()=>{
   try {
     const response = await axios.post("https://moonlit-taiyaki-61f6f1.netlify.app/.netlify/functions/store-in-db", {
-      key,
-      value,
+      
     });
 
     if (response.status === 200) {
