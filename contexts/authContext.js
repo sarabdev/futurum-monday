@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 import netlifyIdentity from "netlify-identity-widget";
-
+import axios from 'axios'
 export const AuthContext = createContext({
   user: null,
   login: () => {},
@@ -11,11 +11,27 @@ export const AuthContext = createContext({
 const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
+const callFunction=async()=>{
+  try {
+    const response = await axios.post("/.netlify/functions/store-in-db", {
+      key,
+      value,
+    });
 
+    if (response.status === 200) {
+      console.log(response.data.message);
+    } else {
+      console.log("Error storing data");
+    }
+  } catch (error) {
+    console.log("An error occurred");
+  }
+}
   useEffect(() => {
       // on login
     netlifyIdentity.on("login", (user) => {
       setUser(user);
+      callFunction()
       netlifyIdentity.close();
     });
 
