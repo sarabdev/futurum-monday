@@ -72,8 +72,8 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
   const chatContainerRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const manage=async()=>{
-    if(user){
-           const response=await axios.post('http://localhost:3002/create-manage-link',{user})
+    if(user && process.env.MANAGE_SUBSCRIPTION){
+           const response=await axios.post(process.env.MANAGE_SUBSCRIPTION,{user})
           console.log(response)
           window.location.href=response?.data?.link?.url
     }
