@@ -48,6 +48,7 @@ const callFunction=async(email,name)=>{
 
     
       const result=JSON.parse(response.body);
+      console.log(result)
       setUserRole(result?.userRole)
     
   } catch (error) {
