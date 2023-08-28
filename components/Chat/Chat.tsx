@@ -98,6 +98,8 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
     };
     if(user && process.env.NEXT_PUBLIC_MANAGE_SUBSCRIPTION){
       const response=await test(config)
+      console.log("response is")
+      console.log(response)
       const result=JSON.parse(response.body);
       console.log(result)
           window.location.href=result?.link?.url
