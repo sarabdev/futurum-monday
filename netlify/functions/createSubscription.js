@@ -13,7 +13,7 @@ const userSchema=new mongoose.Schema({
 })
 
 const CORS_HEADERS = {
-  'Access-Control-Allow-Origin': process.env.FRONT_END_URL,
+  'Access-Control-Allow-Origin': 'https://main--luxury-pothos-0270e0.netlify.app',
   'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
 }
 

@@ -71,13 +71,32 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const chatContainerRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  function test(config:any){
+    return axios(config).then(response => {
+      return {
+        statusCode: 200,
+        body: JSON.stringify(response.data)
+      }
+    }).catch(error => {
+      console.log(error)
+      return {
+        statusCode: 422,
+        body: `Error: ${error}`,
+      }
+    })
+  }
   const manage=async()=>{
-    console.log(process.env.MANAGE_SUBSCRIPTION)
-    console.log(user)
+    const config = {
+      method: 'post',
+      url: process.env.NEXT_PUBLIC_CREATE_SUBSCRIPTION,
+      body:{
+        user
+      }
+    };
     if(user && process.env.MANAGE_SUBSCRIPTION){
-           const response=await axios.post(`${process.env.NEXT_PUBLIC_MANAGE_SUBSCRIPTION}`,{user})
-          console.log(response)
-          window.location.href=response?.data?.link?.url
+      const response=await test(config)
+      const result=JSON.parse(response.body);
+          window.location.href=result?.link?.url
     }
   }
   const handleSend = useCallback(
