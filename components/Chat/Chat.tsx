@@ -88,7 +88,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
   const manage=async()=>{
     const config = {
       method: 'post',
-      url: process.env.NEXT_PUBLIC_CREATE_SUBSCRIPTION,
+      url: process.env.NEXT_PUBLIC_MANAGE_SUBSCRIPTION,
       body:{
         user
       }
@@ -96,6 +96,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
     if(user && process.env.MANAGE_SUBSCRIPTION){
       const response=await test(config)
       const result=JSON.parse(response.body);
+      console.log(result)
           window.location.href=result?.link?.url
     }
   }
