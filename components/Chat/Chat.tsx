@@ -86,6 +86,9 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
     })
   }
   const manage=async()=>{
+    alert("HIII")
+    console.log(process.env.NEXT_PUBLIC_MANAGE_SUBSCRIPTION)
+    console.log(user)
     const config = {
       method: 'post',
       url: process.env.NEXT_PUBLIC_MANAGE_SUBSCRIPTION,
@@ -93,7 +96,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
         user
       }
     };
-    if(user && process.env.MANAGE_SUBSCRIPTION){
+    if(user && process.env.NEXT_PUBLIC_MANAGE_SUBSCRIPTION){
       const response=await test(config)
       const result=JSON.parse(response.body);
       console.log(result)
