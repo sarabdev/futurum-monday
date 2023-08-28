@@ -13,16 +13,16 @@ const userSchema=new mongoose.Schema({
 })
 
 const User=new mongoose.model("Users",userSchema)
-
+const CORS_HEADERS = {
+  'Access-Control-Allow-Origin': process.env.FRONT_END_URL,
+  'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+}
 exports.handler = async (event) => {
   try {
     const { email } = JSON.parse(event.body);
-    console.log("hiiiiiii") 
-    console.log(email)
     const existingUser=await User.findOne({email:email})
     let link=process.env.FRONT_END_URL;
     if(existingUser){
-      console.log("i am existing user")
        const stripeID=existingUser.subscriptionId;
        link = await stripe.billingPortal.sessions.create({
         customer: stripeID,
@@ -31,12 +31,13 @@ exports.handler = async (event) => {
     }
     return {
       statusCode: 200,
+      headers:CORS_HEADERS,
       body: JSON.stringify({ error: false, link }),
     };
   } catch (e) {
-    console.log(e)
     return {
       statusCode: 200,
+      headers:CORS_HEADERS,
       body: JSON.stringify({ error: true, link: process.env.FRONT_END_URL }),
     };
   }
