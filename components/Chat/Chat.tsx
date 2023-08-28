@@ -71,12 +71,13 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const chatContainerRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  function test(){
+  function test(email:string){
+    console.log(email)
     const config = {
       method: 'post',
       url: process.env.NEXT_PUBLIC_MANAGE_SUBSCRIPTION,
       body:{
-        user
+        email 
       }
     };
     return axios(config).then(response => {
@@ -100,7 +101,9 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
     
   
     if(user && process.env.NEXT_PUBLIC_MANAGE_SUBSCRIPTION){
-      const response=await test()
+      const {email}=user;
+      console.log(email)
+      const response=await test(email)
       console.log("response is")
       console.log(response)
       const result=JSON.parse(response.body);

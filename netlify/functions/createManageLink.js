@@ -19,9 +19,9 @@ const CORS_HEADERS = {
 }
 exports.handler = async (event) => {
   try {
-    const { user } = JSON.parse(event.body);
+    const { email } = JSON.parse(event.body);
     console.log(user.email)
-    const existingUser=await User.findOne({email:user.email})
+    const existingUser=await User.findOne({email})
     let link=process.env.FRONT_END_URL;
     if(existingUser){
       console.log("I am existing")
