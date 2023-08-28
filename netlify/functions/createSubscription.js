@@ -14,7 +14,13 @@ const userSchema=new mongoose.Schema({
 
 const User=new mongoose.model("Users",userSchema)
 exports.handler = async (event) => {
+  const headers = {
+    'Access-Control-Allow-Origin': 'https://main--luxury-pothos-0270e0.netlify.app',
+    'Access-Control-Allow-Methods': 'POST', // Adjust this based on your requirements
+    // Add any other necessary headers here
+  };
   try {
+  
     const { email, name } = JSON.parse(event.body);
 
     const isExist=await User.findOne({email:email})
@@ -59,11 +65,13 @@ exports.handler = async (event) => {
 
     return {
       statusCode: 200,
+      headers,
       body: JSON.stringify(responseBody),
     };
   } catch (e) {
     return {
       statusCode: 200,
+      headers
       body: JSON.stringify({ error: true, userRole: "free" ,error:e}),
     };
   }
