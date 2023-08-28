@@ -13,7 +13,7 @@ const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [userRole,setUserRole]=useState(null)
 
-  function test(){
+  function test(config){
     return axios(config).then(response => {
       return {
         statusCode: 200,
