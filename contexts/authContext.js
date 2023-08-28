@@ -16,7 +16,7 @@ const callFunction=async(email,name)=>{
   try {
     console.log(name)
     console.log(email)
-    console.log(process.env.CREATE_SUBSCRIPTION)
+    console.log(process.env.NEXT_PUBLIC_CREATE_SUBSCRIPTION)
     const response = await axios.post(`${process.env.CREATE_SUBSCRIPTION}`, {
       email,
       name

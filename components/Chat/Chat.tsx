@@ -75,7 +75,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
     console.log(process.env.MANAGE_SUBSCRIPTION)
     console.log(user)
     if(user && process.env.MANAGE_SUBSCRIPTION){
-           const response=await axios.post(`${process.env.MANAGE_SUBSCRIPTION}`,{user})
+           const response=await axios.post(`${process.env.NEXT_PUBLIC_MANAGE_SUBSCRIPTION}`,{user})
           console.log(response)
           window.location.href=response?.data?.link?.url
     }
