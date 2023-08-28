@@ -72,7 +72,6 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
   const chatContainerRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   function test(email:string){
-    console.log(email)
     const config = {
       method: 'get',
       url: `${process.env.NEXT_PUBLIC_MANAGE_SUBSCRIPTION}?email=${email}`,
@@ -93,21 +92,11 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
     })
   }
   const manage=async()=>{
-    alert("HIII")
-  
-    console.log(process.env.NEXT_PUBLIC_MANAGE_SUBSCRIPTION)
-    console.log(user)
-    
-  
     if(user && process.env.NEXT_PUBLIC_MANAGE_SUBSCRIPTION){
       const {email}=user;
-      console.log(email)
       const response=await test(email)
-      console.log("response is")
-      console.log(response)
       const result=JSON.parse(response.body);
-      console.log(result)
-        //  window.location.href=result?.link?.url
+      window.location.href=result?.link?.url
     }
   }
   const handleSend = useCallback(
