@@ -39,7 +39,7 @@ exports.handler = async (event) => {
     subscriptionId:customer.id
    })  
    await newEntry.save()
-      responseBody={error:false,userRole:"free"}
+      responseBody={error:false,userRole:"free",n:1}
    }
    else{
     console.log("I am already registered")
@@ -57,11 +57,11 @@ exports.handler = async (event) => {
         responseBody={error:false, userRole:"pro"}
       }
       else{
-        responseBody={error:false, userRole:"free"}
+        responseBody={error:false, userRole:"free", b:0, email}
 
       }
     }
-    else{   responseBody={error:false, userRole:"free"}
+    else{   responseBody={error:false, userRole:"free",l:0, email}
   }
 
    }
