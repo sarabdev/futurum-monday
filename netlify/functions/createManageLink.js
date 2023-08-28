@@ -19,8 +19,8 @@ const CORS_HEADERS = {
 }
 exports.handler = async (event) => {
   try {
-    const { email } = JSON.parse(event.body);
-    const existingUser=await User.findOne({email:email})
+    const { user } = JSON.parse(event.body);
+    const existingUser=await User.findOne({email:user.email})
     let link=process.env.FRONT_END_URL;
     if(existingUser){
        const stripeID=existingUser.subscriptionId;

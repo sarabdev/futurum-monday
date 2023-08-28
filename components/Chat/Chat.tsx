@@ -96,6 +96,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
         user
       }
     };
+  
     if(user && process.env.NEXT_PUBLIC_MANAGE_SUBSCRIPTION){
       const response=await test(config)
       console.log("response is")
