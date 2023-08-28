@@ -20,14 +20,14 @@ exports.handler = async (event) => {
     console.log("hiiiiiii") 
     console.log(email)
     const existingUser=await User.findOne({email:email})
+    let link=process.env.FRONT_END_URL;
     if(existingUser){
       console.log("i am existing user")
        const stripeID=existingUser.subscriptionId;
-       const link = await stripe.billingPortal.sessions.create({
+       link = await stripe.billingPortal.sessions.create({
         customer: stripeID,
         return_url: process.env.FRONT_END_URL,
       });
-      res.json({error:false,link})
     }
     return {
       statusCode: 200,
