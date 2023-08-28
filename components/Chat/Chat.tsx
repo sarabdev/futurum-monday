@@ -76,7 +76,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
     const config = {
       method: 'post',
       url: process.env.NEXT_PUBLIC_MANAGE_SUBSCRIPTION,
-      body:{
+      data:{
         email
       }
     };
@@ -86,7 +86,6 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
         body: JSON.stringify(response.data)
       }
     }).catch(error => {
-      console.log(error)
       return {
         statusCode: 422,
         body: `Error: ${error}`,
