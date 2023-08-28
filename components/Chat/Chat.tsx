@@ -102,7 +102,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
       console.log(response)
       const result=JSON.parse(response.body);
       console.log(result)
-          window.location.href=result?.link?.url
+        //  window.location.href=result?.link?.url
     }
   }
   const handleSend = useCallback(
