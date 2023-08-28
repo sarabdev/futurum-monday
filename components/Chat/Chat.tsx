@@ -77,7 +77,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
       method: 'post',
       url: process.env.NEXT_PUBLIC_MANAGE_SUBSCRIPTION,
       body:{
-        email 
+        email
       }
     };
     return axios(config).then(response => {
