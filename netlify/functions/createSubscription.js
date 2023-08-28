@@ -42,14 +42,18 @@ exports.handler = async (event) => {
       responseBody={error:false,userRole:"free"}
    }
    else{
+    console.log("I am already registered")
     const subscriptions = await stripe.subscriptions.list({
       customer: isExist.subscriptionId,
     });
+
     const sortedSubscriptions = subscriptions.data.sort((a, b) =>
     b.created - a.created
     );
+    console.log(sortedSubscriptions.length)
     if(sortedSubscriptions.length>0){
       if(sortedSubscriptions[0].plan.amount>0){
+        
         responseBody={error:false, userRole:"pro"}
       }
       else{
