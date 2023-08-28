@@ -22,6 +22,7 @@ exports.handler = async (event) => {
     console.log(event.body)
     const { email } = event.body;
     const existingUser=await User.findOne({email})
+    console.log(email)
     let link=process.env.FRONT_END_URL;
     if(existingUser){
       console.log("I am existing")
