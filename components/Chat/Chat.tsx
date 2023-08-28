@@ -87,6 +87,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
   }
   const manage=async()=>{
     alert("HIII")
+  
     console.log(process.env.NEXT_PUBLIC_MANAGE_SUBSCRIPTION)
     console.log(user)
     const config = {

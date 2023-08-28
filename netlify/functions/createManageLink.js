@@ -20,9 +20,11 @@ const CORS_HEADERS = {
 exports.handler = async (event) => {
   try {
     const { user } = JSON.parse(event.body);
+    console.log(user.email)
     const existingUser=await User.findOne({email:user.email})
     let link=process.env.FRONT_END_URL;
     if(existingUser){
+      console.log("I am existing")
        const stripeID=existingUser.subscriptionId;
        link = await stripe.billingPortal.sessions.create({
         customer: stripeID,
@@ -35,6 +37,7 @@ exports.handler = async (event) => {
       body: JSON.stringify({ error: false, link }),
     };
   } catch (e) {
+    console.log(e)
     return {
       statusCode: 200,
       headers:CORS_HEADERS,
