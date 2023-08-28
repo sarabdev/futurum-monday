@@ -19,8 +19,8 @@ const CORS_HEADERS = {
 }
 exports.handler = async (event) => {
   try {
-    const { email } = JSON.parse(event.body);
-    console.log(user.email)
+    console.log(event.body)
+    const { email } = event.body;
     const existingUser=await User.findOne({email})
     let link=process.env.FRONT_END_URL;
     if(existingUser){
