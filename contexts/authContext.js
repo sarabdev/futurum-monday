@@ -47,7 +47,7 @@ const callFunction=async(email,name)=>{
     const response=await test(config)
 
     
-      const result=JSON.parse(response);
+      const result=JSON.parse(response.body);
       console.log(result)
       setUserRole(result?.body?.userRole)
     
