@@ -1,0 +1,7 @@
+[build]
+  functions = "functions"
+
+[[headers]]
+  for = "/*.netlify/functions/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "https://main--luxury-pothos-0270e0.netlify.app"
