@@ -14,7 +14,10 @@ const AuthContextProvider = ({ children }) => {
   const [userRole,setUserRole]=useState(null)
 const callFunction=async(email,name)=>{
   try {
-    const response = await axios.post(process.env.CREATE_SUBSCRIPTION, {
+    console.log(name)
+    console.log(email)
+    console.log(process.env.CREATE_SUBSCRIPTION)
+    const response = await axios.post(`${process.env.CREATE_SUBSCRIPTION}`, {
       email,
       name
   

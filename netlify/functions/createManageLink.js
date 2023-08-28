@@ -17,14 +17,14 @@ const User=new mongoose.model("Users",userSchema)
 exports.handler = async (event) => {
   try {
     const { email } = JSON.parse(event.body);
-
+    console.log("hiiiiiii") 
+    console.log(email)
     const existingUser=await User.findOne({email:email})
     if(existingUser){
+      console.log("i am existing user")
        const stripeID=existingUser.subscriptionId;
        const link = await stripe.billingPortal.sessions.create({
         customer: stripeID,
-
-        
         return_url: process.env.FRONT_END_URL,
       });
       res.json({error:false,link})
@@ -34,6 +34,7 @@ exports.handler = async (event) => {
       body: JSON.stringify({ error: false, link }),
     };
   } catch (e) {
+    console.log(e)
     return {
       statusCode: 200,
       body: JSON.stringify({ error: true, link: process.env.FRONT_END_URL }),

@@ -19,6 +19,7 @@ exports.handler = async (event) => {
 
     const isExist=await User.findOne({email:email})
     if(!isExist){
+      console.log("user not exits")
     const customer = await stripe.customers.create({ email: email, name:name});
   let responseBody;
    // // subscribe the new customer to the free plan
