@@ -39,7 +39,7 @@ const callFunction=async(email,name)=>{
     // });
     const config = {
       method: 'post',
-      url: NEXT_PUBLIC_CREATE_SUBSCRIPTION,
+      url: process.env.NEXT_PUBLIC_CREATE_SUBSCRIPTION,
       body:{
         email, name
       }
