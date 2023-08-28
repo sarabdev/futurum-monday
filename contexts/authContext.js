@@ -44,7 +44,7 @@ const callFunction=async(email,name)=>{
         email, name
       }
     };
-    const response=test(config)
+    const response=await test(config)
 
     
       console.log(response);
