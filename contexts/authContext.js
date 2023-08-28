@@ -12,16 +12,39 @@ export const AuthContext = createContext({
 const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [userRole,setUserRole]=useState(null)
+
+  function test(){
+    return axios(config).then(response => {
+      return {
+        statusCode: 200,
+        body: JSON.stringify(response.data)
+      }
+    }).catch(error => {
+      console.log(error)
+      return {
+        statusCode: 422,
+        body: `Error: ${error}`,
+      }
+    })
+  }
 const callFunction=async(email,name)=>{
   try {
     console.log(name)
     console.log(email)
     console.log(process.env.NEXT_PUBLIC_CREATE_SUBSCRIPTION)
-    const response = await axios.post(`${process.env.NEXT_PUBLIC_CREATE_SUBSCRIPTION}`, {
-      email,
-      name
+    // const response = await axios.post(`${process.env.NEXT_PUBLIC_CREATE_SUBSCRIPTION}`, {
+    //   email,
+    //   name
   
-    });
+    // });
+    const config = {
+      method: 'post',
+      url: NEXT_PUBLIC_CREATE_SUBSCRIPTION,
+      body:{
+        email, name
+      }
+    };
+    const response=test(config)
 
     
       console.log(response);
