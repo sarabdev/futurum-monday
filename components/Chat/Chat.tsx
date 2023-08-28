@@ -76,7 +76,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
     const config = {
       method: 'post',
       url: process.env.NEXT_PUBLIC_MANAGE_SUBSCRIPTION,
-      data:{
+      body:{
         email
       }
     };
