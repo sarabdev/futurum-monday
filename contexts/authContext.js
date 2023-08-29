@@ -1,5 +1,6 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect,useContext } from "react";
 import netlifyIdentity from "netlify-identity-widget";
+
 import axios from 'axios'
 export const AuthContext = createContext({
   user: null,
@@ -12,7 +13,6 @@ export const AuthContext = createContext({
 const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [userRole,setUserRole]=useState(null)
-
   function test(config){
     return axios(config).then(response => {
       return {
@@ -60,7 +60,7 @@ const callFunction=async(email,name)=>{
       setUser(user);
       console.log(user)
       callFunction(user.email,user.user_metadata.full_name)
-    
+     
       netlifyIdentity.close();
     });
 
