@@ -4,6 +4,7 @@ const mongoose=require('mongoose')
 mongoose.connect(process.env.DB_URL).then((data)=>{
     console.log("connected to db")
 }).catch((e)=>{
+  console.log(e)
     console.log("error with db")
 })
 const userSchema=new mongoose.Schema({
