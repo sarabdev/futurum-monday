@@ -96,6 +96,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
       const {email}=user;
       const response=await test(email)
       const result=JSON.parse(response.body);
+      console.log(result)
       window.location.href=result?.link?.url
     }
   }
