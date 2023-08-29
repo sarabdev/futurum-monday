@@ -48,6 +48,7 @@ exports.handler = async (event) => {
       body: JSON.stringify(responseBody),
     };
   } catch (e) {
+    console.log(e)
     return {
       statusCode: 200,
       headers:CORS_HEADERS,
