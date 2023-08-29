@@ -38,11 +38,9 @@ const callFunction=async(email,name)=>{
   
     // });
     const config = {
-      method: 'post',
-      url: process.env.NEXT_PUBLIC_CREATE_SUBSCRIPTION,
-      body:{
-        email, name
-      }
+      method: 'get',
+      url: `${process.env.NEXT_PUBLIC_CREATE_SUBSCRIPTION}?email=${email}&name=${name}`,
+     
     };
     const response=await test(config)
 
