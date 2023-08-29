@@ -411,12 +411,12 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
             <div className="mb-2">
             "Futurum One — Revolutionizing today. Shaping tomorrow."
             </div>
-            {user && userRole=="free" &&
+            {/* {user && userRole=="free" &&
             <div className=''>
             <button className='bg-gradient-to-l from-pink-500 via-blue-300 to-orange-400 text-white text-bold mt-3 bg-clip-text text-transparent text-[15px] bg-white' style={{backgroundColor:"white",padding:'10px', border:"1px solid white", borderRadius:'10px', fontWeight:'bold'}} onClick={manage}>Manage Subscription</button>
             <button className='bg-gradient-to-l from-pink-500 via-blue-300 to-orange-400 text-white text-bold mt-3 bg-clip-text text-transparent text-[15px] bg-white' style={{backgroundColor:"white",padding:'10px', border:"1px solid white", borderRadius:'10px', fontWeight:'bold'}} onClick={logout}>Logout</button>
 
-            </div>}
+            </div>} */}
             
             {!user && <div className=''>
               <button className='bg-gradient-to-l from-pink-500 via-blue-300 to-orange-400 text-white text-bold mt-3 bg-clip-text text-transparent text-[15px] bg-white' style={{backgroundColor:"white",padding:'10px', border:"1px solid white", borderRadius:'10px', fontWeight:'bold'}} onClick={login}>Signup / Login</button>
