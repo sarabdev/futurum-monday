@@ -41,6 +41,7 @@ exports.handler = async (event) => {
       statusCode: 200,
       headers:CORS_HEADERS,
       body: JSON.stringify({ error: true, link: process.env.FRONT_END_URL }),
+      
     };
   }
 };
