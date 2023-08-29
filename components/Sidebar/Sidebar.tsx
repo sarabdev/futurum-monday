@@ -149,7 +149,7 @@ style={{
       <CloseSidebarButton onClick={toggleOpen} side={side} />
     </div>
   ) : (
-    <OpenSidebarButton onClick={toggleOpen} side={side} />
+    user && <OpenSidebarButton onClick={toggleOpen} side={side} />
   ));
 };
 

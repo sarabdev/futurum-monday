@@ -29,9 +29,7 @@ const AuthContextProvider = ({ children }) => {
   }
 const callFunction=async(email,name)=>{
   try {
-    console.log(name)
-    console.log(email)
-    console.log(process.env.NEXT_PUBLIC_CREATE_SUBSCRIPTION)
+  
     // const response = await axios.post(`${process.env.NEXT_PUBLIC_CREATE_SUBSCRIPTION}`, {
     //   email,
     //   name
@@ -46,11 +44,9 @@ const callFunction=async(email,name)=>{
 
     
       const result=JSON.parse(response.body);
-      console.log(result)
       setUserRole(result?.userRole)
     
   } catch (error) {
-    console.log(error)
     console.log("An error occurred");
   }
 }
@@ -58,7 +54,6 @@ const callFunction=async(email,name)=>{
       // on login
     netlifyIdentity.on("login", (user) => {
       setUser(user);
-      console.log(user)
       callFunction(user.email,user.user_metadata.full_name)
      
       netlifyIdentity.close();
