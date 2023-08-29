@@ -12,7 +12,7 @@ exports.handler = async (event) => {
     const customers=await stripe.customers.list()
     const matchingCustomer = customers.data.find(customer => customer.email ==email);
     let link=process.env.FRONT_END_URL;
-    if(existingUser){
+    if(matchingCustomer){
        const stripeID=matchingCustomer.id;
        link = await stripe.billingPortal.sessions.create({
         customer: stripeID,

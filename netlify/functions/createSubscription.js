@@ -20,7 +20,7 @@ exports.handler = async (event) => {
                 customer: matchingCustomer.id,
     });
 
-    const sortedSubscriptions = subscriptions.data.sort((a, b) =>
+    const sortedSubscriptions = subscriptions?.data?.sort((a, b) =>
            b.created - a.created
     );
     if(sortedSubscriptions.length>0){
