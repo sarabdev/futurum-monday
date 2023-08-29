@@ -147,7 +147,8 @@ export const ChatMessage: FC<Props> = memo(({ message, messageIndex, onEdit }) =
           {message.role === 'assistant' ? (
             <img style={{marginBottom:35}} src="/gif-black.gif" alt="gif" width={40} height={40} />
           ) : (
-            <IconUser size={30} />
+            <img style={{marginLeft:12}} src="/Logo_Favicon.png" alt="gif" width={18} height={18} />
+
           )}
         </div>
 

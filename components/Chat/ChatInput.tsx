@@ -68,6 +68,7 @@ export const ChatInput = ({
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [showPluginSelect, setShowPluginSelect] = useState(false);
   const [plugin, setPlugin] = useState<Plugin | null>(null);
+  const [prompt, setPrompt] = useState(false);
 
   const promptListRef = useRef<HTMLUListElement | null>(null);
 
@@ -318,8 +319,13 @@ const defaultOption = options[0];
         style={{
           backgroundColor: lightMode=="light" ? "white" : "black",
           color: lightMode=="light" ? "black" : "white",
-          borderColor: lightMode=="light" ? "black" : "white"
-        }}  className="relative mx-2 flex w-full flex-grow flex-col rounded-md border border-black/10 bg-white shadow-[0_0_10px_rgba(0,0,0,0.10)] dark:border-gray-900/50 dark:bg-[#40414F] dark:text-white dark:shadow-[0_0_15px_rgba(0,0,0,0.10)] sm:mx-4">
+          borderColor: lightMode=="light" ? "black" : "white",
+          borderRadius:0,
+          borderBottomWidth: '1px',
+          borderBottomColor: 'white', 
+          borderBottomStyle: 'solid', 
+          minHeight: '5px',
+        }}  className="relative mx-2 flex w-full flex-grow flex-col rounded-md  bg-white shadow-[0_0_10px_rgba(0,0,0,0.10)] dark:border-gray-900/50 dark:bg-[#40414F] dark:text-white dark:shadow-[0_0_15px_rgba(0,0,0,0.10)] sm:mx-4">
           <button
             className="absolute left-2 top-2 rounded-sm p-1 text-neutral-800 opacity-60 hover:bg-neutral-200 hover:text-neutral-900 dark:bg-opacity-50 dark:text-neutral-100 dark:hover:text-neutral-200"
             onClick={() => setShowPluginSelect(!showPluginSelect)}
@@ -360,6 +366,7 @@ const defaultOption = options[0];
             onClick={handleMenus}
             className="m-0 w-full resize-none border-0 bg-transparent p-0 py-2 pr-8 pl-10 text-black dark:bg-transparent dark:text-white md:py-3 md:pl-10"
             style={{
+              outline: 'none',
               resize: 'none',
               bottom: `${textareaRef?.current?.scrollHeight}px`,
               maxHeight: '400px',
@@ -430,7 +437,8 @@ const defaultOption = options[0];
        style={{
         backgroundColor: lightMode=="light" ? "white" : "black",
         color: lightMode=="light" ? "black" : "white",
-        borderColor: lightMode=="light" ? "black" : "white"
+        borderColor: lightMode=="light" ? "black" : "white",
+        marginTop: (selectedConversation && selectedConversation?.messages?.length>0) ? 0 : 350,
       }} 
       className="px-3 pt-2 pb-3 text-center text-[12px] text-black/50 dark:text-white/50 md:px-4 md:pt-3 md:pb-6">
         <a
