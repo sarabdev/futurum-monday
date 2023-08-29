@@ -10,7 +10,8 @@ const CORS_HEADERS = {
 exports.handler = async (event) => {
   try {
   
-    const { email, name } = JSON.parse(event.body);
+    let email=event.queryStringParameters.email;
+    let name=event.queryStringParameters.name;
     const customers=await stripe.customers.list()
      const matchingCustomer = customers.data.find(customer => customer.email ==email);
      let responseBody={error:false, userRole:"free", email}
