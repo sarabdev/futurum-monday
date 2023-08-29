@@ -38,8 +38,11 @@ exports.handler = async (event) => {
 
     }
     else{
-      await stripe.customers.create({ email: email, name:name});
-
+     const customer= await stripe.customers.create({ email: email, name:name});
+     await stripe.subscriptions.create({
+      customer: customer.id,
+      items: [{ price: 'price_1NjFlHEpEL3jFdarAGB6XUBh' }], // Use the Price ID of the specific product
+     });
     }
     
 
