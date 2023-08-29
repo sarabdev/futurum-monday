@@ -3,7 +3,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 
 const CORS_HEADERS = {
-  'Access-Control-Allow-Origin': `${process.env.FRONT_END_URL}`,
+  'Access-Control-Allow-Origin': "*",
   'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
 }
 
