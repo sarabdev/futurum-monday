@@ -1,0 +1,143 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "bf9c868f-1c3d-4564-aac5-d44432619bac",
+      "name": "Board & Compliance",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "13a2f5e8-ef48-4d45-80c5-f161c9beb811",
+      "name": "Regulatory Compliance Consultation",
+      "description": "This template assists in sketching a consultation to a client regarding their current regulatory compliance status. Replace {{client's industry}} with the specific area in which the client operates, {{relevant regulation}} with the regulation the client needs guidance on, and {{compliance strategies}} with strategic approaches to achieve compliance.\n\n",
+      "content": "Offer a detailed compliance consultation to a client in the {{client's industry}}. Outline the essential aspects of {{relevant regulation}}, evaluate the potential impacts on the client's business and suggest practical {{compliance strategies}} to ensure their practices are aligned with the regulations. Ensure to maintain confidentiality of the client’s proprietary information.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "bf9c868f-1c3d-4564-aac5-d44432619bac"
+    },
+    {
+      "id": "82338f87-682a-41b0-a18f-9c7bb29c1e26",
+      "name": "Horizon Scanning Report",
+      "description": "This template aids in formulating a horizon scanning report identifying potential future risks and opportunities. Replace {{relevant industry}} with the client's industry, {{potential regulatory changes}} with expected changes in regulatory landscape, and {{impact assessment}} with how these changes could affect the client's business.\n\n",
+      "content": "Create a horizon scanning report concentrating on the {{relevant industry}}. The report should project potential {{potential regulatory changes}} and provide a detailed {{impact assessment}} on the client's operations. Please refrain from including unconfirmed or speculative information.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "bf9c868f-1c3d-4564-aac5-d44432619bac"
+    },
+    {
+      "id": "e779335b-611d-4637-b4c4-fbc4ff4067a4",
+      "name": "Compliance Testing and Assessment",
+      "description": "Use this template to devise a comprehensive compliance testing or assessment plan. Substitute {{client's business sectors}} with the areas the client is operating in, {{compliance standards}} with the standards the test is based on, and {{testing and assessment measures}} with the methods or tools to be used for the test.",
+      "content": "Draft a compliance testing and assessment protocol for key {{client's business sectors}} to ensure they align with {{compliance standards}}. Outline the {{testing and assessment measures}}, and define the steps made to correct and prevent non-compliant activities. Exclude any proprietary methodologies still in the developmental or decision phase.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "bf9c868f-1c3d-4564-aac5-d44432619bac"
+    },
+    {
+      "id": "c5c82d7d-d4b7-4e50-909e-595babe4a9df",
+      "name": "Cyber Risk Assessment",
+      "description": "This template helps in creating a cybersecurity risk assessment report. Replace {{client's IT infrastructure}} with the areas being assessed, {{identified risks}} with the potential cyber threats identified, {{risk mitigation strategies}} with the suggested strategies to manage the risks.\n\n",
+      "content": "Develop a cyber risk assessment for {{client's IT infrastructure}}. The report should detail {{identified risks}} and propose corresponding {{risk mitigation strategies}}. It should also give an overview of the client's current cyber risk posture and provide recommendations for improvements. Ensure all information is accurate and up-to-date.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "bf9c868f-1c3d-4564-aac5-d44432619bac"
+    },
+    {
+      "id": "bc510423-d445-4018-8f3e-cbf59fa1e144",
+      "name": "Risk Management Planning",
+      "description": "Use this template to help in creating a comprehensive risk management plan. Replace {{identified business risks}} with the risks recognised, {{risk mitigation strategies}} with strategies to manage the identified risks, and {{contingency plans}} with alternative plans in case main strategies fail.",
+      "content": "Construct a robust risk management plan. Include {{identified business risks}}, analyse their potential impact on business, and suggest {{risk mitigation strategies}}. It should also contain {{contingency plans}} for exceptional scenarios. Please ensure not to disclose any confidential or sensitive information.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "bf9c868f-1c3d-4564-aac5-d44432619bac"
+    },
+    {
+      "id": "88a00db3-4b2f-4edd-953d-2ac7335440f1",
+      "name": "Vendor Risk Management",
+      "description": "This template aids in generating a vendor risk management plan. Substitute {{client's key vendors}} with crucial vendors, {{vendor risk factors}} with potential risks associated with these vendors, and {{risk management strategies}} with strategies to manage and mitigate these risks.",
+      "content": "Prepare a vendor risk management plan highlighting {{client's key vendors}}. Identify {{vendor risk factors}} and propose effective {{risk management strategies}}. The management plan should provide the client with an informed view of how, why, and which vendors can deliver long-term value. Exclude any highly confidential client-vendor details.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "bf9c868f-1c3d-4564-aac5-d44432619bac"
+    },
+    {
+      "id": "aef9ab0a-4cee-4cf5-929b-c3fa385cb8c8",
+      "name": "Financial Crime Risk Management",
+      "description": "Use this template to help in formulating a financial crime risk management plan. Replace {{client's financial operations}} with the areas that are susceptible to financial crime, {{potential crime scenarios}} with potential crime risks, and {{prevention measures}} with steps for prevention or risk management.",
+      "content": "Devise a financial crime risk management plan. The plan should focus on {{client's financial operations}}, explore {{potential crime scenarios}} and outline detailed crime {{prevention measures}}. Keep the language simple and clear, focusing only on actionable and feasible measures.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "bf9c868f-1c3d-4564-aac5-d44432619bac"
+    },
+    {
+      "id": "d4751c5b-ecb8-4b41-ab56-8e63416e6e27",
+      "name": "Regulatory Inventory Report",
+      "description": "This template can be used to create an enriched regulatory inventory report. Insert {{client's regulatory requirements}} for relevant regulations the client should abide by, and {{compliance status}} for each regulation’s compliance status of the client.\n\n",
+      "content": "Create a comprehensive regulatory inventory report. It should include all of the {{client's regulatory requirements}} and the client’s {{compliance status}} for each regulation. Provide insights on potential compliance gaps and suggest improvements. Please keep confidential information secure.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "bf9c868f-1c3d-4564-aac5-d44432619bac"
+    },
+    {
+      "id": "f84d77f0-00a2-4b06-ba5b-d1fe1b3795ef",
+      "name": "Global Regulatory Insight Service",
+      "description": "This template helps in formulating a detailed report on global regulatory developments. Replace {{relevant global regions}} with regions that could impact the client's operations, {{recent regulatory changes}} with recent changes in those regions, and {{impact on client's business}} with how these changes could impact the client's business.",
+      "content": "Draft a report detailing global regulatory developments in {{relevant global regions}}. The report should highlight {{recent regulatory changes}} and analyse their {{impact on client's business}}. Avoid inclusion of speculative or unverified data.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "bf9c868f-1c3d-4564-aac5-d44432619bac"
+    },
+    {
+      "id": "31d4c0d3-ac24-48e5-a41a-2186ad472cb2",
+      "name": "Internal Audit Plan",
+      "description": "This template can be used to sketch a comprehensive internal audit plan. Substitute {{client's business sectors}} with the areas the client operates in, {{key risk areas}} with the main areas where risk is anticipated, and {{audit measures}} with the methods or steps to be used for the audit.\n\n",
+      "content": "Formulate an internal audit plan focussing on {{client's business sectors}}. Highlight {{key risk areas}} and suggest in-depth {{audit measures}} to assess the efficacy of controls in place. Exclude internal processes yet to be implemented or approved by the client.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "bf9c868f-1c3d-4564-aac5-d44432619bac"
+    }
+  ]
+}

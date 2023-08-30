@@ -1,0 +1,143 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "e9b49878-8a1e-4580-90e7-55402e6fcb66",
+      "name": "Information Technology Manager",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "72e753b8-ef32-4e13-b5fb-dde91296695c",
+      "name": "IT Infrastructure Upgrade Proposal",
+      "description": "This template is for drawing up a plan to upgrade your IT infrastructure. Swap {{current issues}} with existing limitations or problems, {{upgrade solutions}} with planned improvements, {{cost estimations}} with your budget for the project, and {{implementation timeline}} with your projected timeline for completion.\n\n",
+      "content": "Prepare an IT infrastructure upgrade proposal that addresses the {{current issues}}, outlines our {{upgrade solutions}}, provides a breakdown of {{cost estimations}}, and provides a feasible {{implementation timeline}}. Desist from including sensitive data or information relating to internal limitations.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "e9b49878-8a1e-4580-90e7-55402e6fcb66"
+    },
+    {
+      "id": "84e48d45-eee0-4beb-a152-40f787a26fb9",
+      "name": "Cybersecurity Framework",
+      "description": "This blueprint is used to establish a robust cybersecurity framework. Substitute {{threat evaluation}} with your company's analysis of potential risks, {{protection strategies}} with your cybersecurity methods, {{incident response plan}} with your cyber attacks response strategy, and {{training programmes}} for educating employees about cybersecurity.\n\n",
+      "content": "Develop a foolproof cybersecurity framework detailing an in-depth {{threat evaluation}}, demonstrating {{protection strategies}}, explaining our {{incident response plan}}, and endorsing {{training programmes}} to ensure company-wide awareness. Be mindful not to divulge specifics of security vulnerabilities or internal software weaknesses.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "e9b49878-8a1e-4580-90e7-55402e6fcb66"
+    },
+    {
+      "id": "33378945-086d-436e-90c2-2fcd777df0ff",
+      "name": "Data Governance Policy",
+      "description": "This template assists in creating an effective data governance policy. Replace {{data handling protocols}} with procedures for managing and utilising data, {{privacy obligations}} with data privacy requirements, {{quality control measures}} with checks for data integrity, and {{review and update processes}} with methods for maintaining the policy.\n\n",
+      "content": "Craft a comprehensive data governance policy encompassing established {{data handling protocols}}, strict adherence to {{privacy obligations}}, rigorous {{quality control measures}}, and regular {{review and update processes}}. Be sure not to include any proprietary information or confidential client data.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "e9b49878-8a1e-4580-90e7-55402e6fcb66"
+    },
+    {
+      "id": "3a214cfb-fb20-4ba4-93e9-dfecd99eff56",
+      "name": "Software Development Plan",
+      "description": "Use this structure to put together a software development plan. Substitute {{project scope}} with the goals of the software development, {{development stages}} with the process and stages of development, {{expected outcomes}} with the anticipated software capabilities, and {{evaluation criteria}} with key performance indicators.\n\n",
+      "content": "Compile a software development plan centred around a clear {{project scope}}, expertly phased {{development stages}}, functionality-rich {{expected outcomes}}, and stringent {{evaluation criteria}}. Avoid sharing sensitive codes, proprietary algorithms, or undisclosed feature specifics.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "e9b49878-8a1e-4580-90e7-55402e6fcb66"
+    },
+    {
+      "id": "75898609-8706-4d0f-95db-40f60884112c",
+      "name": "Technology Investment Proposal",
+      "description": "This template is built to hash out a technology investment proposal. Replace {{investment need}} with the justification for the tech investment, {{proposed tech solutions}} with your suggested tools or systems, {{financial considerations}} with estimates of costs and ROI, and {{implementation timeline}} with the rollout plan.\n\n",
+      "content": "Detail a technology investment proposal laying out the {{investment need}}, putting forward {{proposed tech solutions}}, acknowledging {{financial considerations}}, and including a realistic {{implementation timeline}}. Abstain from any mention of unsecured funding, tentative contracts, or unofficial price quotes.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "e9b49878-8a1e-4580-90e7-55402e6fcb66"
+    },
+    {
+      "id": "7f58b490-c321-4039-8a72-0ac0780a499e",
+      "name": "IT Service Management Strategy",
+      "description": "This template aids in developing an IT service management strategy. Substitute {{service objectives}} with your goals for providing IT services, {{process improvements}} with planned enhancements to service operations, {{performance measures}} with metrics for service evaluation, and {{review frequency}} with how often you will reassess the strategy.\n\n",
+      "content": "Construct an IT service management strategy underlining distinct {{service objectives}}, incorporating proposed {{process improvements}}, implementing robust {{performance measures}}, and committing to a regular {{review frequency}}. Avoid including confidential client details or strategies not fully agreed upon by key stakeholders.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "e9b49878-8a1e-4580-90e7-55402e6fcb66"
+    },
+    {
+      "id": "18981a35-9b46-4ffe-809c-6350cea5b7e8",
+      "name": "IT Disaster Recovery Plan",
+      "description": "This blueprint is for creating an IT disaster recovery plan. Replace {{risk assessment}} with your evaluation of potential threats, {{critical assets and responsibilities}} with prioritised technology and roles, {{recovery strategies}} with plans to restore the IT system, and {{test and update schedule}} with your plan for rehearsing and updating the recovery plan.\n\n",
+      "content": "Sketch an IT disaster recovery plan that includes a thorough {{risk assessment}}, identifies {{critical assets and responsibilities}}, presents efficient {{recovery strategies}}, and schedules {{test and update cycle}}. Don't disclose specific system vulnerabilities or sensitive details of previous IT issues.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "e9b49878-8a1e-4580-90e7-55402e6fcb66"
+    },
+    {
+      "id": "03ea7f2b-792f-490c-9464-d3638289a3e7",
+      "name": "Data Protection Policy",
+      "description": "Use this template to strategize a data protection policy. Change {{data categories}} with types of data being collected, {{storage and security measures}} with how the data is protected, {{access control}} with rules for data accessibility, and {{data breach protocols}} with procedures in the event of a data security issue.",
+      "content": "Formulate a robust data protection policy grouping different {{data categories}}, illustrating secure {{storage and security measures}}, governing {{access control}}, and setting out stringent {{data breach protocols}}. Exclude confidential client-specific data or proprietary security technology.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "e9b49878-8a1e-4580-90e7-55402e6fcb66"
+    },
+    {
+      "id": "0b717fd4-a16c-45be-bd74-7ddd586b7171",
+      "name": "Cloud Migration Strategy",
+      "description": "This template assists in designing a cloud migration strategy. Substitute {{migration objectives}} with your aims for cloud transition, {{migration stages}} with a timeline of the conversion process, {{risk mitigation}} with plans to handle potential issues, and {{post-migration plan}} with a strategy for the post-transition phase.\n\n",
+      "content": "Map out a cloud migration strategy conveying clear {{migration objectives}}, planned {{migration stages}}, embodied {{risk mitigation}}, and a comprehensive {{post-migration plan}}. Make sure not to reveal any sensitive data related to our IT infrastructure or detailed timelines that may inform competitors.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "e9b49878-8a1e-4580-90e7-55402e6fcb66"
+    },
+    {
+      "id": "5f7ed7c3-78dc-435d-aa36-ff8647db9105",
+      "name": "AI and Machine Learning Initiative",
+      "description": "This structure builds an AI and Machine Learning initiative. Replace {{AI goals}} with your objectives for implementing AI, {{machine learning applications}} with your intended uses of machine learning, {{implementation roadmap}} with a timeline for rollout, and {{success metrics}} with indicators for evaluating the initiative's performance.\n\n",
+      "content": "Compose an AI and Machine Learning initiative presenting the envisioned {{AI goals}}, potential {{machine learning applications}}, a feasible {{implementation roadmap}}, and reliable {{success metrics}}. Carefully avoid anything that could be construed as confirmation of unproven technological capabilities or unrevealed proprietary algorithms.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "e9b49878-8a1e-4580-90e7-55402e6fcb66"
+    }
+  ]
+}

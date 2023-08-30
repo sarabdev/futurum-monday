@@ -1,0 +1,143 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "1baff40c-0f82-4e6e-827e-aba374d5c143",
+      "name": "CHRO",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "31536777-9e66-452e-83cb-6148603c90e4",
+      "name": "Work–Life Balance Initiative",
+      "description": "The {{work-life balance initiative}} refers to a specific project aimed at improving employee welfare, the {{implementation schedule}} details when and how it will be introduced, and {{anticipated benefits}} outlines the expected positive impacts for the team.\n\n",
+      "content": "Draft an announcement for {{CHRO's name}} revealing a new {{work-life balance initiative}}. Detail our proposed {{implementation schedule}} and explore the {{anticipated benefits}} to encourage maximum participation from the team.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "1baff40c-0f82-4e6e-827e-aba374d5c143"
+    },
+    {
+      "id": "221db869-d1cb-41ac-ac8a-6bbfc7e6304a",
+      "name": "Hiring Strategy Adjustment",
+      "description": "{{Revised hiring criteria}} includes new specifications for candidate screening, {{recruitment channels}} can be job portals or agencies, and {{role requirements}} are the skills or qualifications needed.",
+      "content": "Construct a message from {{CHRO's name}} detailing the {{revised hiring criteria}} and modifications to our {{recruitment channels}}. Clearly outline the {{role requirements}} to ensure a smooth transition and efficient hiring process.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "1baff40c-0f82-4e6e-827e-aba374d5c143"
+    },
+    {
+      "id": "9cb5d63e-dba6-4aa4-8849-4fcf6a852f93",
+      "name": "Employee Performance Review Protocol",
+      "description": "Use {{performance metrics}} to specify evaluation standards, {{review frequency}} to state how often reviews will occur, and {{feedback provision}} to explain how results will be communicated.\n\n",
+      "content": "Develop a comprehensive performance review protocol for {{CHRO's name}}, including clearly defined {{performance metrics}}, the {{review frequency}}, and the {{feedback provision}} methodology. Communicate expectations clearly to ensure understanding across all departments.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "1baff40c-0f82-4e6e-827e-aba374d5c143"
+    },
+    {
+      "id": "07d49960-722f-4569-9ef7-3d80ad232127",
+      "name": "Diversity and Inclusion Programme",
+      "description": "{{Programme goals}} refer to the intended outcomes of the initiative, {{planned activities}} are the specific tasks to be undertaken, and {{measurement metrics}} are forms of assessment used to gauge progress.",
+      "content": "Design a thorough proposal for a Diversity and Inclusion programme for {{CHRO's name}}. Include the {{programme goals}}, outline the {{planned activities}}, and specify the {{measurement metrics}} that will be used to track progress.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "1baff40c-0f82-4e6e-827e-aba374d5c143"
+    },
+    {
+      "id": "9db475d6-e3c3-4120-8867-50811db5511e",
+      "name": "Employee Training Plan",
+      "description": "In this, {{skills to be developed}} are specific abilities aimed at improving, {{training methods}} can entail workshops, courses, etc., and {{evaluation process}} refers to determining the effectiveness of the training.",
+      "content": "Create a robust employee training plan for {{CHRO's name}} concentrating on {{skills to be developed}}. Describe the {{training methods}} that will be used and detail an appropriate {{evaluation process}} to measure success post-training.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "1baff40c-0f82-4e6e-827e-aba374d5c143"
+    },
+    {
+      "id": "29973f95-df1e-4011-9f47-59b35299150b",
+      "name": "Internal Promotions Announcement",
+      "description": "{{Promoted employees}} refers to the staff receiving promotions, {{new positions}} are the roles they'll be holding, and {{promotion impact}} denotes the significance of these changes for the team or organisation.",
+      "content": "Write an announcement on behalf of {{CHRO's name}} to celebrate the {{promoted employees}} advancing to their {{new positions}}. Discuss the {{promotion impact}} to acknowledge the importance of career progression within our organisation.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "1baff40c-0f82-4e6e-827e-aba374d5c143"
+    },
+    {
+      "id": "84302698-5a90-4c4a-bcf2-dea0c560fa24",
+      "name": "Conflict Resolution Guidelines",
+      "description": "Embed {{conflict scenarios}} as instances needing resolution, {{resolution strategies}} as methods to address them, and {{communication protocol}} for discussing conflicts.\n\n",
+      "content": "Put together conflict resolution guidelines on behalf of {{CHRO's name}}. Highlight a few common {{conflict scenarios}}, propose effective {{resolution strategies}}, and define a transparent {{communication protocol}} for reporting and resolving conflicts.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "1baff40c-0f82-4e6e-827e-aba374d5c143"
+    },
+    {
+      "id": "be5a5dd5-23df-4279-b64e-a9420c9ecea4",
+      "name": "Benefits Package Revision",
+      "description": "{{Revised benefits}} refer to the updated employee benefits, {{effective date}} is when changes will apply, and {{justification}} explains why the changes have been made.",
+      "content": "Script a comprehensive message from {{CHRO's name}} about the {{revised benefits}} package, starting from {{effective date}}. Make a point to explain the {{justification}} behind these revisions to keep the team well-informed.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "1baff40c-0f82-4e6e-827e-aba374d5c143"
+    },
+    {
+      "id": "69de0f04-4683-4fb9-ad9f-5a1a925f27d0",
+      "name": "Organisational Culture Reinforcement Initiative",
+      "description": "This prompt would include {{culture traits}} as the values to emphasise, {{initiative activities}} as the ways to promote those values, and {{expected changes}} as the anticipated benefits.\n\n",
+      "content": "Design a robust initiative for {{CHRO's name}} focusing on reinforcing {{culture traits}} through various {{initiative activities}}. Present an overview of the {{expected changes}} in terms of teamwork, productivity and overall job satisfaction.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "1baff40c-0f82-4e6e-827e-aba374d5c143"
+    },
+    {
+      "id": "8df20f64-589f-4053-af16-29a6510bf179",
+      "name": "Layoff Procedure and Support",
+      "description": "{{Layoff reasons}} should provide clear explanation for the actions, {{support measures}} can cover outplacement services or severance payments, and {{future plans}} outline how the company aims to move forward.\n\n",
+      "content": "Draft a sensitive but clear communication for {{CHRO's name}} explaining unavoidable {{layoff reasons}}. Address comprehensive {{support measures}} for affected employees and elucidate the company's {{future plans}} to ensure business continuity. It's crucial to communicate this delicately to minimise negative impact.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "1baff40c-0f82-4e6e-827e-aba374d5c143"
+    }
+  ]
+}

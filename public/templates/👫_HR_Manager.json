@@ -1,0 +1,143 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "d413d884-6466-4b79-b3ea-cd938f7d38d5",
+      "name": "HR Manager",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "3b14d0d2-92e7-4eef-ada6-f1d2c304889b",
+      "name": "Workplace Health and Safety Policy",
+      "description": "This template helps in constructing a robust workplace health and safety policy. Replace {{safety procedures}} with rules to maintain workplace safety, {{emergency protocols}} with steps to follow in case of emergencies, {{employee responsibilities}} with what is expected of staff, and {{training provisions}} with the planned safety training programs.\n\n",
+      "content": "Devise a workplace health and safety policy outlining mandated {{safety procedures}}, detailed {{emergency protocols}}, clarified {{employee responsibilities}}, and comprehensive {{training provisions}}. Refrain from sharing details that could compromise strategic plans or protocols not yet approved.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d413d884-6466-4b79-b3ea-cd938f7d38d5"
+    },
+    {
+      "id": "f8e430cf-78c5-48eb-b106-01f92c1fe976",
+      "name": "Career Development Plan",
+      "description": "This template facilitates the drafting of a comprehensive career development plan. Substitute {{development objectives}} with goals for the employee's career progression, {{development activities}} with the planned courses or programs, {{monitoring process}} with the means of tracking progress, and {{revision schedule}} with timings for plan reviews.\n\n",
+      "content": "Develop a career development plan exhibiting clear {{development objectives}}, a broad spectrum of {{development activities}}, an established {{monitoring process}}, and a regular {{revision schedule}}. Please avoid including details of specific employee performance or potential sensitive career discussions.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d413d884-6466-4b79-b3ea-cd938f7d38d5"
+    },
+    {
+      "id": "cbb03107-e095-4333-bda8-13d3f34bb6ae",
+      "name": "Diversity and Equality Policy",
+      "description": "Use this template to formulate a robust diversity and equality policy. Replace {{diversity commitments}} with your promises to promote diversity, {{anti-discrimination rules}} with policies to prevent discrimination, {{policy implementation}} with steps to ensure policy adherence, and {{compliance monitoring}} with your means of checking compliance.\n\n",
+      "content": "Draft an all-inclusive diversity and equality policy that consists of our {{diversity commitments}}, strict {{anti-discrimination rules}}, comprehensive {{policy implementation}} roadmap, and efficient {{compliance monitoring}} techniques. Please skip details on individual discrimination cases or sensitive internal discussions.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d413d884-6466-4b79-b3ea-cd938f7d38d5"
+    },
+    {
+      "id": "43dbdbe6-b5ab-4eff-81c9-4462eb6390ed",
+      "name": "Employee Skills Assessment Framework",
+      "description": "This structure builds an employee skills assessment framework. Substitute {{assessment criteria}} with the skills or abilities to be evaluated, {{measurement scale}} with the rating system to be used, {{feedback mechanism}} with how appraisal feedback will be conveyed, and {{development plan}} with the strategy for addressing skills gaps found.\n\n",
+      "content": "Construct an employee skills assessment framework powered with precise {{assessment criteria}}, a uniform {{measurement scale}}, a constructive {{feedback mechanism}}, and a proactive {{development plan}}. Do not share details of individual employee assessments or sensitive performance data.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d413d884-6466-4b79-b3ea-cd938f7d38d5"
+    },
+    {
+      "id": "cdad8a96-f709-442f-849d-ad7e98f32512",
+      "name": "Employee Well-being Programme",
+      "description": "This template is for creating a comprehensive employee well-being programme. Replace {{well-being objectives}} with your goals for employee wellness, {{wellness activities}} with planned health and wellness events or initiatives, {{internal communication strategy}} with the plan for programme promotion, and {{programme evaluation}} with the method for gauging success.\n\n",
+      "content": "Fashion an employee well-being programme that encapsulates our {{well-being objectives}}, an array of {{wellness activities}}, a strategic {{internal communication strategy}}, and effective {{programme evaluation}}. Abstain from sharing any personal health information or confidential data.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d413d884-6466-4b79-b3ea-cd938f7d38d5"
+    },
+    {
+      "id": "28aa9214-bcc5-4b18-b61f-76890cb57079",
+      "name": "Conflict Resolution Protocol",
+      "description": "This template is for creating an effective conflict resolution protocol. Replace {{conflict identification}} with the process to recognise and report conflicts, {{resolution process}} with your plan to manage conflict, {{roles and responsibilities}} with who should do what during conflicts, and {{follow-up procedure}} with steps to ensure resolution and prevent recurrence.\n\n",
+      "content": "Formulate a conflict resolution protocol indicating comprehensive {{conflict identification}} steps, detailing an effective {{resolution process}}, assigning {{roles and responsibilities}}, and ensuring a thorough {{follow-up procedure}}. Please avoid including potentially controversial topics or specific past incidents.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d413d884-6466-4b79-b3ea-cd938f7d38d5"
+    },
+    {
+      "id": "29d60ae7-55a6-426b-b090-fad8c5d261e6",
+      "name": "Employee Recognition Program",
+      "description": "This template helps in devising an employee recognition programme. Substitute {{recognition criteria}} with the standards for employee acknowledgement, {{reward options}} with your offerings for employee recognition, {{nomination and selection process}} with the process to identify and choose employees, and {{program timeline}} with the schedule for recognition activities.\n\n",
+      "content": "Create an employee recognition program outlining clear {{recognition criteria}}, exciting {{reward options}}, fair {{nomination and selection process}}, and consistent {{program timeline}}. Steer clear of including specific employee appreciation situations regarding individuals that may imply favouritism.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d413d884-6466-4b79-b3ea-cd938f7d38d5"
+    },
+    {
+      "id": "34889098-62ee-4906-8d9c-89e883a41cc7",
+      "name": "Anti-Harassment Policy",
+      "description": "Use this template to establish a comprehensive anti-harassment policy. Replace {{harassment definitions}} with explicit explanations of unacceptable behaviours, {{reporting procedures}} with instructions for filing harassment complaints, {{disciplinary actions}} with potential consequences for harassment, and {{support mechanisms}} with resources available for victims.\n\n",
+      "content": "Draft an anti-harassment policy providing explicit {{harassment definitions}}, establishing straightforward {{reporting procedures}}, enforcing strict {{disciplinary actions}}, and offering supportive {{support mechanisms}}. Please avoid details of specific harassment cases or sensitive personnel matters.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d413d884-6466-4b79-b3ea-cd938f7d38d5"
+    },
+    {
+      "id": "a31327be-b9ab-4c3c-ae58-a9a0a52576fe",
+      "name": "Succession Planning Framework",
+      "description": "This template facilitates the creation of a succession planning framework. Substitute {{role criticality analysis}} with the process of identifying key roles, {{candidate development}} with plans for potential successor readiness, {{candidate identification}} with the process of choosing suitable successors, and {{succession update cycle}} with the frequency of framework reviews.\n\n",
+      "content": "Develop a succession planning framework entailing a comprehensive {{role criticality analysis}}, initiating a strengthening {{candidate development}} initiative, streamlining {{candidate identification}}, and adhering to a regular {{succession update cycle}}. Avoid focusing on specific roles or individuals as this may lead to bias or misunderstandings.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d413d884-6466-4b79-b3ea-cd938f7d38d5"
+    },
+    {
+      "id": "dc47c8c1-a7e3-4741-875b-6ba9e3afa42f",
+      "name": "Workplace Etiquette Guidelines",
+      "description": "This blueprint helps in cultivating workplace etiquette guidelines. Replace {{behavioural expectations}} with hierarchical conduct norms, {{communication protocols}} with preferred modes and styles of communication, {{conflict management}} with rules for handling disagreements, and {{courtesy reminders}} with polite behaviour reminders.\n\n",
+      "content": "Compile workplace etiquette guidelines encompassing expected {{behavioural expectations}}, appropriate {{communication protocols}}, firm {{conflict management}} rules, and gentle {{courtesy reminders}}. Refrain from mentioning specific instances or individuals who may have violated these guidelines to avoid embarrassing or singling out employees.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d413d884-6466-4b79-b3ea-cd938f7d38d5"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "da8cdf8f-8806-4c94-86aa-5dd6d9f3fc0a",
+      "name": "Director of Technology",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "c69ce7d9-a4e9-4803-b601-414177c31a7b",
+      "name": "Technology Strategy Development",
+      "description": "This template serves as a guide for drawing up a technology strategy. Replace {{business objectives}} with your company's goals, {{technology goals}} with your desired outcomes regarding technology use, and {{implementation plan}} with the steps for executing the strategy.",
+      "content": "Outline a technology strategy that maps to {{business objectives}}. Detail your {{technology goals}}, emphasising how they will drive business growth. Propose an {{implementation plan}} that ensures the smooth rollout of new technologies. Exclude proprietary information that should not be shared extensively.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "da8cdf8f-8806-4c94-86aa-5dd6d9f3fc0a"
+    },
+    {
+      "id": "cc563c30-a835-4501-bbb9-16ad9b047324",
+      "name": "Software Procurement Document",
+      "description": "Use this template to prepare a comprehensive software procurement document. Substitute {{software requirements}} with your list of needs, {{vendor evaluation criteria}} with the aspects you'll consider when choosing a vendor, and {{implementation timeline}} with the plan for software integration.\n\n",
+      "content": "Draft a software procurement document specifying the {{software requirements}}. Detail the {{vendor evaluation criteria}} for transparent supplier selection. Finally, provide an {{implementation timeline}} to ensure clarity on rollout expectations. Do not include sensitive financial details until final vendor negotiations.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "da8cdf8f-8806-4c94-86aa-5dd6d9f3fc0a"
+    },
+    {
+      "id": "25b04c65-220d-4c32-8dfb-7cc2ec06ecef",
+      "name": "IT Vendor Selection",
+      "description": "This template is for framing an IT vendor selection process. Replace {{key criteria}} with your deciding factors, {{potential vendors}} with the list of suppliers able to meet your needs, and {{selection timeline}} with the timeframe for vendor selection.\n\n",
+      "content": "Develop an IT vendor selection plan for our upcoming project. Define {{key criteria}} for evaluation, enumerate promising {{potential vendors}}, and provide a {{selection timeline}} that covers vetting, negotiation, and decision-making. Be mindful to maintain confidentiality around proprietary selection criteria.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "da8cdf8f-8806-4c94-86aa-5dd6d9f3fc0a"
+    },
+    {
+      "id": "799a9889-92d8-4455-9223-6e1d0ca65f0d",
+      "name": "IT Risk Assessment Report",
+      "description": "This template aids in creating an IT risk assessment report. Substitute {{assessed areas}} with the IT sections evaluated, {{identified risks}} with risks spotted during assessment, and {{risk mitigation strategies}} with your plans to manage these risks.\n\n",
+      "content": "Carry out an IT risk assessment, covering {{assessed areas}} A thorough report should detail {{identified risks}} and recommend corresponding {{risk mitigation strategies}}. Remember to keep the language clear and avoid speculation or prediction without concrete data.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "da8cdf8f-8806-4c94-86aa-5dd6d9f3fc0a"
+    },
+    {
+      "id": "0390242e-c05a-4eed-8a82-1d1a5f80a7be",
+      "name": "Data Governance Policy",
+      "description": "Use this template to construct a data governance policy. Replace {{policy objectives}} with the goals of your data governance, {{procedures and standards}} with your chosen rules and benchmarks, and {{roles and responsibilities}} with the teams or individuals accountable for data governance.\n\n",
+      "content": "Outline a comprehensive data governance policy. Enumerate {{policy objectives}}, establish {{procedures and standards}} for data management, and assign {{roles and responsibilities}} accordingly. Be sure to maintain data confidentiality and follow all regulatory compliance guidelines.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "da8cdf8f-8806-4c94-86aa-5dd6d9f3fc0a"
+    },
+    {
+      "id": "a480df73-da7c-4a35-9e2a-bea04c376f81",
+      "name": "Cybersecurity Plan",
+      "description": "This template is for formulating a robust cybersecurity plan. Replace {{cyber threats}} with identified digital security risks, {{security measures}} with your proposed precautions, and {{incident response plan}} with your strategy for reacting to breaches.\n\n",
+      "content": "Draft a concrete cybersecurity plan. Identify potential {{cyber threats}}, suggest go-to {{security measures}}, and develop an {{incident response plan}} for unforeseen security breaches. Avoid disclosing sensitive company information or precise technical details that could be exploited.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "da8cdf8f-8806-4c94-86aa-5dd6d9f3fc0a"
+    },
+    {
+      "id": "860be1e1-5b9b-473f-ae75-55979a78add0",
+      "name": "Cloud Migration Strategy",
+      "description": "This template helps create a detailed cloud migration strategy. Substitute {{selected cloud platforms}} with your chosen providers, {{migration phases}} with the stages of your migration plan, and {{post-migration actions}} with your plan for post-migration activities, such as crew training or system optimisation.\n\n",
+      "content": "Assemble a cloud migration strategy. Consider which {{selected cloud platforms}} will best suit our needs, delineate the {{migration phases}}, and plan for {{post-migration actions}}. Continue employing best practices for data security and privacy throughout.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "da8cdf8f-8806-4c94-86aa-5dd6d9f3fc0a"
+    },
+    {
+      "id": "a2a07bdd-3c85-4952-bfef-fc78bd302317",
+      "name": "Technology Partnerships Proposal",
+      "description": "Use this template to devise a proposal for technology partnerships. Replace {{potential partners}} with the companies you're considering for partnerships, {{partnership benefits}} with what each party stands to gain, and {{collaboration plan}} with a high-level strategy for the partnership.",
+      "content": "Draft a proposal for establishing technology partnerships with {{potential partners}}. Highlight mutual {{partnership benefits}} and outline a {{collaboration plan}} which aligns with our overall technology strategy. Remember to respect non-disclosure agreements and proprietary information.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "da8cdf8f-8806-4c94-86aa-5dd6d9f3fc0a"
+    },
+    {
+      "id": "cbd62535-7a33-4f7f-887e-ea4946c17242",
+      "name": "Innovation Roadmap",
+      "description": "This template is for developing an innovation roadmap. Substitute {{innovation goals}} with what you hope to achieve through innovation, {{key milestones}} with major steps on the journey, and {{resources required}} with the people, tools, and funding your goals will need.",
+      "content": "Plan a detailed innovation roadmap. Start with our broad {{innovation goals}}, chart {{key milestones}} towards accomplishing them, and enumerate the {{resources required}}. Steer clear of mentioning unapproved initiatives or unsecured resources.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "da8cdf8f-8806-4c94-86aa-5dd6d9f3fc0a"
+    },
+    {
+      "id": "5d724ea7-e8c4-485d-aace-1f6e90725841",
+      "name": "AI Integration Plan",
+      "description": "This template aids in formulating an AI integration plan. Replace {{AI applications}} with the specific purposes you intend to use AI in your business, {{implementation stages}} with the phases for deploying AI, and {{expected benefits}} with the positive outcomes you forecast from AI integration.",
+      "content": "Draw up an AI integration plan that covers desired {{AI applications}}, the {{implementation stages}}, and potential challenges that may arise. Additionally, explore the {{expected benefits}} and the impacts on various business areas. Avoid revealing sensitive internal strategies or unapproved plans.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "da8cdf8f-8806-4c94-86aa-5dd6d9f3fc0a"
+    },
+    {
+      "id": "1c8ff7d8-5e8c-48fa-ab0f-65d3b94df280",
+      "name": "Digital Transformation Blueprint",
+      "description": "Use this template to create a blueprint for a digital transformation journey. Replace {{transformation goals}} with your objectives for digitalisation, {{technology adoption plan}} with your strategy for implementing new technologies, and {{impact assessment}} with projections of how the transformation will benefit your business.\n\n",
+      "content": "Draft a digital transformation blueprint that outlines {{transformation goals}}, details the {{technology adoption plan}}, and predicts potential results through an {{impact assessment}}. Ensure the blueprint aligns with the company's strategic goals and operational capabilities. Omit confidential or proprietary details pertaining to future transformation efforts.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "da8cdf8f-8806-4c94-86aa-5dd6d9f3fc0a"
+    }
+  ]
+}

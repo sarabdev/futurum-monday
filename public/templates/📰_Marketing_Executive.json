@@ -1,0 +1,117 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "404eda3f-676c-4789-a9b8-bdcf7f831aeb",
+      "name": "Marketing Executive",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "175400de-a33a-44a1-8533-562cfad1bb0a",
+      "name": "Marketing Campaign Proposal",
+      "description": "This template assists in drafting a marketing campaign proposal. Substitute {{campaign objectives}} with the primary goals your campaign aims to achieve, {{target audience}} with the ideal customer segment, {{marketing channels}} with the touchpoints to engage your audience, and {{monitoring metrics}} with performance indicators.\n\n",
+      "content": "Construct a tactical marketing campaign proposal underlining the {{campaign objectives}}, defining the {{target audience}}, identifying suitable {{marketing channels}}, and establishing relevant {{monitoring metrics}}. Remember to avoid revealing confidential audience data or proprietary marketing strategies.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "404eda3f-676c-4789-a9b8-bdcf7f831aeb"
+    },
+    {
+      "id": "2d7cd9cd-68d3-4d34-91d7-ab48f086aca0",
+      "name": "Content Strategy Plan",
+      "description": "This structure aids in developing a comprehensive content strategy plan. Replace {{content goals}} with what you aim to achieve through content, {{content themes}} with the main topics to be addressed, {{content formats}} with types of content to be produced, and {{distribution channels}} with paths for content distribution.\n\n",
+      "content": "Design an engaging content strategy plan encompassing defined {{content goals}}, engaging {{content themes}}, versatile {{content formats}}, and strategic {{distribution channels}}. Refrain from disclosing yet to be released content themes or confidential distribution methods.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "404eda3f-676c-4789-a9b8-bdcf7f831aeb"
+    },
+    {
+      "id": "397c5f0d-d386-44a2-843a-e042953081b5",
+      "name": "Brand Positioning Statement",
+      "description": "Use this blueprint to create a brand positioning statement. Substitute {{target consumer}} with the primary audience, {{brand promise}} with the unique value your brand offers, {{reason to believe}} with evidence supporting the brand promise, and {{competitive differentiation}} with what sets your brand apart from competitors.\n\n",
+      "content": "Propose a powerful brand positioning statement identifying a specific {{target consumer}}, stating a compelling {{brand promise}}, providing tangible {{reason to believe}}, and highlighting {{competitive differentiation}}. Avoid disclosing sensitive branding decisions or competitive strategies.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "404eda3f-676c-4789-a9b8-bdcf7f831aeb"
+    },
+    {
+      "id": "89c312ad-3090-41ed-82eb-be1ce9f151c0",
+      "name": "Marketing Budget Proposal",
+      "description": "This template guides in preparing a detailed marketing budget proposal. Replace {{expense categories}} with the different marketing activities, {{allocated funds}} with the amount designated for each category, {{cost justification}} with reasons to support each budget allocation, and {{ROI projections}} with return on investment expectations.\n\n",
+      "content": "Enumerate a cost-efficient marketing budget proposal outlining the {{expense categories}}, apportioning the {{allocated funds}}, reasonings for the {{cost justification}}, and measurable {{ROI projections}}. Please avoid sharing specific financial data or any proprietary company information.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "404eda3f-676c-4789-a9b8-bdcf7f831aeb"
+    },
+    {
+      "id": "b5f20876-5b3b-494a-831a-9b28ca3518f7",
+      "name": "Social Media Calendar",
+      "description": "This structure facilitates the creation of a social media calendar. Substitute {{content themes}} with main topics to be shared, {{post schedule}} with the planned times to post content, {{engagement initiatives}} with activities to encourage audience interaction, and {{performance tracking}} with methods to monitor social media performance.\n\n",
+      "content": "Formulate a vibrant social media calendar showcasing engaging {{content themes}}, routine {{post schedule}}, interactive {{engagement initiatives}}, and effective {{performance tracking}}. Refrain from posting content not yet approved or discussing confidential engagement activities.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "404eda3f-676c-4789-a9b8-bdcf7f831aeb"
+    },
+    {
+      "id": "bd401e3e-4395-441e-a779-bf2bb66ba470",
+      "name": "Event Marketing Plan",
+      "description": "This outline will help to shape an effective event marketing plan. Replace {{event objectives}} with the main goals for hosting the event, {{event promotion}} with strategies to advertise the event, {{stakeholder engagement}} with ways to involve all participants, and {{post-event follow up}} with processes to maintain contact after the event.\n\n",
+      "content": "Script a dynamic event marketing plan underlining clear {{event objectives}}, exciting {{event promotion}}, diligent {{stakeholder engagement}}, and thoughtful {{post-event follow up}}. Do not disclose specific guest details or proprietary event strategies.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "404eda3f-676c-4789-a9b8-bdcf7f831aeb"
+    },
+    {
+      "id": "2604111d-4021-4cc9-a495-7fd424716351",
+      "name": "Customer Segmentation Model",
+      "description": "Use this blueprint to develop a comprehensive customer segmentation model. Substitute {{segmentation criteria}} with factors used for dividing the market, {{segmented profiles}} with description of each identified segment, {{targeting strategy}} with approaches to engage each segment, and {{segment performance evaluation}} with your measure of segment success.\n\n",
+      "content": "Design an insightful customer segmentation model, illustrating precise {{segmentation criteria}}, detailed {{segmented profiles}}, tailored {{targeting strategy}}, and robust {{segment performance evaluation}}. Avoid sharing confidential customer data or internal targeting tactics.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "404eda3f-676c-4789-a9b8-bdcf7f831aeb"
+    },
+    {
+      "id": "2a93058c-5621-417a-8f26-6d1f572d012d",
+      "name": "Influencer Collaboration Proposal",
+      "description": "This template is ideal for drawing up an influencer collaboration proposal. Replace {{influencer identification}} with the identified collaborator, {{collaboration objectives}} with what you hope to achieve from the partnership, {{collaboration terms}} with the nature of the agreement, and {{performance evaluation}} with how you will measure the partnership's success.\n\n",
+      "content": "Draft a persuasive influencer collaboration proposal featuring your chosen {{influencer identification}}, clear {{collaboration objectives}}, fair {{collaboration terms}}, and meaningful {{performance evaluation}}. Refrain from revealing potential collaboration details or future partnership strategies.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "404eda3f-676c-4789-a9b8-bdcf7f831aeb"
+    }
+  ]
+}

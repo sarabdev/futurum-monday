@@ -1,0 +1,143 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "4b93e7f0-ed96-4b73-9f2f-a7d6b7a48da4",
+      "name": "Director of Marketing",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "4a028098-556c-4515-abee-470404d2baa3",
+      "name": "Marketing Strategy Proposal",
+      "description": "This template guides the creation of a detailed marketing strategy proposal. Replace {{target market}} with a description of the audience the marketing campaign is targeted towards, {{proposed marketing channels}} with the channels to be used in the campaign, and {{expected results}} with the forecasted outcome of the campaign.\n\n",
+      "content": "Develop a comprehensive marketing strategy proposal aimed at {{target market}}. Discuss how to utilise {{proposed marketing channels}} effectively and provide insight on {{expected results}}, correlated with specific strategies. Remember to omit speculative data or unapproved marketing tactics.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "4b93e7f0-ed96-4b73-9f2f-a7d6b7a48da4"
+    },
+    {
+      "id": "65f69e42-3301-4506-a5c5-74e50098416a",
+      "name": "Product Launch Plan",
+      "description": "Use this template to formulate a product launch plan. Substitute {{product name}} with the name of the product to be launched, {{launch strategy}} with the strategy for the launch, and {{key marketing activities}} with detailed actions to promote the product.\n\n",
+      "content": "Draft a robust product launch plan for {{product name}}. The plan must detail the {{launch strategy}} and set out {{key marketing activities}}, ensuring synchronisation with overall marketing goals. Refrain from discussing unconfirmed launch dates or speculative market reactions.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "4b93e7f0-ed96-4b73-9f2f-a7d6b7a48da4"
+    },
+    {
+      "id": "70ee0537-124a-480a-a57b-09731ea67193",
+      "name": "Brand Positioning Statement",
+      "description": "This template aids in creating a powerful brand positioning statement. Replace {{brand name}} with the name of the brand, {{brand's unique attributes}} with characteristics that differentiate the brand from competition, and {{brand promise}} with an expression of the value the brand promises to deliver.\n\n",
+      "content": "Craft a compelling brand positioning statement for {{brand name}}. It should articulate {{brand's unique attributes}}, define target consumers, and end with the {{brand promise}}. Do not include information that is unsubstantiated or not in line with the brand's established image and values.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "4b93e7f0-ed96-4b73-9f2f-a7d6b7a48da4"
+    },
+    {
+      "id": "426c294f-bdf8-4064-9e6d-bd78ea66ace6",
+      "name": "Social Media Campaign Brief",
+      "description": "Use this template to arrange a comprehensive social media campaign brief. Insert {{campaign objectives}} for the goals the campaign should achieve, {{target platforms}} for the social media platforms to be used, and {{content strategy}} with a plan for the content to be posted.\n\n",
+      "content": "Develop a brief for a social media campaign outlining its {{campaign objectives}}, envisaging which {{target platforms}} will be utilised and proposing a {{content strategy}} tailored towards the target audience. The brief must not deviate from the company's social media policies or unduly expose the brand to reputational risk.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "4b93e7f0-ed96-4b73-9f2f-a7d6b7a48da4"
+    },
+    {
+      "id": "0abf7d61-ee02-41eb-8043-88e23056f593",
+      "name": "Marketing Budget Allocation",
+      "description": "This template assists in outlining the marketing budget allocation. Replace {{marketing sectors}} with the various marketing areas, the {{allocated budget}} with each sector’s budget allocations, and {{justification}} with the reasons behind those allocations.\n\n",
+      "content": "Prepare a comprehensive write-up that communicates the budget allocation. Explain changes made in the allocation for different {{marketing sectors}}, detailing the {{allocated budget}} for each and providing a robust {{justification}} for it. Exclude any confidential financial statements or internal financial strategies.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "4b93e7f0-ed96-4b73-9f2f-a7d6b7a48da4"
+    },
+    {
+      "id": "8aeffb91-6e26-46bc-8b77-63dba1312d77",
+      "name": "Content Marketing Plan",
+      "description": "This template helps create a comprehensive content marketing plan. Substitute {{content categories}} with types of content to be created, {{publication platforms}} with where to post the content, and {{content goals}} with the results intended to achieve with the content.\n\n",
+      "content": "Construct a content marketing plan that outlines the {{content categories}} to be produced, outlines the targeted {{publication platforms}}, and states the {{content goals}}. Do remember to make the objectives clear, measurable, and attached to a specific timeline.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "4b93e7f0-ed96-4b73-9f2f-a7d6b7a48da4"
+    },
+    {
+      "id": "998ab429-e4a6-40ce-83b8-162533db2889",
+      "name": "Market Research Analysis",
+      "description": "This template guides the development of market research analysis. Replace {{research topic}} with the subject matter of the research, {{key findings}} with the significant discoveries from the research, and {{strategic implications}} with potential impacts these findings may have on the marketing strategy.\n\n",
+      "content": "Assemble a comprehensive market research analysis covering {{research topic}}. Detail {{key findings}} and discuss their {{strategic implications}} in relation to our existing and future marketing plans. Be sure to maintain the confidentiality of data sources that are not publicly accessible.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "4b93e7f0-ed96-4b73-9f2f-a7d6b7a48da4"
+    },
+    {
+      "id": "6e58f9bb-be35-4aea-96de-ab9c5d74c4c5",
+      "name": "Competitor Benchmarking Report",
+      "description": "Use this template to compile a competitor benchmarking report. Substitute {{key competitors}} with your main business rivals, {{benchmarking parameters}} with the aspects you're examining, and {{competitive analysis}} with your analysis of how you compare to these competitors.\n\n",
+      "content": "Draft a competitor benchmarking report that analyses {{key competitors}} across various {{benchmarking parameters}} like product portfolio, market share, pricing, and marketing strategies. Offer a thorough {{competitive analysis}} detailing where we excel and areas for improvement. Be cautious about revealing any proprietary strategic information.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "4b93e7f0-ed96-4b73-9f2f-a7d6b7a48da4"
+    },
+    {
+      "id": "5939448b-5cdd-4512-b1ba-2de0ea1738bf",
+      "name": "Digital Marketing Audit",
+      "description": "This template is for creating a digital marketing audit. Replace {{audit areas}} with the digital marketing segments to be audited, {{current performance}} with an evaluation of the existing performance, and {{recommendations}} with your suggestions for improvement based on the audit results.\n\n",
+      "content": "Conduct a digital marketing audit encompassing various {{audit areas}} such as SEO, email marketing, social media, and web analytics. The report should detail {{current performance}} of our digital assets and include a set of actionable {{recommendations}} to enhance future performance. Be mindful not to include sensitive or classified company data.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "4b93e7f0-ed96-4b73-9f2f-a7d6b7a48da4"
+    },
+    {
+      "id": "b0770fdd-b2a9-4119-b419-e2a8aa14d72a",
+      "name": "Event Marketing Proposal",
+      "description": "This template aids in putting together an event marketing proposal. Substitute {{event details}} with the specifics of the event, {{marketing activities}} with the promotional actions planned around the event, and {{expected outcomes}} with the event's projected impact.\n\n",
+      "content": "Prepare a robust event marketing proposal providing the {{event details}}, defining the {{marketing activities}} to promote the event, and articulating {{expected outcomes}} in terms of audience reach, brand exposure, and potential lead generation. Avoid disclosing budgetary details or other sensitive information until final approval.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "4b93e7f0-ed96-4b73-9f2f-a7d6b7a48da4"
+    }
+  ]
+}

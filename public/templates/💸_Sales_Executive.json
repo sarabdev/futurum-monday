@@ -1,0 +1,325 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "f05163b0-2a2a-4c27-9158-501b9cc728c8",
+      "name": "Sales Executive",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "b297fabc-4ea7-4991-8520-99beada6a242",
+      "name": "Sales Funnel Development",
+      "description": "This template is meticulously designed to help you construct a sales funnel bespoke to your business. Substitute {{audience targeting}} with your research-based approach to recognise the right prospects. Replace {{engagement strategies}} with your tried-and-tested methods to strike meaningful conversations with these prospects. Insert your plans for {{conversion strategy}}, detailing how you intend to transform potential customers into actual ones. Finally, for {{retention tactics}}, insert your carefully planned long-term strategies to ensure these customers remain loyal to your brand.\n\n",
+      "content": "Begin setting up an effective sales funnel by identifying the correct target audience, clearly defining your {{audience targeting}} strategies. Next, lay out your {{engagement strategies}}, detailing the actions that will make your prospects pay attention. Further on, outline your {{conversion strategy}}, focusing on how best to turn these engaged prospects into actual customers. Finally, provide a detailed plan for your {{retention tactics}}, showing the steps to ensure your new customers become loyal ones. Remember never to release proprietary sales strategies or client-sensitive information.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "940ecc68-0d29-4034-a6d3-3e6b8daf7710",
+      "name": "Prospect Meeting Preparation",
+      "description": "This guide is designed to assist you in getting ready for a crucial prospect meeting. Substitute {{customer research}} with your in-depth examination and understanding of the prospect's background. Replace {{meeting objectives}} with the specific goals you aim to achieve during the prospective meeting. For {{product presentation strategy}}, replace with your carefully crafted plan to showcase your product or service effectively. Lastly, in {{objection handling}}, share your proactive strategies to tackle potential concerns that may be raised.\n\n",
+      "content": "Prepare for your prospect meeting, starting with a comprehensive {{customer research}} that informs you about the prospective client. Following that, outline your clear {{meeting objectives}} that you aim to achieve during the meeting. The next step involves devising a convincing {{product presentation strategy}} that showcases your product in the best light. Lastly, detail your strategic {{objection handling}} that foresees and prepares for potential prospect reservations. It's essential not to share confidential client information or internal sales procedures.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "1f8b2a8f-f297-467a-9c18-4bb2e902246b",
+      "name": "Sales Activity Report",
+      "description": "This template is designed to aid you in creating a comprehensive sales activity report, tracking your sales operations. By replacing {{customer interactions}}, you're outlining the number of engagements and the quality of interactions with customers. {{Sales volume}} should be replaced with precise figures that reflect the quantity of goods or services sold during the specific period. Change {{revenue generated}} with the total revenue brought in, and {{forward plan}} should encapsulate your strategies for upcoming sales activities\n\n",
+      "content": "Start by detailing the {{customer interactions}} over the given period, encapsulating both quality and quantity of engagements. Progress to the {{sales volume}}, presenting the tangible count of products or services sold. Disclose the {{revenue generated}} by these sales, providing a clear financial snapshot of the reporting period. Conclude the report with a comprehensive {{forward plan}}, outlining your future sales strategy and target projections. Please remember to uphold the confidentiality of sensitive customer data and discreet sales figures while preparing this report.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "ce9ead14-4d56-4462-b75e-c6dbb4383342",
+      "name": "Sales Call Script",
+      "description": "This template facilitates the creation of a sales call script, helping in structuring your points for effective communication. Replace {{introduction}} with how you plan to kick-start the conversation, creating a personable yet professional first impression. Substitute {{product pitch}} with a compelling presentation of your product or service benefits. Change {{response to objections}} to your prepared counter-arguments for possible client objections. Finally, {{closing}} should include your cluster of affirmations or actions that solidify an agreement or set up a follow-up.\n\n",
+      "content": "Begin the sales call with an engaging {{introduction}}, setting the tone for the conversation. Progress to your {{product pitch}}, focusing on relaying unique selling points convincingly. Prepare for any objections with cogent {{response to objections}}, reassuring the client about their concerns. Cap off with a strong {{closing}}, gaining client commitment or scheduling the next conversation step. Remember to avoid revealing proprietary product details or disclosing future sales strategies.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "53b12fa3-e415-44ff-96ee-62beb0560fad",
+      "name": "Quote Preparation Guide",
+      "description": "This template is your go-to for preparing a sales quote that is appealing yet comprehensive. By changing {{product/service pricing}}, you provide an accurate financial depiction of your offerings. Replace {{discount policy}} with your rules around applying discounts or offers. Substitute {{quote presentation}} with the aesthetic and contextual arrangement of your quote. Swap {{follow-up strategy}} with your plans for remaining engaged with the prospect post-quote submission.\n\n",
+      "content": "Kick off your preparation guide with detailed {{product/service pricing}}, ensuring transparency about the cost and value of your offerings. Dive into your {{discount policy}}, specifying scenarios where discounts apply and to what extent. Pay attention to the {{quote presentation}}, crafting a layout that's as professional as it is appealing. Conclude with your {{follow-up strategy}}, mapping future interactions to accentuate the rapport with the client. Remember, it's crucial not to disclose sensitive pricing details or internal discount norms.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "95a08249-ed7c-49aa-917e-532aa38eb6ff",
+      "name": "Customer Retention Strategy",
+      "description": "This template assists in crafting a solid customer retention strategy to build long-term customer loyalty. By substituting {{client appreciation activities}}, you highlight initiatives to show gratitude and value to your customers. Substitute {{feedback reaction mechanisms}} with your reactive measures to client feedback, demonstrating willingness to improve. Implement {{loyalty programs}} to provide incentives to loyal customers and outline them here. Replace {{retention goal metrics}} with measurable targets that would gauge the success of your retention strategy.\n\n",
+      "content": "Your customer retention strategy begins with the inclusion of meaningful {{client appreciation activities}} which value and reward the customer. This is backed by your {{feedback reaction mechanisms}}, which highlight your responsive actions to customer feedback. Incorporate detailed {{loyalty programs}} offering incentives for continued patronage and loyalty. Outline measurable {{retention goal metrics}} to monitor the effectiveness of your strategies. Remember, this strategy is for internal use only and should not disclose sensitive customer data or proprietary strategies.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "38e88cba-0804-4a43-bb71-dad2479eec5b",
+      "name": "Post-Sale Follow-up Plan",
+      "description": "This template aids in developing a robust post-sale follow-up plan to engage and retain customers. Substituting {{follow-up timing}} allows you to schedule timely and appropriate customer contact. Replace {{communication channels}} with your chosen methods of reaching out to customers. Insert {{feedback collection}} with your strategies for collecting and analysing customer feedback. Also, replace {{up-sell/cross-sell strategy}} with your plans to opportunistically sell additional products or services to customers.\n\n",
+      "content": "Create a customer-focused post-sale follow-up plan starting with optimal {{follow-up timing}}. Identify your primary {{communication channels}} for effectively reaching out to customers. Embed your {{feedback collection}} strategies to capture customer viewpoints, criticisms and praise. Design an opportunistic {{up-sell/cross-sell strategy}} to maximise customer value. Avoid discussing individually identifiable customer experiences or any shortfalls in your services.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "d9f86e47-05f6-4135-bcbd-38c2a9cbcc15",
+      "name": "Referral Program Strategy",
+      "description": "This template helps devise a compelling referral program strategy to drive business growth organically. Substitute {{referral incentives}} with appealing rewards to encourage customer referrals. Replace {{program promotion}} with your marketing strategies to publicise the referral program. For {{referral tracking methodology}}, provide details on how you will track the progress and referral rates. Lastly, substitute {{feedback system}} to specify your mechanisms for collecting and implementing program-related feedback.\n\n",
+      "content": "Establish a successful referral program strategy rooted in enticing {{referral incentives}} that resonate with your customer base. Define your {{program promotion}} tactics to reach out to potential participants effectively. Incorporate an efficient {{referral tracking methodology}} to monitor the program's success and growth. Provide a constructive {{feedback system}} process to handle customer feedback and implement necessary enhancements. Avoid revealing confidential promotional strategies or proprietary tracking mechanisms.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "7fc0bd06-91db-4a32-b028-9d0dcba6bc3f",
+      "name": "Sales Territory Management Plan",
+      "description": "This template assists in formulating a strategic sales territory management plan. Specify {{territory segmentation}} by outlining how you group geographic markets or customer types. Substitute {{targeted prospects}} with details about potential customers in each territory. Replace {{contact schedule}} to lay down how frequently you aim to engage prospects. Lastly, replace {{sales goal per territory}} with specific, measurable sales targets for each territory.\n\n",
+      "content": "Formulate a sales territory management plan, starting with clear {{territory segmentation}}, ensuring the most promising areas are targeted. Identify your {{targeted prospects}} in each territory for a tailored approach. Build a regular and consistent {{contact schedule}} for productive customer interaction. Finally, provide explicit {{sales goal per territory}}, setting clear benchmarks for your sales team. Be cautious not to release confidential sales data or sensitive customer information.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "29d9cbae-405b-4c71-806b-f809d2156cd1",
+      "name": "Rejection Follow-up Strategy",
+      "description": "This template is intended to assist in designing a thoughtful strategy to follow-up on sales rejection. Replace {{initial response}} with your communication directly after the rejection, making sure it maintains a positive relationship. Substitute {{analysis of rejection reasons}} with a detailed review of reasons behind the client's decision. Replace {{improvement plan}} with your strategies for addressing identified issues. Lastly, insert {{re-engagement strategy}} with your long-term plans for re-approaching or maintaining contact with the client.\n\n",
+      "content": "Develop your rejection follow-up strategy beginning with an empathetic {{initial response}} communicating understanding and professionalism. Progress to an in-depth {{analysis of rejection reasons}} to identify possible areas of improvement. Next, devise a thorough {{improvement plan}} that addresses each identified issue, fostering a better future relationship. Wrap up with a forward-thinking {{re-engagement strategy}} outlining how to keep the door open for potential future opportunities. Ensure to respect client privacy and avoid disclosing internal strategic decisions.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "f8b6466b-49ec-4116-81e9-c8b3d99575f3",
+      "name": "Negotiation Strategy Outline",
+      "description": "This template is ideal for formulating your negotiation strategy. Substitute {{opening stance}} with your initial position including what you're offering and your initial expectations. Replace {{critical points}} with aspects of the negotiation you deem vital to your objectives. Include {{concession possibilities}} to outline areas where you're willing to compromise, and replace {{closing strategy}} with your final steps to secure the deal.\n\n",
+      "content": "Define a comprehensive negotiation strategy starting with the {{opening stance}}, clearly outlining your initial expectations. Delve into the non-negotiable {{critical points}} that firmly align with your goals. Prepare for flexibility by detailing your {{concession possibilities}} where compromise is feasible. Conclude the strategy with a precise {{closing strategy}}, solidifying the steps to finalise the deal. Remember to keep this information confidential to maintain your strategic advantage.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "5f907bbf-e96c-4aca-b799-b01f0c7c41fb",
+      "name": "Promotional Campaign Brief",
+      "description": "This template aids in writing a detailed promotional campaign brief. Replace {{campaign objective}} with the main goal your campaign aims to achieve. Substitute {{target audience}} to specify the exact demographic you wish to reach. Change {{key messages}} to highlight the underlying theme or information you want to articulate. Replace {{promotion channels}} with your chosen outlets for campaign dissemination.\n\n",
+      "content": "Begin your promotional campaign brief detailing the clear {{campaign objective}}, helping to steer the campaign in the right direction. Identify the {{target audience}} crucial for successful targeting and engagement. Describe thought-provoking {{key messages}} that resonate with your audience and complement your campaign objectives. Pick the optimal {{promotion channels}} for the delivery of your campaign. Confidentiality is paramount for maintaining the competitive edge of your promotional campaign.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "53983c43-21f7-4c29-938d-15a58e163431",
+      "name": "Product Demonstration Guide",
+      "description": "This template helps in creating a guide for conducting persuasive product demonstrations. Substitute {{product overview}} with a summary of your product and its major attributes. Replace {{demonstration strategy}} with a step-by-step method to display key features and benefits. Change {{customer engagement}} with ways to involve customers during the demonstration, and replace {{objection handling}} with your plans to address potential concerns or criticisms.\n\n",
+      "content": "Commence the guide with an insightful {{product overview}}, highlighting the product’s key values and benefits. Detail your {{demonstration strategy}}, ensuring it effectively showcases the product. Incorporate a customer-centric {{customer engagement}} strategy to keep the audience interested. Lastly, prepare for potential doubts by outlining your {{objection handling}} process. Be sure not to reveal any proprietary details about the product.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "415962bb-1955-4da5-bd54-c33c336ec270",
+      "name": "Sales Onboarding Process",
+      "description": "This template assists in drafting a thorough sales onboarding process for new hires. Substitute {{orientation plan}} with a comprehensive introduction to your company's structure, culture, and expectations. Replace {{training schedule}} with a detailed timetable of training sessions. Change {{role expectations}} to explain job responsibilities and targets. Lastly, replace {{performance metrics}} with your criteria to measure and evaluate success.\n\n",
+      "content": "Initiate your onboarding process with a welcoming {{orientation plan}}, aligning new hires with company culture. Follow this with a clear {{training schedule}}, providing structured learning opportunities. Develop detailed {{role expectations}}, underlining the tasks and goals for the new role. Conclude with specific {{performance metrics}}, defining success in the role. Always ensure your onboarding process respects company privacy and confidentiality rules.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "df54f738-6a4f-4ca8-8417-27553d978f1e",
+      "name": "Upselling Plan",
+      "description": "This template helps to create an effective upselling plan. Exchange {{customer analysis}} with your process to identify customers likely to be receptive to upselling. Replace {{product linking}} with strategies to link additional items or services to the core product. Substitute {{communication script}} with a customer-focused pitch for upselling items. Finally, replace {{success metrics}} with measurements to evaluate the effectiveness of the upselling initiative.\n\n",
+      "content": "Start your upselling plan by outlining your data-driven {{customer analysis}}, identifying the customers most likely to be responsive. Proceed with {{product linking}} strategies, ensuring relevancy and value addition. Develop a persuasive {{communication script}} tailored to promote the added benefits. Lastly, establish quantifiable {{success metrics}} to monitor and evaluate the success of the upsell initiative. Stringent privacy compliance should be maintained during customer analysis and the execution of the plan.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "f7d82980-f62e-4986-a23e-eaf8d5f7e9d7",
+      "name": "Sales Forecasting Methodology",
+      "description": "This template helps in outlining a detailed sales forecasting methodology. Substitute {{historical sales analysis}} with your evaluation of past sales data, {{market trend examination}} with the analysis of your sector's trajectories, {{competitive landscape}} with an assessment of your competition, and {{sales goal setting}} with your projections for future sales.\n\n",
+      "content": "Kickstart your sales forecasting methodology with an in-depth {{historical sales analysis}}, providing valuable insights into past performances. Follow it with a comprehensive {{market trend examination}}, keeping track of industry shifts and customer behaviours. Delve into the {{competitive landscape}}, identifying gaps and opportunities. Finally, establish ambitious but achievable {{sales goal setting}} based on your forecast data. Please remember to keep sensitive data and proprietary methodologies confidential.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "20ac2ac5-df6f-48d4-9c68-0d4a3a596243",
+      "name": "Key Account Management Plan",
+      "description": "This template aids in creating a plan for managing key accounts. Replace {{account profiling}} with a detailed understanding of the key account’s business, {{value proposition}} with tailored offerings for the account, {{relationship building strategies}} with ways to foster and maintain a strong rapport, and {{growth plan}} with strategies to encourage further business.\n\n",
+      "content": "Begin your key account management plan with thorough {{account profiling}}, defining a clear understanding of the account's business and needs. Progress with a customised {{value proposition}}, presenting your offerings in a way that matches the account's specific needs. Build on {{relationship building strategies}}, ensuring long-term engagement and satisfaction. Round off with an ambitious {{growth plan}}, projecting opportunities for future engagement. Ensure that your plan respects the confidentiality of client information.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "8ea646f4-eea6-40f1-9c4c-3e03e1746fe2",
+      "name": "Win-Loss Analysis Report",
+      "description": "This template aids in crafting a win-loss analysis report. Substitute {{winning deals overview}} with a summary of won deals and factors behind the success. Replace {{losing deals analysis}} with an evaluation of lost deals and reasons behind the failures. Replace {{improvement areas}} with identified aspects necessitating enhancement. Lastly, replace {{strategy adjustment}} with your plans for altering your approach based on the analysis.\n\n",
+      "content": "Begin your win-loss analysis report by summarising your {{winning deals overview}}, highlighting factors that drove your success. Proceed with a detailed {{losing deals analysis}}, critically evaluating the reasons behind unsuccessful endeavors. Highlight significant {{improvement areas}} found from your evaluations. Conclude with proposed {{strategy adjustment}}, showcasing how you plan to revamp based on insightful analysis. Ensure this report, intended for internal improvement, doesn't share confidential information.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "dc5cfe4a-e353-4743-9469-f0799a32a025",
+      "name": "Sales Team Performance Review",
+      "description": "This template helps in creating a comprehensive sales team performance review. Replace {{team member profiling}} with a brief overview of each sales team member. Substitute {{individual performance metrics}} with specific data points evaluating each team member's performance. Replace {{team-wide achievements}} with the collective victories of the team, and {{improvement strategy}} with plans for the team's future growth and development.\n\n",
+      "content": "Start your sales team performance review with concise {{team member profiling}}, outlining each member’s role and responsibilities. Proceed to data-backed {{individual performance metrics}}, measuring each member's contributions. Celebrate collective victories in {{team-wide achievements}}. Finish with a proactive {{improvement strategy}}, detailing planned actions for boosting team performance. Please remain sensitive to individual staff confidentiality and wellbeing.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "62faa50c-5f6b-48f2-9bbb-84de3789343b",
+      "name": "Lead Generation Strategy",
+      "description": "This template guides you in developing a potent lead generation strategy. Substitute {{target market definition}} with a clear outline of your intended audience. Replace {{lead sourcing channels}} with platforms or techniques for identifying potential leads. Substitute {{lead qualification criteria}} with indicators to discern the quality of your leads, and change {{lead nurturing process}} with methods for developing a relationship with your leads and guiding them towards becoming customers.\n\n",
+      "content": "Begin structuring your lead generation strategy by explicitly outlining your {{target market definition}}. Identify the most effective {{lead sourcing channels}} that connect you with your potential customers. Set a stringent {{lead qualification criteria}}, ensuring focus on quality prospects. Lastly, detail your customer-centric {{lead nurturing process}}, progressing leads through the buying journey. Always ensure confidentiality when dealing with potential client data.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "e267998e-818d-4fab-8e8c-3adde1a4416f",
+      "name": "Sales Crisis Management Plan",
+      "description": "This template assists in creating a crisis management plan for unforeseen sales downturns. Replace {{crisis identification}} with your plan to recognise and acknowledge a sales crisis. Substitute {{impact assessment}} with your method for evaluating how the crisis affects your sales function. Change {{critical operations}} to define necessary sales activities that must continue despite the crisis. Lastly, replace {{recovery plan}} with strategies to mitigate the crisis and return to normal operations.\n\n",
+      "content": "Start by outlining your {{crisis identification}} strategy, ensuring early detection of any sales issues. Proceed to conduct a detailed {{impact assessment}} to understand the full implications of the crisis. Identify your {{critical operations}} that need to keep running for maintaining your business functions. Finally, devise a comprehensive {{recovery plan}} to navigate through the crisis and steer your sales back on track. Be sure not to broadcast sensitive internal procedures.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "b21b9aec-a6d9-42b1-9004-da45ccf1e4c7",
+      "name": "Sales Pitch Review and Improvement",
+      "description": "This template assists in performing an in-depth review and improvement of your sales pitch. Substitute {{current pitch evaluation}} with an assessment of your existing pitch. Replace {{customer feedback}} with reactions and responses you've received from customers to your pitch. Alter {{pitch improvements}} with identified areas of enhancement for your pitch, and replace {{new pitch rehearsal}} with your preparation plan to practice and refine the new sales pitch.\n\n",
+      "content": "Initiate your pitch review with a thorough {{current pitch evaluation}}, identifying existing strengths and weaknesses. Incorporate {{customer feedback}} to make your evaluation more comprehensive and customer-centric. Define precise {{pitch improvements}} based on identified areas of your existing pitch that need enhancement. Culminate with a clear {{new pitch rehearsal}} plan, ensuring your new pitch is ready for successful delivery. Remember to maintain customer confidentiality while utilising feedback.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "84bb6e8f-2482-47d9-98a5-8cd3f1ae97e1",
+      "name": "Sales Training Program Outline",
+      "description": "This template aids in designing a comprehensive sales training program. Substitute {{training goals}} with the key learning objectives for your team. Replace {{module breakdown}} with a detailed plan of individual training modules and their respective content. Change {{interactive elements}} to specify how interactive sessions or activities will be incorporated into the training, and replace {{evaluation metrics}} with measurements of training effectiveness and team progress.\n\n",
+      "content": "Your sales training program begins by setting clear {{training goals}}, defining what success looks like. Break down the program into tangible {{module breakdown}}, ensuring systematic coverage of all necessary knowledge areas. Pepper the program with engaging {{interactive elements}} to facilitate active learning and practical application. Conclude with concrete {{evaluation metrics}}, providing a way to monitor progress and quantify the training's effectiveness. Always ensure the confidential nature of internal training programs.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    },
+    {
+      "id": "08840b06-3cab-4a80-a10b-921edb7bb9f2",
+      "name": "Long-term Sales Strategy Development",
+      "description": "This template is useful for creating a prolonged sales strategy for lasting success. Replace {{market analysis}} with a detailed study of your market dynamics. Substitute {{sales objective}} with a defined aim for your long-term sales. Alter {{strategic initiatives}} with your key actions to achieve these objectives, and change {{milestones and KPIs}} with check-points to keep track of progress over time.\n\n",
+      "content": "Commence the development of your long-term sales strategy with an in-depth {{market analysis}}, supplying the data-driven basis for your strategic decisions. Define your overarching {{sales objective}} for the desired horizon, providing a target to aim for. Pinpoint the necessary {{strategic initiatives}} that will propel you towards your ultimate sales target. Conclude with measurable {{milestones and KPIs}}, ensuring you can track your progress effectively. Confidentiality of strategic decisions should be respected.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "f05163b0-2a2a-4c27-9158-501b9cc728c8"
+    }
+  ]
+}

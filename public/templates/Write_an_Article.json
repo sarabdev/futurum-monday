@@ -1,0 +1,20 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [],
+  "prompts": [
+    {
+      "id": "cc766ffe-3a9c-4e50-b2fd-51c1477f1393",
+      "name": "Write an Article",
+      "description": "",
+      "content": "Write a viral article for LinkedIn by {{What's your name?}} about {{What would you like to write about?}}.  Open the article with a hook.  You should be practical and use tangible outcomes and relevant quotes at the end of every second paragraph.  Write with a witty tone.  Use LinkedIn formatting.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": null
+    }
+  ]
+}

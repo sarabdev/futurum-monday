@@ -1,0 +1,143 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "9c9c9790-6da3-4fec-b802-e865f9e54813",
+      "name": "Operations Manager",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "6f0c98bf-ccd0-4f7f-8290-73c0658e0767",
+      "name": "Production Efficiency Plan",
+      "description": "This template helps construct a production efficiency plan. {{Current production issues}} can be any prevalent production problems, {{proposed solutions}} are the fixes suggested, and {{anticipated improvements}} are the expected efficiency gains.\n\n",
+      "content": "Develop a meticulous production efficiency plan for {{Operations Manager's name}}. Analyse {{current production issues}}, present your {{proposed solutions}}, and forecast the {{anticipated improvements}}.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "9c9c9790-6da3-4fec-b802-e865f9e54813"
+    },
+    {
+      "id": "be599d1e-b34d-4817-af9f-ab094d9ebfd1",
+      "name": "Inventory Control Measures",
+      "description": "This template guides in outlining inventory control measures. {{Inventory issues}} refer to any stock management problems, {{control measures}} are proposed corrective actions, and {{effect on operations}} is how operations would be improved.\n\n",
+      "content": "Draft a detailed inventory control measure proposal for {{Operations Manager's name}} addressing {{inventory issues}}. Propose applicable {{control measures}} and examine the potential {{effect on operations}}.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "9c9c9790-6da3-4fec-b802-e865f9e54813"
+    },
+    {
+      "id": "f5eace0c-7a48-4389-be38-74d42efff155",
+      "name": "Supplier Relations Strategy",
+      "description": "This template aids in devising a supplier relations strategy. {{Key suppliers}} represent significant suppliers, {{relationship goals}} are the objectives for the relationship, and {{implementation strategy}} outlines how goals will be achieved.\n\n",
+      "content": "Construct a comprehensive supplier relations strategy for {{Operations Manager's name}} focusing on {{key suppliers}}. Detail the {{relationship goals}} and provide a clear {{implementation strategy}}.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "9c9c9790-6da3-4fec-b802-e865f9e54813"
+    },
+    {
+      "id": "a303dd83-1352-4b4b-80db-f92e404af537",
+      "name": "Maintenance Schedule",
+      "description": "Use {{equipment requiring maintenance}} to denote machinery that needs attention, {{maintenance tasks}} to clarify the specific jobs to be done, and {{proposed schedule}} to suggest when tasks should occur.\n\n",
+      "content": "Create a comprehensive maintenance schedule for {{Operations Manager's name}} for {{equipment requiring maintenance}}. Summarise the {{maintenance tasks}} and propose a practical {{proposed schedule}} for completion.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "9c9c9790-6da3-4fec-b802-e865f9e54813"
+    },
+    {
+      "id": "72036497-43fa-4c46-98ac-ccbdf85aef7f",
+      "name": "Safety Protocol Update",
+      "description": "This template assists in revising safety protocol. {{Current safety concerns}} denotes existing issue areas, {{safety measures}} are the planned policies, and {{training requirements}} refers to any educational needs.\n\n",
+      "content": "Write a detailed safety protocol update for {{Operations Manager's name}} addressing {{current safety concerns}}. Propose necessary {{safety measures}} and the associated {{training requirements}}.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "9c9c9790-6da3-4fec-b802-e865f9e54813"
+    },
+    {
+      "id": "e4079f46-f8fb-413c-8dd2-f3777bf107e7",
+      "name": "Quality Control Procedure",
+      "description": "Use {{critical production stages}} to refer to vital points in production, {{exploration process}} to dictate how the stages will be analysed, and {{quality control steps}} to outline how quality will be ensured.\n\n",
+      "content": "Develop a quality control procedure for {{Operations Manager's name}} identifying {{critical production stages}}. Describe the {{exploration process}} for those stages and possible {{quality control steps}}.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "9c9c9790-6da3-4fec-b802-e865f9e54813"
+    },
+    {
+      "id": "64581778-c13a-4b49-9e68-2dc900dd831f",
+      "name": "Sustainability Plan",
+      "description": "This template aids in forming a sustainability plan. {{Sustainable goals}} represent eco-friendly objectives, {{change initiatives}} are the steps towards the goals, and {{monitoring methods}} show how progress will be tracked.\n\n",
+      "content": "Sketch out a detailed sustainability plan for {{Operations Manager's name}} outlining {{sustainable goals}}. List the specific {{change initiatives}} for each goal and define {{monitoring methods}}.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "9c9c9790-6da3-4fec-b802-e865f9e54813"
+    },
+    {
+      "id": "e0a21124-cf40-4562-97a8-a58b5a5495a3",
+      "name": "Process Improvement Proposal",
+      "description": "Use {{inefficient processes}} to highlight areas of operation needing improvement, {{solution proposals}} dictate how the process can be streamlined, and {{impact assessment}} measures how changes would affect the operations.\n\n",
+      "content": "Write a process improvement proposal for {{Operations Manager's name}} addressing {{inefficient processes}}. Present innovative {{solution proposals}} and an accurate {{impact assessment}}.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "9c9c9790-6da3-4fec-b802-e865f9e54813"
+    },
+    {
+      "id": "f72fb650-71ac-4568-b9ae-042d7d24223f",
+      "name": "Operations Budget Plan",
+      "description": "This template provides a structure for an operations budget plan. {{Anticipated costs}} highlight predicted expenses, {{potential savings}} signal areas where costs can be reduced, and {{impact on operations}} clarifies how changes would affect operations.\n\n",
+      "content": "Compile a comprehensive operations budget plan for {{Operations Manager's name}} predicting {{anticipated costs}}. Identify areas for {{potential savings}} and assess the expected {{impact on operations}}.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "9c9c9790-6da3-4fec-b802-e865f9e54813"
+    },
+    {
+      "id": "a0b0b21f-f21b-4a1d-9d96-8595dbae3235",
+      "name": "Staff Rostering Procedure",
+      "description": "This template supports developing a staff rostering procedure. Substitute {{staff availability}} with worker shift preferences, {{rostering strategy}} for how shifts will be allocated, and {{conflict resolution}} for handling scheduling disputes.\n\n",
+      "content": "Create a staff rostering procedure for {{Operations Manager's name}} considering {{staff availability}}. Implement a fair {{rostering strategy}} and detail an efficient {{conflict resolution}} plan.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "9c9c9790-6da3-4fec-b802-e865f9e54813"
+    }
+  ]
+}

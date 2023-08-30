@@ -1,0 +1,143 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "b230539e-09ee-4fe5-848c-4f0d72d949fb",
+      "name": "CTO",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "e2177c96-e66b-48fb-abb7-dc3bfbf44ee8",
+      "name": "Technology Strategy Overview",
+      "description": "The template can aid the CTO in outlining a future technology strategy. The variables involved are {{strategic goals}} referring to the primary technology goals of the company, {{key technologies}} representing major tech platforms crucial to the company, and {{implementation plan}} that lays out the timeline for technology adoption.\n\n",
+      "content": "Compose a comprehensive technology strategy overview for {{CTO's name}}. The document should cover specific {{strategic goals}} that are to be achieved, provide detailed insights into the {{key technologies}}, and include a clear {{implementation plan}}.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "b230539e-09ee-4fe5-848c-4f0d72d949fb"
+    },
+    {
+      "id": "788f0f0f-9bc1-4a20-944b-44fd06ac869f",
+      "name": "System Upgrade Proposal",
+      "description": "This template supports creating a proposal for system upgrades. {{Current system weaknesses}} refer to prevalent limitations, {{proposed solutions}} are the updates planned, and {{expected improvements}} are the benefits that will be observed after the upgrade.\n\n",
+      "content": "Draft a proposal for {{CTO's name}} addressing {{current system weaknesses}} with the provision of effective {{proposed solutions}}. Detail the {{expected improvements}} alongside potential return on investment from such an upgrade.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "b230539e-09ee-4fe5-848c-4f0d72d949fb"
+    },
+    {
+      "id": "8a1770bc-7ebf-4cdb-8bbc-94172cb9a3d8",
+      "name": "Project Management Plan",
+      "description": "This template aids in devising a project management plan. The {{project objectives}} refer to the desired outcomes, {{major deliverables}} are the substantial outputs, and {{timeline}} is the schedule for the project.\n\n",
+      "content": "Develop a project management plan for {{CTO's name}} encapsulating clear {{project objectives}}. Highlight the {{major deliverables}} expected and propose a realistic {{timeline}}.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "b230539e-09ee-4fe5-848c-4f0d72d949fb"
+    },
+    {
+      "id": "308ca3f9-edba-47fa-94cf-24171061f0b2",
+      "name": "Cybersecurity Strategy",
+      "description": "This template assists in formulating a comprehensive cybersecurity strategy. {{Identified threats}} stand for perceived cybersecurity threats, {{defense measures}} are the countermeasures recommended, and {{employee training}} refers to the training needs for preventative measures.",
+      "content": "Forge a well-defined cybersecurity strategy for {{CTO's name}} outlining key {{identified threats}}. Investigate recommended {{defense measures}} while emphasising the significance of {{employee training}} in maintaining strong cyber hygiene.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "b230539e-09ee-4fe5-848c-4f0d72d949fb"
+    },
+    {
+      "id": "80d6df54-55bc-4e11-a2bb-dcb1c2556317",
+      "name": "Tech Team Performance Evaluation",
+      "description": "This template guides in conducting an effective tech team performance evaluation. {{Staff member}} refers to the individual being evaluated, {{performance metrics}} are the standards for assessment, and {{recommendations}} are suggestions for improvement.\n\n",
+      "content": "Create a performance evaluation report for {{CTO's name}} on {{staff member}} based on set {{performance metrics}}. Include constructive {{recommendations}} aimed at future performance improvement.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "b230539e-09ee-4fe5-848c-4f0d72d949fb"
+    },
+    {
+      "id": "eef6d776-6795-41bb-ab80-3f0777a11b56",
+      "name": "Software Vendor Selection Criteria",
+      "description": "This template aids in outlining criteria for software vendor selection. {{Software type}} refers to the specific application type, {{vendor qualifications}} are the requirements for vendors, and {{assessment process}} represents the vendor vetting procedure.\n\n",
+      "content": "Arrange suitable vendor selection criteria for {{CTO's name}} for procurement of {{software type}}. Lay emphasis on essential {{vendor qualifications}} and chalk out a transparent {{assessment process}}.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "b230539e-09ee-4fe5-848c-4f0d72d949fb"
+    },
+    {
+      "id": "24f5a02e-260e-4c4b-a069-52233b163510",
+      "name": "R&D Budget Plan",
+      "description": "This template facilitates the creation of an R&D budget plan. {{Projected expenses}} cover expected costs, {{allocations}} are the budget distributions, and {{future projections}} forecast financial needs.\n\n",
+      "content": "This template facilitates the creation of an R&D budget plan. {{Projected expenses}} cover expected costs, {{allocations}} are the budget distributions, and {{future projections}} forecast financial needs.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "b230539e-09ee-4fe5-848c-4f0d72d949fb"
+    },
+    {
+      "id": "84bd6b27-d24a-471d-b88c-b68758d9dea5",
+      "name": "Technology Partnership Proposal",
+      "description": "This template helps outline a proposal for a technology partnership. {{Potential partner}} is the prospective collaborator, {{shared goals}} refer to mutual objectives, and {{agreement terms}} are the partnership terms.\n\n",
+      "content": "Draft a technology partnership proposal for {{CTO's name}} exploring collaboration with {{potential partner}}. Highlight {{shared goals}} and provide a draft of the {{agreement terms}}.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "b230539e-09ee-4fe5-848c-4f0d72d949fb"
+    },
+    {
+      "id": "73a33272-93c5-46a7-a08f-2e1896bc623a",
+      "name": "New Tech Implementation Communication",
+      "description": "This template guides in drafting a communication about new tech implementation. {{Technology to be implemented}} is the new technology, {{benefits}} are the expected advantages, and {{transition plan}} is the timeline and process for implementation.\n\n",
+      "content": "Write a communication on behalf of {{CTO's name}} about {{technology to be implemented}}. Dive into the {{benefits}} of this new tech and explain the {{transition plan}} to reassure staff.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "b230539e-09ee-4fe5-848c-4f0d72d949fb"
+    },
+    {
+      "id": "a017c49b-cf91-4456-bb57-c9c60ec5f17b",
+      "name": "Regulatory Compliance Update",
+      "description": "This template aids in sketching an update about regulatory compliance. {{Regulations}} are the specific rules to which compliance is required, {{compliance status}} refers to the company's current adherence levels, and {{action plan}} represents the next steps for ensuring or maintaining compliance.\n\n",
+      "content": "Draft a communication for {{CTO's name}} detailing our adherence to {{regulations}}. Present a clear statement of our {{compliance status}} and outline the {{action plan}} moving forward to address any shortcomings. Make sure to clearly state any potential impact on operations.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "b230539e-09ee-4fe5-848c-4f0d72d949fb"
+    }
+  ]
+}

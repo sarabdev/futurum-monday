@@ -1,0 +1,130 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "ef2d4b45-d04a-4c8f-9d43-a986117850aa",
+      "name": "Director of Finance",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "e810327c-fab2-4b8f-bf31-fcf152c7872c",
+      "name": "Director of Finance's Budget Evaluation Report",
+      "description": "Use this template to aid the Director of Finance in outlining a comprehensive budget evaluation. Replace {{Director of Finance's name}} with the appropriate full name, {{evaluation period}} with the period the evaluation report encapsulates, {{key budget elements}} with the significant budget components, and {{identified variances}} with the variances recognised concerning the budget.\n\n",
+      "content": "Construct a detailed budget evaluation report for {{Director of Finance's name}} encompassing the period of {{evaluation period}}. The evaluation should focus on {{key budget elements}} and discuss the {{identified variances}} in great detail. Avoid presenting non-finance related matters in this report.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "ef2d4b45-d04a-4c8f-9d43-a986117850aa"
+    },
+    {
+      "id": "6cd2a01e-5e07-4351-b72e-ac5abf227149",
+      "name": "Director of Finance's Departmental Meeting Minutes",
+      "description": "Use this template to compile concise meeting minutes for a departmental meeting headed by the Director of Finance. Replace {{Director of Finance's name}} with their full name, {{meeting date}} with the appropriate date, {{major talking points}} with the vital subjects discussed in the meeting, and {{decisions made}} with the decisions arrived at during the meeting.\n\n",
+      "content": "Draft accurate minutes from the financial department meeting conducted by {{Director of Finance's name}} on {{meeting date}}. These minutes should capture the {{major talking points}} and any {{decisions made}}. Keep the language simple and clear, excluding any irrelevant details.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "ef2d4b45-d04a-4c8f-9d43-a986117850aa"
+    },
+    {
+      "id": "1e93e257-9293-41df-bbb1-34c052aeea07",
+      "name": "Director of Finance's Cost Reduction Proposal",
+      "description": "This template helps in formulating a proposal focusing on cost reduction measures. Change {{Director of Finance's name}} with the Director's full name, {{proposed cost-saving measures}} with the measures under consideration, {{anticipated savings}} with the expected savings from these measures.\n\n",
+      "content": "Prepare a proposal for {{Director of Finance's name}} outlining the {{proposed cost-saving measures}}. Discuss their implications, efficiencies, and the possible financial impact, highlighting the {{anticipated savings}}. Please refrain from including any measures still under review or non-approved by the management.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "ef2d4b45-d04a-4c8f-9d43-a986117850aa"
+    },
+    {
+      "id": "4938bdeb-ba53-4f31-b58f-8b1b20e825a9",
+      "name": "Director of Finance's Yearly Financial Report",
+      "description": "Use this template to assist the Director of Finance in assembling a comprehensive annual financial report. Replace {{Director of Finance's name}} with the Director's full name, {{highlighted financial data}} with the significant financial information of the year, and {{anticipated financial trends}} with the forecasted finance trends for the following year.\n\n",
+      "content": "Develop a yearly financial report for {{Director of Finance's name}}. It should incorporate {{highlighted financial data}} of the current fiscal year and provide analyses on these data points. In addition, comment on {{anticipated financial trends}} for the next year. Avoid including speculative or unconfirmed figures.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "ef2d4b45-d04a-4c8f-9d43-a986117850aa"
+    },
+    {
+      "id": "65bc0d89-17a9-42b1-9ff5-b9c114e1ee29",
+      "name": "Financial Forecasting Report",
+      "description": "This template is designed to assist in generating a financial forecasting report. Replace {{forecasting period}} with the specific timeline that the forecast covers, {{key financial indicators}} with the relevant financial metrics under observation, and {{positioning strategies}} with strategies devised based on the forecast.\n\n",
+      "content": "Compile a report detailing the financial forecasts for the next {{forecasting period}}. The report should provide insights into the trends of {{key financial indicators}}, and lay out adaptive {{positioning strategies}} based on these forecasts. Please ensure only robust forecasts based on robust data are included, avoiding undue speculation.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "ef2d4b45-d04a-4c8f-9d43-a986117850aa"
+    },
+    {
+      "id": "abc1254f-909e-409c-9f43-1b7c193e203d",
+      "name": "Cost-Benefit Analysis",
+      "description": "This template aids in creating a detailed cost-benefit analysis. Substitute {{project name}} with the project for which this analysis is being undertaken, {{expected costs}} with the anticipated expense associated with the project, and {{projected benefits}} with the expected advantage or returns from the project.\n\n",
+      "content": "Draft a cost-benefit analysis for the {{project name}}. List all {{expected costs}} including opportunity costs and forecasted expenses. Then detail the {{projected benefits}} both in monetary terms and potential business advancements. Please avoid including unconfirmed or speculative figures.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "ef2d4b45-d04a-4c8f-9d43-a986117850aa"
+    },
+    {
+      "id": "58d71703-0ce2-43cf-93b2-70e3eee047f7",
+      "name": "Monthly Financial Statement",
+      "description": "Employ this template to prepare a monthly financial statement. Replace {{reporting month}} with the month the statement covers, {{financial figures}} with the key financial metrics for the month, and {{variances}} with any significant financial fluctuations encountered in the reporting period.\n\n",
+      "content": "Assemble a financial statement for {{reporting month}}, highlighting pertinent {{financial figures}}. The report should also articulate any significant {{variances}} compared to the previous months and potential reasons. Please ensure all figures are accurate and verified.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "ef2d4b45-d04a-4c8f-9d43-a986117850aa"
+    },
+    {
+      "id": "2ceddcdf-345c-4d28-b042-fb2f66e4e3fa",
+      "name": "Risk Management Plan",
+      "description": "This template supports formulating a risk management plan. Replace {{identified risks}} with the potential risks detected, {{risk management strategies}} with strategies to mitigate or manage the risks, and {{contingency plans}} with alternative plans should the implemented strategies fail.\n\n",
+      "content": "Construct a comprehensive risk management plan. Identify {{identified risks}}, discuss their potential impact and propose {{risk management strategies}} for each. Also, include {{contingency plans}} to ensure business continuity in worst-case scenarios. Avoid including minor risks not capable of affecting the business operation significantly.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "ef2d4b45-d04a-4c8f-9d43-a986117850aa"
+    },
+    {
+      "id": "f240a681-a541-47a5-a534-b5fd89a8f2c2",
+      "name": "Internal Audit Report",
+      "description": "This template can be used to create an internal audit report. Insert the {{audit period}} for the auditing time span, {{audit findings}} for the major discoveries made during the audit, and {{recommendations}} for potential improvements or amendments based on audit results.\n\n",
+      "content": "Draft an internal audit report covering the {{audit period}}. Present key {{audit findings}}, outlining non-compliance points, discrepancies, and exceptional events. Follow with {{recommendations}} for corrective actions and preventative steps to improve future operations. Exclude any sensitive information that should only be disclosed to particular personnel.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "ef2d4b45-d04a-4c8f-9d43-a986117850aa"
+    }
+  ]
+}

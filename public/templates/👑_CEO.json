@@ -1,0 +1,143 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "56b52821-e4f6-4f19-b561-5d07d36aeee0",
+      "name": "CEO",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "a187faff-1a54-41fe-aa53-272309d4619f",
+      "name": "Stakeholder Progress Report",
+      "description": "This template assists the CEO in drafting a comprehensive progress report for stakeholders. The user should replace {{CEO's name}} with the executive's full name, {{topic}} with the main focus of the meeting, and {{future initiative}} with a key upcoming project or plan.\n",
+      "content": "Draft a progress report from {{CEO's Name}} for all stakeholders on the {{Topic}}. Begin with current status, followed by achieved milestones, obstacles encountered, and steps taken to overcome them. Emphasise tangible outcomes and outline future plans regarding {{Future Initiative}}. Exclude sensitive HR or financial topics.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "56b52821-e4f6-4f19-b561-5d07d36aeee0"
+    },
+    {
+      "id": "0bf1bad0-dcc4-4594-be48-6de55e84dff6",
+      "name": "Business Strategy Brief",
+      "description": "This template helps the CEO articulate a business strategy. {{timeframe}} should be replaced with the relevant period, and {{pillar1}}, {{pillar2}}, {{pillar3}} should outline the strategic pillars of the business plan.\n",
+      "content": "Formulate a business strategy brief highlighting our vision for the company in the next {{timeframe}}. Describe major strategic pillars such as {{pillar1}}, {{pillar2}}, {{pillar3}}, and their intended impact on our business’s growth. Exclude any confidential or speculative information.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "56b52821-e4f6-4f19-b561-5d07d36aeee0"
+    },
+    {
+      "id": "e8d2d631-a296-4b9b-b9cc-641521a65a7f",
+      "name": "Q&A Preparation",
+      "description": "This template prepares the CEO for Q&A sessions. {{event type}} should be replaced with the type of event, e.g., town hall, meeting, webinar, and {{key area 1}}, {{key area 2}}, {{key area 3}} should mention the main focus areas or themes likely to be discussed.\n",
+      "content": "Prepare potential questions and answers for {{CEO's name}} for the upcoming {{event type}}. Questions should cover our performance in {{key area 1}}, strategy for {{key area 2}}, and future plans for {{key area 3}}. Provide comprehensive but succinct answers and avoid speculations.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "56b52821-e4f6-4f19-b561-5d07d36aeee0"
+    },
+    {
+      "id": "b477272a-1a72-40c9-bf4f-8d936eb7057b",
+      "name": "Monthly Newsletter",
+      "description": "The template assists the CEO in crafting an engaging monthly employee newsletter. The user should replace {{specific area}} with a project or initiative of the previous month and {{next month's focus}} with the key focus area for the forthcoming month.\n",
+      "content": "Draft a monthly newsletter addressing all employees from the perspective of {{CEO's name}}. Discuss our achievement in {{specific area}}, give an overview of our next month's focus on {{next month's focus}}, and insert an employee recognition segment for the {{employee team}}. Exclude any sensitive internal information.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "56b52821-e4f6-4f19-b561-5d07d36aeee0"
+    },
+    {
+      "id": "264b1659-05ae-42ba-b3bc-30c777311bd4",
+      "name": "Introductory Remarks",
+      "description": "The template provides guidance for the CEO's speech at company events. {{company event}} should be the name or type of the event, and {{specific department}} should mention the department or team, if there is a particular focus on them in this event.\n",
+      "content": "Compose a welcoming address for {{CEO's name}} for the upcoming {{company event}}. Highlight the importance of the event, its implications on the future of our {{department}}, and thank the employees for their efforts towards {{specific goal}}. Don't include sensitive or speculative information.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "56b52821-e4f6-4f19-b561-5d07d36aeee0"
+    },
+    {
+      "id": "b49e14c6-0baa-4d13-becf-39e24606e6b6",
+      "name": "Major Decision Announcement",
+      "description": "This prompt helps the CEO in drafting an announcement to stakeholders about a major business decision. The user should replace {{CEO's name}} with the actual name, {{decision}} with the decision that has been made, and {{reasons and implications}} with the rationale behind the decision and its expected impact on the business.\n",
+      "content": "Prepare an announcement from {{CEO's name}} for all stakeholders about a major decision {{decision}} that our company has made. Discuss the reasons behind the decision, its alignment with our business goals, and the potential implications {{reasons and implications}} it may have on our operations. Avoid going into confidential details about the decision-making process.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "56b52821-e4f6-4f19-b561-5d07d36aeee0"
+    },
+    {
+      "id": "2a0633b9-15fc-469a-8511-94606a1c9c83",
+      "name": "Employee Motivational Message",
+      "description": "This prompt assists the CEO in writing a motivational message for employees. The user should replace {{CEO's name}}, {{current challenge}} and {{vision/expectations}} with the CEO's name, the ongoing situation or project that's proving challenging, and the company’s vision.\n",
+      "content": "Write a motivational message from {{CEO's name}} to all employees to boost morale amid {{current challenge}}. Acknowledge their hard work, share your view of the bigger picture, your confidence in their ability, and refresh the firm's {{vision/expectations}}. Kindly avoid mentioning any specific employee or department.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "56b52821-e4f6-4f19-b561-5d07d36aeee0"
+    },
+    {
+      "id": "f955f9a0-523e-4cb5-b518-3bf6911b5e24",
+      "name": "Investor Meeting Summary",
+      "description": "This prompt prepares the CEO to summarise investor meeting outcomes. The user should replace {{CEO's name}}, {{meeting date}} and {{key discussion points}} with the CEO's name, date of the investor meeting and primary points or decisions discussed during the meeting.\n",
+      "content": "Summarise the meeting with our investors on {{meeting date}} from the perspective of {{CEO's name}}. Highlight {{key discussion points}}, any decisions taken, and how those align with our strategic goals. Please exclude any contentious or confidential points.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "56b52821-e4f6-4f19-b561-5d07d36aeee0"
+    },
+    {
+      "id": "fc54fc0a-bd0e-4e1e-84a4-7812dd7063e0",
+      "name": "Thought Leadership Article",
+      "description": "This prompt assists the CEO in outlining a thought leadership article on a relevant industry or company topic. {{CEO's name}}, {{topic}} and {{key insights}} should be replaced with the CEO's name, the topic of the article and principal insights respectively.\n",
+      "content": "Draft a thought leadership article for {{CEO's name}} on {{topic}}. Discuss the current landscape, innovative thoughts, {{key insights}}, and what the future holds. Do not include any derogatory statements about competitors or any controversial remarks.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "56b52821-e4f6-4f19-b561-5d07d36aeee0"
+    },
+    {
+      "id": "148d21a8-6d0c-4d60-bc46-c334dea29264",
+      "name": "Company Strategy Presentation",
+      "description": "This prompt helps the CEO prepare a presentation on the company's strategy. The user should replace {{CEO's name}}, {{specific objective}} and {{course of action}} with the CEO's name, a specific strategic objective and the steps to achieve it.\n",
+      "content": "Create a set of slides for a presentation from {{CEO's name}} on our company's strategy. Discuss the state of the company, our {{specific objective}}, the course of action {{course of action}} we plan to undertake to reach it and potential challenges. Steer clear of any confidential data or speculative forecasts.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "56b52821-e4f6-4f19-b561-5d07d36aeee0"
+    }
+  ]
+}

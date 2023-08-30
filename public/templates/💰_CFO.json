@@ -1,0 +1,143 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "6185276c-ff81-41bb-bcf9-b4671fb5f7d3",
+      "name": "CFO",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "7f57d8f6-adb4-4b68-b26a-8424a9bc47b4",
+      "name": "Financial Update Announcement",
+      "description": "This template assists the CFO to inform stakeholders about the company's financial updates. Replace {{CFO's name}} with the CFO's full name, {{end of financial period}} with the period the report covers, {{future projections timeframe}} with the period of the upcoming projections.\n",
+      "content": "Draft an announcement from {{CFO's name}} to all stakeholders providing financial updates for the period ending {{end of financial period}}. Discuss performance indicators, budget variances and financial prospects for the next {{future projections timeframe}}. Avoid disclosing sensitive internal finance strategies or unsolidified plans.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "6185276c-ff81-41bb-bcf9-b4671fb5f7d3"
+    },
+    {
+      "id": "88ce6432-95b2-49a4-9e69-8fe05c716ca9",
+      "name": "Finance Team Meeting Agenda",
+      "description": "This prompt supports creating a comprehensive agenda for a finance team meeting. Replace {{CFO's name}} with the CFO's name, {{current financial performance topic}} with the issue or goal currently being addressed, {{future finance initiative}} with any planned finance projects, {{specific issue or solution}} with any challenges or improvements identified.\n",
+      "content": "Prepare an agenda for the upcoming finance team meeting to be conducted by {{CFO's name}}. Main points to cover include our performance on {{current financial performance topic}}, plans for {{future finance initiative}}, and discussions on {{specific issue or solution}}. Avoid including topics unrelated to finance.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "6185276c-ff81-41bb-bcf9-b4671fb5f7d3"
+    },
+    {
+      "id": "05849f73-a2e1-404d-afee-7572a8358249",
+      "name": "Supplier Negotiation Points",
+      "description": "This prompt helps to devise negotiation points for supplier contracts. Replace {{CFO's name}} with the CFO's full name, {{supplier's name}} with the supplier's name, {{specific products or services}} with the products or services relevant to this negotiation.\n",
+      "content": "Formulate negotiation points for {{CFO's name}} for the meeting with {{supplier's name}}. Touch on contract length, terms of payment, potential discounts on {{specific products or services}}, and measures in case of supply chain disruptions. Please do not include any sensitive or proprietary company data.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "6185276c-ff81-41bb-bcf9-b4671fb5f7d3"
+    },
+    {
+      "id": "c906448e-fe37-49d9-b394-4ccc19a56944",
+      "name": "Department Budget Allocation",
+      "description": "This template aids the CFO in distributing the budget to different departments. Replace {{CFO's name}} with the CFO's full name and {{department names}} with the names of the departments relevant to this message.",
+      "content": "Draft an email for {{CFO's name}} to department heads outlining the new budget allocation. Discuss changes in allocation for {{department names}}, reasoning behind it, and the expected efficiency or performance growth. Please avoid mentioning any confidential finance strategies or detailed comparisons with previous budgets.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "6185276c-ff81-41bb-bcf9-b4671fb5f7d3"
+    },
+    {
+      "id": "712cee7a-9f9a-41ff-94ae-6cce1c4e69b6",
+      "name": "Investor Presentation",
+      "description": "This prompt supports CFO in preparing a financial presentation for investors. Replace {{CFO's name}} with CFO's full name, {{financial metrics}} with the relevant financial data, {{key project or initiative}} with the project or initiative the allocated capital will be used for, {{forecast timeframe}} with the time period the forecast covers.\n",
+      "content": "Create a set of slides for a presentation by {{CFO's name}} to our investors. Key points should include an overview of the previous quarter’s {{financial metrics}}, plans for capital use in {{key project or initiative}}, and financial forecasts for the next {{forecast timeframe}}. Avoid speculation and ensure all information is supported by sound financial data.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "6185276c-ff81-41bb-bcf9-b4671fb5f7d3"
+    },
+    {
+      "id": "85c661aa-d2d1-4497-8f51-08e7cef703e8",
+      "name": "Cash Flow Statement",
+      "description": "This template aids the CFO in presenting a clear overview on the firm's cash flow situation. Replace {{CFO's name}} with CFO's full name, {{Income Statement}}, {{Balance Sheet}}, and {{Supplementary Information}} with respective financial data.",
+      "content": "Draft a cash flow statement for {{CFO's name}}. It needs to clearly outline the cash generated in operating, investing and financing activities. Be sure to include reconciliation of {{Income Statement}}, changes in {{Balance Sheet}} items, and {{Supplementary Information}}. Do not include any speculative calculations or data.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "6185276c-ff81-41bb-bcf9-b4671fb5f7d3"
+    },
+    {
+      "id": "cdad06de-c68e-4415-8def-751fd53dec48",
+      "name": "Business Expansion Proposal",
+      "description": "This prompt helps the CFO formulate a proposal for business expansion. Substitute {{CFO's name}}, {{new market}}, {{initial capital investment}} with the relevant details.",
+      "content": "Develop a business expansion proposal on behalf of {{CFO's name}} looking to explore {{new market}}. Pen down the investment requirements, approximate turnover, and projected financial risks. Include details about the {{initial capital investment}} and projected timeline. Skip any untimely or inappropriate details.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "6185276c-ff81-41bb-bcf9-b4671fb5f7d3"
+    },
+    {
+      "id": "be3d50d3-beab-4ccd-ab1d-2053d6c04f6b",
+      "name": "Financial Risk Analysis",
+      "description": "The template is designed to guide CFO in analysing the financial risks involved in a strategy or project. Replace {{CFO's name}}, {{strategy or project}}, {{risk factors}} with suitable data.",
+      "content": "Craft a financial risk analysis for {{CFO's name}} on {{strategy or project}}. Discuss potential {{risk factors}}, prospective impacts on profits and mitigating measures. Steer clear of any unrelated elements.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "6185276c-ff81-41bb-bcf9-b4671fb5f7d3"
+    },
+    {
+      "id": "dd008331-4732-47b9-93ce-a222b63067c1",
+      "name": "Loan Application",
+      "description": "This prompt aids the CFO in applying for a business loan. Substitute {{CFO's name}}, {{loan amount}}, {{purpose of loan}}, {{repayment plan}} with the apt specifications. ",
+      "content": "Compose a letter on behalf of {{CFO's name}} applying for a business loan of {{loan amount}}. State the {{purpose of loan}}, how it will help business growth, and outline the {{repayment plan}}. Exclude any irrelevant or personal information.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "6185276c-ff81-41bb-bcf9-b4671fb5f7d3"
+    },
+    {
+      "id": "900edd40-efbe-4198-abbe-778168d74bbe",
+      "name": "Debt Management Plan",
+      "description": "This template assists the CFO in creating a strategy to manage company's debt. Replace {{CFO's name}}, {{short term debt}}, {{long term debt}}, {{debt payment strategy}} with corresponding information. ",
+      "content": "Formulate a comprehensive debt management plan for {{CFO's name}}. Highlight the current status of {{short term debt}} and {{long term debt}}, propose a {{debt payment strategy}}, and possible impact on company's future financial health. Do avoid including assumptions or unsanctioned financial strategies.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "6185276c-ff81-41bb-bcf9-b4671fb5f7d3"
+    }
+  ]
+}

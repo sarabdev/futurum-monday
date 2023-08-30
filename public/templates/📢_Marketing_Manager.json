@@ -1,0 +1,143 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "e7221b61-4d1b-40f5-ad3f-8cef5fed3808",
+      "name": "Marketing Manager",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "5c238992-19c3-49be-b6f9-afdd579b715c",
+      "name": "Marketing Strategy Plan",
+      "description": "This template facilitates the creation of a comprehensive marketing strategy. Replace {{business goals}} with your company's strategic goals, {{target market}} with your ideal customer demographic, {{competitive analysis}} with your assessment of market competition, and {{marketing tactics}} with your proposed marketing methods.\n",
+      "content": "Draft a robust marketing strategy reflecting key {{business goals}}, carefully defined {{target market}}, detailed {{competitive analysis}}, and a wide array of innovative {{marketing tactics}}. Evade divulging classified information about new products, service offerings, or confidential business strategies.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "e7221b61-4d1b-40f5-ad3f-8cef5fed3808"
+    },
+    {
+      "id": "e525bd15-ee09-4be3-ab9d-8bacca7ba528",
+      "name": "Market Research Report",
+      "description": "This template serves to structure a market research report. Substitute {{research objectives}} with your specific goals for the research, {{research methodology}} with your conducted survey or study methods, {{findings}} with the data gathered, and {{recommendations}} with your proposed decisions based on the findings.\n",
+      "content": "Pencil in a market research report that clarifies the {{research objectives}}, validates the {{research methodology}}, provides an exhaustive review of the {{findings}}, and offers impactful {{recommendations}}. Be careful not to disclose sensitive information about participants or proprietary analysis techniques.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "e7221b61-4d1b-40f5-ad3f-8cef5fed3808"
+    },
+    {
+      "id": "6ecc6b52-3a4d-4079-9642-5bb616fa7019",
+      "name": "Product Launch Plan",
+      "description": "Use this template to design an effective product launch plan. Replace {{product details}} with specifics about the new product, {{launch timeline}} with your intended launch schedule, {{promotion strategies}} with marketing methods to be used, and {{success metrics}} with the criteria for determining the success of the launch.\n",
+      "content": "Assemble a product launch plan that introduces the {{product details}}, outlines the {{launch timeline}}, incorporates ambitious {{promotion strategies}}, and establishes clear {{success metrics}}. Refrain from including competitive secrets, confidential product details, or vague and unrealistic goals.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "e7221b61-4d1b-40f5-ad3f-8cef5fed3808"
+    },
+    {
+      "id": "963359e3-7813-41ab-8df5-46582f979e4a",
+      "name": "Content Marketing Calendar",
+      "description": "This template guides you in crafting a content marketing calendar. Substitute {{content themes}} with your themes for content, {{publication dates}} with timings for each content release, {{content types}} with the various formats of content, and {{performance measurements}} with metrics for evaluating the content's success.",
+      "content": "Devise a content marketing calendar that specifies intriguing {{content themes}}, fixed {{publication dates}}, engaging {{content types}}, and utilises quantifiable {{performance measurements}}. Be mindful not to reveal industry secrets, confidential campaign information, or sensitive metrics.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "e7221b61-4d1b-40f5-ad3f-8cef5fed3808"
+    },
+    {
+      "id": "af6335e2-51ce-4a86-b281-1255d93f6296",
+      "name": "Digital Marketing Campaign",
+      "description": "This template assists in the development of a digital marketing campaign. Replace {{campaign objectives}} with specific, measurable goals for the campaign, {{target audience}} with your ideal digital customers, {{channels}} with chosen digital platforms, and {{evaluation metric}} with your method for assessing the campaign’s effectiveness.\n\n",
+      "content": "Build a diligent digital marketing campaign detailing the focused {{campaign objectives}}, your defined {{target audience}}, suitable {{channels}}, and the adoption of an appropriate {{evaluation metric}}. Avoid sharing confidential data, customer insights securely held, or proprietary marketing tactics.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "e7221b61-4d1b-40f5-ad3f-8cef5fed3808"
+    },
+    {
+      "id": "7305bc89-1cda-402e-a9fe-c64e34ad7adf",
+      "name": "Brand Strategy Development",
+      "description": "This outline assists in generating a robust brand strategy. Substitute {{brand vision}} with your overall brand aspiration, {{value proposition}} with unique aspects of your brand, {{customer personas}} with the typical profiles of your targeted customers, and {{brand touchpoints}} with interactions customers have with your brand.",
+      "content": "Formulate a brand strategy characterising a compelling {{brand vision}}, a distinct {{value proposition}}, comprehensive {{customer personas}}, and essential {{brand touchpoints}}. Steer clear of any information that could undermine the brand's image or share closely-guarded company secrets.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "e7221b61-4d1b-40f5-ad3f-8cef5fed3808"
+    },
+    {
+      "id": "db792fb9-a55e-4d16-9f24-7566209b87b5",
+      "name": "Customer Relationship Management Plan",
+      "description": "This blueprint is for devising a customer relationship management (CRM) plan. Replace {{CRM goals}} with your objectives for customer relationships, {{customer segmentation}} with how you plan to categorise customers, {{communication strategies}} with interaction plans, and {{retention tactics}} with ways to maintain customer loyalty.\n\n",
+      "content": "Develop a CRM plan incorporating concrete {{CRM goals}}, precise {{customer segmentation}}, forward-thinking {{communication strategies}}, and well-thought-out {{retention tactics}}. Avoid referencing specific customer examples or sensitive data protected by data privacy laws.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "e7221b61-4d1b-40f5-ad3f-8cef5fed3808"
+    },
+    {
+      "id": "98e4a5bd-f67a-4a73-9bc9-fce8c984039c",
+      "name": "Competitive Analysis Report",
+      "description": "This template will guide you in shaping a competitive analysis report. Substitute {{industry overview}} with a general view of the market your business operates in, {{competitors}} with key opponents in your field, {{competitive positioning}} with your stance compared to competitors, and {{action steps}} with strategic plans based on your findings.\n\n",
+      "content": "Craft a competitive analysis report aptly summarising the {{industry overview}}, profiling dominant {{competitors}}, assessing your {{competitive positioning}}, and proposing clear-cut {{action steps}}. Refrain from making defamatory comments or unfounded claims about competitors.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "e7221b61-4d1b-40f5-ad3f-8cef5fed3808"
+    },
+    {
+      "id": "739bb5bc-30dd-484b-8fb1-2f25ead58a86",
+      "name": "Social Media Marketing Strategy",
+      "description": "Use this template to construct an effective social media marketing strategy. Replace {{social media objectives}} with your goals for social media presence, {{target audience}} with whom your content will aim to reach, {{content strategy}} with your plan for what types of posts to share, and {{performance indicators}} with your chosen metrics for tracking success.\n\n",
+      "content": "Conceive a social media marketing strategy outlining compelling {{social media objectives}}, clarifying your {{target audience}}, curating a coherent {{content strategy}}, and monitoring key {{performance indicators}}. Avoid divulging sensitive company insider information or detailed demographic data about followers.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "e7221b61-4d1b-40f5-ad3f-8cef5fed3808"
+    },
+    {
+      "id": "6b91a0ac-4b27-4c42-ba7a-078450482c61",
+      "name": "Email Marketing Campaign",
+      "description": "This template aids in building an efficient email marketing campaign. Substitute {{campaign goals}} with your defined targets for the campaign, {{subscriber segments}} with your specific customer groups, {{email content}} with the nature of emails to be sent, and {{evaluation metric}} with how you intend to assess the campaign’s effectiveness.\n\n",
+      "content": "Architect an email marketing campaign setting out your {{campaign goals}}, analysing the {{subscriber segments}}, designing engaging {{email content}}, and setting a clear {{evaluation metric}}. Be sure to ensure content is compliant with spam legislation and that any personal data is handled and stored safely.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "e7221b61-4d1b-40f5-ad3f-8cef5fed3808"
+    }
+  ]
+}

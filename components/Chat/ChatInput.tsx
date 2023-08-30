@@ -447,7 +447,7 @@ const defaultOption = options[0];
           rel="noreferrer"
           className="underline"
         >
-          Futurum One
+          Data Privacy Policy
         </a>
         .{' '}
         {t(

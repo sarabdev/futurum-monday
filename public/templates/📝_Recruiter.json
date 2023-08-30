@@ -1,0 +1,104 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "fc13d1b7-31aa-4841-98f1-82b786519120",
+      "name": "Recruitment",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "a1f700eb-54ed-4990-951b-7a9ac0c92094",
+      "name": "Job Advertisement",
+      "description": "Use this template to craft an enticing job advertisement. Replace {{job title}} with the position advertised, {{primary responsibilities}} with the main tasks the job will entail, and {{required qualifications}} with the necessary attributes and qualifications.\n\n",
+      "content": "Prepare a job advertisement for {{job title}}. Describe the role, {{primary responsibilities}}, and what a day on the job would look like. List {{required qualifications}}, desirable skills, and possible career advancement opportunities. Please refrain from using jargon or acronyms without explanation.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "fc13d1b7-31aa-4841-98f1-82b786519120"
+    },
+    {
+      "id": "e1b8591e-3a58-48d0-905c-8210570cbd0d",
+      "name": "Interview Invitation Letter",
+      "description": "This template assists in writing a formal invitation to an applicant for an interview. Substitute {{candidate's name}} with the interviewee's name, {{job title}} with the position they've applied for, and {{interview details}} with the time, location and date of the interview.\n\n",
+      "content": "Draft an interview invitation letter to {{candidate's name}} for the {{job title}} position. The letter should clearly outline the {{interview details}} and provide relevant information about the interview format. Please maintain a professional tone throughout the letter.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "fc13d1b7-31aa-4841-98f1-82b786519120"
+    },
+    {
+      "id": "b0693844-cd6e-4e4c-9991-184ce675aa46",
+      "name": "Recruitment Agency Collaboration Email",
+      "description": "Use this template to generate a collaboration email to a recruitment agency. Replace {{agency name}} with the designated recruitment agency, {{job vacancies}} with the positions to be filled, and {{candidate profile}} with the preferred attributes for potential candidates.\n\n",
+      "content": "Send an email to {{agency name}} detailing our intent to collaborate on filling our open {{job vacancies}}. Be sure to include information about the {{candidate profile}} we are seeking and our company values. Precautions are to be taken not to share any sensitive internal information.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "fc13d1b7-31aa-4841-98f1-82b786519120"
+    },
+    {
+      "id": "fd7e6f42-e016-4af9-8e7f-c0535c97e04c",
+      "name": "Candidate Rejection Letter",
+      "description": "This template helps to construct a letter to inform a candidate their application was not successful. Change {{candidate's name}} with the concerned individual's name, {{job title}} with the role they applied for, and {{positive feedback}} with some constructive feedback on their performance.\n\n",
+      "content": "Create a well-intentioned rejection letter for {{candidate's name}} who applied for the {{job title}} position. While conveying the decision, also provide some {{positive feedback}} and encouragement. Maintain a tone that is empathetic and respectful.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "fc13d1b7-31aa-4841-98f1-82b786519120"
+    },
+    {
+      "id": "5bfcba73-7802-4c59-8018-ac7e90746702",
+      "name": "Onboarding Checklist",
+      "description": "Use this template to form an effective onboarding checklist for new employees. Replace {{new employee's name}} with the name of the new hire, {{onboarding tasks}} with tasks to be completed during onboarding, and {{key contacts}} with the people the new employee should meet.\n\n",
+      "content": "Compile a comprehensive onboarding checklist for {{new employee's name}}. List all relevant {{onboarding tasks}} in order of completion, starting with basic orientation and paperwork, followed by job-specific training tasks. Include {{key contacts}} within our organisation that they should know. Balance between providing enough information to be useful, without overwhelming.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "fc13d1b7-31aa-4841-98f1-82b786519120"
+    },
+    {
+      "id": "b000d640-72f2-4897-8cc4-49d15174e9c1",
+      "name": "Employment Contract",
+      "description": "This template facilitates drafting detailed employment contracts. Replace {{employee's name}} with the legal name of the new hire, {{job description}} with a comprehensive outline of the role, {{terms of employment}} with the contract clauses including salary, fringe benefits, etc.\n\n",
+      "content": "Draft an employment contract for {{employee's name}} containing a concise {{job description}}, clear {{terms of employment}}, confidentiality agreement, and clauses related to termination. Ensure legal conformity and clarity. Please exclude any discriminatory or biased terms.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "fc13d1b7-31aa-4841-98f1-82b786519120"
+    },
+    {
+      "id": "d53051eb-dfe0-4f49-b7a0-63a0d90adbcc",
+      "name": "Exit Interview Questionnaire",
+      "description": "Use this template to compile a list of exit interview questions. Insert {{employee's name}} with the departing employee's name, {{working period}} with employee’s tenure and {{position}} with the role they held.\n\n",
+      "content": "Create an exit interview questionnaire for {{employee's name}} who held the {{position}} for a {{working period}}. Include questions about their experience, suggestions for improvement, work culture, job-specific insights and reasons for leaving. Be sure to maintain a respectful and non-intrusive tone.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "fc13d1b7-31aa-4841-98f1-82b786519120"
+    }
+  ]
+}

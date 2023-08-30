@@ -1,0 +1,143 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "d55ff84a-21ca-41e6-a160-181f66eae5a0",
+      "name": "Financial Manager",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "6e4c6eaf-3011-4a0e-a65c-a0526c939b26",
+      "name": "Financial Forecast Model",
+      "description": "This template is built for generating a compelling financial forecast model. Substitute {{assumptions}} with the premises on which your forecasts are based, {{projected financials}} with estimates of income, expenses, and cash flow, and {{risk assessment}} with evaluation of potential financial risks.\n\n",
+      "content": "Formulate a financial forecast model based on realistic {{assumptions}} and detailing {{projected financials}} for the next fiscal year. Incorporate a robust {{risk assessment}} to identify potential threats or opportunities. Please avoid explicit predictions or guarantees about future performance, as this could be legally contentious.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d55ff84a-21ca-41e6-a160-181f66eae5a0"
+    },
+    {
+      "id": "134bcab8-e2ef-48c4-b75b-d0c0bbcbd67b",
+      "name": "Investment Evaluation Process",
+      "description": "This template aids in structuring an investment evaluation process. Replace {{investment criteria}} with your guidelines for considering investments, {{analysis methods}} with techniques used to assess investment viability, and {{investment return projections}} with expectations of returns.\n\n",
+      "content": "Develop an investment evaluation procedure illustrating the {{investment criteria}}, the use of appropriate {{analysis methods}}, and sketch an initial {{investment return projections}}. Be cautious not to leak sensitive commercial information or misleading predictions.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d55ff84a-21ca-41e6-a160-181f66eae5a0"
+    },
+    {
+      "id": "b2c02cc6-fbc0-462e-b2cb-2473c4a99475",
+      "name": "Annual Budget Plan",
+      "description": "This template is designed for devising an annual budget plan. Replace {{revenue sources}} with the company's funding streams, {{expense categories}} with broad sections of outgoing costs, and {{financial goals}} with your fiscal targets for the upcoming year.\n\n",
+      "content": "Draft an annual budget plan comprising key {{revenue sources}}, itemised {{expense categories}}, and defined {{financial goals}}. Exclude individual salary details and any form of confidential financial information related to private contracts or deals.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d55ff84a-21ca-41e6-a160-181f66eae5a0"
+    },
+    {
+      "id": "ae3aa9b3-68ed-4691-b9de-4b8c63fdee41",
+      "name": "Fund Allocation Strategy",
+      "description": "Use this template to create a detailed fund allocation strategy. Replace {{financial objectives}} with explicit fiscal goals, {{allocation metrics}} with rules used for distributing funds, and {{performance indicators}} with measures for assessing the strategy's efficiency.\n\n",
+      "content": "Outline a robust fund allocation strategy articulating specific {{financial objectives}}, established {{allocation metrics}}, and objective {{performance indicators}}. Abstain from specifying any confidential details regarding share allocations or personal investment percentages.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d55ff84a-21ca-41e6-a160-181f66eae5a0"
+    },
+    {
+      "id": "d61a0a65-2eda-48a2-9d32-01946162e35f",
+      "name": "Cost Reduction Plan",
+      "description": "This template assists in constructing a cost reduction plan. Substitute {{cost reduction areas}} with areas identified for cost savings, {{cost-cutting measures}} with the methods to reduce expenses, and {{impact assessment}} with the analysis of the plan's effects on the operations and quality.\n\n",
+      "content": "Formulate a cost reduction plan pinpointing the {{cost reduction areas}}, illustrating the {{cost-cutting measures}}, and culminating in the {{impact assessment}} of the proposed changes. Refrain from using controversial savings methods or plans that could adversely impact employee morale.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d55ff84a-21ca-41e6-a160-181f66eae5a0"
+    },
+    {
+      "id": "9923db02-312a-4e68-add1-18adb4efe452",
+      "name": "Financial Risk Management Framework",
+      "description": "This template aids in establishing a financial risk management framework. Substitute {{risk categories}} with types of risks your business faces, {{mitigation strategies}} with plans to tackle these risks, and {{review process}} with regular audits to assess the current risks.\n\n",
+      "content": "Develop a financial risk management framework outlining identified {{risk categories}}, implementing comprehensive {{mitigation strategies}}, and followed by a scheduled {{review process}}. Steer clear of any proprietary risk-related data or information that could be classified as sensitive or confidential.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d55ff84a-21ca-41e6-a160-181f66eae5a0"
+    },
+    {
+      "id": "181bb98e-f763-48c4-8538-323c3bd20851",
+      "name": "Capital Expenditure Plan",
+      "description": "This blueprint is for designing a capital expenditure (CapEx) plan. Replace {{CapEx items}} with intended capital expenses, {{budget estimates}} with approximations of costs, and {{ROI projections}} with the return on investment estimates for the capital outlay.\n\n",
+      "content": "Create a detailed capital expenditure plan highlighting key {{CapEx items}}, with assigned {{budget estimates}} and the predicted {{ROI projections}}. Be mindful to exclude sensitive company-specific data, such as upcoming merger or acquisition plans.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d55ff84a-21ca-41e6-a160-181f66eae5a0"
+    },
+    {
+      "id": "8fe08c21-f3b3-499b-912b-9921fff4fc4f",
+      "name": "Financial Audit Procedure",
+      "description": "This template will guide you in framing a financial audit process. Substitute {{audit areas}} with the sectors your audit will focus on, {{audit methodology}} with the audit approach, and {{timeline and responsibilities}} with your planning on task allocation and deadlines.\n\n",
+      "content": "Design a streamlined financial audit procedure that encompasses {{audit areas}}, provides a defined {{audit methodology}}, and sets out a clear {{timeline and responsibilities}}. Do not disclose specifics about past frauds or financial discrepancies unless absolutely necessary.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d55ff84a-21ca-41e6-a160-181f66eae5a0"
+    },
+    {
+      "id": "bfb739bd-8be4-4956-a04c-4c77394e79db",
+      "name": "Tax Compliance Policy",
+      "description": "Use this template to construct an effective tax compliance policy. Replace {{tax obligations}} with your company's specific tax duties, {{procedures and controls}} with steps taken to ensure compliance, and {{penalty management}} with how your company handles potential infractions.\n\n",
+      "content": "Draft a tax compliance policy detailing specific {{tax obligations}}, summarising default {{procedures and controls}}, and outlining the approach to {{penalty management}}. Avoid delving into detailed tax avoidance schemes or historical tax disputes.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d55ff84a-21ca-41e6-a160-181f66eae5a0"
+    },
+    {
+      "id": "0778f9c0-0d35-46ee-a14a-d34b259878d6",
+      "name": "Budget Variance Report",
+      "description": "This template is for outlining a budget variance report. Substitute {{financial period}} with the timeframe under review, {{variance categories}} with areas where actual results differed from the budget, and {{corrective actions}} with steps to realign the budget and actual spending.\n\n",
+      "content": "Script a budget variance report consolidating key disparities between budgets and actuals for the {{financial period}}. Classify distinct {{variance categories}} and propose suitable {{corrective actions}}. Shy away from highlighting variations which are confidential or potentially damaging to the company's reputation.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d55ff84a-21ca-41e6-a160-181f66eae5a0"
+    }
+  ]
+}

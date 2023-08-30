@@ -1,0 +1,143 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "3ec298f8-d2a9-4f2d-88ec-c014355c3f66",
+      "name": "Product Manager",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "6084ccf1-fb02-4d6f-8103-6369452d81ad",
+      "name": "Product Development Strategy",
+      "description": "This template aids in establishing a product development strategy. Substitute {{product vision}} with the overarching aim for the product, {{market research}} with consumer insights informing the need for the product, {{development timeline}} with phases and timeframes of product creation, and {{launch strategy}} with plans for introducing the product to the market.\n\n",
+      "content": "Construct a focused product development strategy comprehensively outlining your inspiring {{product vision}}, in-depth {{market research}}, detailed {{development timeline}}, and impactful {{launch strategy}}. Remember to avoid disclosing confidential feature designs or proprietary market research details.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "3ec298f8-d2a9-4f2d-88ec-c014355c3f66"
+    },
+    {
+      "id": "a419a9d9-4910-43a4-ad89-df7326dddfd3",
+      "name": "Consumer Feedback Collection Plan",
+      "description": "This layout assists in generating an efficient consumer feedback collection plan. Replace {{feedback channels}} with the mediums used for obtaining customer opinions, {{feedback prompts}} with the instructions or questions asked to guide feedback, {{response handling}} with processes for managing feedback responses, and {{incorporation strategy}} with how feedback is used for improvement.\n\n",
+      "content": "Draft a dynamic consumer feedback collection plan, highlighting varied {{feedback channels}}, engaging {{feedback prompts}}, efficient {{response handling}}, and productive {{incorporation strategy}}. Avoid revealing sensitive customer data or proprietary data processing methods.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "3ec298f8-d2a9-4f2d-88ec-c014355c3f66"
+    },
+    {
+      "id": "989004d2-612a-47ae-9eec-7c92047fcdd4",
+      "name": "Product Branding Strategy",
+      "description": "This blueprint is for structuring a competitive product branding strategy. Substitute {{brand identity}} with defining features of the product's brand, {{brand positioning}} with the unique market space the brand intends to occupy, {{brand promotion approach}} with strategies to increase brand visibility, and {{brand evolution considerations}} with plans for brand development over time.\n\n",
+      "content": "Develop a compelling product branding strategy, detailing distinguished {{brand identity}}, strategic {{brand positioning}}, creative {{brand promotion approach}}, and forward-thinking {{brand evolution considerations}}. Please refrain from announcing unapproved branding decisions or revealing confidential promotional tactics.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "3ec298f8-d2a9-4f2d-88ec-c014355c3f66"
+    },
+    {
+      "id": "2a029631-122e-48cf-9f9b-156f4ebff147",
+      "name": "Product Pricing Model",
+      "description": "This template enables the creation of a viable product pricing model. Replace {{cost factors}} with the breakdown of product creation expenses, {{competitive pricing analysis}} with insights into how similar products are priced, {{value proposition}} with the benefits to consumers justifying the price, and {{price adjustment strategy}} with plans for future price changes.\n\n",
+      "content": "Formulate a competitive product pricing model showcasing comprehensive {{cost factors}}, thorough {{competitive pricing analysis}}, compelling {{value proposition}}, and adaptable {{price adjustment strategy}}. Refrain from revealing specific cost information or disclosing upcoming price changes.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "3ec298f8-d2a9-4f2d-88ec-c014355c3f66"
+    },
+    {
+      "id": "c376589b-02c0-4fdd-94ad-6e452e9c7b28",
+      "name": "Product Lifecycle Review",
+      "description": "This format aids in devising a robust product lifecycle review. Substitute {{review frequency}} with how often product stages are analysed, {{performance metrics}} with indicators used to gauge the product's success, {{intervention procedures}} with responses to underperforming products, and {{end-of-life strategy review}} with the analysis of a product's final lifecycle stage.\n\n",
+      "content": "Draft a reliable product lifecycle review setting regular {{review frequency}}, insightful {{performance metrics}}, decisive {{intervention procedures}}, and reflective {{end-of-life strategy review}}. Don't discuss confidential product information or specific intervention tactics.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "3ec298f8-d2a9-4f2d-88ec-c014355c3f66"
+    },
+    {
+      "id": "a5ef0f66-88c5-4a4d-929b-c505b7d4e2fc",
+      "name": "Product Portfolio Management",
+      "description": "This template enables the creation of a product portfolio management strategy. Replace {{portfolio objectives}} with the designations of what your portfolio should achieve, {{portfolio composition}} with the description of your product mix, {{product interdependencies}} with the relation between different products, and {{portfolio evaluation metrics}} with the standards used to assess the portfolio's success.\n\n",
+      "content": "Conceive a balanced product portfolio management plan pinpointing your {{portfolio objectives}}, analysing the dynamic {{portfolio composition}}, acknowledging the interconnected {{product interdependencies}}, and applying valuable {{portfolio evaluation metrics}}. Avoid disclosing confidential product development plans or revealing sensitive portfolio performance results.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "3ec298f8-d2a9-4f2d-88ec-c014355c3f66"
+    },
+    {
+      "id": "d79cf8b3-02f1-486f-a118-8b81f36bc8c3",
+      "name": "Product Marketing Strategy",
+      "description": "This layout assists in formulating a product marketing strategy. Substitute {{target audience identification}} with the process of defining your ideal customers, {{value proposition creation}} with the key advantages you're offering, {{marketing channel selection}} with where and how you plan to reach your audience, and {{performance tracking methods}} with your systems for measuring success.\n\n",
+      "content": "Script a comprehensive product marketing strategy encapsulating precise {{target audience identification}}, captivating {{value proposition creation}}, effective {{marketing channel selection}}, and consistent {{performance tracking methods}}. Do not share detailed customer profiles or proprietary marketing approaches.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "3ec298f8-d2a9-4f2d-88ec-c014355c3f66"
+    },
+    {
+      "id": "a4c8c39f-1221-4b6d-9de9-d3e835221e9a",
+      "name": "User Experience Design Plan",
+      "description": "This blueprint aids in composing a user experience (UX) design plan. Replace {{UX research}} with the insights you have gathered about your users, {{user journey mapping}} with the path users take in your product, {{interaction design principles}} with your approach to creating engaging interfaces, and {{UX testing methods}} with your system to test and validate the user experience.\n\n",
+      "content": "Formulate a user-centric UX design plan featuring empathetic {{UX research}}, visual {{user journey mapping}}, intuitive {{interaction design principles}}, and iterative {{UX testing methods}}. Refrain from showing confidential user research data or unapproved design drafts.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "3ec298f8-d2a9-4f2d-88ec-c014355c3f66"
+    },
+    {
+      "id": "a5230caa-0871-4ab7-92fe-a5307bcbd971",
+      "name": "Product Partnership Strategy",
+      "description": "This structure allows for a detailed product partnership strategy. Substitute {{potential partners}} with the entities for a beneficial alliance, {{partnership objectives}} with what you aim to achieve from the collaboration, {{benefit sharing}} with the distribution of returns between partners, and {{collaborative development phases}} with stages of joint product creation.\n\n",
+      "content": "Craft a strategic product partnership strategy highlighting promising {{potential partners}}, clear {{partnership objectives}}, fair {{benefit sharing}}, and collaborative {{collaborative development phases}}. Don’t disclose potential partnership details or sensitive negotiation insights.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "3ec298f8-d2a9-4f2d-88ec-c014355c3f66"
+    },
+    {
+      "id": "b8614645-c3c0-460a-b75c-0109c7b0d56b",
+      "name": "Product Roadmap Guidelines",
+      "description": "This template aids in creating a forward-thinking product roadmap. Replace {{product vision}} with the future state for your product, {{milestones}} with the key steps to reach this vision, {{potential obstacles}} with the predicted challenges along the way, and {{contingency plans}} with your alternative approaches to overcome these obstacles.\n\n",
+      "content": "Develop a visionary product roadmap underscoring the bold {{product vision}}, carefully gauged {{milestones}}, identified {{potential obstacles}}, and adaptable {{contingency plans}}. Please avoid announcing unconfirmed future features or revealing confidential strategic details.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "3ec298f8-d2a9-4f2d-88ec-c014355c3f66"
+    }
+  ]
+}

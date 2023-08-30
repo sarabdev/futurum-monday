@@ -1,0 +1,143 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "d26a24f7-cf90-4991-9569-2e623c9f19f3",
+      "name": "CMO",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "ed9bed25-d0a8-48eb-a700-0184116bcde2",
+      "name": "Marketing Strategy Proposal",
+      "description": "This template aids the CMO in formulating a strategy. Tailor the {{specific audience segment}} to your primary customer base, {{proposed marketing channels}} to suit your most effective platforms, and {{desired KPIs}} should relate to marketing objectives.",
+      "content": "Draft a marketing strategy for {{CMO's name}} targeting {{specific audience segment}} through {{proposed marketing channels}}. The strategy's effectiveness will be measured using {{desired KPIs}}.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d26a24f7-cf90-4991-9569-2e623c9f19f3"
+    },
+    {
+      "id": "17cd7c87-5f1f-4656-af53-05a568dd6682",
+      "name": "Marketing Metrics Report",
+      "description": "This template supports creating a report on vital marketing metrics. {{Key metrics}} could include customer retention rate or sales growth, {{marketing campaign}} represents the specific campaign you're assessing, and {{suggested improvements}} refers to ideas for future campaigns.\n\n",
+      "content": "Develop a report for {{CMO's name}} detailing {{key metrics}} of the recent {{marketing campaign}} and include {{suggested improvements}} based on the data.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d26a24f7-cf90-4991-9569-2e623c9f19f3"
+    },
+    {
+      "id": "91a1bb76-bc06-4587-88f4-4b803558e197",
+      "name": "Branding Initiative Outline",
+      "description": "This template helps outline a branding initiative. Fill {{branding elements}} with components like logo, tagline, etc., {{reason for rebranding}} could include market positioning changes, and {{implementation time-frame}} is the proposed schedule for the rebrand.\n\n",
+      "content": "Assemble an outline for {{CMO's name}} for a branding initiative comprising {{branding elements}}. The reasons for this pivot, {{reason for rebranding}}, and expected {{implementation time-frame}} should be included.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d26a24f7-cf90-4991-9569-2e623c9f19f3"
+    },
+    {
+      "id": "b6aff24b-fd31-4ebd-a8dd-0b4461219cd9",
+      "name": "Social Media Campaign",
+      "description": "This template guides in creating a social media campaign. {{Campaign goals}} could be brand awareness or customer engagement, {{social media platforms}} refer to networks like Instagram, and {{success indicators}} could be likes, shares, etc.\n\n",
+      "content": "Plan a comprehensive social media campaign for {{CMO's name}} with {{campaign goals}} to be met across {{social media platforms}}. The success of the campaign will be measured by {{success indicators}}.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d26a24f7-cf90-4991-9569-2e623c9f19f3"
+    },
+    {
+      "id": "8e404820-4713-4232-a08e-666eeb5db7cb",
+      "name": "Customer Feedback Analysis",
+      "description": "This template aids in creating a customer feedback analysis. Replace {{feedback source}} with platforms like reviews or surveys, {{major strengths}} with positive feedback themes, and {{areas for improvement}} with common complaints.\n\n",
+      "content": "Prepare an analysis of customer feedback for {{CMO's name}} from {{feedback source}}, highlighting {{major strengths}} and {{areas for improvement}}.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d26a24f7-cf90-4991-9569-2e623c9f19f3"
+    },
+    {
+      "id": "6288594b-81fd-4d46-ad40-e9268eb8b503",
+      "name": "Partnership Proposal",
+      "description": "This template supports crafting a proposal for potential partnerships. {{Potential partner}} could be a specific company or influencer, {{mutual benefits}} should detail projected gains, and {{proposed collaboration}} refers to the exact nature of the partnership.\n\n",
+      "content": "Draft a partnership proposal for {{CMO's name}} to {{potential partner}}, outlining our {{mutual benefits}} and the nature of our {{proposed collaboration}}.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d26a24f7-cf90-4991-9569-2e623c9f19f3"
+    },
+    {
+      "id": "41294d26-6903-45ef-9d7f-a0df9ee7dfec",
+      "name": "Content Marketing Strategy",
+      "description": "This template is for creating a content marketing strategy. {{Content types}} represents forms of content like podcasts or blogs, {{distribution channels}} refer to where you'll publish, and {{engagement metrics}} could be views, likes, etc.\n\n",
+      "content": "Structure a content marketing strategy for {{CMO's name}} featuring {{content types}}, to be disseminated across {{distribution channels}}, and monitored with {{engagement metrics}}.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d26a24f7-cf90-4991-9569-2e623c9f19f3"
+    },
+    {
+      "id": "57ae93be-d694-43ee-b7ca-7fe8b39608df",
+      "name": "Influencer Marketing Brief",
+      "description": "This template aids in creating a brief for influencer marketing. {{Influencer name}} is the person you're collaborating with, {{campaign details}} refers to specifics of the collaboration, and {{expected outcomes}} are the desired results.\n\n",
+      "content": "Write a brief for {{CMO's name}} detailing our partnership with {{influencer name}}, including {{campaign details}} and {{expected outcomes}}.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d26a24f7-cf90-4991-9569-2e623c9f19f3"
+    },
+    {
+      "id": "f02347c1-0216-4e88-af07-b15b88e5cd02",
+      "name": "Product Launch Campaign",
+      "description": "This template assists in outlining a product launch campaign. {{Product name}} refers to the item being introduced, {{target audience}} is the primary demographic, and {{campaign length}} is its duration.\n\n",
+      "content": "Craft a comprehensive product launch campaign for {{CMO's name}} for {{product name}}, primarily targeting {{target audience}}, over a period of {{campaign length}}.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d26a24f7-cf90-4991-9569-2e623c9f19f3"
+    },
+    {
+      "id": "6b0e3a5b-1053-48af-a8d3-8c8ae27bed7b",
+      "name": "Market Research Summary",
+      "description": "This template helps condense significant market research findings. {{Market trends}} refer to notable patterns, {{competitive activities}} to what competitors are doing, and {{opportunities}} to potential market gaps.\n\n",
+      "content": "Present a market research summary for {{CMO's name}}, highlighting {{market trends}}, {{competitive activities}}, and future {{opportunities}}.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "d26a24f7-cf90-4991-9569-2e623c9f19f3"
+    }
+  ]
+}

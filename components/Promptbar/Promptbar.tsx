@@ -26,7 +26,7 @@ const Promptbar = () => {
   const promptBarContextValue = useCreateReducer<PromptbarInitialState>({
     initialState,
   });
-
+  
   const {
     state: { prompts, defaultModelId, showPromptbar },
     dispatch: homeDispatch,
@@ -128,7 +128,7 @@ const Promptbar = () => {
       <Sidebar<Prompt>
         side={'right'}
         isOpen={showPromptbar}
-        addItemButtonTitle={t('New prompt')}
+        addItemButtonTitle={t('New Template')}
         itemComponent={
           <Prompts
             prompts={filteredPrompts.filter((prompt) => !prompt.folderId)}

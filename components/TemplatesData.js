@@ -1,0 +1,30 @@
+const Templates=[
+    "⚖️_Board_&_Compliance",
+    "⛭_COO",
+    "🎁_Product_Manager",
+    "👑_CEO",
+    "👥_CHRO",
+    "👨_💼_Director_of_Human_Resources",
+    "👫_HR_Manager",
+    "💰_CFO",
+    "💵_Finance_Manager",
+    "💸_Director_of_Finance",
+    "💸_Sales_Executive",
+    "💻_CTO",
+    "📈_Business_Analyst",
+    "📊_Director_of_Marketing",
+    "📝_Recruiter",
+    "📢_Marketing_Manager",
+    "📣_CMO",
+    "📦_Supply_Chain_Manager",
+    "📰_Marketing_Executive",
+    "🔌_Information_Technology_Manager",
+    "🕸️_Wed_Dev_House",
+    "🖥️_Director_of_Technology",
+    "🧾_Accountant",
+    "🛒_Sales_Manager",
+    "🛠️_Operations_Manager",
+    "Write_an_Article"
+
+]
+export default Templates;

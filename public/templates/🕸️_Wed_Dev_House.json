@@ -1,0 +1,195 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "856c55b6-2e03-407f-9249-21899ff47170",
+      "name": "Web Dev House",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "062cc696-c1d2-449e-b31a-5c3793ceee4c",
+      "name": "Website Project Kickoff Meeting Agenda",
+      "description": "This template helps to plan a website project kickoff meeting. Replace {{project objectives}} with your identified goals for the website project. Substitute {{team introductions}} with a session to introduce the project team members. Change {{project roadmap}} to outline key milestones and deadlines for the project. Finally, replace {{communication plans}} with strategies to ensure effective team communication throughout the project.\n\n",
+      "content": "Start your meeting by setting clear {{project objectives}}, outlining what the completed website should achieve. Proceed with {{team introductions}}, allowing everyone involved in the project to familiarise with each other. Present your detailed {{project roadmap}}, providing clarity on key deadlines and deliverables. Conclude by defining {{communication plans}}, ensuring everyone knows who to contact for various issues and updates throughout the project. Ensure this agenda is not disclosed to any unauthorised persons.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "856c55b6-2e03-407f-9249-21899ff47170"
+    },
+    {
+      "id": "ba53d9ff-d1b5-44b6-bd28-4dcdb068d338",
+      "name": "Website Development Progress Report",
+      "description": "This template facilitates the creation of a progress report for a website development project. Substitute {{completed tasks}} with a summary of the tasks completed to date. Replace {{upcoming tasks}} with tasks that are due in the forthcoming periods. Alter {{potential roadblocks}} with any foreseeable issues that might occur, and substitute {{solutions and strategies}} with planned responses to these challenges.\n\n",
+      "content": "Begin your report detailing the {{completed tasks}}, illustrating your project's current status. Look ahead and outline the {{upcoming tasks}}, helping your team to stay on track with the project itinerary. Identify any {{potential roadblocks}} and discuss their possible impact on the project. Conclude with your {{solutions and strategies}} to navigate through these challenges, ensuring smooth project progress. Refrain from sharing sensitive project information externally.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "856c55b6-2e03-407f-9249-21899ff47170"
+    },
+    {
+      "id": "aa99578e-24fc-4670-b879-0f70f94bc951",
+      "name": "Website Launch Plan",
+      "description": "This template aids in designing a comprehensive plan for a website launch. Substitute {{website testing}} with your strategy for testing the website’s functionality and user experience. Replace {{marketing strategy}} with a plan for promoting the website. Change {{launch date}} to specify the intended live date for the website, and replace {{post-launch support plan}} with measures in place for handling any post-launch issues.\n\n",
+      "content": "Commence with a meticulous {{website testing}} process, ensuring optimal user experience ahead of the launch. Develop a focused {{marketing strategy}} to create a buzz about the website launch. Set a confirmed {{launch date}}, providing a definitive goal for all preparation efforts. Round off your strategy with a robust {{post-launch support plan}}, to address any user issues or feedback after the website goes live. Avoid sharing the detailed plan with unauthorised external parties.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "856c55b6-2e03-407f-9249-21899ff47170"
+    },
+    {
+      "id": "2b7df601-a177-48d0-9f15-913e03093e65",
+      "name": "Nurturing Client Relations",
+      "description": "This template helps to construct an approach for nurturing client relations during a website development project. Replace {{regular updates}} with strategies for sharing progress updates with the client. Substitute {{query resolution}} with plans for handling client queries or feedback. Change {{additional services offer}} to strategies for offering additional services to the client, and offer additional value beyond the primary scope of work.\n\n",
+      "content": "Begin by outlining your {{regular updates}} schedule to keep the client abreast of the project advancements. Set up a process for effective {{query resolution}}, resolving any client queries or concerns promptly and proactively. Formulate enticing {{additional services offer}} strategies to further satisfy and retain your client in the long term. Always remember to protect the confidentiality of client interactions.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "856c55b6-2e03-407f-9249-21899ff47170"
+    },
+    {
+      "id": "c5820f8f-48ef-403b-9458-2f3dc8482303",
+      "name": "Website Audit Report",
+      "description": "This template helps in preparing a website audit report. Substitute {{technical SEO issues}} with the list of detected site's technical SEO issues. Replace {{content effectiveness}} with a review of website content in terms of relevance, utility, and SEO effectiveness. Change {{UI/UX review}} with an evaluation of the site’s user interface and user experience. Finally, replace {{recommendations}} with suggestions for improving the website's performance.\n\n",
+      "content": "Commence your audit report with a detailed breakdown of {{technical SEO issues}} to remedy for improved search visibility. Proceed with an assessment of {{content effectiveness}}, indicating points of strength and areas of improvement. Incorporate an in-depth {{UI/UX review}} to ensure the site is user-friendly and encourages engagement. Round off your report with actionable {{recommendations}} to elevate the website's performance and reach. Treat this report as confidential.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "856c55b6-2e03-407f-9249-21899ff47170"
+    },
+    {
+      "id": "4aad293e-c590-4c12-9655-ddd581cbd86b",
+      "name": "Client Needs Assessment",
+      "description": "This template assists in creating a client needs assessment for a website development project. Replace {{client's business}} with a brief overview of your client's industry and unique needs. Substitute {{client goals}} with a description of what their specific objectives are. Change {{website requirements}} to a list of technical and aesthetic features needed in the website, and finally, replace {{performance indicators}} with metrics to evaluate the website's success.\n\n",
+      "content": "Start by gaining a thorough understanding of the {{client's business}} to align your development objectives. Outline the {{client goals}} to serve as a road map for your website creation. Delve into the {{website requirements}}, capturing all the desired features and functionality in detail. Finish this assessment with {{performance indicators}}, including metrics to monitor in evaluating the website's effectiveness. Treat client information with confidentiality.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "856c55b6-2e03-407f-9249-21899ff47170"
+    },
+    {
+      "id": "6e0472fa-028b-4092-b63d-21b866480034",
+      "name": "Project Debrief and Reflection",
+      "description": "This template aids in conducting a project debrief and reflection for a completed website development task. Substitute {{project outcomes}} with a summary of the project results compared to the initial objectives. Replace {{successes}} with what went well in the project, change {{challenges}} with difficulties faced and finally replace {{lessons and improvements}} with learnings from the project and how to improve in the future.\n\n",
+      "content": "Begin the debrief by assessing the {{project outcomes}}, analyzing how they measured up to the goals set at the beginning. Highlight your {{successes}} to acknowledge the team’s hard work and positive achievements. Discuss the {{challenges}} faced to foster resilience and problem-solving acumen within the team. Conclude on a forward-looking note with your {{lessons and improvements}} for future projects based on this experience. Keep the discussions confined to the team involved.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "856c55b6-2e03-407f-9249-21899ff47170"
+    },
+    {
+      "id": "edf7b259-3ac5-4bbb-a2b6-2769a2d95fee",
+      "name": "Website Performance Analytics Report",
+      "description": "This template allows for effectively tracking and communicating a website's performance over a defined period of time. Replace {{website traffic}} with the site's traffic stats. Substitute {{engagement metrics}} with figures indicating visitors' interaction with the site. Replace {{conversion rates}} with the percentage of visitors completing desired actions, and finally, replace {{performance insights}} with interpretation of the data in respect of the project's objectives.\n\n",
+      "content": "Initiate your report highlighting the {{website traffic}} over the specified period. Present detailed {{engagement metrics}} including page views, bounce rates and time spent on site. Analyse {{conversion rates}} to illustrate how effectively site's design and content convert visitors into customers or leads. Conclude with actionable {{performance insights}} to guide strategies for website improvement. Maintain confidentiality of the analytics report.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "856c55b6-2e03-407f-9249-21899ff47170"
+    },
+    {
+      "id": "ee13e42a-fae1-4e04-929d-199052633c7b",
+      "name": "Client Feedback Solicitation",
+      "description": "This template assists in soliciting feedback from clients post website delivery. Replace {{project review}} with a brief recap of the project. Substitute {{feedback questions}} with specific questions to guide client responses regarding their experience and satisfaction. Change {{next steps}} to steps planned post feedback, and finally, replace {{appreciation message}} with a personalised note thanking the client for their time and business.\n\n",
+      "content": "Reminisce with a quick {{project review}}, setting the stage for a comprehensive reflection. Request candid responses to your {{feedback questions}} to gather valuable insights into your performance. Communicate your planned {{next steps}} indicating that their feedback is being valued and acted upon. Wrap up with a heartfelt {{appreciation message}} to foster client goodwill. Ensure client comfort and confidentiality while seeking feedback.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "856c55b6-2e03-407f-9249-21899ff47170"
+    },
+    {
+      "id": "87c65a00-51a6-4d50-b7b9-bfc172df91aa",
+      "name": "Project Proposal for Client",
+      "description": "This templates assists in crafting an effective proposal for a prospective website development project. Replace {{client background}} with a summary of the client's needs and context. Substitute {{project goals}} with what the project aims to achieve. Replace {{proposed solution}} with the outline of your approach and service offerings, and finally, replace {{costings and timelines}} with an estimate of the project's financial and temporal requirements.\n\n",
+      "content": "Open your proposal demonstrating an understanding of the {{client background}} and their unique needs. Detail your {{project goals}} for added clarity and alignment. Outline your {{proposed solution}}, explaining how it resolves their needs and potentially offers additional advantages. Complete the proposal with a clear and concise breakdown of {{costings and timelines}}. Ensure that all communication is kept professional and confidential.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "856c55b6-2e03-407f-9249-21899ff47170"
+    },
+    {
+      "id": "57843241-a7fc-4c09-9f85-1c0593d68a42",
+      "name": "Website Content Planning",
+      "description": "This template guides the planning of content for a website project. Replace {{content objectives}} with the main goals for your website content. Substitute {{content mapping}} with a plan for segregating the content across various pages. Replace {{SEO strategy}} with your approach for optimising content for search engines, and finally, replace {{content creation schedule}} with a timeline for content development and publishing.\n\n",
+      "content": "Start by defining clear {{content objectives}}, ensuring they align with the overall goals of the website. Identify how content will be distributed with a thorough {{content mapping}}. Develop a rigorous {{SEO strategy}} to improve the website’s visibility and search ranking. Wrap up with a strict {{content creation schedule}} to guide your content production and publishing activities. Avoid disclosing sensitive project details externally.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "856c55b6-2e03-407f-9249-21899ff47170"
+    },
+    {
+      "id": "c8f4a39a-037d-4fb0-b20a-5991e82fa9c4",
+      "name": "Client Onboarding Process",
+      "description": "This template helps in outlining the onboarding process for new clients in a website development project. Replace {{initial meeting}} with the process for the first client interaction. Substitute {{requirements gathering}} with steps for collecting detailed client needs. Change {{agreement and timelines}} to describe how contracts are finalised and deadlines set, and replace {{regular updates and communication}} with how ongoing communication will be managed with the client.\n\n",
+      "content": "Begin by detailing what happens during the {{initial meeting}} to set the right expectations. Explain your process for {{requirements gathering}} to ensure all client needs are captured. Describe your approach to setting {{agreement and timelines}} to ensure both parties are on the same page. Finally, showcase your commitment to transparency and collaboration with your plan for {{regular updates and communication}}. Any communication regarding this process should be kept confidential.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "856c55b6-2e03-407f-9249-21899ff47170"
+    },
+    {
+      "id": "2636286a-46b1-4396-abd1-e3bdbd01f0d0",
+      "name": "Post-Project Website Maintenance Plan",
+      "description": "This template allows for crafting a website maintenance plan after project completion. Replace {{routine checks}} with your strategy for regular website reviews. Substitute {{website updates}} with plans for updating website content and design. Change {{security measures}} to specify plans for protecting the website from security threats, and replace {{backup and recovery}} with your protocol for data backup and site recovery in case of issues.\n\n",
+      "content": "Commence with a detailed plan for conducting {{routine checks}} to ensure optimal website performance. Delve into how {{website updates}} will be managed to keep the site fresh and relevant. Elaborate on the {{security measures}} to ensure the website remains safe from potential threats. Finish with an outline of your {{backup and recovery}} strategies to safeguard your website data and functionality. Keep the details of this plan confidential.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "856c55b6-2e03-407f-9249-21899ff47170"
+    },
+    {
+      "id": "8fd212bb-b071-40a1-91c0-53a8a4ed7514",
+      "name": "Website Competitor Analysis",
+      "description": "This template assists in conducting a competitor analysis for a website development project. Replace {{competitor identification}} with information on the main competitors. Substitute {{website comparison}} with a comparison of your and competitors' websites. Change {{strengths and weaknesses}} to highlight what competitors are doing well and areas for their improvement, and replace {{strategic opportunities}} with actionable insights drawn from the analysis.\n\n",
+      "content": "Start with {{competitor identification}}, providing context for the competitive landscape. Conduct a thorough {{website comparison}} to understand how you stack up against the competition. Outline your competitors' {{strengths and weaknesses}} to identify areas of differentiation. Conclude with an exploration of {{strategic opportunities}} for improving your website based on this analysis. Always treat the competition’s information with confidentiality.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "856c55b6-2e03-407f-9249-21899ff47170"
+    }
+  ]
+}

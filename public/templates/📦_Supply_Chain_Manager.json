@@ -1,0 +1,169 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "a0e9a998-90a8-4e2c-809f-2b964e6414ba",
+      "name": "Supply Chain Manager",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "96129e3e-f344-4ced-af6d-b61bfd5d28d6",
+      "name": "Inventory Control System",
+      "description": "This template guides in creating an inventory control system. Replace {{stock tracking method}} with our method for keeping account of stock, {{reorder point}} with when we need to purchase more inventory, {{safety stock level}} with our backup inventory, and {{lead time}} with time taken from ordering inventory to when it is received.\n\n",
+      "content": "Set up an efficient inventory control system that includes a precise {{stock tracking method}}, suitable {{reorder point}}, adequate {{safety stock level}}, and correct estimation of {{lead time}}. Be sure to not mention specific inventory count or details on relationships with suppliers.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "a0e9a998-90a8-4e2c-809f-2b964e6414ba"
+    },
+    {
+      "id": "18aa9502-3d0c-4383-a44b-0c8d1247f782",
+      "name": "Vendor Evaluation Criteria",
+      "description": "Use this template to establish vendor evaluation criteria. Substitute {{product quality standards}} with our expectations on product quality, {{delivery performance}} with vendor's punctuality in delivering orders, {{pricing}} with the cost effectiveness of the vendor, and {{business stability}} with how well-established business practices and credentials are.\n\n",
+      "content": "Define rigorous vendor evaluation criteria incorporating {{product quality standards}}, expected {{delivery performance}}, competitive {{pricing}}, and proven {{business stability}}. Remember to not discuss confidential details about existing vendors or proprietary assessment techniques.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "a0e9a998-90a8-4e2c-809f-2b964e6414ba"
+    },
+    {
+      "id": "12a7e0d0-edac-4087-84fe-ad6384748c37",
+      "name": "Demand Forecasting Method",
+      "description": "This template assists in constructing a demand forecasting method. Replace {{historical sales data}} with past sales statistics, {{market trends}} with current market activities, {{promotional plans}} with your sales activation strategies, and {{seasonality factors}} with elements specific to certain times of the year.\n\n",
+      "content": "Develop a reliable demand forecasting method utilising robust {{historical sales data}}, relevant {{market trends}}, planned {{promotional plans}} and factoring in {{seasonality factors}}. Refrain from including specific future sales targets or confidential company projections.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "a0e9a998-90a8-4e2c-809f-2b964e6414ba"
+    },
+    {
+      "id": "b3922ae5-69d7-4a5a-8ddc-4a0cde67d99b",
+      "name": "Supply Chain Risk Management Plan",
+      "description": "This template assists in elaborating a supply chain risk management plan. Replace {{risk identification}} with how potential risks are identified, {{risk analysis}} with the methods used to evaluate these risks, {{risk handling}} with measures to mitigate risks and {{review process}} with the approach to ensure the effectiveness of the risk management plan.\n\n",
+      "content": "Outline a comprehensive supply chain risk management plan illustrating your systematic {{risk identification}}, proficient {{risk analysis}}, robust {{risk handling}}, and unceasing {{review process}}. Avoid disclosing confidential supplier information or revealing sensitive strategic details.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "a0e9a998-90a8-4e2c-809f-2b964e6414ba"
+    },
+    {
+      "id": "350ad831-2800-4428-9f53-280a26a5ab26",
+      "name": "Supplier Selection Strategy",
+      "description": "Use this blueprint to frame a supplier selection strategy. Substitute {{selection criteria}} with your parameters for selecting suppliers, {{supplier evaluation}} with your method of assessing potential suppliers, {{contract negotiation process}} with your approach to securing beneficial contracts, and {{supplier relationship management}} with the procedures for nurturing a positive supplier relationship.\n\n",
+      "content": "Construct a supplier selection strategy articulating concise {{selection criteria}}, credible {{supplier evaluation}}, balanced {{contract negotiation process}}, and efficient {{supplier relationship management}}. Please refrain from discussing specific supplier data or revealing confidential negotiation approaches.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "a0e9a998-90a8-4e2c-809f-2b964e6414ba"
+    },
+    {
+      "id": "36eaf88d-6de9-4876-bb11-bbf24d0ee25b",
+      "name": "Supply Chain Sustainability Approach",
+      "description": "This format allows for a comprehensive supply chain sustainability approach. Substitute {{sustainability goals}} with your targets for supply chain sustainability, {{sustainable sourcing strategies}} with procedures to source responsibly, {{carbon footprint reduction}} with measures to reduce environmental impact, and {{sustainability monitoring}} with methods to track progress.\n\n",
+      "content": "Formulate a supply chain sustainability approach highlighting your ambitious {{sustainability goals}}, ethical {{sustainable sourcing strategies}}, proactive {{carbon footprint reduction}}, and dedicated {{sustainability monitoring}} system. Refrain from referencing unverified supplier sustainability practices or divulging confidential environmental initiatives.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "a0e9a998-90a8-4e2c-809f-2b964e6414ba"
+    },
+    {
+      "id": "a4012388-316d-4b01-aaed-325e006d686b",
+      "name": "Demand Planning Method",
+      "description": "This template aids in developing a demand planning method. Replace {{demand forecasting tools}} with technology used for making demand predictions, {{data sources}} with the sources of information used for forecasting, {{demand management initiatives}} with strategies to influence demand and {{performance evaluation}} with the approach to assess accuracy of the forecast.\n\n",
+      "content": "Propose a demand planning method showcasing advanced {{demand forecasting tools}}, nuanced {{data sources}}, adaptable {{demand management initiatives}}, and thorough {{performance evaluation}}. Avoid sharing specific forecast data or sensitive demand management tactics.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "a0e9a998-90a8-4e2c-809f-2b964e6414ba"
+    },
+    {
+      "id": "3ba1751b-adad-4765-8944-aedaf9801eef",
+      "name": "Supplier Performance Evaluation Strategy",
+      "description": "This layout assists in creating a supplier performance evaluation strategy. Swap {{evaluation criteria}} with metrics used for rating suppliers, {{frequency of evaluation}} with how often suppliers are evaluated, {{feedback mechanism}} with the method of providing results to suppliers and {{action plans}} with improvements based on performance ratings.\n\n",
+      "content": "Craft a supplier performance evaluation strategy integrating precise {{evaluation criteria}}, regular {{frequency of evaluation}}, transparent {{feedback mechanism}} and proactive {{action plans}}. Don't divulge particular supplier evaluations or proprietary information about your evaluation methods.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "a0e9a998-90a8-4e2c-809f-2b964e6414ba"
+    },
+    {
+      "id": "38b1cfbd-48ad-4697-b2d2-9c7a16ced4ab",
+      "name": "Logistics Management Plan",
+      "description": "This blueprint aids in assembling a logistics management plan. Replace {{transportation methods}} with your chosen methods of moving goods, {{warehouse location strategy}} with factors influencing the location of storage facilities, {{goods tracking system}} with technology used to monitor goods in transit, and {{logistics KPIs}} with metrics used to assess logistics performance.\n\n",
+      "content": "Sketch a logistics management plan highlighting optimised {{transportation methods}}, strategic {{warehouse location strategy}}, state-of-the-art {{goods tracking system}}, and key {{logistics KPIs}}. Avoid discussing confidential delivery routes or proprietary technology used in tracking shipments.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "a0e9a998-90a8-4e2c-809f-2b964e6414ba"
+    },
+    {
+      "id": "2e5cb0a5-09ef-44bb-8b3d-77ab80f429d6",
+      "name": "Supply Chain Integrations Approach",
+      "description": "This template guides in framing an approach to integrate operations across the supply chain. Change {{integration goals}} with the outcomes of integration, {{technology adoption}} with tools used for smoother integration, {{organisational alignment}} with strategies to ensure all players are in sync, and {{performance monitoring}} with methods to assess the success of integrations.\n\n",
+      "content": "Develop a supply chain integrations approach featuring clear {{integration goals}}, efficient {{technology adoption}}, thorough {{organisational alignment}}, and stringent {{performance monitoring}}. Please refrain from revealing sensitive technical configurations or internal alignment strategies.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "a0e9a998-90a8-4e2c-809f-2b964e6414ba"
+    },
+    {
+      "id": "06e009bf-61f8-4ff5-b558-53e7666cb5b2",
+      "name": "Procurement Strategy Plan",
+      "description": "This structure helps to draw up a procurement strategy. Substitute {{procurement goals}} with the aims of the procurement activities, {{supplier partnership model}} with the chosen relationship structure with suppliers, {{contractual terms}} with the conditions you aim to negotiate and {{procurement performance metrics}} with the indicators to measure procurement success.\n\n",
+      "content": "Construct a procurement strategy plan underscoring key {{procurement goals}}, robust {{supplier partnership model}}, fair {{contractual terms}}, and actionable {{procurement performance metrics}}. Avoid sharing specific contract details or proprietary procurement methods.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "a0e9a998-90a8-4e2c-809f-2b964e6414ba"
+    },
+    {
+      "id": "886ee1ca-d776-4f67-993b-64a6a6bb6116",
+      "name": "Product Lifecycle Management",
+      "description": "This format enables the detailing of a product lifecycle management plan. Replace {{product development phases}} with stages through which products pass, {{cross-functional collaboration}} with interactions between different departments, {{product review milestones}} with the approval points in development, and {{end-of-life strategy}} with the approach taken when the product reaches the end of its life.\n\n",
+      "content": "Formulate a product lifecycle management strategy featuring comprehensive {{product development phases}}, effective {{cross-functional collaboration}}, disciplined {{product review milestones}}, and considerate {{end-of-life strategy}}. Don’t refer to confidential product details or unreleased lifecycle procedures.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "a0e9a998-90a8-4e2c-809f-2b964e6414ba"
+    }
+  ]
+}

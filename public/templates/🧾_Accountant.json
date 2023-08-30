@@ -1,0 +1,117 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "9a203aa4-4bb1-4164-b33f-5418ff509a57",
+      "name": "Accountant",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "e2da5327-d5e5-435e-b2be-6ceaa0454e57",
+      "name": "Monthly Financial Report",
+      "description": "This template enables an assembled monthly financial report. Replace {{income statement}} with the company's revenues and expenses, {{balance sheet}} with assets, liabilities, and shareholders' equity, {{cash flow statement}} with cash and cash equivalents coming in and out, and {{financial ratio analysis}} with measurements of a company's financial performance.\n\n",
+      "content": "Prepare a comprehensive monthly financial report integrating a detailed {{income statement}}, a careful {{balance sheet}}, an exact {{cash flow statement}}, and a thorough {{financial ratio analysis}}. Avoid disclosing confidential financial data or future business forecasts.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "9a203aa4-4bb1-4164-b33f-5418ff509a57"
+    },
+    {
+      "id": "3aa98572-d5ce-4330-af90-8b6a173d818d",
+      "name": "Financial Forecasting Model",
+      "description": "Use this blueprint to construct a financial forecasting model. Substitute {{historical financial data}} with financial history that will be considered, {{market factors}} with economic influences considered, {{deduction assumptions}} with the premises upon which you've based your predictions, and {{forecast periods}} with the time frames for your forecasts.\n\n",
+      "content": "Develop a reliable financial forecasting model highlighting your {{historical financial data}}, current {{market factors}}, underlying {{deduction assumptions}}, and set {{forecast periods}}. Make sure not to include any confidential company information or unapproved future strategies.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "9a203aa4-4bb1-4164-b33f-5418ff509a57"
+    },
+    {
+      "id": "1ae2759e-883b-4a92-b8ed-cccfa6b85e64",
+      "name": "Annual Budget Plan",
+      "description": "This outline aids in developing a solid annual budget plan. Replace {{income estimate}} with the projected total revenue, {{expense estimate}} with the prediction of total costs, {{capital expenditure plan}} with the budget for acquiring or maintaining fixed assets, and {{contingency fund}} with the emergency finance reserved for unexpected events.\n\n",
+      "content": "Create an effective annual budget plan featuring your realistic {{income estimate}}, anticipated {{expense estimate}}, strategic {{capital expenditure plan}}, and safeguarding {{contingency fund}}. Please refrain from disclosing sensitive expenditure information or internal financial plans.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "9a203aa4-4bb1-4164-b33f-5418ff509a57"
+    },
+    {
+      "id": "3f4571a1-b941-4831-bdfa-7a013fb1dc50",
+      "name": "Tax Compliance Checklist",
+      "description": "This structure provides a basis for maintaining a tax compliance checklist. Substitute {{income tax requirements}} with the obligations for income tax, {{GST/VAT conditions}} with Goods and Services Tax/Value Added Tax norms, {{employment tax obligations}} with the duties related to employee taxes, and {{documentation}} with the necessary paperwork for tax compliance.\n\n",
+      "content": "Formulate a robust tax compliance checklist considering comprehensive {{income tax requirements}}, crucial {{GST/VAT conditions}}, important {{employment tax obligations}}, and accurate {{documentation}}. Remember not to divulge sensitive employee tax data or proprietary financial details.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "9a203aa4-4bb1-4164-b33f-5418ff509a57"
+    },
+    {
+      "id": "4ba9fa57-41bb-4f8d-af65-34a6a99aa146",
+      "name": "Accounts Receivable Report",
+      "description": "Use this template to create an accounts receivable report. Replace {{customer details}} with information of those who owe money, {{outstanding invoices}} with unpaid bills, {{aged receivables}} with debts classified by the length of time they have gone unpaid, and {{debt recovery actions}} with steps taken to recoup overdue amounts.",
+      "content": "Compile a comprehensive accounts receivable report featuring complete {{customer details}}, all {{outstanding invoices}}, thorough {{aged receivables}} analysis, and active {{debt recovery actions}}. Avoid sharing confidential customer details or private debt recovery strategies.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "9a203aa4-4bb1-4164-b33f-5418ff509a57"
+    },
+    {
+      "id": "55f7c5f3-bc73-4224-9584-1076e87c09d2",
+      "name": "Accounts Payable Ledger",
+      "description": "This template is useful for maintaining an accounts payable ledger. Substitute {{supplier details}} with information about your vendors, {{pending bills}} with bills awaiting payment, {{payment due dates}} with the deadlines by which bills must be settled, and {{discrepancy resolution}} with actions taken to rectify any inconsistencies.\n\n",
+      "content": "Construct an organised accounts payable ledger presenting all {{supplier details}}, listing {{pending bills}}, marking {{payment due dates}}, and noting any {{discrepancy resolution}}. Please refrain from revealing sensitive vendor data or the company's financial status.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "9a203aa4-4bb1-4164-b33f-5418ff509a57"
+    },
+    {
+      "id": "01595940-45a5-4922-ab4e-25ffee42e3e7",
+      "name": "Cash Flow Analysis",
+      "description": "This blueprint assists in performing a useful cash flow analysis. Replace {{cash inflow}} with the total money coming into the business, {{cash outflow}} with the total money leaving the business, {{net cash flow}} with the difference between cash inflow and cash outflow, and {{cash flow forecast}} with prediction of future cash flow based on historical data.\n\n",
+      "content": "Develop a detailed cash flow analysis encompassing comprehensive {{cash inflow}}, exact {{cash outflow}}, calculated {{net cash flow}}, and prudent {{cash flow forecast}}. Avoid sharing sensitive financial information or unapproved future forecasts.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "9a203aa4-4bb1-4164-b33f-5418ff509a57"
+    },
+    {
+      "id": "7e4cc8a9-09f5-4f02-8280-4fa784c73115",
+      "name": "Financial Audit Checklist",
+      "description": "This format helps to come up with an efficient financial audit checklist. Substitute {{document review}} with the financial records to be examined, {{internal control evaluation}} with the assessment of the company's control systems, {{reconciliation procedures}} with the process of ensuring financial consistency, and {{audit report preparation}} with the stages of putting together your findings in a report.",
+      "content": "Formulate a practical financial audit checklist indicating thorough {{document review}}, in-depth {{internal control evaluation}}, systematic {{reconciliation procedures}}, and meticulous {{audit report preparation}}. Do not reveal specific audit findings or proprietary control systems.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "9a203aa4-4bb1-4164-b33f-5418ff509a57"
+    }
+  ]
+}

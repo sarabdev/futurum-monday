@@ -30,14 +30,15 @@ export const PluginSelect: FC<Props> = ({
   const [plugin,setPlugin]=useState({id:'', name:''})
   const [value,setValue]=useState('')
   const PluginList=[
+    // {
+    //   id:1,
+    //   name:"Image"
+    // },
+    // {
+    //   id:2,
+    //   name:"File"
+    // },
     {
-      id:1,
-      name:"Image"
-    },
-    {
-      id:2,
-      name:"File"
-    },{
       id:"3",
       name:"Text"
     }

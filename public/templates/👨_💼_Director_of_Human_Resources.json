@@ -1,0 +1,156 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "c21f0e99-4852-4dfe-9ffb-0ab1acbc4751",
+      "name": "Director of Human Resources",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "2a113f30-f9d9-4180-a679-8bedf624981a",
+      "name": "Recruitment Strategy Plan",
+      "description": "This template guides the creation of a detailed recruitment strategy. Substitute {{job positions}} with the roles that need to be filled, {{candidate sourcing methods}} with the channels for reaching out to potential candidates, and {{selection process}} with the recruitment stages from screening to onboarding.",
+      "content": "Develop a robust recruitment strategy to hire for {{job positions}}. The strategy should include effective {{candidate sourcing methods}}, a clearly defined {{selection process}}, and a plan for maintaining communication with candidates throughout. Please ensure data privacy regulations are adhered to throughout the process.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "c21f0e99-4852-4dfe-9ffb-0ab1acbc4751"
+    },
+    {
+      "id": "fad2ebc0-69d8-4993-8fbc-56b96cc8b661",
+      "name": "Employee Onboarding Procedure",
+      "description": "This template assists in establishing an effective employee onboarding procedure. Replace {{onboarding activities}} with the set of actions new joiners need to take, {{role-specific training}} with any necessary job-related training, and {{follow-up plan}} with the method for checking in on new hires’ adaptation and progression.\n\n",
+      "content": "Draft an employee onboarding procedure detailing necessary {{onboarding activities}}, inclusive of orientation sessions, IT system setup, policy briefings, and {{role-specific training}}. Incorporate structured {{follow-up plan}} to ensure new hires adjust smoothly to the workplace and their roles. Remember to keep language user-friendly and concise to facilitate understanding.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "c21f0e99-4852-4dfe-9ffb-0ab1acbc4751"
+    },
+    {
+      "id": "50a7a05d-4dd5-494f-a890-81771270a143",
+      "name": "Workforce Training Program",
+      "description": "This template is for outlining a workforce training program. Substitute {{training topics}} with the subjects the training will cover, {{training schedule}} with when the training will take place, and {{expected outcomes}} with the skills or behaviours you aim for the trainees to develop.\n\n",
+      "content": "Develop a detailed itinerary for a workforce training program that covers {{training topics}}. Clarify the {{training schedule}} and define the {{expected outcomes}} for each session. Be sure to exclude personal staff data or sensitive content related to company practices outside of the training's scope.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "c21f0e99-4852-4dfe-9ffb-0ab1acbc4751"
+    },
+    {
+      "id": "f1d5f011-2bc3-4ad9-b622-72e628712699",
+      "name": "Performance Evaluation Protocol",
+      "description": "Use this template to create a thorough performance evaluation protocol. Replace {{evaluation criteria}} with your metrics for appraisal, {{feedback methodology}} with your technique for delivering feedback, and {{performance improvement initiatives}} with training or motivational measures.\n\n",
+      "content": "Formulate a performance evaluation protocol encompassing {{evaluation criteria}} across various job roles. Describe the {{feedback methodology}} to provide constructive appraisals and outline {{performance improvement initiatives}} to address any identified areas for development. Avoid including information specific to individual employees or confidential performance data.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "c21f0e99-4852-4dfe-9ffb-0ab1acbc4751"
+    },
+    {
+      "id": "49dba115-69b6-4977-ba89-84a8d39b888e",
+      "name": "Recruitment Strategy Plan",
+      "description": "This template is for crafting a persuasive recruitment strategy. Substitute {{recruitment channels}} with the avenues you use for candidate sourcing, {{selection process}} with your methods for assessing candidates, and {{onboarding roadmap}} with a high-level template for training and integrating new hires.\n\n",
+      "content": "Draft a recruitment strategy that covers all the bases: our standard {{recruitment channels}}, the steps involved in the {{selection process}}, and an initial glimpse into the {{onboarding roadmap}} for successful applicants. Refrain from divulging details that are unnecessary or potentially discriminating in early recruitment stages.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "c21f0e99-4852-4dfe-9ffb-0ab1acbc4751"
+    },
+    {
+      "id": "127f8139-f929-43f1-8413-73dbd582c9c0",
+      "name": "Company HR Policy Update",
+      "description": "This template assists in communicating a company HR policy update. Replace {{policy name}} with the updated policy's title, {{key changes}} with any major alterations from the previous policy, and {{implementation date}} with when the change will come into effect.\n\n",
+      "content": "Construct an announcement email regarding the update to the {{policy name}}. Discuss the {{key changes}} in clear and concise language, emphasise the reasons for these updates, and note the {{implementation date}}. Please ensure to maintain objectivity and focus on facts without divulging sensitive internal discussions.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "c21f0e99-4852-4dfe-9ffb-0ab1acbc4751"
+    },
+    {
+      "id": "b0e9533f-dce2-4418-907d-a6a327430c61",
+      "name": "Leadership Development Plan",
+      "description": "This template is designed for the formulation of a leadership development plan. Replace {{target skills}} with the necessary leadership competencies to be developed, {{learning activities}} with exercises or sessions tailored to cultivate these skills, and {{evaluation methods}} with measures to assess improvements.\n",
+      "content": "Devise a leadership development plan that highlights the need to hone {{target skills}} through participating in designed {{learning activities}}. Indicate the {{evaluation methods}} that will be used to monitor progress and effectivity of the plan. Refrain from including specific personal development needs of individuals, which should remain confidential.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "c21f0e99-4852-4dfe-9ffb-0ab1acbc4751"
+    },
+    {
+      "id": "4ea9352c-aa8c-48f1-8dce-e33011ba142d",
+      "name": "Employee Engagement Strategy",
+      "description": "This template is for shaping an effective employee engagement strategy. Substitute {{engagement activities}} with the initiatives aimed at boosting morale and engagement, {{employee feedback process}} with your proposed method for collecting employee opinions, and {{engagement metrics}} with your chosen markers to track engagement levels.\n\n",
+      "content": "Assemble an employee engagement strategy outlining future {{engagement activities}}, and include the proposed {{employee feedback process}} to ensure a two-way communication channel. Highlight how the {{engagement metrics}} will gauge the success of the initiatives. Avoid mentioning any individual or team-specific plans to maintain equality and fairness across the board.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "c21f0e99-4852-4dfe-9ffb-0ab1acbc4751"
+    },
+    {
+      "id": "8086751b-07ad-4284-9240-282822a26922",
+      "name": "Work-Life Balance Policy",
+      "description": "Use this template to curate a work-life balance policy. Replace {{flexibility options}} with your company's flexible working arrangements, {{well-being programs}} with health and wellness offerings at your company, and {{measurable outcomes}} with your intended results for employee satisfaction, productivity, etc.\n\n",
+      "content": "Draft a comprehensive work-life balance policy detailing the {{flexibility options}} available and promoting the {{well-being programs}} offered. Specify the {{measurable outcomes}} to track the policy's effectiveness. Avoid mentioning any benefits or programs not yet formalised or not applicable to all employees.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "c21f0e99-4852-4dfe-9ffb-0ab1acbc4751"
+    },
+    {
+      "id": "8320b7ba-cedb-41f5-a9ef-f6d60d0bdad0",
+      "name": "Employee Exit Procedure",
+      "description": "This template assists in establishing a structured employee exit procedure. Substitute {{offboarding steps}} with the checklist for departing employees, {{knowledge transfer process}} with transitioning of tasks and responsibilities, and {{exit interview process}} with your approach to collecting feedback from the departing employee.\n\n",
+      "content": "Create an employee exit procedure highlighting the required {{offboarding steps}}, including the {{knowledge transfer process}}. Outline the {{exit interview process}} in place to gather valuable insights. Refrain from including any grievance procedures or disciplinary actions.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "c21f0e99-4852-4dfe-9ffb-0ab1acbc4751"
+    },
+    {
+      "id": "bf4a91e4-7160-4b2c-bdb9-907b1bdb3d1f",
+      "name": "Diversity and Inclusion Plan",
+      "description": "This template assists in creating a diverse and inclusive workplace plan. Replace {{diversity initiatives}} with actions designed to promote various forms of diversity, {{inclusivity programs}} with measures taken to ensure inclusion, and {{assessment mechanisms}} with methods to evaluate the success of these actions.\n\n",
+      "content": "Draft a diversity and inclusion plan featuring the {{diversity initiatives}}, elaborating on the {{inclusivity programs}} and denoting the {{assessment mechanisms}} to evaluate the progress. Do not touch upon specific protected characteristics or any bias-related incidents.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "c21f0e99-4852-4dfe-9ffb-0ab1acbc4751"
+    }
+  ]
+}

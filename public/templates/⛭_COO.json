@@ -1,0 +1,143 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "fb3e5010-4b7c-41a4-aaf8-28574b7cbf25",
+      "name": "COO",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "f87ed479-bf85-4da2-acb7-eb27e77a5bf8",
+      "name": "Business Operations Update",
+      "description": "This template assists the COO in updating stakeholders on business operations. Substitute {{COO's name}}, {{operational update}} with suitable information. ",
+      "content": "Craft an update from {{COO's name}} informing stakeholders about the current state of business operations. Discuss major operational achievements, challenges faced, and future directions of our {{operational update}}. Refrain from divulging confidential strategies.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "fb3e5010-4b7c-41a4-aaf8-28574b7cbf25"
+    },
+    {
+      "id": "7c03917e-2407-4ff3-80e1-4ac63e987433",
+      "name": "Product Launch Plan",
+      "description": "This prompt aids the COO in planning a product launch. Replace {{COO's name}}, {{product name}}, {{launch date}} with corresponding inputs. ",
+      "content": "Formulate a plan on behalf of {{COO's name}} for the launch of {{product name}} scheduled for {{launch date}}. Detail alignment of production, marketing, sales, and customer support for a successful launch. Avoid inclusion of tentative timelines or unconfirmed details.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "fb3e5010-4b7c-41a4-aaf8-28574b7cbf25"
+    },
+    {
+      "id": "70cb1c4e-05c5-42aa-8bbd-abe7a4c5e6a1",
+      "name": "Quality Improvement Initiative",
+      "description": "This template supports creating a quality improvement initiative. Replace {{COO's name}}, {{relevant sector of operation}}, {{quality improvement standards}} with apt data.",
+      "content": "Sketch out a quality improvement initiative directed by {{COO's name}} for {{relevant sector of operation}}. Discuss the implementation of {{quality improvement standards}} and expected operational improvements. Do not propose changes that are unrealistic given our resources or timelines.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "fb3e5010-4b7c-41a4-aaf8-28574b7cbf25"
+    },
+    {
+      "id": "b0a7985b-1e6b-4284-9e00-61df9c8ca56b",
+      "name": "Staff Assignment and Responsibility Notice",
+      "description": "This prompt assists the COO in delegating tasks and responsibilities to employees. Replace {{COO's name}}, {{staff names}}, {{assigned tasks}} properly.",
+      "content": "Draft an email for {{COO's name}} to team members, detailing their new {{assigned tasks}} and changes in responsibilities. Make sure to address each {{staff names}} specifically, appreciating their adaptability. Please avoid insensitive language or remarks.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "fb3e5010-4b7c-41a4-aaf8-28574b7cbf25"
+    },
+    {
+      "id": "a5ed6772-abdd-4b76-be94-c55152447c3b",
+      "name": "Operational Audit Summary",
+      "description": "This template supports creating a summary of an operational audit. Replace {{COO's name}}, {{audit findings}}, {{recommended actions}} with relevant information. ",
+      "content": "Prepare a summary presentation of {{audit findings}} for {{COO's name}}. Highlight key issues, strengths, and proposed {{recommended actions}}. Please ensure all information is accurate and does not violate any company protocols.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "fb3e5010-4b7c-41a4-aaf8-28574b7cbf25"
+    },
+    {
+      "id": "5ce00a05-dc76-490f-8cb3-39ae81f128ea",
+      "name": "Supplier Management Strategy",
+      "description": "This prompt aids in devising a supplier management strategy. Substitute {{COO's name}}, {{supplier's name}}, {{key negotiation points}} with suitable details.",
+      "content": "Organise a supplier management strategy for {{COO's name}}. Emphasise on strong partnerships, prompt communication and mutual growth with {{supplier's name}}. Highlight these {{key negotiation points}} but remember not to include proprietary company information.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "fb3e5010-4b7c-41a4-aaf8-28574b7cbf25"
+    },
+    {
+      "id": "429fc9ba-11c7-4514-956c-e3999e2b3fcc",
+      "name": "Change Management Proposal ",
+      "description": "This template assists in outlining a change management proposal. Replace {{COO's name}}, {{proposed changes}}, {{implementation plan}} accordingly.",
+      "content": "Compose a change management proposal for {{COO's name}}, detailing the {{proposed changes}}, their implications, and the {{implementation plan}}. Be sure to discuss potential resistance and how to manage it. Refrain from speculative or misguiding statements.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "fb3e5010-4b7c-41a4-aaf8-28574b7cbf25"
+    },
+    {
+      "id": "ce6f62ac-f085-4fab-bca4-270c6fce74f6",
+      "name": "Operations Meeting Agenda",
+      "description": "This prompt helps in preparing an agenda for an operations meeting. Replace {{COO's name}}, {{meeting topics}}, {{key objectives}} with the relevant details. ",
+      "content": "Construct an agenda for the upcoming operations meeting led by {{COO's name}}. Main points to discuss include the {{meeting topics}} and {{key objectives}}. Exclude topics that are not relevant to operations.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "fb3e5010-4b7c-41a4-aaf8-28574b7cbf25"
+    },
+    {
+      "id": "bd1a4537-ccf2-47dc-b23d-6cabcd969547",
+      "name": "Crisis Management Plan",
+      "description": "This template is used to develop a crisis management plan. Substitute {{COO's name}}, {{potential crisis scenarios}}, {{contingency measures}} with the appropriate details.",
+      "content": "Devise a crisis management plan on behalf of {{COO's name}}, detailing {{potential crisis scenarios}} and {{contingency measures}}. Keep assumptions realistic and avoid instigating panic.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "fb3e5010-4b7c-41a4-aaf8-28574b7cbf25"
+    },
+    {
+      "id": "6ce423af-eec9-48e8-b455-a6ef26c807be",
+      "name": "Operational Performance Report",
+      "description": "This template aids in drafting a performance report. Replace {{COO's name}}, {{performance indicators}}, {{next quarter's targets}} with suitable information.",
+      "content": "Create a performance report for {{COO's name}}, encompassing key {{performance indicators}}, achievements against targets, and setting {{next quarter's targets}}. Do not refer to confidential company performance metrics.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "fb3e5010-4b7c-41a4-aaf8-28574b7cbf25"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "ab995bb4-9faa-424b-99e8-137aeb81d863",
+      "name": "Sales Manager",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "5c2868b5-d36d-4a2d-a888-a0fca394f2f1",
+      "name": "Sales Forecasting Model",
+      "description": "This template enables the creation of a sales forecasting model. Replace {{historical sales data}} with past sales that will be considered, {{market trends}} with industry or economic factors considered, {{sales strategies}} with your planned sales initiatives, and {{forecast periods}} with your forecasted timeline.\n\n",
+      "content": "Construct a sales forecasting model featuring {{historical sales data}}, current {{market trends}}, upcoming {{sales strategies}}, and set {{forecast periods}}. Be careful not to include any confidential client information or unapproved future strategies.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "ab995bb4-9faa-424b-99e8-137aeb81d863"
+    },
+    {
+      "id": "0d29e8f8-cded-44f7-977a-f2a7c670629f",
+      "name": "Customer Relationship Management (CRM) Plan",
+      "description": "This template assists in drawing up a CRM plan. Substitute {{strategy objectives}} with your CRM targets, {{client segmentation}} with your customer breakdown, {{follow-up actions}} with customer interaction planning, and {{measurement metrics}} with your CRM performance indicators.\n\n",
+      "content": "Develop a CRM plan laying out your {{strategy objectives}}, undertakes significant {{client segmentation}}, arranges diligent {{follow-up actions}}, and applies measurable {{measurement metrics}}. Avoid discussing sensitive customer data or proprietary CRM tools.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "ab995bb4-9faa-424b-99e8-137aeb81d863"
+    },
+    {
+      "id": "3a24cc9b-5022-432e-8c97-e967cf2ce9cd",
+      "name": "New Product Sales Strategy",
+      "description": "Use this blueprint to construct a new product sales strategy. Replace {{product USPs}} with unique selling points of the product, {{target audience}} with your defined customer segment, {{sales channels}} with your proposed distribution channels, and {{promotion plans}} with marketing and advertising efforts for the product.\n\n",
+      "content": "Script a new product sales strategy underscoring {{product USPs}}, identifying the {{target audience}}, stating practical {{sales channels}}, and outlining creative {{promotion plans}}. Please, avoid releasing any confidential product features or unconfirmed marketing strategies.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "ab995bb4-9faa-424b-99e8-137aeb81d863"
+    },
+    {
+      "id": "08f9b732-b3e5-4ba1-8b40-9ae11097cc54",
+      "name": "Sales Team Training Plan",
+      "description": "This structure enables a wholesome sales team training plan. Substitute {{training goals}} with what you intend the team to learn, {{training content}} with the specifics of the training curriculum, {{training schedule}} with times for training sessions, and {{evaluation methods}} with plans for assessing the training's effectiveness.\n\n",
+      "content": "Formulate a sales team training plan specifying your {{training goals}}, delivering a broad-based {{training content}}, providing a flexible yet structured {{training schedule}}, and utilising reliable {{evaluation methods}}. Refrain from pointing out individual weaknesses or confidential sales strategies.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "ab995bb4-9faa-424b-99e8-137aeb81d863"
+    },
+    {
+      "id": "cd230a69-3a2a-48d6-823d-ca28188273ac",
+      "name": "Key Account Management Strategy",
+      "description": "This template assists in assembling a key account management strategy. Replace {{account selection criteria}} with your rules for identifying key accounts, {{relationship building strategies}} with techniques for nurturing customer relationships, {{account growth plans}} with initiatives on expanding business with each account, and {{success metrics}} with indicators for tracking the strategy's performance.\n\n",
+      "content": "Sketch a key account management strategy highlighting transparent {{account selection criteria}}, relationship-enhancing {{relationship building strategies}}, optimised {{account growth plans}}, and realistic {{success metrics}}. Avoid commenting on specific accounts or revealing sensitive pricing strategies.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "ab995bb4-9faa-424b-99e8-137aeb81d863"
+    },
+    {
+      "id": "16b44c3f-5f53-4042-9dab-9bc5a797425e",
+      "name": "Sales Quota Setting Method",
+      "description": "This template assists in devising a sales quota setting method. Substitute {{sales performance history}} with past sales records, {{market analysis}} with consideration of market conditions, {{sales capacity}} with your team's sales potential, and {{quota adjustment guidelines}} with the rules for quota revisions.\n\n",
+      "content": "Draw up a sales quota setting method featuring a review of {{sales performance history}}, systematic {{market analysis}}, accurate {{sales capacity}} estimation, and clear-cut {{quota adjustment guidelines}}. Avoid discussing individual salesperson's performance or confidential revenue information.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "ab995bb4-9faa-424b-99e8-137aeb81d863"
+    },
+    {
+      "id": "350d84f4-1eb1-4c24-8d94-769235105729",
+      "name": "Customer Retention Strategy",
+      "description": "This template aids in structuring a customer retention strategy. Replace {{retention goals}} with your objectives for maintaining customers, {{customer segmentation}} with specific customer groups, {{engagement tactics}} with methods to hold customer interest, and {{evaluation metrics}} with your methods of assessing retention success.\n\n",
+      "content": "Develop a customer retention strategy tailoring to {{retention goals}}, segmenting {{customer segmentation}}, planning interactive {{engagement tactics}}, and adopting real-time {{evaluation metrics}}. Refrain from including specific customer experiences or any data that violates customer privacy.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "ab995bb4-9faa-424b-99e8-137aeb81d863"
+    },
+    {
+      "id": "7af5e470-401a-4c8d-b017-8c08c7e90dea",
+      "name": "Competitor Pricing Analysis",
+      "description": "Use this blueprint to conduct a competitor pricing analysis. Substitute {{competitor identification}} with the process in place to identify competitors, {{pricing data}} with details on your competitors' pricing, {{benefit comparison}} with a comparison of your products' values against competitors, and {{pricing strategy recommendations}} with advised pricing moves based on the analysis.\n\n",
+      "content": "Perform a competitor pricing analysis that includes essential {{competitor identification}}, comprehensive {{pricing data}}, benefit-focused {{benefit comparison}}, along with {{pricing strategy recommendations}}. Avoid sharing confidential information or any analytical methods that give your organisation a proprietary edge.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "ab995bb4-9faa-424b-99e8-137aeb81d863"
+    },
+    {
+      "id": "9bf41545-e01f-4a6c-9ee4-0b157eb863b1",
+      "name": "Lead Generation Initiative",
+      "description": "This schema enables a lead generation initiative. Replace {{lead generation channels}} with your sources for finding potential customers, {{lead scoring criteria}} with your system for ranking the value of leads, {{follow-up methods}} with how you'll connect with leads, and {{performance evaluation}} with your method for assessing the lead generation success.\n\n",
+      "content": "Construct a lead generation initiative outlining our preferred {{lead generation channels}}, establishing defined {{lead scoring criteria}}, designing efficient {{follow-up methods}}, and implementing a comprehensive {{performance evaluation}} plan. Be cautious about revealing proprietary marketing strategies or specific leads data.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "ab995bb4-9faa-424b-99e8-137aeb81d863"
+    },
+    {
+      "id": "8630ab64-189c-4b25-8f0a-f698d2bc222f",
+      "name": "Sales Incentive Scheme",
+      "description": "This structure crafts a sale incentive scheme. Substitute {{sales performance metrics}} with your standards for evaluating sales performance, {{reward types}} with your offerings for exceptional performance, {{eligibility criteria}} with the rules on who can participate, and {{scheme duration}} with the timeline for the scheme.\n\n",
+      "content": "Form an attractive sales incentive scheme incorporating transparent {{sales performance metrics}}, enticing {{reward types}}, clear {{eligibility criteria}}, and a fixed {{scheme duration}}. Avoid mentioning specific reward amounts or performance thresholds that have not been finalised.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "ab995bb4-9faa-424b-99e8-137aeb81d863"
+    }
+  ]
+}

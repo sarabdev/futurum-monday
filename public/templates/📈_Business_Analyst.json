@@ -1,0 +1,143 @@
+{
+  "version": 4,
+  "history": [],
+  "folders": [
+    {
+      "id": "c9b6b501-534e-43e6-9dda-ce74692c2a49",
+      "name": "Business Analyst",
+      "type": "prompt"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "7c766f57-6e9d-4ce5-b362-4c13aaedd0e6",
+      "name": "Business Process Analysis",
+      "description": "This template facilitates the creation of a thorough business process analysis. Replace {{process identification}} with the business processes that need to be analysed, {{process mapping}} with the visualisation of these processes, {{performance measurement}} with your method of assessing these processes, and {{improvement suggestions}} with recommended adjustments to enhance efficiency.\n\n",
+      "content": "Sketch a comprehensive business process analysis that includes detailed {{process identification}}, meticulous {{process mapping}}, precise {{performance measurement}}, and actionable {{improvement suggestions}}. Please refrain from disclosing any sensitive information regarding the organisation's proprietary processes.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "c9b6b501-534e-43e6-9dda-ce74692c2a49"
+    },
+    {
+      "id": "1513c735-4c73-45fc-8cf0-2557cb97fc4a",
+      "name": "Data Analysis Report",
+      "description": "This layout aids in structuring a cohesive data analysis report. Substitute {{data sources}} with origins of the data under analysis, {{analysis methods}} with tools and techniques applied, {{findings}} with key results or trends from the analysis, and {{recommendations}} with suggestions based on the analysed data.\n\n",
+      "content": "Develop a robust data analysis report discussing your relevant {{data sources}}, applying your scientific {{analysis methods}}, summarising the critical {{findings}}, and offering strategic {{recommendations}}. Avoid revealing confidential data or proprietary analytical techniques.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "c9b6b501-534e-43e6-9dda-ce74692c2a49"
+    },
+    {
+      "id": "9d63f6c1-09ab-4561-9593-b09e797c84f2",
+      "name": "Market Research Strategy",
+      "description": "This structure enables the development of an effective market research strategy. Replace {{research objectives}} with what you hope to learn, {{research methods}} with techniques used to gather market information, {{target audience}} with the consumer segment to be researched, and {{research analysis}} with your approach to interpreting the results.\n\n",
+      "content": "Formulate an insightful market research strategy, underscoring your well-defined {{research objectives}}, sustainable {{research methods}}, defined {{target audience}}, and comprehensive {{research analysis}}. Remember not to include confidential customer details or proprietary research methodologies.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "c9b6b501-534e-43e6-9dda-ce74692c2a49"
+    },
+    {
+      "id": "02cf6c65-eaf0-48e4-a783-462c26c4a24f",
+      "name": "Requirement Gathering Approach",
+      "description": "This blueprint assists in establishing a systematic requirement gathering approach. Substitute {{stakeholder identification}} with individuals or groups you'll need input from, {{information collection methods}} with techniques for data collection, {{requirement categorisation}} with sorting of needs into groups, and {{requirement validation}} with the process of confirming requirements.\n\n",
+      "content": "Construct a focused requirement gathering approach, outlining identified {{stakeholder identification}}, effective {{information collection methods}}, logical {{requirement categorisation}}, and meticulous {{requirement validation}}. Avoid disclosing specific stakeholder comments or internal software development requests.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "c9b6b501-534e-43e6-9dda-ce74692c2a49"
+    },
+    {
+      "id": "9e912b09-678b-4972-af2d-b7e94c97e90f",
+      "name": "Business Case Development",
+      "description": "This template guides in the creation of a compelling business case. Replace {{problem statement}} with the issue the business is facing, {{proposed solution}} with your idea to tackle the problem, {{benefit-cost analysis}} with quantifying the expected benefits versus the cost, and {{risk assessment}} with potential drawbacks and how to deal with them.",
+      "content": "Draft a persuasive business case featuring a concise {{problem statement}}, an innovative {{proposed solution}}, a thorough {{benefit-cost analysis}}, and a detailed {{risk assessment}}. Please refrain from revealing sensitive financial data or future business strategy plans.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "c9b6b501-534e-43e6-9dda-ce74692c2a49"
+    },
+    {
+      "id": "c79673f6-0644-4040-92a3-4e586b386bde",
+      "name": "Project Scoping Document",
+      "description": "This template facilitates the development of a detailed project scoping document. Substitute {{project objectives}} with the aims your project intends to achieve, {{scope boundaries}} with clarification of what's included and what's not, {{deliverables}} with the final outcomes expected, and {{constraints}} with any limitations such as time, budget, or resources.\n\n",
+      "content": "Conceive a precise project scoping document that includes clear {{project objectives}}, defined {{scope boundaries}}, listed {{deliverables}}, and recognised {{constraints}}. Remember to avoid exposing confidential project-related data or proprietary project management strategies.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "c9b6b501-534e-43e6-9dda-ce74692c2a49"
+    },
+    {
+      "id": "4cb0eaca-9751-40ac-9b2c-447d4623b4be",
+      "name": "Competitor Analysis Report",
+      "description": "This outline assists in formulating a comprehensive competitor analysis report. Replace {{competitor identification}} with whom you are comparing your business to, {{product comparison}} with the examination of your products or services against those of rivals, {{marketing strategies assessment}} with a review of competitors' promotional techniques, and {{SWOT analysis}} with an analysis of competitors' strengths, weaknesses, opportunities, and threats.\n\n",
+      "content": "Assemble a thorough competitor analysis report presenting identifiable {{competitor identification}}, fair {{product comparison}}, insightful {{marketing strategies assessment}}, and critical {{SWOT analysis}}. Please avoid sharing confidential marketing strategies or excessive company critique.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "c9b6b501-534e-43e6-9dda-ce74692c2a49"
+    },
+    {
+      "id": "2672d831-a21e-4827-99bb-04e8ee5a4bf2",
+      "name": "User Acceptance Testing (UAT) Plan",
+      "description": "This blueprint aids in structuring a User Acceptance Testing Plan. Substitute {{test objectives}} with the goals of your UAT, {{user roles}} with the users set to perform the tests, {{test scenarios}} with situations in which the system will be tested, and {{test evaluation criteria}} with what determines a successful or failed test.\n\n",
+      "content": "Frame a robust UAT Plan, highlighting purposeful {{test objectives}}, identified {{user roles}}, realistic {{test scenarios}}, and precise {{test evaluation criteria}}. Refrain from specifying sensitive user data or proprietary test scenarios.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "c9b6b501-534e-43e6-9dda-ce74692c2a49"
+    },
+    {
+      "id": "04a3e808-8283-479a-bdf8-1870d8555139",
+      "name": "Change Management Strategy",
+      "description": "This template enables the creation of a successful change management strategy. Replace {{change vision}} with the desired state after the change, {{change drivers}} with factors driving the necessity for change, {{stakeholder engagement plan}} with ways to involve all participants in the process, and {{change tracking mechanism}} with your system to monitor the success of change implementation.\n\n",
+      "content": "Draft an effective change management strategy detailing your inspired {{change vision}}, recognisable {{change drivers}}, proactive {{stakeholder engagement plan}}, and reliable {{change tracking mechanism}}. Please avoid revealing specific personnel-related change details or confidential organisational plans.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "c9b6b501-534e-43e6-9dda-ce74692c2a49"
+    },
+    {
+      "id": "68337651-cd4e-4479-9f12-439c9d35238f",
+      "name": "Key Performance Indicator (KPI) Report",
+      "description": "This structure guides the assembly of a meaningful KPI Report. Substitute {{KPI identification}} with the chosen business performance metrics, {{measurement methods}} with how you track those KPIs, {{performance insights}} with results of the KPI tracking, and {{recommendations}} with the proposals based on the performance insights.\n\n",
+      "content": "Craft a comprehensive KPI report featuring your strategic {{KPI identification}}, methodical {{measurement methods}}, insightful {{performance insights}}, and forward-looking {{recommendations}}. Avoid revealing sensitive performance data or internal strategic developments.",
+      "model": {
+        "id": "gpt-4",
+        "name": "GPT-4",
+        "maxLength": 24000,
+        "tokenLimit": 8000
+      },
+      "folderId": "c9b6b501-534e-43e6-9dda-ce74692c2a49"
+    }
+  ]
+}
