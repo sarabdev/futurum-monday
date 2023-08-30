@@ -87,7 +87,7 @@ const Sidebar = <T,>({
     homeDispatch({ field: 'folders', value: folders });
     homeDispatch({ field: 'prompts', value: prompts });
 
-   // window.location.reload();
+    window.location.reload();
   };
   const handleSelection=(value:any)=>{
     setSelectionValue(value)
