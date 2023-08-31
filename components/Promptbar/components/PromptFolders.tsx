@@ -11,7 +11,7 @@ import PromptbarContext from '../PromptBar.context';
 
 export const PromptFolders = () => {
   const {
-    state: { folders },
+    state: { folders ,isGlobal},
   } = useContext(HomeContext);
 
   const {

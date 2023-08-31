@@ -1,4 +1,4 @@
-import { IconFileImport, IconFolderPlus, IconMistOff, IconPlus } from '@tabler/icons-react';
+import { IconFileImport, IconFolderPlus, IconMistOff, IconPlus, IconWorld } from '@tabler/icons-react';
 import { ReactNode, useContext ,useState} from 'react';
 import { useTranslation } from 'react-i18next';
 import SelectSearch from "react-select-search";
@@ -20,7 +20,9 @@ interface Props<T> {
   addItemButtonTitle: string;
   side: 'left' | 'right';
   items: T[];
+  globalItems:T[];
   itemComponent: ReactNode;
+  globalItemComponent:ReactNode;
   folderComponent: ReactNode;
   footerComponent?: ReactNode;
   searchTerm: string;
@@ -36,7 +38,9 @@ const Sidebar = <T,>({
   addItemButtonTitle,
   side,
   items,
+  globalItems,
   itemComponent,
+  globalItemComponent,
   folderComponent,
   footerComponent,
   searchTerm,
@@ -52,13 +56,19 @@ const Sidebar = <T,>({
     state: {
       apiKey,
       lightMode,
+      globalPrompts,
       serverSideApiKeyIsSet,
       serverSidePluginKeysSet,
       conversations,
+      isGlobal,
+      
     },
     dispatch: homeDispatch,
+    onGlobal,
+    offGlobal
   } = useContext(HomeContext);
   const [showBox,setShowBox]=useState(false)
+  // const [isGlobal,setIsGlobal]=useState(false)
   const { user ,login, userRole} = useContext(AuthContext);
   const [fileJson,setFileJson]=useState<SupportedExportFormats|undefined>(undefined)
   const [selectionValue,setSelectionValue]=useState("")
@@ -78,6 +88,7 @@ const Sidebar = <T,>({
   };
   const handleImportConversations = (data: SupportedExportFormats|undefined) => {
     if(data==undefined) return
+
     const { history, folders, prompts }: LatestExportFormat = importData(data);
     homeDispatch({ field: 'conversations', value: history });
     homeDispatch({
@@ -86,7 +97,7 @@ const Sidebar = <T,>({
     });
     homeDispatch({ field: 'folders', value: folders });
     homeDispatch({ field: 'prompts', value: prompts });
-
+    
     window.location.reload();
   };
   const handleSelection=(value:any)=>{
@@ -207,6 +218,7 @@ style={{
             //   handleSearchTerm('');
             // }}
           >
+            {side=="right" && <IconWorld size={18} onClick={()=>isGlobal?offGlobal():onGlobal()}/>}
             {side=="right"  && <IconFileImport onClick={() => {
               setShowBox(true)
           // const importFile = document.querySelector(
@@ -262,7 +274,18 @@ style={{
         />
 
         <div className="flex-grow overflow-auto">
-          {items?.length > 0 && (
+        {/* {(side=="right" && !isGlobal) && globalItems?.length > 0 && (
+            <div
+            style={{
+              backgroundColor: lightMode=="light" ? "white" : "black",
+              color: lightMode=="light" ? "black" : "white",
+              borderColor: lightMode=="light" ? "black" : "white"
+            }} 
+            className="flex border-b border-white/20 pb-2">
+              {folderComponent}
+            </div>
+          )} */}
+          {(side=="left" || !isGlobal) && items?.length > 0 && (
             <div
             style={{
               backgroundColor: lightMode=="light" ? "white" : "black",
@@ -273,8 +296,32 @@ style={{
               {folderComponent}
             </div>
           )}
+ {(side=="right" && isGlobal) && (globalItems?.length > 0 ? (
+            <div
+            
+              className="pt-2"
+              onDrop={handleDrop}
+              onDragOver={allowDrop}
+              onDragEnter={highlightDrop}
+              onDragLeave={removeHighlight}
+            >
+              {globalItemComponent}
+            </div>
+          ) : (
+            <div  className="mt-8 select-none text-center text-white opacity-50">
+              <IconMistOff color={`${lightMode === 'light' ? "black" : "white"}`} className="mx-auto mb-3" />
+              <span style={{
+      color: lightMode=="light" ? "black" : "white",
+    }} className="text-[14px] leading-normal">
+                {t('No data.')}
+              </span>
+            </div>
+          ))}
 
-          {items?.length > 0 ? (
+
+
+
+          {(side=="left" || !isGlobal) && (items?.length > 0 ? (
             <div
             
               className="pt-2"
@@ -294,7 +341,7 @@ style={{
                 {t('No data.')}
               </span>
             </div>
-          )}
+          ))}
         </div>
         {footerComponent}
       </div>

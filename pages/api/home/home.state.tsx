@@ -9,15 +9,18 @@ export interface HomeInitialState {
   apiKey: string;
   pluginKeys: PluginKey[];
   loading: boolean;
+  isGlobal:boolean;
   lightMode: 'light' | 'dark';
   messageIsStreaming: boolean;
   modelError: ErrorMessage | null;
   models: OpenAIModel[];
   folders: FolderInterface[];
+  globalFolders:FolderInterface[];
   conversations: Conversation[];
   selectedConversation: Conversation | undefined;
   currentMessage: Message | undefined;
   prompts: Prompt[];
+  globalPrompts:Prompt[];
   temperature: number;
   showChatbar: boolean;
   showPromptbar: boolean;
@@ -32,16 +35,19 @@ export interface HomeInitialState {
 export const initialState: HomeInitialState = {
   apiKey: "" ,
   loading: false,
+  isGlobal: false||true,
   pluginKeys: [],
   lightMode: 'dark',
   messageIsStreaming: false,
   modelError: null,
   models: [],
   folders: [],
+  globalFolders:[],
   conversations: [],
   selectedConversation: undefined,
   currentMessage: undefined,
   prompts: [],
+  globalPrompts:[],
   temperature: 1,
   showPromptbar: false,
   showChatbar: false,

@@ -283,7 +283,7 @@ export const ChatMessage: FC<Props> = memo(({ message, messageIndex, onEdit }) =
                         {...props}
                       />
                     ) : (
-                      <code  className={className} {...props}>
+                      <code style={{color:'black'}} className={className} {...props}>
                         {children}
                       </code>
                     );

@@ -2,6 +2,7 @@ import {
   IconBulbFilled,
   IconCheck,
   IconTrash,
+  IconWorld,
   IconX,
 } from '@tabler/icons-react';
 import {
@@ -18,12 +19,26 @@ import SidebarActionButton from '@/components/Buttons/SidebarActionButton';
 
 import PromptbarContext from '../PromptBar.context';
 import { PromptModal } from './PromptModal';
+import HomeContext from '@/pages/api/home/home.context';
 
 interface Props {
   prompt: Prompt;
 }
 
 export const PromptComponent = ({ prompt }: Props) => {
+  const {
+    state: {
+      apiKey,
+      lightMode,
+      globalPrompts,
+      serverSideApiKeyIsSet,
+      serverSidePluginKeysSet,
+      conversations,
+      prompts,
+      isGlobal
+    },
+    dispatch: homeDispatch,
+  } = useContext(HomeContext);
   const {
     dispatch: promptDispatch,
     handleUpdatePrompt,
@@ -41,8 +56,7 @@ export const PromptComponent = ({ prompt }: Props) => {
   };
 
   const handleDelete: MouseEventHandler<HTMLButtonElement> = (e) => {
-    e.stopPropagation();
-
+   
     if (isDeleting) {
       handleDeletePrompt(prompt);
       promptDispatch({ field: 'searchTerm', value: '' });
@@ -50,6 +64,17 @@ export const PromptComponent = ({ prompt }: Props) => {
 
     setIsDeleting(false);
   };
+  
+  const handleMakeGlobal:MouseEventHandler<HTMLButtonElement>=(e)=>{
+    e.stopPropagation();
+    let res=confirm('Are you sure you want to make it global?')
+    if(res){
+    localStorage.setItem('globalPrompts', JSON.stringify([...globalPrompts,prompt]));
+
+    homeDispatch({ field: 'globalPrompts', value: [...globalPrompts,prompt] });
+    }
+
+  }
 
   const handleCancelDelete: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.stopPropagation();
@@ -115,6 +140,9 @@ export const PromptComponent = ({ prompt }: Props) => {
           <SidebarActionButton handleClick={handleOpenDeleteModal}>
             <IconTrash size={18} />
           </SidebarActionButton>
+          {!isGlobal && !prompt.folderId && <SidebarActionButton handleClick={handleMakeGlobal}>
+            <IconWorld size={18} />
+          </SidebarActionButton>}
         </div>
       )}
 

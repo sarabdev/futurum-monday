@@ -363,7 +363,7 @@ const defaultOption = options[0];
 
           <textarea
             ref={textareaRef}
-            onClick={handleMenus}
+            onClick={()=>{handleMenus();setShowPluginSelect(false)}}
             className="m-0 w-full resize-none border-0 bg-transparent p-0 py-2 pr-8 pl-10 text-black dark:bg-transparent dark:text-white md:py-3 md:pl-10"
             style={{
               outline: 'none',

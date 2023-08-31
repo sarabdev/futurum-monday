@@ -207,6 +207,14 @@ const Home = ({
     dispatch({ field: 'loading', value: false });
   };
 
+  const onGlobal=()=>{
+    dispatch({ field: 'isGlobal', value:true });
+  }
+ const offGlobal=()=>{
+  dispatch({ field: 'isGlobal', value:false });
+
+ }
+
   const handleUpdateConversation = (
     conversation: Conversation,
     data: KeyValuePair,
@@ -345,6 +353,7 @@ const Home = ({
     dispatch,
     serverSideApiKeyIsSet,
     serverSidePluginKeysSet,
+  
   ]);
 
   return (
@@ -352,6 +361,8 @@ const Home = ({
       value={{
         ...contextValue,
         handleNewConversation,
+        onGlobal,
+        offGlobal,
         handleCreateFolder,
         handleDeleteFolder,
         handleUpdateFolder,

@@ -28,13 +28,13 @@ const Promptbar = () => {
   });
   
   const {
-    state: { prompts, defaultModelId, showPromptbar },
+    state: { prompts, defaultModelId, showPromptbar, globalPrompts },
     dispatch: homeDispatch,
     handleCreateFolder,
   } = useContext(HomeContext);
 
   const {
-    state: { searchTerm, filteredPrompts },
+    state: { searchTerm, filteredPrompts,filteredGlobalPrompts },
     dispatch: promptDispatch,
   } = promptBarContextValue;
 
@@ -113,8 +113,10 @@ const Promptbar = () => {
       });
     } else {
       promptDispatch({ field: 'filteredPrompts', value: prompts });
+      promptDispatch({ field: 'filteredGlobalPrompts', value: globalPrompts });
+
     }
-  }, [searchTerm, prompts]);
+  }, [searchTerm, prompts, globalPrompts]);
 
   return (
     <PromptbarContext.Provider
@@ -134,8 +136,13 @@ const Promptbar = () => {
             prompts={filteredPrompts.filter((prompt) => !prompt.folderId)}
           />
         }
+        globalItemComponent={
+          <Prompts
+          prompts={filteredGlobalPrompts.filter((prompt)=>!prompt.folderId)}/>
+        }
         folderComponent={<PromptFolders />}
         items={filteredPrompts}
+        globalItems={globalPrompts}
         searchTerm={searchTerm}
         handleSearchTerm={(searchTerm: string) =>
           promptDispatch({ field: 'searchTerm', value: searchTerm })

@@ -34,7 +34,7 @@ export const Chatbar = () => {
   });
 
   const {
-    state: { conversations, showChatbar, defaultModelId, folders, pluginKeys },
+    state: { conversations, showChatbar, defaultModelId, folders, pluginKeys ,globalPrompts},
     dispatch: homeDispatch,
     handleCreateFolder,
     handleNewConversation,
@@ -42,7 +42,7 @@ export const Chatbar = () => {
   } = useContext(HomeContext);
 
   const {
-    state: { searchTerm, filteredConversations },
+    state: { searchTerm, filteredConversations,filteredGlobalPrompts },
     dispatch: chatDispatch,
   } = chatBarContextValue;
 
@@ -224,8 +224,10 @@ export const Chatbar = () => {
         isOpen={showChatbar}
         addItemButtonTitle={t('New chat')}
         itemComponent={<Conversations conversations={filteredConversations} />}
+        globalItemComponent={null}
         folderComponent={<ChatFolders searchTerm={searchTerm} />}
         items={filteredConversations}
+        globalItems={filteredGlobalPrompts}
         searchTerm={searchTerm}
         handleSearchTerm={(searchTerm: string) =>
           chatDispatch({ field: 'searchTerm', value: searchTerm })

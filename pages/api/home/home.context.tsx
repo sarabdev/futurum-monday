@@ -12,6 +12,9 @@ export interface HomeContextProps {
   state: HomeInitialState;
   dispatch: Dispatch<ActionType<HomeInitialState>>;
   handleNewConversation: () => void;
+  onGlobal:()=>void;
+  offGlobal:()=>void;
+
   handleCreateFolder: (name: string, type: FolderType) => void;
   handleDeleteFolder: (folderId: string) => void;
   handleUpdateFolder: (folderId: string, name: string) => void;

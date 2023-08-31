@@ -4,6 +4,7 @@ import {
   IconCheck,
   IconPencil,
   IconTrash,
+  IconWorld,
   IconX,
 } from '@tabler/icons-react';
 import {
@@ -33,7 +34,7 @@ const Folder = ({
   handleDrop,
   folderComponent,
 }: Props) => {
-  const { handleDeleteFolder, handleUpdateFolder } = useContext(HomeContext);
+  const { state:{isGlobal},handleDeleteFolder, handleUpdateFolder } = useContext(HomeContext);
 
   const [isDeleting, setIsDeleting] = useState(false);
   const [isRenaming, setIsRenaming] = useState(false);
@@ -180,6 +181,14 @@ const Folder = ({
             >
               <IconTrash size={18} />
             </SidebarActionButton>
+          {/* {!isGlobal &&  <SidebarActionButton
+              handleClick={(e) => {
+                // e.stopPropagation();
+                // setIsDeleting(true);
+              }}
+            >
+              <IconWorld size={18} />
+            </SidebarActionButton>} */}
           </div>
         )}
       </div>
