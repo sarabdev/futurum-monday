@@ -65,7 +65,9 @@ const Sidebar = <T,>({
     },
     dispatch: homeDispatch,
     onGlobal,
-    offGlobal
+    offGlobal,
+    onPluginSelect,
+    offPluginSelect
   } = useContext(HomeContext);
   const [showBox,setShowBox]=useState(false)
   // const [isGlobal,setIsGlobal]=useState(false)
@@ -346,10 +348,10 @@ style={{
         {footerComponent}
       </div>
 
-      <CloseSidebarButton onClick={toggleOpen} side={side} />
+      <CloseSidebarButton onClick={()=>{toggleOpen();offPluginSelect()}} side={side} />
     </div>
   ) : (
-    user && <OpenSidebarButton onClick={toggleOpen} side={side} />
+    user && <OpenSidebarButton onClick={()=>{toggleOpen();offPluginSelect()}} side={side} />
   ));
 };
 

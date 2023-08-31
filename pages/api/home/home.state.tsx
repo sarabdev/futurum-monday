@@ -10,6 +10,7 @@ export interface HomeInitialState {
   pluginKeys: PluginKey[];
   loading: boolean;
   isGlobal:boolean;
+  showPluginSelect:boolean;
   lightMode: 'light' | 'dark';
   messageIsStreaming: boolean;
   modelError: ErrorMessage | null;
@@ -35,7 +36,8 @@ export interface HomeInitialState {
 export const initialState: HomeInitialState = {
   apiKey: "" ,
   loading: false,
-  isGlobal: false||true,
+  isGlobal: false,
+  showPluginSelect:false,
   pluginKeys: [],
   lightMode: 'dark',
   messageIsStreaming: false,

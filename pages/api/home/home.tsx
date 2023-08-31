@@ -210,6 +210,12 @@ const Home = ({
   const onGlobal=()=>{
     dispatch({ field: 'isGlobal', value:true });
   }
+  const onPluginSelect=()=>{
+    dispatch({ field: 'showPluginSelect', value:true });
+  }
+  const offPluginSelect=()=>{
+    dispatch({ field: 'showPluginSelect', value:false });
+  }
  const offGlobal=()=>{
   dispatch({ field: 'isGlobal', value:false });
 
@@ -363,6 +369,8 @@ const Home = ({
         handleNewConversation,
         onGlobal,
         offGlobal,
+        onPluginSelect,
+        offPluginSelect,
         handleCreateFolder,
         handleDeleteFolder,
         handleUpdateFolder,
