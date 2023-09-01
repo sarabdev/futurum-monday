@@ -265,7 +265,7 @@ const Home = ({
   // ON LOAD --------------------------------------------
   function test(){
     const config = {
-      method: 'post',
+      method: 'get',
       url: `https://dev.futurum.one/.netlify/functions/getPrompts`,
     };
     return axios(config).then(response => {
@@ -340,7 +340,7 @@ const Home = ({
       dispatch({ field: 'prompts', value: JSON.parse(prompts) });
     }
 
-    getGlobalTemplatesFromDb()
+   // getGlobalTemplatesFromDb()
 
     const conversationHistory = localStorage.getItem('conversationHistory');
     if (conversationHistory) {
