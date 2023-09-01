@@ -12,6 +12,7 @@ import {
   useEffect,
   useState,
 } from 'react';
+import axios from 'axios';
 
 import { Prompt } from '@/types/prompt';
 
@@ -64,8 +65,31 @@ export const PromptComponent = ({ prompt }: Props) => {
 
     setIsDeleting(false);
   };
-  
-  const handleMakeGlobal:MouseEventHandler<HTMLButtonElement>=(e)=>{
+  function test(){
+    const config = {
+      method: 'post',
+      url: `https://dev.futurum.one/.netlify/functions/addPrompts`,
+      data: {
+        prompt: {
+          te: 'test222',
+        },
+      },
+     
+    };
+    return axios(config).then(response => {
+      return {
+        statusCode: 200,
+        body: JSON.stringify(response.data)
+      }
+    }).catch(error => {
+      console.log(error)
+      return {
+        statusCode: 422,
+        body: `Error: ${error}`,
+      }
+    })
+  }
+  const handleMakeGlobal:MouseEventHandler<HTMLButtonElement>=async(e)=>{
     e.stopPropagation();
     let res=confirm('Are you sure you want to make it global?')
     if(res){
@@ -73,6 +97,14 @@ export const PromptComponent = ({ prompt }: Props) => {
 
     homeDispatch({ field: 'globalPrompts', value: [...globalPrompts,prompt] });
     }
+
+   
+    const response=await test()
+
+    
+      const result=JSON.parse(response.body);
+      console.log(result)
+
 
   }
 

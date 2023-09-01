@@ -16,7 +16,7 @@ export const CloseSidebarButton = ({ onClick, side }: Props) => {
         } sm:h-8 sm:w-8 sm:text-neutral-700`}
         onClick={onClick}
       >
-        {side === 'right' ? <IconMenu2 /> : <IconMenu2 />}
+        {side === 'right' ? <IconMenu2 color='#808080' /> : <IconMenu2 color='#808080' />}
       </button>
       <div
         onClick={onClick}
@@ -36,7 +36,7 @@ export const OpenSidebarButton = ({ onClick, side }: Props) => {
       } sm:h-8 sm:w-8 sm:text-neutral-700`}
       onClick={onClick}
     >
-      {side === 'right' ? <IconMenu2 /> : <IconMenu2 />}
+      {side === 'right' ? <IconMenu2 color='#808080' /> : <IconMenu2 color='#808080' />}
     </button>
   );
 };
