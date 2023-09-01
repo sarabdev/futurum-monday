@@ -9,6 +9,7 @@ import {
 } from '@tabler/icons-react';
 import {
   KeyboardEvent,
+  MouseEventHandler,
   ReactElement,
   useContext,
   useEffect,
@@ -34,7 +35,7 @@ const Folder = ({
   handleDrop,
   folderComponent,
 }: Props) => {
-  const { state:{isGlobal},handleDeleteFolder, handleUpdateFolder } = useContext(HomeContext);
+  const { state:{isGlobal, globalFolders},handleDeleteFolder, handleUpdateFolder, dispatch:homeDispatch } = useContext(HomeContext);
 
   const [isDeleting, setIsDeleting] = useState(false);
   const [isRenaming, setIsRenaming] = useState(false);
@@ -75,6 +76,16 @@ const Folder = ({
   const removeHighlight = (e: any) => {
     e.target.style.background = 'none';
   };
+  const handleMakeGlobal:MouseEventHandler<HTMLButtonElement>=(e)=>{
+    e.stopPropagation();
+    let res=confirm('Are you sure you want to make it global?')
+    if(res){
+    localStorage.setItem('globalFolders', JSON.stringify([...globalFolders,currentFolder]));
+
+    homeDispatch({ field: 'globalFolders', value: [...globalFolders,currentFolder] });
+    }
+
+  }
 
   useEffect(() => {
     if (isRenaming) {
@@ -181,14 +192,15 @@ const Folder = ({
             >
               <IconTrash size={18} />
             </SidebarActionButton>
-          {/* {!isGlobal &&  <SidebarActionButton
+          {!isGlobal &&  <SidebarActionButton
               handleClick={(e) => {
                 // e.stopPropagation();
                 // setIsDeleting(true);
+                handleMakeGlobal(e);
               }}
             >
-              <IconWorld size={18} />
-            </SidebarActionButton>} */}
+              <IconWorld size={18}/>
+            </SidebarActionButton>}
           </div>
         )}
       </div>

@@ -23,6 +23,7 @@ interface Props<T> {
   globalItems:T[];
   itemComponent: ReactNode;
   globalItemComponent:ReactNode;
+  globalFolderComponent:ReactNode;
   folderComponent: ReactNode;
   footerComponent?: ReactNode;
   searchTerm: string;
@@ -41,6 +42,7 @@ const Sidebar = <T,>({
   globalItems,
   itemComponent,
   globalItemComponent,
+  globalFolderComponent,
   folderComponent,
   footerComponent,
   searchTerm,
@@ -276,7 +278,7 @@ style={{
         />
 
         <div className="flex-grow overflow-auto">
-        {/* {(side=="right" && !isGlobal) && globalItems?.length > 0 && (
+         {(side=="right" && isGlobal) && globalItems?.length > 0 && (
             <div
             style={{
               backgroundColor: lightMode=="light" ? "white" : "black",
@@ -285,8 +287,8 @@ style={{
             }} 
             className="flex border-b border-white/20 pb-2">
               {folderComponent}
-            </div>
-          )} */}
+            </div> 
+          )} 
           {(side=="left" || !isGlobal) && items?.length > 0 && (
             <div
             style={{

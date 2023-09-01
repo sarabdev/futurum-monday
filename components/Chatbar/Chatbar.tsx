@@ -225,6 +225,7 @@ export const Chatbar = () => {
         addItemButtonTitle={t('New chat')}
         itemComponent={<Conversations conversations={filteredConversations} />}
         globalItemComponent={null}
+        globalFolderComponent={null}
         folderComponent={<ChatFolders searchTerm={searchTerm} />}
         items={filteredConversations}
         globalItems={filteredGlobalPrompts}

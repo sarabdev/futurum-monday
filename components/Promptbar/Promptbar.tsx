@@ -141,6 +141,7 @@ const Promptbar = () => {
           prompts={filteredGlobalPrompts.filter((prompt)=>!prompt.folderId)}/>
         }
         folderComponent={<PromptFolders />}
+        globalFolderComponent={<PromptFolders/>}
         items={filteredPrompts}
         globalItems={globalPrompts}
         searchTerm={searchTerm}

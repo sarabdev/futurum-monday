@@ -1,8 +1,11 @@
-import { FC, KeyboardEvent, useEffect, useRef, useState } from 'react';
+import { FC, KeyboardEvent, MouseEventHandler, useContext, useEffect, useRef, useState } from 'react';
 
 import { useTranslation } from 'next-i18next';
 
 import { Prompt } from '@/types/prompt';
+import SidebarActionButton from '@/components/Buttons/SidebarActionButton';
+import { IconWorld } from '@tabler/icons-react';
+import HomeContext from '@/pages/api/home/home.context';
 
 interface Props {
   prompt: Prompt;
@@ -12,6 +15,19 @@ interface Props {
 
 export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt }) => {
   const { t } = useTranslation('promptbar');
+  const {
+    state: {
+      apiKey,
+      lightMode,
+      globalPrompts,
+      serverSideApiKeyIsSet,
+      serverSidePluginKeysSet,
+      conversations,
+      prompts,
+      isGlobal
+    },
+    dispatch: homeDispatch,
+  } = useContext(HomeContext);
   const [name, setName] = useState(prompt.name);
   const [description, setDescription] = useState(prompt.description);
   const [content, setContent] = useState(prompt.content);
@@ -49,6 +65,16 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt }) => {
     nameInputRef.current?.focus();
   }, []);
 
+  const handleMakeGlobal:MouseEventHandler<HTMLButtonElement>=(e)=>{
+    e.stopPropagation();
+    let res=confirm('Are you sure you want to make it global?')
+    if(res){
+    localStorage.setItem('globalPrompts', JSON.stringify([...globalPrompts,prompt]));
+
+    homeDispatch({ field: 'globalPrompts', value: [...globalPrompts,prompt] });
+    }
+
+  }
   return (
     <div
       className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
@@ -104,10 +130,12 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt }) => {
               onChange={(e) => setContent(e.target.value)}
               rows={10}
             />
+            <div style={{display:'flex', justifyContent:'space-between', alignItems:'center'}}>
 
             <button
               type="button"
-              className="w-full px-4 py-2 mt-6 border rounded-lg shadow border-neutral-500 text-neutral-900 hover:bg-neutral-100 focus:outline-none dark:border-neutral-800 dark:border-opacity-50 dark:bg-white dark:text-black dark:hover:bg-neutral-300"
+              style={{width:"85%"}}
+              className=" px-4 py-2 mt-6 border rounded-lg shadow border-neutral-500 text-neutral-900 hover:bg-neutral-100 focus:outline-none dark:border-neutral-800 dark:border-opacity-50 dark:bg-white dark:text-black dark:hover:bg-neutral-300"
               onClick={() => {
                 const updatedPrompt = {
                   ...prompt,
@@ -122,7 +150,10 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt }) => {
             >
               {t('Save')}
             </button>
-          </div>
+            <SidebarActionButton handleClick={handleMakeGlobal}>
+            <IconWorld size={18} />
+          </SidebarActionButton>  
+          </div>        </div>
         </div>
       </div>
     </div>

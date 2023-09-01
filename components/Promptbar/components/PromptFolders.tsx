@@ -11,7 +11,7 @@ import PromptbarContext from '../PromptBar.context';
 
 export const PromptFolders = () => {
   const {
-    state: { folders ,isGlobal},
+    state: { folders ,isGlobal,globalFolders},
   } = useContext(HomeContext);
 
   const {
@@ -47,7 +47,20 @@ export const PromptFolders = () => {
 
   return (
     <div className="flex w-full flex-col pt-2">
-      {folders
+      {isGlobal ? 
+      globalFolders
+      .filter((folder) => folder.type === 'prompt')
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .map((folder, index) => (
+        <Folder
+          key={index}
+          searchTerm={searchTerm}
+          currentFolder={folder}
+          handleDrop={handleDrop}
+          folderComponent={PromptFolders(folder)}
+        />
+      )) :
+      folders
         .filter((folder) => folder.type === 'prompt')
         .sort((a, b) => a.name.localeCompare(b.name))
         .map((folder, index) => (
