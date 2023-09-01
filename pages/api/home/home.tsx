@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useQuery } from 'react-query';
-
+import axios from 'axios';
 import { GetServerSideProps } from 'next';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -263,7 +263,31 @@ const Home = ({
   }, [defaultModelId, serverSideApiKeyIsSet, serverSidePluginKeysSet]);
 
   // ON LOAD --------------------------------------------
-
+  function test(){
+    const config = {
+      method: 'post',
+      url: `https://dev.futurum.one/.netlify/functions/getPrompts`,
+    };
+    return axios(config).then(response => {
+      return {
+        statusCode: 200,
+        body: JSON.stringify(response.data)
+      }
+    }).catch(error => {
+      console.log(error)
+      return {
+        statusCode: 422,
+        body: `Error: ${error}`,
+      }
+    })
+  }
+  const getGlobalTemplatesFromDb=async()=>{
+    const response=await test();
+       const result=JSON.parse(response.body);
+       localStorage.setItem('globalPrompts',JSON.stringify(result.templates));
+      dispatch({ field: 'globalPrompts', value: result.templates });
+    
+  }
   useEffect(() => {
     const settings = getSettings();
     if (settings.theme) {
@@ -315,6 +339,8 @@ const Home = ({
     if (prompts) {
       dispatch({ field: 'prompts', value: JSON.parse(prompts) });
     }
+
+    getGlobalTemplatesFromDb()
 
     const conversationHistory = localStorage.getItem('conversationHistory');
     if (conversationHistory) {

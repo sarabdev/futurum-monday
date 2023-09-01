@@ -70,9 +70,7 @@ export const PromptComponent = ({ prompt }: Props) => {
       method: 'post',
       url: `https://dev.futurum.one/.netlify/functions/addPrompts`,
       data: {
-        prompt: {
-          te: 'test222',
-        },
+        prompt: prompt
       },
      
     };
@@ -102,8 +100,7 @@ export const PromptComponent = ({ prompt }: Props) => {
     const response=await test()
 
     
-      const result=JSON.parse(response.body);
-      console.log(result)
+       const result=JSON.parse(response.body);
 
 
   }
