@@ -1,7 +1,8 @@
-import { IconArrowBarLeft, IconArrowBarRight, IconMenu2 } from '@tabler/icons-react';
+import { IconArrowBarLeft, IconArrowBarRight, IconMenu2, IconPlus } from '@tabler/icons-react';
 
 interface Props {
   onClick: any;
+  handleCreateItem:any;
   side: 'left' | 'right';
 }
 
@@ -26,17 +27,17 @@ export const CloseSidebarButton = ({ onClick, side }: Props) => {
   );
 };
 
-export const OpenSidebarButton = ({ onClick, side }: Props) => {
+export const OpenSidebarButton = ({ onClick, side ,handleCreateItem}: Props) => {
   return (
     <button
       className={`fixed top-2.5 ${
         side === 'right' ? 'right-2' : 'left-2'
       } z-50 h-7 w-7 text-white hover:text-gray-400 dark:text-white dark:hover:text-gray-300 sm:top-0.5 sm:${
         side === 'right' ? 'right-2' : 'left-2'
-      } sm:h-8 sm:w-8 sm:text-neutral-700`}
-      onClick={onClick}
+      } sm:h-8 sm:w-12 sm:text-neutral-700`}
     >
-      {side === 'right' ? <IconMenu2 color='#808080' /> : <IconMenu2 color='#808080' />}
+      {side === 'right' ? (<div style={{display:'flex'}}><IconPlus color='#808080' onClick={()=>{handleCreateItem();onClick()}}/><IconMenu2       onClick={onClick}
+ color='#808080' /></div>) : <div style={{display:'flex'}}><IconMenu2 color='#808080' /><IconPlus color='#808080' onClick={()=>{handleCreateItem();onClick()}}/></div>}
     </button>
   );
 };

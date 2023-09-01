@@ -350,10 +350,10 @@ style={{
         {footerComponent}
       </div>
 
-      <CloseSidebarButton onClick={()=>{toggleOpen();offPluginSelect()}} side={side} />
+      <CloseSidebarButton handleCreateItem={handleCreateItem} onClick={()=>{toggleOpen();offPluginSelect()}} side={side} />
     </div>
   ) : (
-    user && <OpenSidebarButton onClick={()=>{toggleOpen();offPluginSelect()}} side={side} />
+    user && <OpenSidebarButton handleCreateItem={handleCreateItem} onClick={()=>{toggleOpen();offPluginSelect()}} side={side} />
   ));
 };
 

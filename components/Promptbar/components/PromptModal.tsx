@@ -130,12 +130,12 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt }) => {
               onChange={(e) => setContent(e.target.value)}
               rows={10}
             />
-            <div style={{display:'flex', justifyContent:'space-between', alignItems:'center'}}>
+            <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginTop:"20px"}}>
 
             <button
               type="button"
               style={{width:"85%"}}
-              className=" px-4 py-2 mt-6 border rounded-lg shadow border-neutral-500 text-neutral-900 hover:bg-neutral-100 focus:outline-none dark:border-neutral-800 dark:border-opacity-50 dark:bg-white dark:text-black dark:hover:bg-neutral-300"
+              className=" px-4 py-2  border rounded-lg shadow border-neutral-500 text-neutral-900 hover:bg-neutral-100 focus:outline-none dark:border-neutral-800 dark:border-opacity-50 dark:bg-white dark:text-black dark:hover:bg-neutral-300"
               onClick={() => {
                 const updatedPrompt = {
                   ...prompt,
@@ -151,7 +151,7 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt }) => {
               {t('Save')}
             </button>
             <SidebarActionButton handleClick={handleMakeGlobal}>
-            <IconWorld size={18} />
+            <IconWorld size={34} />
           </SidebarActionButton>  
           </div>        </div>
         </div>
