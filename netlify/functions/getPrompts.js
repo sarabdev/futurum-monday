@@ -12,7 +12,7 @@ const handler = async (event) => {
     try {
         const database = (await clientPromise).db('futurum');
         const collection = database.collection('templates');
-         const templates=collection.find({});
+         const templates=await collection.find({}).toArray();
         return {
             statusCode: 200,
             headers:CORS_HEADERS,
