@@ -263,6 +263,24 @@ const Home = ({
   }, [defaultModelId, serverSideApiKeyIsSet, serverSidePluginKeysSet]);
 
   // ON LOAD --------------------------------------------
+  function test2(){
+    const config = {
+      method: 'get',
+      url: `https://dev.futurum.one/.netlify/functions/getFolders`,
+    };
+    return axios(config).then(response => {
+      return {
+        statusCode: 200,
+        body: JSON.stringify(response.data)
+      }
+    }).catch(error => {
+      console.log(error)
+      return {
+        statusCode: 422,
+        body: `Error: ${error}`,
+      }
+    })
+  }
   function test(){
     const config = {
       method: 'get',
@@ -287,6 +305,13 @@ const Home = ({
        console.log(result)
        localStorage.setItem('globalPrompts',JSON.stringify(result.templates));
       dispatch({ field: 'globalPrompts', value: result.templates });
+    
+  }
+  const getGlobalFoldersFromDb=async()=>{
+    const response=await test2();
+       const result=JSON.parse(response.body);
+       localStorage.setItem('globalFolders',JSON.stringify(result.folders));
+      dispatch({ field: 'globalFolders', value: result.templates });
     
   }
   useEffect(() => {
@@ -342,7 +367,7 @@ const Home = ({
     }
 
     getGlobalTemplatesFromDb()
-
+    getGlobalFoldersFromDb()
     const conversationHistory = localStorage.getItem('conversationHistory');
     if (conversationHistory) {
       const parsedConversationHistory: Conversation[] =

@@ -94,10 +94,11 @@ export const PromptComponent = ({ prompt }: Props) => {
     localStorage.setItem('globalPrompts', JSON.stringify([...globalPrompts,prompt]));
 
     homeDispatch({ field: 'globalPrompts', value: [...globalPrompts,prompt] });
+    const response=await test()
+
     }
 
    
-    const response=await test()
 
     
     //    const result=JSON.parse(response.body);

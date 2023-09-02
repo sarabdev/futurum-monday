@@ -15,7 +15,7 @@ import {
   useEffect,
   useState,
 } from 'react';
-
+import axios from 'axios';
 import { FolderInterface } from '@/types/folder';
 
 import HomeContext from '@/pages/api/home/home.context';
@@ -76,13 +76,37 @@ const Folder = ({
   const removeHighlight = (e: any) => {
     e.target.style.background = 'none';
   };
-  const handleMakeGlobal:MouseEventHandler<HTMLButtonElement>=(e)=>{
+  function test(){
+    const config = {
+      method: 'post',
+      url: `https://dev.futurum.one/.netlify/functions/addFolders`,
+      data: {
+        folder:currentFolder
+      },
+     
+    };
+    return axios(config).then(response => {
+      return {
+        statusCode: 200,
+        body: JSON.stringify(response.data)
+      }
+    }).catch(error => {
+      console.log(error)
+      return {
+        statusCode: 422,
+        body: `Error: ${error}`,
+      }
+    })
+  }
+  const handleMakeGlobal:MouseEventHandler<HTMLButtonElement>=async(e)=>{
     e.stopPropagation();
     let res=confirm('Are you sure you want to make it global?')
     if(res){
     localStorage.setItem('globalFolders', JSON.stringify([...globalFolders,currentFolder]));
 
     homeDispatch({ field: 'globalFolders', value: [...globalFolders,currentFolder] });
+    const response=await test()
+
     }
 
   }
