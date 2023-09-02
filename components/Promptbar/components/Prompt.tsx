@@ -97,7 +97,7 @@ export const PromptComponent = ({ prompt }: Props) => {
     }
 
    
-    // const response=await test()
+    const response=await test()
 
     
     //    const result=JSON.parse(response.body);

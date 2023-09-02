@@ -1,6 +1,6 @@
 const { MongoClient } = require("mongodb");
 
-const mongoClient = new MongoClient('');
+const mongoClient = new MongoClient('mongodb+srv://sarab:futurumTest@cluster0.tteokeh.mongodb.net/');
 
 const clientPromise = mongoClient.connect();
 const CORS_HEADERS = {

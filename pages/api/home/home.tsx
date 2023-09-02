@@ -284,6 +284,7 @@ const Home = ({
   const getGlobalTemplatesFromDb=async()=>{
     const response=await test();
        const result=JSON.parse(response.body);
+       console.log(result)
        localStorage.setItem('globalPrompts',JSON.stringify(result.templates));
       dispatch({ field: 'globalPrompts', value: result.templates });
     
@@ -340,7 +341,7 @@ const Home = ({
       dispatch({ field: 'prompts', value: JSON.parse(prompts) });
     }
 
-   // getGlobalTemplatesFromDb()
+    getGlobalTemplatesFromDb()
 
     const conversationHistory = localStorage.getItem('conversationHistory');
     if (conversationHistory) {
