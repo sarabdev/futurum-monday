@@ -102,6 +102,7 @@ const Folder = ({
     e.stopPropagation();
     let res=confirm('Are you sure you want to make it global?')
     if(res){
+      console.log(currentFolder)
     localStorage.setItem('globalFolders', JSON.stringify([...globalFolders,currentFolder]));
 
     homeDispatch({ field: 'globalFolders', value: [...globalFolders,currentFolder] });
@@ -171,8 +172,7 @@ const Folder = ({
           <div className="absolute right-1 z-10 flex text-gray-300">
             <SidebarActionButton
               handleClick={(e) => {
-                let response=confirm("Are you sure you want to delete the folder and all of its contents?")
-                if(response){
+                
                 e.stopPropagation();
 
                 if (isDeleting) {
@@ -183,7 +183,7 @@ const Folder = ({
 
                 setIsDeleting(false);
                 setIsRenaming(false);
-              }
+              
               setIsDeleting(false)
               }}
             >
@@ -214,8 +214,11 @@ const Folder = ({
             </SidebarActionButton>
             <SidebarActionButton
               handleClick={(e) => {
+                let response=confirm("Are you sure you want to delete folder and all of its content?")
+                if(response){
                 e.stopPropagation();
                 setIsDeleting(true);
+                }
               }}
             >
               <IconTrash size={18} />
