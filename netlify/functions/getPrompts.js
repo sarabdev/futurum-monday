@@ -1,6 +1,6 @@
 const { MongoClient } = require("mongodb");
 
-const mongoClient = new MongoClient('');
+const mongoClient = new MongoClient('mongodb+srv://sarab:futurumTest@cluster0.tteokeh.mongodb.net/');
 
 const clientPromise = mongoClient.connect();
 const CORS_HEADERS = {
@@ -12,7 +12,7 @@ const handler = async (event) => {
     try {
         const database = (await clientPromise).db('futurum');
         const collection = database.collection('templates');
-         const templates=await collection.find();
+         const templates=collection.find({});
         return {
             statusCode: 200,
             headers:CORS_HEADERS,

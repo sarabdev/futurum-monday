@@ -76,6 +76,7 @@ const Sidebar = <T,>({
   const { user ,login, userRole} = useContext(AuthContext);
   const [fileJson,setFileJson]=useState<SupportedExportFormats|undefined>(undefined)
   const [selectionValue,setSelectionValue]=useState("")
+  const [isPromptModal,setIsPromptModal]=useState(false)
   const [fileValue, setFileValue]=useState<File |null>(null)
   const { t } = useTranslation('promptbar');
 
@@ -353,7 +354,9 @@ style={{
       <CloseSidebarButton handleCreateItem={handleCreateItem} onClick={()=>{toggleOpen();offPluginSelect()}} side={side} />
     </div>
   ) : (
+
     user && <OpenSidebarButton handleCreateItem={handleCreateItem} onClick={()=>{toggleOpen();offPluginSelect()}} side={side} />
+  
   ));
 };
 

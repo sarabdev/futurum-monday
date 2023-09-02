@@ -6,6 +6,7 @@ import { Prompt } from '@/types/prompt';
 import SidebarActionButton from '@/components/Buttons/SidebarActionButton';
 import { IconWorld } from '@tabler/icons-react';
 import HomeContext from '@/pages/api/home/home.context';
+import { updatePrompt } from '@/utils/app/prompts';
 
 interface Props {
   prompt: Prompt;
@@ -31,7 +32,7 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt }) => {
   const [name, setName] = useState(prompt.name);
   const [description, setDescription] = useState(prompt.description);
   const [content, setContent] = useState(prompt.content);
-
+  const [globalHappen,setGlobalHappen]=useState(false)
   const modalRef = useRef<HTMLDivElement>(null);
   const nameInputRef = useRef<HTMLInputElement>(null);
 
@@ -97,6 +98,11 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt }) => {
             </div>
             <input
               ref={nameInputRef}
+              style={{
+                backgroundColor: lightMode=="light" ? "white" : "black",
+                color: lightMode=="light" ? "black" : "white",
+                borderColor: lightMode=="light" ? "black" : "white"
+              }} 
               className="mt-2 w-full rounded-lg border border-neutral-500 px-4 py-2 text-neutral-900 shadow focus:outline-none dark:border-neutral-800 dark:border-opacity-50 dark:bg-[#40414F] dark:text-neutral-100"
               placeholder={t('A name for your prompt.') || ''}
               value={name}
@@ -107,8 +113,13 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt }) => {
               {t('Description')}
             </div>
             <textarea
+             style={{
+              backgroundColor: lightMode=="light" ? "white" : "black",
+              color: lightMode=="light" ? "black" : "white",
+              borderColor: lightMode=="light" ? "black" : "white",
+              resize:"none"
+            }} 
               className="mt-2 w-full rounded-lg border border-neutral-500 px-4 py-2 text-neutral-900 shadow focus:outline-none dark:border-neutral-800 dark:border-opacity-50 dark:bg-[#40414F] dark:text-neutral-100"
-              style={{ resize: 'none' }}
               placeholder={t('A description for your prompt.') || ''}
               value={description}
               onChange={(e) => setDescription(e.target.value)}
@@ -120,7 +131,12 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt }) => {
             </div>
             <textarea
               className="mt-2 w-full rounded-lg border border-neutral-500 px-4 py-2 text-neutral-900 shadow focus:outline-none dark:border-neutral-800 dark:border-opacity-50 dark:bg-[#40414F] dark:text-neutral-100"
-              style={{ resize: 'none' }}
+              style={{
+                backgroundColor: lightMode=="light" ? "white" : "black",
+                color: lightMode=="light" ? "black" : "white",
+                borderColor: lightMode=="light" ? "black" : "white",
+                resize:'none'
+              }} 
               placeholder={
                 t(
                   'Prompt content. Use {{}} to denote a variable. Ex: {{name}} is a {{adjective}} {{noun}}',
@@ -137,6 +153,7 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt }) => {
               style={{width:"85%"}}
               className=" px-4 py-2  border rounded-lg shadow border-neutral-500 text-neutral-900 hover:bg-neutral-100 focus:outline-none dark:border-neutral-800 dark:border-opacity-50 dark:bg-white dark:text-black dark:hover:bg-neutral-300"
               onClick={() => {
+                if(globalHappen){
                 const updatedPrompt = {
                   ...prompt,
                   name,
@@ -145,13 +162,14 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt }) => {
                 };
 
                 onUpdatePrompt(updatedPrompt);
+              }
                 onClose();
               }}
             >
               {t('Save')}
             </button>
-            <SidebarActionButton handleClick={handleMakeGlobal}>
-            <IconWorld size={34} />
+            <SidebarActionButton   handleClick={handleMakeGlobal}>
+            <IconWorld size={34} onClick={()=>{setGlobalHappen(true);onUpdatePrompt({...prompt,name,description,content:content.trim()});onClose()}} />
           </SidebarActionButton>  
           </div>        </div>
         </div>

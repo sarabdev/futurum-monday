@@ -1,12 +1,20 @@
 import { IconArrowBarLeft, IconArrowBarRight, IconMenu2, IconPlus } from '@tabler/icons-react';
-
+import {useContext, useState} from 'react'
+import { PromptModal } from '@/components/Promptbar/components/PromptModal';
 interface Props {
   onClick: any;
   handleCreateItem:any;
   side: 'left' | 'right';
 }
+import { v4 as uuidv4 } from 'uuid';
+import HomeContext from '@/pages/api/home/home.context';
+import { OpenAIModels } from '@/types/openai';
+import { Prompt } from '@/types/prompt';
+import { savePrompts } from '@/utils/app/prompts';
+
 
 export const CloseSidebarButton = ({ onClick, side }: Props) => {
+
   return (
     <>
       <button
@@ -28,7 +36,33 @@ export const CloseSidebarButton = ({ onClick, side }: Props) => {
 };
 
 export const OpenSidebarButton = ({ onClick, side ,handleCreateItem}: Props) => {
+  const [isPromptModal,setIsPromptModal]=useState(false)
+  const {
+    state: { prompts, defaultModelId, showPromptbar, globalPrompts },
+    dispatch: homeDispatch,
+    handleCreateFolder,
+  } = useContext(HomeContext);
+  const handleUpdate = (prompt: Prompt) => {
+    const updatedPrompts = [...prompts, prompt];
+
+    homeDispatch({ field: 'prompts', value: updatedPrompts });
+
+    savePrompts(updatedPrompts);
+  };
   return (
+    <>
+    {isPromptModal && defaultModelId && <PromptModal prompt= {{
+        id: uuidv4(),
+        name: `Prompt ${prompts.length + 1}`,
+        description: '',
+        content: '',
+        model: OpenAIModels[defaultModelId],
+        folderId: null,
+      }}
+      onUpdatePrompt={handleUpdate}
+
+      onClose={() => setIsPromptModal(false)}
+/>}
     <button
       className={`fixed top-2.5 ${
         side === 'right' ? 'right-2' : 'left-2'
@@ -36,8 +70,9 @@ export const OpenSidebarButton = ({ onClick, side ,handleCreateItem}: Props) => 
         side === 'right' ? 'right-2' : 'left-2'
       } sm:h-8 sm:w-12 sm:text-neutral-700`}
     >
-      {side === 'right' ? (<div style={{display:'flex'}}><IconPlus color='#808080' onClick={()=>{handleCreateItem();onClick()}}/><IconMenu2       onClick={onClick}
- color='#808080' /></div>) : <div style={{display:'flex'}}><IconMenu2 color='#808080' /><IconPlus color='#808080' onClick={()=>{handleCreateItem();onClick()}}/></div>}
+      {side === 'right' ? (<div style={{display:'flex'}}><IconPlus color='#808080' onClick={()=>{setIsPromptModal(true)}}/><IconMenu2       onClick={onClick}
+ color='#808080' /></div>) : <div style={{display:'flex'}}><IconMenu2 color='#808080' onClick={onClick} /><IconPlus color='#808080' onClick={()=>{handleCreateItem();}}/></div>}
     </button>
+    </>
   );
 };

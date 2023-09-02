@@ -147,6 +147,8 @@ const Folder = ({
           <div className="absolute right-1 z-10 flex text-gray-300">
             <SidebarActionButton
               handleClick={(e) => {
+                let response=confirm("Are you sure you want to delete the folder and all of its contents?")
+                if(response){
                 e.stopPropagation();
 
                 if (isDeleting) {
@@ -157,6 +159,8 @@ const Folder = ({
 
                 setIsDeleting(false);
                 setIsRenaming(false);
+              }
+              setIsDeleting(false)
               }}
             >
               <IconCheck size={18} />
