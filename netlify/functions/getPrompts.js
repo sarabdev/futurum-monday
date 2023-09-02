@@ -4,7 +4,7 @@ const mongoClient = new MongoClient('mongodb+srv://sarab:futurumTest@cluster0.tt
 
 const clientPromise = mongoClient.connect();
 const CORS_HEADERS = {
-    'Access-Control-Allow-Origin': "*",
+    'Access-Control-Allow-Origin': "https://dev.futurum.one",
     'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
   }
   
