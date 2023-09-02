@@ -311,7 +311,7 @@ const Home = ({
     const response=await test2();
        const result=JSON.parse(response.body);
        localStorage.setItem('globalFolders',JSON.stringify(result.folders));
-      dispatch({ field: 'globalFolders', value: result.templates });
+      dispatch({ field: 'globalFolders', value: result.folders });
     
   }
   useEffect(() => {

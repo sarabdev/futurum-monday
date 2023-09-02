@@ -48,7 +48,7 @@ export const PromptFolders = () => {
   return (
     <div className="flex w-full flex-col pt-2">
       {isGlobal ? 
-      globalFolders
+      globalFolders && globalFolders
       .filter((folder) => folder.type === 'prompt')
       .sort((a, b) => a.name.localeCompare(b.name))
       .map((folder, index) => (
