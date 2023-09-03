@@ -21,6 +21,7 @@ import { FolderInterface } from '@/types/folder';
 import HomeContext from '@/pages/api/home/home.context';
 
 import SidebarActionButton from '@/components/Buttons/SidebarActionButton';
+import PromptbarContext from '../Promptbar/PromptBar.context';
 
 interface Props {
   currentFolder: FolderInterface;
@@ -37,6 +38,10 @@ const Folder = ({
 }: Props) => {
   const { state:{isGlobal, globalFolders},handleDeleteFolder, handleUpdateFolder, dispatch:homeDispatch } = useContext(HomeContext);
 
+  const {
+    state: { filteredPrompts },
+    handleUpdatePrompt,
+  } = useContext(PromptbarContext);
   const [isDeleting, setIsDeleting] = useState(false);
   const [isRenaming, setIsRenaming] = useState(false);
   const [renameValue, setRenameValue] = useState('');
@@ -102,6 +107,8 @@ const Folder = ({
     e.stopPropagation();
     let res=confirm('Are you sure you want to make it global?')
     if(res){
+      const myPrompts=filteredPrompts.filter((prompt)=>prompt.folderId==currentFolder.id)
+      console.log(myPrompts)
       console.log(currentFolder)
     localStorage.setItem('globalFolders', JSON.stringify([...globalFolders,currentFolder]));
 
