@@ -8,6 +8,7 @@ import Folder from '@/components/Folder';
 import { PromptComponent } from '@/components/Promptbar/components/Prompt';
 
 import PromptbarContext from '../PromptBar.context';
+import { Prompt } from '@/types/prompt';
 
 export const PromptFolders = () => {
   const {
@@ -32,10 +33,21 @@ export const PromptFolders = () => {
     }
   };
 
-  const PromptFolders = (currentFolder: FolderInterface) =>
-  filteredPrompts
-  .concat(globalPrompts)
-      .filter((p) => p.folderId)
+  const PromptFolders = (currentFolder: FolderInterface) =>{
+    const combinedPrompts = filteredPrompts.concat(globalPrompts);
+
+const uniquePrompts = combinedPrompts.reduce((accumulator:Prompt[], currentPrompt:Prompt) => {
+  const isPromptAlreadyAdded = accumulator.some((uniquePrompt:Prompt) => uniquePrompt.id === currentPrompt.id);
+
+  if (!isPromptAlreadyAdded && currentPrompt.folderId === currentFolder.id) {
+    accumulator.push(currentPrompt);
+  }
+
+  return accumulator;
+}, []);
+  return uniquePrompts
+  // .concat(globalPrompts)
+  //     .filter((p) => p.folderId)
       .map((prompt, index) => {
         if (prompt.folderId === currentFolder.id) {
           return (
@@ -45,6 +57,7 @@ export const PromptFolders = () => {
           );
         }
       });
+    }
 
   return (
     <div className="flex w-full flex-col pt-2">
