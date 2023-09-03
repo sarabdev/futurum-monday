@@ -12,7 +12,7 @@ const handler = async (event) => {
     try {
         const {prompts}=JSON.parse(event.body)
         const database = (await clientPromise).db('futurum');
-        const collection = database.collection('prompts');
+        const collection = database.collection('templates');
          await collection.insertMany(prompts);
         return {
             statusCode: 200,
