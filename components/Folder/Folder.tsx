@@ -109,7 +109,7 @@ const Folder = ({
       method: 'post',
       url: `https://dev.futurum.one/.netlify/functions/addFolderPrompts`,
       data: {
-        prompts:currentFolder
+        prompts:myPrompts
       },
      
     };
