@@ -367,6 +367,15 @@ const defaultOption = options[0];
             onKeyDown={handleKeyDown}
           />
 
+{/* <button
+            className="absolute right-(-10) top-2  rounded-full p-1 text-neutral-800 opacity-60 hover:bg-neutral-200 hover:text-neutral-900 dark:bg-opacity-50 dark:text-neutral-100 dark:hover:text-neutral-200"
+            onClick={onScrollDownClick}
+          >
+            {showScrollDownButton && (
+              
+              <IconArrowDown size={18} />
+            )}
+          </button> */}
           <button
             className="absolute right-2 top-2 rounded-sm p-1 text-neutral-800 opacity-60 hover:bg-neutral-200 hover:text-neutral-900 dark:bg-opacity-50 dark:text-neutral-100 dark:hover:text-neutral-200"
             onClick={handleSend}
@@ -378,9 +387,11 @@ const defaultOption = options[0];
             )}
           </button>
 
+        
+
           {showScrollDownButton && (
             <div
-             className="absolute bottom-12 right-0 lg:bottom-0 lg:-right-10">
+             className="absolute bottom-12 left-100 right-7 lg:bottom-1 lg:-right-6">
               <button
                 className="flex h-7 w-7 items-center justify-center rounded-full bg-neutral-300 text-gray-800 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-neutral-200"
                 onClick={onScrollDownClick}
