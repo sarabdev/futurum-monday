@@ -11,11 +11,11 @@ import PromptbarContext from '../PromptBar.context';
 
 export const PromptFolders = () => {
   const {
-    state: { folders ,isGlobal,globalFolders},
+    state: { folders ,isGlobal,globalFolders,globalPrompts},
   } = useContext(HomeContext);
 
   const {
-    state: { searchTerm, filteredPrompts },
+    state: { searchTerm, filteredPrompts, filteredGlobalPrompts },
     handleUpdatePrompt,
   } = useContext(PromptbarContext);
 
@@ -33,7 +33,8 @@ export const PromptFolders = () => {
   };
 
   const PromptFolders = (currentFolder: FolderInterface) =>
-    filteredPrompts
+  filteredPrompts
+  .concat(globalPrompts)
       .filter((p) => p.folderId)
       .map((prompt, index) => {
         if (prompt.folderId === currentFolder.id) {
