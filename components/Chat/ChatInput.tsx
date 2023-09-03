@@ -291,33 +291,9 @@ const defaultOption = options[0];
 
       <div
        className="stretch mx-2 mt-4 flex flex-row gap-3 last:mb-2 md:mx-4 md:mt-[52px] md:last:mb-6 lg:mx-auto lg:max-w-3xl">
-        {messageIsStreaming && (
-          <button
-          style={{
-            backgroundColor: lightMode=="light" ? "white" : "black",
-            color: lightMode=="light" ? "black" : "white",
-          }} 
-            className="absolute top-0 left-0 right-0 mx-auto mb-3 flex w-fit items-center gap-3 rounded border border-neutral-200 bg-white py-2 px-4 text-black hover:opacity-50 dark:border-neutral-600 dark:bg-[#343541] dark:text-white md:mb-0 md:mt-2"
-            onClick={handleStopConversation}
-          >
-            <IconPlayerStop size={16} /> {t('Stop Generating')}
-          </button>
-        )}
+       
 
-        {!messageIsStreaming &&
-          selectedConversation &&
-          selectedConversation.messages.length > 0 && (
-            <button
-            style={{
-              backgroundColor: lightMode=="light" ? "white" : "black",
-              color: lightMode=="light" ? "black" : "white",
-            }} 
-              className="absolute top-0 left-0 right-0 mx-auto mb-3 flex w-fit items-center gap-3 rounded border border-neutral-200 bg-white py-2 px-4 text-black hover:opacity-50 dark:border-neutral-600 dark:bg-[#343541] dark:text-white md:mb-0 md:mt-2"
-              onClick={onRegenerate}
-            >
-              <IconRepeat size={16} /> {t('Regenerate response')}
-            </button>
-          )}
+    
 
         <div
         style={{
@@ -435,6 +411,34 @@ const defaultOption = options[0];
             />
           )}
         </div>
+        {!messageIsStreaming &&
+          selectedConversation &&
+          selectedConversation.messages.length > 0 && (
+            <button
+            style={{
+              backgroundColor: lightMode=="light" ? "white" : "black",
+              color: lightMode=="light" ? "black" : "white",
+              width:"35%"
+            }} 
+              className="relative top-0 left-0 right-0 mx-auto mb-3 flex w-fit items-center gap-3 rounded border border-neutral-200 bg-white py-2 px-2 text-black hover:opacity-50 dark:border-neutral-600 dark:bg-[#343541] dark:text-white md:mb-0 md:mt-2"
+              onClick={onRegenerate}
+            >
+              <IconRepeat size={16} /> {t('Regenerate response')}
+            </button>
+          )}
+           {messageIsStreaming && (
+          <button
+          style={{
+            backgroundColor: lightMode=="light" ? "white" : "black",
+            color: lightMode=="light" ? "black" : "white",
+            width:"30%"
+          }} 
+            className="relative top-0 left-0 right-0 mx-auto mb-3 flex w-fit items-center gap-3 rounded border border-neutral-200 bg-white py-2 px-2 text-black hover:opacity-50 dark:border-neutral-600 dark:bg-[#343541] dark:text-white md:mb-0 md:mt-2"
+            onClick={handleStopConversation}
+          >
+            <IconPlayerStop size={16} /> {t('Stop Generating')}
+          </button>
+        )}
       </div>
   
       <div
