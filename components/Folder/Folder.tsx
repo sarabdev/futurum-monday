@@ -22,6 +22,7 @@ import HomeContext from '@/pages/api/home/home.context';
 
 import SidebarActionButton from '@/components/Buttons/SidebarActionButton';
 import PromptbarContext from '../Promptbar/PromptBar.context';
+import { Prompt } from '@/types/prompt';
 
 interface Props {
   currentFolder: FolderInterface;
@@ -103,6 +104,28 @@ const Folder = ({
       }
     })
   }
+  function addFolderPrompts(myPrompts:Prompt[]){
+    const config = {
+      method: 'post',
+      url: `https://dev.futurum.one/.netlify/functions/addFolderPrompts`,
+      data: {
+        prompts:currentFolder
+      },
+     
+    };
+    return axios(config).then(response => {
+      return {
+        statusCode: 200,
+        body: JSON.stringify(response.data)
+      }
+    }).catch(error => {
+      console.log(error)
+      return {
+        statusCode: 422,
+        body: `Error: ${error}`,
+      }
+    })
+  }
   const handleMakeGlobal:MouseEventHandler<HTMLButtonElement>=async(e)=>{
     e.stopPropagation();
     let res=confirm('Are you sure you want to make it global?')
@@ -113,7 +136,8 @@ const Folder = ({
     localStorage.setItem('globalFolders', JSON.stringify([...globalFolders,currentFolder]));
 
     homeDispatch({ field: 'globalFolders', value: [...globalFolders,currentFolder] });
-    const response=await test()
+    await test()
+    await addFolderPrompts(myPrompts)
 
     }
 

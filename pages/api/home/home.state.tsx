@@ -22,6 +22,7 @@ export interface HomeInitialState {
   currentMessage: Message | undefined;
   prompts: Prompt[];
   globalPrompts:Prompt[];
+  filteredGlobalPrompts:Prompt[];
   temperature: number;
   showChatbar: boolean;
   showPromptbar: boolean;
@@ -50,6 +51,7 @@ export const initialState: HomeInitialState = {
   currentMessage: undefined,
   prompts: [],
   globalPrompts:[],
+  filteredGlobalPrompts:[],
   temperature: 1,
   showPromptbar: false,
   showChatbar: false,
