@@ -1,6 +1,5 @@
 import { IconClearAll, IconFileExport, IconSettings, IconSettings2 } from '@tabler/icons-react';
 import { useContext, useState } from 'react';
-
 import { useTranslation } from 'next-i18next';
 
 import HomeContext from '@/pages/api/home/home.context';
@@ -79,7 +78,6 @@ export const ChatbarSettings = () => {
       ) : null}
 
       <Import onImport={handleImportConversations} lightMode={lightMode} />
-
       <SidebarButton
         text={t('Export data')}
         icon={<IconFileExport size={18} />}

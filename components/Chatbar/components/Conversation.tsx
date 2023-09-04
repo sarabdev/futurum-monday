@@ -27,7 +27,7 @@ interface Props {
 
 export const ConversationComponent = ({ conversation }: Props) => {
   const {
-    state: { selectedConversation, messageIsStreaming, lightMode },
+    state: { selectedConversation, messageIsStreaming, lightMode, folderColors },
     handleSelectConversation,
     handleUpdateConversation,
   } = useContext(HomeContext);
@@ -99,17 +99,16 @@ export const ConversationComponent = ({ conversation }: Props) => {
       setIsRenaming(false);
     }
   }, [isRenaming, isDeleting]);
-
   return (
     <div
-     className="relative flex items-center">
+     className="relative flex items-center" style={{backgroundColor:folderColors.find(color=>color.folderId==conversation.folderId)?.colorCode}}>
       {isRenaming && selectedConversation?.id === conversation.id ? (
         <div
         
-         className="flex w-full items-center gap-3 rounded-lg bg-[#343541]/90 p-3">
+         className="flex w-full items-center gap-3 rounded-lg  p-3">
           <IconMessage size={18} />
           <input
-            className="mr-12 flex-1 overflow-hidden overflow-ellipsis border-neutral-400 bg-transparent text-left text-[12.5px] leading-3 text-white outline-none focus:border-neutral-100"
+            className="mr-12 flex-1 overflow-hidden overflow-ellipsis border-neutral-400  text-left text-[12.5px] leading-3 text-white outline-none focus:border-neutral-100"
             type="text"
             value={renameValue}
             onChange={(e) => setRenameValue(e.target.value)}
@@ -120,15 +119,15 @@ export const ConversationComponent = ({ conversation }: Props) => {
       ) : (
         <button
         style={{
-          backgroundColor: lightMode=="light" ? "white" : "black",
+          // backgroundColor: lightMode=="light" ? "white" : "black",
           color: lightMode=="light" ? "black" : "white",
           borderColor: lightMode=="light" ? "black" : "white"
         }} 
-          className={`flex w-full cursor-pointer items-center gap-3 rounded-lg p-3 text-sm transition-colors duration-200 hover:bg-[#343541]/90 ${
+          className={`flex w-full cursor-pointer items-center gap-3 rounded-lg p-3 text-sm transition-colors duration-200  ${
             messageIsStreaming ? 'disabled:cursor-not-allowed' : ''
           } ${
             selectedConversation?.id === conversation.id
-              ? 'bg-[#343541]/90'
+              ? ''
               : ''
           }`}
           onClick={() => handleSelectConversation(conversation)}

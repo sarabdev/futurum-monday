@@ -37,7 +37,6 @@ const Promptbar = () => {
     state: { searchTerm, filteredPrompts,filteredGlobalPrompts },
     dispatch: promptDispatch,
   } = promptBarContextValue;
-
   const handleTogglePromptbar = () => {
     homeDispatch({ field: 'showPromptbar', value: !showPromptbar });
     localStorage.setItem('showPromptbar', JSON.stringify(!showPromptbar));

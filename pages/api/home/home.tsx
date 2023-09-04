@@ -299,6 +299,19 @@ const Home = ({
       }
     })
   }
+
+  const setColors=()=>{
+    const storedColors=localStorage.getItem('folderColors');
+    if(storedColors){
+      console.log(storedColors)
+      dispatch({ field: 'folderColors', value: JSON.parse(storedColors) });
+    }
+    else{
+      dispatch({ field: 'folderColors', value: [] });
+      localStorage.setItem('folderColors',JSON.stringify([]))
+    }
+
+  }
   const getGlobalTemplatesFromDb=async()=>{
     const response=await test();
        const result=JSON.parse(response.body);
@@ -368,6 +381,7 @@ const Home = ({
 
     getGlobalTemplatesFromDb()
     getGlobalFoldersFromDb()
+    setColors()
     const conversationHistory = localStorage.getItem('conversationHistory');
     if (conversationHistory) {
       const parsedConversationHistory: Conversation[] =

@@ -2,11 +2,14 @@ import {
   IconCaretDown,
   IconCaretRight,
   IconCheck,
+  IconPalette,
   IconPencil,
   IconTrash,
   IconWorld,
   IconX,
 } from '@tabler/icons-react';
+import {TwitterPicker} from 'react-color'
+import ColorCodes from "../ColorCodes"
 import {
   KeyboardEvent,
   MouseEventHandler,
@@ -37,16 +40,17 @@ const Folder = ({
   handleDrop,
   folderComponent,
 }: Props) => {
-  const { state:{isGlobal, globalFolders},handleDeleteFolder, handleUpdateFolder, dispatch:homeDispatch } = useContext(HomeContext);
-
-  const {
-    state: { filteredPrompts },
-    handleUpdatePrompt,
-  } = useContext(PromptbarContext);
+  const { state:{isGlobal, globalFolders,prompts,folderColors},handleDeleteFolder, handleUpdateFolder, dispatch:homeDispatch } = useContext(HomeContext);
+  // const {
+  //   state,
+  //   handleUpdatePrompt,
+  // } = useContext(PromptbarContext);
   const [isDeleting, setIsDeleting] = useState(false);
   const [isRenaming, setIsRenaming] = useState(false);
+  const [background,setBackground]= useState('')
   const [renameValue, setRenameValue] = useState('');
   const [isOpen, setIsOpen] = useState(false);
+  const [isChangeColor,setIsChangeColor]=useState(false)
 
   const handleEnterDown = (e: KeyboardEvent<HTMLDivElement>) => {
     if (e.key === 'Enter') {
@@ -130,14 +134,14 @@ const Folder = ({
     e.stopPropagation();
     let res=confirm('Are you sure you want to make it global?')
     if(res){
-      const myPrompts=filteredPrompts.filter((prompt)=>prompt.folderId==currentFolder.id)
+      const myPrompts=prompts.filter((prompt)=>prompt.folderId==currentFolder.id)
       console.log(myPrompts)
       console.log(currentFolder)
     localStorage.setItem('globalFolders', JSON.stringify([...globalFolders,currentFolder]));
 
     homeDispatch({ field: 'globalFolders', value: [...globalFolders,currentFolder] });
-    await test()
-    await addFolderPrompts(myPrompts)
+    //await test()
+    //await addFolderPrompts(myPrompts)
 
     }
 
@@ -159,11 +163,43 @@ const Folder = ({
     }
   }, [searchTerm]);
 
+  const handleChangeComplete = (color:any) => {
+    setBackground(color.hex)
+    let item = folderColors.find(obj => obj.folderId == currentFolder.id)
+    if(item) {
+    item.colorCode = color.hex;
+    item.folderId=currentFolder.id;
+    homeDispatch({ field: 'folderColors', value: [...folderColors], });
+    localStorage.setItem('folderColors',JSON.stringify([...folderColors]))
+
+    }
+    else{
+      let newColor={
+        colorCode:color.hex,
+        folderId:currentFolder.id
+      }
+      homeDispatch({ field: 'folderColors', value: [...folderColors,newColor], });
+      localStorage.setItem('folderColors',JSON.stringify([...folderColors,newColor]))
+
+    }
+    setIsChangeColor(false)
+    
+
+
+  };
+
+  useEffect(()=>{
+    let newColor=folderColors.find((color)=>color.folderId==currentFolder.id)
+    if(newColor){
+      setBackground(newColor.colorCode)
+    }
+  },[])
   return (
     <>
-      <div className="relative flex items-center">
+
+      <div className="relative flex items-center" style={{backgroundColor:background}}>
         {isRenaming ? (
-          <div className="flex w-full items-center gap-3 bg-[#343541]/90 p-3">
+          <div className="flex w-full items-center gap-3  p-3">
             {isOpen ? (
               <IconCaretDown size={18} />
             ) : (
@@ -180,7 +216,7 @@ const Folder = ({
           </div>
         ) : (
           <button
-            className={`flex w-full cursor-pointer items-center gap-3 rounded-lg p-3 text-sm transition-colors duration-200 hover:bg-[#343541]/90`}
+            className={`flex w-full cursor-pointer items-center gap-3 rounded-lg p-3 text-sm transition-colors duration-200`}
             onClick={() => setIsOpen(!isOpen)}
             onDrop={(e) => dropHandler(e)}
             onDragOver={allowDrop}
@@ -234,6 +270,18 @@ const Folder = ({
 
         {!isDeleting && !isRenaming && (
           <div className="absolute right-1 z-10 flex text-gray-300">
+            {currentFolder.type=="chat" && <SidebarActionButton
+              handleClick={(e) => {
+
+                setIsChangeColor((old)=>!old)
+                //e.stopPropagation();
+                //setIsRenaming(true);
+                //setRenameValue(currentFolder.name);
+              }}
+            >
+              <IconPalette size={18} />
+            </SidebarActionButton>
+}
             <SidebarActionButton
               handleClick={(e) => {
                 e.stopPropagation();
@@ -254,7 +302,7 @@ const Folder = ({
             >
               <IconTrash size={18} />
             </SidebarActionButton>
-          {!isGlobal &&  <SidebarActionButton
+          {!isGlobal && currentFolder.type=="prompt" &&  <SidebarActionButton
               handleClick={(e) => {
                 // e.stopPropagation();
                 // setIsDeleting(true);
@@ -268,6 +316,8 @@ const Folder = ({
       </div>
 
       {isOpen ? folderComponent : null}
+      {isChangeColor && <TwitterPicker colors={ColorCodes} onChangeComplete={handleChangeComplete} width={'210px'}/>}
+
     </>
   );
 };

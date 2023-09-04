@@ -1,4 +1,5 @@
 import { Conversation, Message } from '@/types/chat';
+import { Color } from '@/types/color';
 import { ErrorMessage } from '@/types/error';
 import { FolderInterface } from '@/types/folder';
 import { OpenAIModel, OpenAIModelID } from '@/types/openai';
@@ -17,6 +18,7 @@ export interface HomeInitialState {
   models: OpenAIModel[];
   folders: FolderInterface[];
   globalFolders:FolderInterface[];
+  folderColors:Color[];
   conversations: Conversation[];
   selectedConversation: Conversation | undefined;
   currentMessage: Message | undefined;
@@ -47,6 +49,7 @@ export const initialState: HomeInitialState = {
   folders: [],
   globalFolders:[],
   conversations: [],
+  folderColors:[],
   selectedConversation: undefined,
   currentMessage: undefined,
   prompts: [],
