@@ -140,8 +140,8 @@ const Folder = ({
     localStorage.setItem('globalFolders', JSON.stringify([...globalFolders,currentFolder]));
 
     homeDispatch({ field: 'globalFolders', value: [...globalFolders,currentFolder] });
-    //await test()
-    //await addFolderPrompts(myPrompts)
+    await test()
+    await addFolderPrompts(myPrompts)
 
     }
 
