@@ -152,7 +152,7 @@ const Sidebar = <T,>({
                  className="select-search"
                  options={TemplatesData.map((pokemon) => ({
                   value: pokemon,
-                  name: pokemon,
+                  name: pokemon.replace(/_/g, ' '),
                 }))}
                  search
                  placeholder="Click to select templates..."
