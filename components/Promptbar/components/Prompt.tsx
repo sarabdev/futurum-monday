@@ -167,9 +167,9 @@ export const PromptComponent = ({ prompt }: Props) => {
 
       {!isDeleting && !isRenaming && (
         <div className="absolute right-1 z-10 flex text-gray-300">
-          <SidebarActionButton handleClick={handleOpenDeleteModal}>
+          {!isGlobal && <SidebarActionButton handleClick={handleOpenDeleteModal}>
             <IconTrash size={18} />
-          </SidebarActionButton>
+          </SidebarActionButton>}
           {!isGlobal && !prompt.folderId && <SidebarActionButton handleClick={handleMakeGlobal}>
             <IconWorld size={18} />
           </SidebarActionButton>}

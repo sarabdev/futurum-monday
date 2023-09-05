@@ -282,7 +282,7 @@ const Folder = ({
               <IconPalette size={18} />
             </SidebarActionButton>
 }
-            <SidebarActionButton
+         {(currentFolder.type=="chat" || (currentFolder.type=="prompt" && !isGlobal) )&&  <SidebarActionButton
               handleClick={(e) => {
                 e.stopPropagation();
                 setIsRenaming(true);
@@ -290,18 +290,20 @@ const Folder = ({
               }}
             >
               <IconPencil size={18} />
-            </SidebarActionButton>
-            <SidebarActionButton
+            </SidebarActionButton>}
+         {(currentFolder.type=="chat" || (currentFolder.type=="prompt" && !isGlobal) ) && <SidebarActionButton
               handleClick={(e) => {
                 let response=confirm("Are you sure you want to delete folder and all of its content?")
                 if(response){
                 e.stopPropagation();
-                setIsDeleting(true);
+                //setIsDeleting(true);
+                handleDeleteFolder(currentFolder.id);
+
                 }
               }}
             >
               <IconTrash size={18} />
-            </SidebarActionButton>
+            </SidebarActionButton>}
           {!isGlobal && currentFolder.type=="prompt" &&  <SidebarActionButton
               handleClick={(e) => {
                 // e.stopPropagation();

@@ -238,7 +238,7 @@ style={{
               handleSearchTerm('');
             }}>
             <IconPlus  size={16} />
-            {addItemButtonTitle}
+            {/* {addItemButtonTitle} */}
             </button>
           </button>:
 
