@@ -69,6 +69,8 @@ export const ChatInput = ({
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [plugin, setPlugin] = useState<Plugin | null>(null);
   const [prompt, setPrompt] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
 
   const promptListRef = useRef<HTMLUListElement | null>(null);
 
@@ -426,28 +428,43 @@ const defaultOption = options[0];
           selectedConversation &&
           selectedConversation.messages.length > 0 && (
             <button
-            style={{
-              backgroundColor: lightMode=="light" ? "white" : "black",
-              color: lightMode=="light" ? "black" : "white",
-              width:"35%"
-            }} 
-              className="relative top-0 left-0 right-0 mx-auto mb-3 flex w-fit items-center gap-3 rounded border border-neutral-200 bg-white py-2 px-2 text-black hover:opacity-50 dark:border-neutral-600 dark:bg-[#343541] dark:text-white md:mb-0 md:mt-2"
-              onClick={onRegenerate}
-            >
-              <IconRepeat size={16} /> {t('Regenerate response')}
-            </button>
+  style={{
+    backgroundColor: lightMode === "light" ? "white" : "black",
+    color: lightMode === "light" ? "black" : "white",
+    width: isHovered ? "30%" : "2.5rem", 
+  }}
+  className="relative top-0 left-0 right-0 mx-auto mb-3 flex w-fit items-center gap-3 rounded border border-neutral-200 bg-white py-2 px-2 text-black hover:opacity-50 dark:border-neutral-600 dark:bg-[#343541] dark:text-white md:mb-0 md:mt-2"
+  onClick={onRegenerate}
+  onMouseEnter={() => setIsHovered(true)}
+  onMouseLeave={() => setIsHovered(false)}
+>
+  <div className="flex items-center">
+    <IconRepeat size={16} />
+    {isHovered && (
+      <span className="ml-2 opacity-100 transition-opacity">
+        {t('Regenerate response')}
+      </span>
+    )}
+  </div>
+</button>
           )}
            {messageIsStreaming && (
           <button
           style={{
             backgroundColor: lightMode=="light" ? "white" : "black",
             color: lightMode=="light" ? "black" : "white",
-            width:"30%"
+            width: isHovered ? "30%" : "2.5rem", 
           }} 
-            className="relative top-0 left-0 right-0 mx-auto mb-3 flex w-fit items-center gap-3 rounded border border-neutral-200 bg-white py-2 px-2 text-black hover:opacity-50 dark:border-neutral-600 dark:bg-[#343541] dark:text-white md:mb-0 md:mt-2"
+            className="relative top-y0 left-0 right-0 mx-auto mb-3 flex w-fit items-center gap-3 rounded border border-neutral-200 bg-white py-2 px-2 text-black hover:opacity-50 dark:border-neutral-600 dark:bg-[#343541] dark:text-white md:mb-0 md:mt-2"
             onClick={handleStopConversation}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           >
-            <IconPlayerStop size={16} /> {t('Stop Generating')}
+            <IconPlayerStop size={16} /> {isHovered && (
+      <span className="ml-2 opacity-100 transition-opacity">
+        {t('Stop generating')}
+      </span>
+    )}
           </button>
         )}
       </div>

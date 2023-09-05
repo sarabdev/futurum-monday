@@ -15,6 +15,7 @@ import HomeContext from '@/pages/api/home/home.context';
 import { AuthContext } from '@/contexts/authContext';
 import { LatestExportFormat, SupportedExportFormats } from '@/types/export';
 import { importData } from '@/utils/app/importExport';
+import Image from 'next/image';
 interface Props<T> {
   isOpen: boolean;
   addItemButtonTitle: string;
@@ -77,6 +78,7 @@ const Sidebar = <T,>({
   const [fileJson,setFileJson]=useState<SupportedExportFormats|undefined>(undefined)
   const [selectionValue,setSelectionValue]=useState("")
   const [isPromptModal,setIsPromptModal]=useState(false)
+  const [marketPlace,setMarketPlace]=useState(false);
   const [fileValue, setFileValue]=useState<File |null>(null)
   const { t } = useTranslation('promptbar');
 
@@ -223,7 +225,8 @@ style={{
             //   handleSearchTerm('');
             // }}
           >
-            {side=="right" && <IconWorld size={18} onClick={()=>isGlobal?offGlobal():onGlobal()}/>}
+
+            {side=="right" && <Image width={20} onClick={()=>isGlobal?offGlobal():onGlobal()}  style={{background:'transparent'}} height={100} src={lightMode=="light"?"/Marketplace_Icon.gif":"/Marketplace_Icon_(1).gif"} alt="gif"/>}
             {side=="right"  && <IconFileImport onClick={() => {
               setShowBox(true)
           // const importFile = document.querySelector(
@@ -271,6 +274,7 @@ style={{
             <IconFolderPlus size={16} />
           </button>
         </div>
+        {side === 'right' ? (isGlobal ? <p>MarketPlace</p> : <p>My Templates</p>) : null}
         <Search
           placeholder={t('Search...') || ''}
           searchTerm={searchTerm}
