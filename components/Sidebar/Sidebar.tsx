@@ -274,7 +274,7 @@ style={{
             <IconFolderPlus size={16} />
           </button>
         </div>
-        {side === 'right' ? (isGlobal ? <p>MarketPlace</p> : <p>My Templates</p>) : null}
+        {side === 'right' ? (isGlobal ? <p>Marketplace</p> : <p>My Templates</p>) : null}
         <Search
           placeholder={t('Search...') || ''}
           searchTerm={searchTerm}
