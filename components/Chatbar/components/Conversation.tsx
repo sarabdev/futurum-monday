@@ -119,10 +119,10 @@ export const ConversationComponent = ({ conversation }: Props) => {
       ) : (
         <button
         style={{
-          backgroundColor:folderColors.find(color=>color.folderId==conversation.folderId)?.backgroundColor.length==0?lightMode=="light" ? "black" : "white":folderColors.find(color=>color.folderId==conversation.folderId)?.backgroundColor,
+          backgroundColor:folderColors.find(color=>color.folderId==conversation.folderId)?.backgroundColor,
           // color: lightMode=="light" ? "black" : "white",
           borderColor: lightMode=="light" ? "black" : "white",
-          color:folderColors.find(color=>color.folderId==conversation.folderId)?.textColor.length==0?lightMode=="light" ? "black" : "white":folderColors.find(color=>color.folderId==conversation.folderId)?.textColor
+          color:folderColors.find(color=>color.folderId==conversation.folderId)?.textColor
 
         }} 
           className={`flex w-full cursor-pointer items-center gap-3 rounded-lg p-3 text-sm transition-colors duration-200  ${
