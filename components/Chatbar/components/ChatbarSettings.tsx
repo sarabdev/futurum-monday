@@ -1,4 +1,4 @@
-import { IconClearAll, IconFileExport, IconSettings, IconSettings2 } from '@tabler/icons-react';
+import { IconClearAll, IconFileExport, IconMist, IconMistOff, IconSettings, IconSettings2 } from '@tabler/icons-react';
 import { useContext, useState } from 'react';
 import { useTranslation } from 'next-i18next';
 
@@ -30,9 +30,10 @@ export const ChatbarSettings = () => {
       serverSideApiKeyIsSet,
       serverSidePluginKeysSet,
       conversations,
-      models
+      models,
+      isAutoHide
     },
-    dispatch: homeDispatch,
+    dispatch,
     handleUpdateConversation
   } = useContext(HomeContext);
 
@@ -105,6 +106,16 @@ export const ChatbarSettings = () => {
       ) : null}
 
       {!serverSidePluginKeysSet ? <PluginKeys  /> : null}
+      <SidebarButton
+        text={t(isAutoHide?'Disable Autohide Sidebar':'Enable Autohide Sidebar')}
+        icon={isAutoHide?<IconMistOff size={18}/>:<IconMist size={18} />}
+        onClick={() => {
+          dispatch({ field: 'isAutoHide', value: !isAutoHide })
+          localStorage.setItem('isAutoHide',JSON.stringify(!isAutoHide))
+        }
+      }
+        lightMode={lightMode}
+      />
       {user && <SidebarButton
         text={t('Logout')}
         icon={<IconSettings2 size={18} />}

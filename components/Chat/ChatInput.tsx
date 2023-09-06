@@ -54,7 +54,7 @@ export const ChatInput = ({
   const { t } = useTranslation('chat');
 
   const {
-    state: { selectedConversation, messageIsStreaming, prompts, lightMode, showPluginSelect },
+    state: { selectedConversation, messageIsStreaming, prompts, lightMode, showPluginSelect,isAutoHide },
     offPluginSelect,
     onPluginSelect,
     dispatch: homeDispatch,
@@ -74,9 +74,11 @@ export const ChatInput = ({
   const promptListRef = useRef<HTMLUListElement | null>(null);
 
   const handleMenus=()=>{
+
+    if(isAutoHide){
     homeDispatch({ field: 'showChatbar', value:false });
     homeDispatch({ field: 'showPromptbar', value:false });
-
+    }
 
   }
   const filteredPrompts = prompts.filter((prompt) =>

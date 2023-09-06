@@ -8,6 +8,7 @@ import { Prompt } from '@/types/prompt';
 
 export interface HomeInitialState {
   apiKey: string;
+  isAutoHide:boolean;
   pluginKeys: PluginKey[];
   loading: boolean;
   isGlobal:boolean;
@@ -38,6 +39,7 @@ export interface HomeInitialState {
 
 export const initialState: HomeInitialState = {
   apiKey: "" ,
+  isAutoHide:false,
   loading: false,
   isGlobal: false,
   showPluginSelect:false,

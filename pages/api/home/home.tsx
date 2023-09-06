@@ -70,6 +70,7 @@ const Home = ({
       selectedConversation,
       prompts,
       temperature,
+      isAutoHide
     },
     dispatch,
   } = contextValue;
@@ -303,7 +304,6 @@ const Home = ({
   const setColors=()=>{
     const storedColors=localStorage.getItem('folderColors');
     if(storedColors){
-      console.log(storedColors)
       dispatch({ field: 'folderColors', value: JSON.parse(storedColors) });
     }
     else{
@@ -327,6 +327,17 @@ const Home = ({
       dispatch({ field: 'globalFolders', value: result.folders });
     
   }
+  
+  const checkAutoHideSidebar=()=>{
+    let storedValue=localStorage.getItem('isAutoHide')
+    if(storedValue){
+      dispatch({ field: 'isAutoHide', value: JSON.parse(storedValue) });
+    }
+    else{
+      localStorage.setItem('isAutoHide',JSON.stringify(isAutoHide))
+    }
+  }
+
   useEffect(() => {
     const settings = getSettings();
     if (settings.theme) {
@@ -382,6 +393,7 @@ const Home = ({
     getGlobalTemplatesFromDb()
     getGlobalFoldersFromDb()
     setColors()
+    checkAutoHideSidebar()
     const conversationHistory = localStorage.getItem('conversationHistory');
     if (conversationHistory) {
       const parsedConversationHistory: Conversation[] =

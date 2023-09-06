@@ -40,18 +40,21 @@ const Folder = ({
   handleDrop,
   folderComponent,
 }: Props) => {
-  const { state:{isGlobal, globalFolders,prompts,folderColors},handleDeleteFolder, handleUpdateFolder, dispatch:homeDispatch } = useContext(HomeContext);
+  const { state:{isGlobal, globalFolders,prompts,folderColors, lightMode},handleDeleteFolder, handleUpdateFolder, dispatch:homeDispatch } = useContext(HomeContext);
   // const {
   //   state,
   //   handleUpdatePrompt,
   // } = useContext(PromptbarContext);
   const [isDeleting, setIsDeleting] = useState(false);
   const [isRenaming, setIsRenaming] = useState(false);
-  const [background,setBackground]= useState('')
+  const [color,setColor]= useState({
+    background:'',
+    text:''
+  })
   const [renameValue, setRenameValue] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const [isChangeColor,setIsChangeColor]=useState(false)
-
+  const [changeWhat, setChangeWhat]=useState("background")
   const handleEnterDown = (e: KeyboardEvent<HTMLDivElement>) => {
     if (e.key === 'Enter') {
       e.preventDefault();
@@ -164,10 +167,18 @@ const Folder = ({
   }, [searchTerm]);
 
   const handleChangeComplete = (color:any) => {
-    setBackground(color.hex)
+    if(changeWhat=='background')
+    setColor(old=>({...old,background:color.hex}))
+  else{
+  setColor(old=>({...old,text:color.hex}))
+  }
+
     let item = folderColors.find(obj => obj.folderId == currentFolder.id)
     if(item) {
-    item.colorCode = color.hex;
+      if(changeWhat=='background')
+      item.backgroundColor=color.hex;
+      else
+    item.textColor = color.hex;
     item.folderId=currentFolder.id;
     homeDispatch({ field: 'folderColors', value: [...folderColors], });
     localStorage.setItem('folderColors',JSON.stringify([...folderColors]))
@@ -175,10 +186,11 @@ const Folder = ({
     }
     else{
       let newColor={
-        colorCode:color.hex,
+        textColor:color.text,
+        backgroundColor:color.background,
         folderId:currentFolder.id
       }
-      homeDispatch({ field: 'folderColors', value: [...folderColors,newColor], });
+      homeDispatch({ field: 'folderColors', value: [...folderColors,newColor] });
       localStorage.setItem('folderColors',JSON.stringify([...folderColors,newColor]))
 
     }
@@ -191,13 +203,13 @@ const Folder = ({
   useEffect(()=>{
     let newColor=folderColors.find((color)=>color.folderId==currentFolder.id)
     if(newColor){
-      setBackground(newColor.colorCode)
+      setColor({...color,background:newColor.backgroundColor, text:newColor.textColor})
     }
   },[])
   return (
     <>
 
-      <div className="relative flex items-center" style={{backgroundColor:background}}>
+      <div className="relative flex items-center" style={{backgroundColor:color.background, color:color.text}}>
         {isRenaming ? (
           <div className="flex w-full items-center gap-3  p-3">
             {isOpen ? (
@@ -206,7 +218,7 @@ const Folder = ({
               <IconCaretRight size={18} />
             )}
             <input
-              className="mr-12 flex-1 overflow-hidden overflow-ellipsis border-neutral-400 bg-transparent text-left text-[12.5px] leading-3 text-white outline-none focus:border-neutral-100"
+              className="mr-12 flex-1 overflow-hidden overflow-ellipsis border-neutral-400 bg-transparent text-left text-[12.5px] leading-3  outline-none focus:border-neutral-100"
               type="text"
               value={renameValue}
               onChange={(e) => setRenameValue(e.target.value)}
@@ -229,7 +241,7 @@ const Folder = ({
               <IconCaretRight size={18} />
             )}
 
-            <div className="relative max-h-5 flex-1 overflow-hidden text-ellipsis whitespace-nowrap break-all text-left text-[12.5px] leading-3">
+            <div style={{color:color.text}} className="relative max-h-5 flex-1 overflow-hidden text-ellipsis whitespace-nowrap break-all text-left text-[12.5px] leading-3">
               {currentFolder.name}
             </div>
           </button>
@@ -272,7 +284,7 @@ const Folder = ({
           <div className="absolute right-1 z-10 flex text-gray-300">
             {currentFolder.type=="chat" && <SidebarActionButton
               handleClick={(e) => {
-
+               
                 setIsChangeColor((old)=>!old)
                 //e.stopPropagation();
                 //setIsRenaming(true);
@@ -282,6 +294,7 @@ const Folder = ({
               <IconPalette size={18} />
             </SidebarActionButton>
 }
+
          {(currentFolder.type=="chat" || (currentFolder.type=="prompt" && !isGlobal) )&&  <SidebarActionButton
               handleClick={(e) => {
                 e.stopPropagation();
@@ -318,6 +331,16 @@ const Folder = ({
       </div>
 
       {isOpen ? folderComponent : null}
+      {isChangeColor && <select value={changeWhat} onChange={(e)=>setChangeWhat(e.target.value)} style={{
+          backgroundColor: lightMode=="light" ? "white" : "black",
+          color: lightMode=="light" ? "black" : "white",
+          borderColor: lightMode=="light" ? "black" : "white",
+          marginBottom:'10px',
+          border:"1px solid"
+      }} id="optionSelect">
+                <option value="background">Change Background Color</option>
+                <option value="text">Change Text Color</option>
+            </select>}
       {isChangeColor && <TwitterPicker colors={ColorCodes} onChangeComplete={handleChangeComplete} width={'210px'}/>}
 
     </>
