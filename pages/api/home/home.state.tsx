@@ -2,6 +2,7 @@ import { Conversation, Message } from '@/types/chat';
 import { Color } from '@/types/color';
 import { ErrorMessage } from '@/types/error';
 import { FolderInterface } from '@/types/folder';
+import { GlobalFolderInterface } from '@/types/globalFolder';
 import { GlobalPrompt } from '@/types/globalPrompt';
 import { OpenAIModel, OpenAIModelID } from '@/types/openai';
 import { PluginKey } from '@/types/plugin';
@@ -19,7 +20,7 @@ export interface HomeInitialState {
   modelError: ErrorMessage | null;
   models: OpenAIModel[];
   folders: FolderInterface[];
-  globalFolders:FolderInterface[];
+  globalFolders:GlobalFolderInterface[];
   folderColors:Color[];
   conversations: Conversation[];
   selectedConversation: Conversation | undefined;

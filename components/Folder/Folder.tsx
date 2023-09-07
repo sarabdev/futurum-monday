@@ -6,6 +6,7 @@ import {
   IconPencil,
   IconTrash,
   IconWorld,
+  IconWorldDownload,
   IconX,
 } from '@tabler/icons-react';
 import {TwitterPicker} from 'react-color'
@@ -26,6 +27,7 @@ import HomeContext from '@/pages/api/home/home.context';
 import SidebarActionButton from '@/components/Buttons/SidebarActionButton';
 import PromptbarContext from '../Promptbar/PromptBar.context';
 import { Prompt } from '@/types/prompt';
+import { GlobalFolderInterface } from '@/types/globalFolder';
 
 interface Props {
   currentFolder: FolderInterface;
@@ -40,7 +42,7 @@ const Folder = ({
   handleDrop,
   folderComponent,
 }: Props) => {
-  const { state:{isGlobal, globalFolders,prompts,folderColors, lightMode},handleDeleteFolder, handleUpdateFolder, dispatch:homeDispatch } = useContext(HomeContext);
+  const { state:{isGlobal, globalFolders, globalPrompts,prompts,folderColors, lightMode, folders},handleDeleteFolder, handleUpdateFolder, dispatch:homeDispatch } = useContext(HomeContext);
   // const {
   //   state,
   //   handleUpdatePrompt,
@@ -94,7 +96,7 @@ const Folder = ({
       method: 'post',
       url: `https://dev.futurum.one/.netlify/functions/addFolders`,
       data: {
-        folder:currentFolder
+        folder:{...currentFolder,downloadCount:0}
       },
      
     };
@@ -140,9 +142,9 @@ const Folder = ({
       const myPrompts=prompts.filter((prompt)=>prompt.folderId==currentFolder.id)
       console.log(myPrompts)
       console.log(currentFolder)
-    localStorage.setItem('globalFolders', JSON.stringify([...globalFolders,currentFolder]));
+    localStorage.setItem('globalFolders', JSON.stringify([...globalFolders,{...currentFolder,downloadCount:0}]));
 
-    homeDispatch({ field: 'globalFolders', value: [...globalFolders,currentFolder] });
+    homeDispatch({ field: 'globalFolders', value: [...globalFolders,{...currentFolder,downloadCount:0}] });
     await test()
     await addFolderPrompts(myPrompts)
 
@@ -206,6 +208,65 @@ const Folder = ({
       setColor({...color,background:newColor.backgroundColor, text:newColor.textColor})
     }
   },[])
+
+  
+  const updatePromptCount=(updatedPrompt:GlobalFolderInterface|undefined)=>{
+    const config = {
+      method: 'post',
+      url: `https://dev.futurum.one/.netlify/functions/updateFolder`,
+      data: {
+        folder: updatedPrompt
+      },
+
+    };
+    return axios(config).then(response => {
+      return {
+        statusCode: 200,
+        body: JSON.stringify(response.data)
+      }
+    }).catch(error => {
+      console.log(error)
+      return {
+        statusCode: 422,
+        body: `Error: ${error}`,
+      }
+    })
+  }
+  const handleDownload=async()=>{
+
+    let foundObject = globalFolders.find(obj => obj.id == currentFolder.id);
+    if(foundObject){
+      foundObject.downloadCount++;
+    }
+     
+     localStorage.setItem('globalFolders',JSON.stringify([...globalFolders]))
+    homeDispatch({ field: 'globalFolders', value: [...globalFolders] });
+
+
+    const currentFolderPrompts=globalPrompts.filter((prompt)=>prompt.folderId==currentFolder.id)
+   // The property you want to remove
+const propertyToRemove = 'downloadCount';
+
+// Create a new array with the property removed from each object
+const newArray =currentFolderPrompts.map((obj) => {
+  // Destructure the object and create a new one without the specified property
+  const { [propertyToRemove]: _, ...newObj } = obj;
+  return newObj;
+});
+     localStorage.setItem('prompts', JSON.stringify([...prompts,...newArray]));
+
+     homeDispatch({ field: 'prompts', value: [...prompts,...newArray] });
+
+
+
+
+
+     localStorage.setItem('folders',JSON.stringify([...folders,{id:currentFolder.id, name:currentFolder.name, type:currentFolder.type}]))
+     homeDispatch({ field: 'folders', value: [...folders,{id:currentFolder.id, name:currentFolder.name, type:currentFolder.type}] });
+      await updatePromptCount(foundObject)
+
+
+}
   return (
     <>
 
@@ -242,7 +303,7 @@ const Folder = ({
             )}
 
             <div style={{color:color.text}} className="relative max-h-5 flex-1 overflow-hidden text-ellipsis whitespace-nowrap break-all text-left text-[12.5px] leading-3">
-              {currentFolder.name}
+              {currentFolder.name}{isGlobal && currentFolder.type=="prompt" && `(${(currentFolder as GlobalFolderInterface).downloadCount})`} 
             </div>
           </button>
         )}
@@ -316,6 +377,17 @@ const Folder = ({
               }}
             >
               <IconTrash size={18} />
+
+            </SidebarActionButton>}
+
+            {isGlobal && currentFolder.type=="prompt" && <SidebarActionButton
+              handleClick={(e) => {
+                e.stopPropagation();
+               handleDownload()
+              
+              }}
+            >
+              <IconWorldDownload size={18} />
             </SidebarActionButton>}
           {!isGlobal && currentFolder.type=="prompt" &&  <SidebarActionButton
               handleClick={(e) => {

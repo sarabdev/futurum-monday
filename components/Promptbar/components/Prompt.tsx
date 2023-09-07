@@ -193,7 +193,7 @@ export const PromptComponent = ({ prompt }: Props) => {
         <IconBulbFilled size={18} />
 
         <div className="relative max-h-5 flex-1 overflow-hidden text-ellipsis whitespace-nowrap break-all pr-4 text-left text-[12.5px] leading-3">
-        {prompt.name} {isGlobal && `(${(prompt as GlobalPrompt).downloadCount})`}        </div>
+        {prompt.name} {isGlobal && !prompt.folderId && `(${(prompt as GlobalPrompt).downloadCount})`}        </div>
       </button>
 
       {(isDeleting || isRenaming) && (
