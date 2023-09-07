@@ -2,6 +2,7 @@ import { Conversation, Message } from '@/types/chat';
 import { Color } from '@/types/color';
 import { ErrorMessage } from '@/types/error';
 import { FolderInterface } from '@/types/folder';
+import { GlobalPrompt } from '@/types/globalPrompt';
 import { OpenAIModel, OpenAIModelID } from '@/types/openai';
 import { PluginKey } from '@/types/plugin';
 import { Prompt } from '@/types/prompt';
@@ -24,7 +25,7 @@ export interface HomeInitialState {
   selectedConversation: Conversation | undefined;
   currentMessage: Message | undefined;
   prompts: Prompt[];
-  globalPrompts:Prompt[];
+  globalPrompts:GlobalPrompt[];
   filteredGlobalPrompts:Prompt[];
   temperature: number;
   showChatbar: boolean;
