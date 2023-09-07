@@ -50,7 +50,7 @@ export const Chatbar = () => {
     (apiKey: string) => {
       homeDispatch({ field: 'apiKey', value: apiKey });
 
-      localStorage.setItem('apiKey', apiKey);
+      // localStorage.setItem('apiKey', apiKey);
     },
     [homeDispatch],
   );

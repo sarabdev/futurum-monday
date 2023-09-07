@@ -347,15 +347,15 @@ const Home = ({
       });
     }
 
-    const apiKey = localStorage.getItem('apiKey');
+    // const apiKey = localStorage.getItem('apiKey');
 
-    if (serverSideApiKeyIsSet) {
-      dispatch({ field: 'apiKey', value: '' });
+    // if (serverSideApiKeyIsSet) {
+    //   dispatch({ field: 'apiKey', value: '' });
 
-      localStorage.removeItem('apiKey');
-    } else if (apiKey) {
-      dispatch({ field: 'apiKey', value: apiKey });
-    }
+    //   // localStorage.removeItem('apiKey');
+    // } else if (apiKey) {
+    //   dispatch({ field: 'apiKey', value: apiKey });
+    // }
 
     const pluginKeys = localStorage.getItem('pluginKeys');
     if (serverSidePluginKeysSet) {

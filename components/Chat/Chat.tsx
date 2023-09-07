@@ -380,13 +380,10 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
 
   useEffect(()=>{
    if(user){
-    homeDispatch({ field: 'apiKey', value: "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" });
-    if("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")
-    localStorage.setItem('apiKey', "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");
+    homeDispatch({ field: 'apiKey', value: process.env.NEXT_PUBLIC_API_KEY });
    }
    else{
     homeDispatch({ field: 'apiKey', value:'' });
-    localStorage.setItem('apiKey', '');
    }
   },[user])
 
