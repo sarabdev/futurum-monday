@@ -232,7 +232,7 @@ style={{
             {side=="right" &&
              <div className="group relative">
  
-            <Image  width={20} onClick={()=>isGlobal?offGlobal():onGlobal()}  style={{background:'transparent'}} height={20} src={lightMode=="light"?"/cart.gif":"/cart.gif"} alt="gif"/>
+            <Image loading='eager'  width={20} onClick={()=>isGlobal?offGlobal():onGlobal()}  style={{background:'transparent'}} height={20} src={lightMode=="light"?"/cart.gif":"/cart.gif"} alt="gif"/>
             <span style={{width:'max-content'}} className="absolute top-5 scale-0 transition-all rounded bg-gray-800 p-2  text-white group-hover:scale-100">Marketplace</span>
 
              </div>}
