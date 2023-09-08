@@ -267,7 +267,7 @@ const Home = ({
   function test2(){
     const config = {
       method: 'get',
-      url: `https://dev.futurum.one/.netlify/functions/getFolders`,
+      url: `https://chat.futurum.one/.netlify/functions/getFolders`,
     };
     return axios(config).then(response => {
       return {
@@ -285,7 +285,7 @@ const Home = ({
   function test(){
     const config = {
       method: 'get',
-      url: `https://dev.futurum.one/.netlify/functions/getPrompts`,
+      url: `https://chat.futurum.one/.netlify/functions/getPrompts`,
     };
     return axios(config).then(response => {
       return {

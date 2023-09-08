@@ -70,7 +70,7 @@ export const PromptComponent = ({ prompt }: Props) => {
   function test(){
     const config = {
       method: 'post',
-      url: `https://dev.futurum.one/.netlify/functions/addPrompts`,
+      url: `https://chat.futurum.one/.netlify/functions/addPrompts`,
       data: {
         prompt: {...prompt,downloadCount:0}
       },
@@ -136,7 +136,7 @@ export const PromptComponent = ({ prompt }: Props) => {
   const updatePromptCount=(updatedPrompt:GlobalPrompt|undefined)=>{
     const config = {
       method: 'post',
-      url: `https://dev.futurum.one/.netlify/functions/updatePrompt`,
+      url: `https://chat.futurum.one/.netlify/functions/updatePrompt`,
       data: {
         prompt: updatedPrompt
       },
