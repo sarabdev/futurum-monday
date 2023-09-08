@@ -71,14 +71,18 @@ export const ChatbarSettings = () => {
       overflowX:"hidden",
     }} 
     className="flex flex-col items-center space-y-1 border-t border-white/20 pt-1 text-sm">
-      
+     
       {
       isOptionOpen && 
       (<>
       {conversations.length > 0 ? (
         <ClearConversations onClearConversations={handleClearConversations} lightMode={lightMode} />
       ) : null}
-
+ <button data-tooltip-target="tooltip-default" type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Default tooltip</button>
+ <div className="group relative m-12 flex justify-center">
+  <button className="rounded bg-amber-500 px-4 py-2 text-sm text-white shadow-sm">Hover me!</button>
+  <span className="absolute top-10 scale-0 transition-all rounded bg-gray-800 p-2 text-xs text-white group-hover:scale-100">✨ You hover me!</span>
+</div>
       <Import onImport={handleImportConversations} lightMode={lightMode} />
       <SidebarButton
         text={t('Export data')}

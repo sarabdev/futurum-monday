@@ -228,9 +228,17 @@ style={{
             //   handleSearchTerm('');
             // }}
           >
-            {side=="right" && <Image width={20} onClick={()=>isGlobal?offGlobal():onGlobal()}  style={{background:'transparent'}} height={100} src={lightMode=="light"?"/cart.gif":"/cart.gif"} alt="gif"/>}
-            
-            {side=="right"  && <IconFileImport onClick={() => {
+            {side=="right" &&
+             <div className="group relative">
+ 
+            <Image width={20} onClick={()=>isGlobal?offGlobal():onGlobal()}  style={{background:'transparent'}} height={100} src={lightMode=="light"?"/cart.gif":"/cart.gif"} alt="gif"/>
+            <span style={{width:'max-content'}} className="absolute top-5 scale-0 transition-all rounded bg-gray-800 p-2  text-white group-hover:scale-100">Marketplace</span>
+
+             </div>}
+            {side=="right" &&
+             <div className="group relative">
+
+             <IconFileImport onClick={() => {
               setShowBox(true)
           // const importFile = document.querySelector(
           //   '#import-file',
@@ -238,7 +246,12 @@ style={{
           // if (importFile) {
           //   importFile.click();
           // }
-        }} size={18} /> }
+        }} size={18} /> 
+         <span style={{width:'max-content'}} className="absolute top-5 scale-0 transition-all rounded bg-gray-800 p-2  text-white group-hover:scale-100">Import Template</span>
+
+</div>}
+<div className="group relative">
+
            <button style={{display:"flex", alignItems:'center', justifyContent:'space-around'}} onClick={() => {
               handleCreateItem();
               handleSearchTerm('');
@@ -246,6 +259,9 @@ style={{
             <IconPlus  size={16} />
             {/* {addItemButtonTitle} */}
             </button>
+            <span style={{width:'max-content'}} className="absolute top-5 right-(-1) scale-0 transition-all rounded bg-gray-800 p-2  text-white group-hover:scale-100">New Prompt</span>
+
+</div>
           </button>:
 
 <button
@@ -269,6 +285,7 @@ style={{
          }
 
          
+<div className="group relative">
 
           <button
             className="ml-2 flex flex-shrink-0 cursor-pointer items-center gap-3 rounded-md  p-3 text-sm text-white transition-colors duration-200 hover:bg-gray-500/10"
@@ -276,6 +293,9 @@ style={{
           >
             <IconFolderPlus size={16} />
           </button>
+          <span style={{width:'max-content'}} className="absolute top-8 z-[100] right-3 scale-0 transition-all rounded bg-gray-800 p-2  text-white group-hover:scale-100">New Folder</span>
+
+</div>
         </div>
         {side === 'right' ? (isGlobal ? <p>Marketplace</p> : <p>My Templates</p>) : null}
         <Search
