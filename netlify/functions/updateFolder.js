@@ -19,6 +19,8 @@ const handler = async (event) => {
                ...folder
             },
          };
+         delete updateDocument.$set._id;
+
           await collection.updateOne(filter, updateDocument);
         return {
             statusCode: 200,
