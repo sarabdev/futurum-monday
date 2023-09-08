@@ -66,8 +66,9 @@ export const ChatbarSettings = () => {
     style={{
       borderColor: lightMode=="light" ? "black" : "white",
       maxHeight:"50%",
+      minHeight:isOptionOpen?"50%":"0%",
       overflowY:"scroll",
-      overflowX:"hidden"
+      overflowX:"hidden",
     }} 
     className="flex flex-col items-center space-y-1 border-t border-white/20 pt-1 text-sm">
       

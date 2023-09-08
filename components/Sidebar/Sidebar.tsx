@@ -218,7 +218,9 @@ style={{
           style={{
             backgroundColor: lightMode=="light" ? "white" : "black",
             color: lightMode=="light" ? "black" : "white",
-            borderColor: lightMode=="light" ? "black" : "white"
+            borderColor: lightMode=="light" ? "black" : "white",
+            display:"flex",
+            justifyContent:'space-evenly'
           }} 
             className="text-sidebar flex w-[190px] flex-shrink-0 cursor-pointer select-none items-center gap-3 rounded-md border border-white/20 p-3 text-white transition-colors duration-200 hover:bg-gray-500/10"
             // onClick={() => {
@@ -226,7 +228,7 @@ style={{
             //   handleSearchTerm('');
             // }}
           >
-            {side=="right" && <Image width={20} onClick={()=>isGlobal?offGlobal():onGlobal()}  style={{background:'transparent'}} height={100} src={lightMode=="light"?"/Marketplace_Icon.gif":"/Marketplace_Icon_(1).gif"} alt="gif"/>}
+            {side=="right" && <Image width={20} onClick={()=>isGlobal?offGlobal():onGlobal()}  style={{background:'transparent'}} height={100} src={lightMode=="light"?"/cart.gif":"/cart.gif"} alt="gif"/>}
             
             {side=="right"  && <IconFileImport onClick={() => {
               setShowBox(true)
@@ -237,7 +239,7 @@ style={{
           //   importFile.click();
           // }
         }} size={18} /> }
-           <button style={{display:"flex", alignItems:'center',width:"80%", justifyContent:'space-around'}} onClick={() => {
+           <button style={{display:"flex", alignItems:'center', justifyContent:'space-around'}} onClick={() => {
               handleCreateItem();
               handleSearchTerm('');
             }}>
@@ -269,7 +271,7 @@ style={{
          
 
           <button
-            className="ml-2 flex flex-shrink-0 cursor-pointer items-center gap-3 rounded-md border border-white/20 p-3 text-sm text-white transition-colors duration-200 hover:bg-gray-500/10"
+            className="ml-2 flex flex-shrink-0 cursor-pointer items-center gap-3 rounded-md  p-3 text-sm text-white transition-colors duration-200 hover:bg-gray-500/10"
             onClick={handleCreateFolder}
           >
             <IconFolderPlus size={16} />

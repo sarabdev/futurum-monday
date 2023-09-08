@@ -7,14 +7,16 @@ import SidebarActionButton from '@/components/Buttons/SidebarActionButton';
 import { IconWorld } from '@tabler/icons-react';
 import HomeContext from '@/pages/api/home/home.context';
 import { updatePrompt } from '@/utils/app/prompts';
+import { GlobalPrompt } from '@/types/globalPrompt';
 
 interface Props {
   prompt: Prompt;
   onClose: () => void;
   onUpdatePrompt: (prompt: Prompt) => void;
+  handleDownload:()=>void
 }
 
-export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt }) => {
+export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt,handleDownload }) => {
   const { t } = useTranslation('promptbar');
   const {
     state: {
@@ -150,9 +152,13 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt }) => {
 
             <button
               type="button"
-              style={{width:"85%"}}
+              style={{width:isGlobal?"100%":"85%"}}
               className=" px-4 py-2  border rounded-lg shadow border-neutral-500 text-neutral-900 hover:bg-neutral-100 focus:outline-none dark:border-neutral-800 dark:border-opacity-50 dark:bg-white dark:text-black dark:hover:bg-neutral-300"
               onClick={() => {
+                if(isGlobal){
+                  handleDownload();
+                }
+                else{
                 if(globalHappen){
                 const updatedPrompt = {
                   ...prompt,
@@ -164,13 +170,14 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt }) => {
                 onUpdatePrompt(updatedPrompt);
               }
                 onClose();
+            }
               }}
             >
-              {t('Save')}
+              {isGlobal?t('Add'):t('Save')}
             </button>
-            <SidebarActionButton   handleClick={handleMakeGlobal}>
+          {!isGlobal &&  <SidebarActionButton   handleClick={handleMakeGlobal}>
             <IconWorld size={34} onClick={()=>{setGlobalHappen(true);onUpdatePrompt({...prompt,name,description,content:content.trim()});onClose()}} />
-          </SidebarActionButton>  
+          </SidebarActionButton> } 
           </div>        </div>
         </div>
       </div>

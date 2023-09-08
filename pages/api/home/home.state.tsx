@@ -41,7 +41,7 @@ export interface HomeInitialState {
 
 export const initialState: HomeInitialState = {
   apiKey: "" ,
-  isAutoHide:false,
+  isAutoHide:true,
   loading: false,
   isGlobal: false,
   showPluginSelect:false,
