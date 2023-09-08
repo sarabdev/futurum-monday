@@ -30,8 +30,8 @@ export const CloseSidebarButton = ({ onClick, side }: Props) => {
         } sm:h-8 sm:w-8 sm:text-neutral-700`}
         onClick={onClick}
       >
-        {lightMode && <Image src="/burger-1.gif" width={20} height={100} alt="burger_icon" /> }
-        {!lightMode && <Image src="/burger-1.gif" width={20} height={100} alt="burger_icon" /> }
+        {lightMode && <Image src="/burger-1.gif" width={20} height={20} alt="burger_icon" /> }
+        {!lightMode && <Image src="/burger-1.gif" width={20} height={20} alt="burger_icon" /> }
 
       </button>
       <div
@@ -85,8 +85,8 @@ export const OpenSidebarButton = ({ onClick, side ,handleCreateItem}: Props) => 
       } sm:h-8 sm:w-12 sm:text-neutral-700`}
     >
       
-      {side === 'right' ? (<div style={{display:'flex'}}><IconPlus color='#808080' onClick={()=>{setIsPromptModal(true)}}/>{lightMode?<Image src="/burger-1.gif" width={20} height={100} onClick={onClick} alt="burger_icon" />:<Image src="/burger-1.gif" onClick={onClick} width={20} height={100} alt="burger_icon" />}</div>) :
-       <div style={{display:'flex'}}>{lightMode ?<Image src="/burger-1.gif" width={20} height={100} onClick={onClick} alt="burger_icon" />:<Image src="/burger-1.gif"  onClick={onClick} width={20} height={100} alt="burger_icon" />}<IconPlus color='#808080' onClick={()=>{handleCreateItem();selectpromptbar()}}/></div>}
+      {side === 'right' ? (<div style={{display:'flex'}}><IconPlus color='#808080' onClick={()=>{setIsPromptModal(true)}}/>{lightMode?<Image src="/burger-1.gif" width={20} height={20} onClick={onClick} alt="burger_icon" />:<Image src="/burger-1.gif" onClick={onClick} width={20} height={20} alt="burger_icon" />}</div>) :
+       <div style={{display:'flex'}}>{lightMode ?<Image src="/burger-1.gif" width={20} height={20} onClick={onClick} alt="burger_icon" />:<Image src="/burger-1.gif"  onClick={onClick} width={20} height={20} alt="burger_icon" />}<IconPlus color='#808080' onClick={()=>{handleCreateItem();selectpromptbar()}}/></div>}
     </button>
     </>
   );
