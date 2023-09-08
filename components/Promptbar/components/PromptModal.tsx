@@ -8,7 +8,7 @@ import { IconWorld } from '@tabler/icons-react';
 import HomeContext from '@/pages/api/home/home.context';
 import { updatePrompt } from '@/utils/app/prompts';
 import { GlobalPrompt } from '@/types/globalPrompt';
-
+import axios from 'axios';
 interface Props {
   prompt: Prompt;
   onClose: () => void;
@@ -68,15 +68,38 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt,handleD
     nameInputRef.current?.focus();
   }, []);
 
-  const handleMakeGlobal:MouseEventHandler<HTMLButtonElement>=(e)=>{
+  function test(){
+    const config = {
+      method: 'post',
+      url: `https://dev.futurum.one/.netlify/functions/addPrompts`,
+      data: {
+        prompt: {...prompt,downloadCount:0}
+      },
+     
+    };
+    return axios(config).then(response => {
+      return {
+        statusCode: 200,
+        body: JSON.stringify(response.data)
+      }
+    }).catch(error => {
+      console.log(error)
+      return {
+        statusCode: 422,
+        body: `Error: ${error}`,
+      }
+    })
+  }
+  const handleMakeGlobal:MouseEventHandler<HTMLButtonElement>=async(e)=>{
     e.stopPropagation();
     let res=confirm('Are you sure you want to make it global?')
     if(res){
-    localStorage.setItem('globalPrompts', JSON.stringify([...globalPrompts,prompt]));
+    localStorage.setItem('globalPrompts', JSON.stringify([...globalPrompts,{...prompt,downloadCount:0}]));
 
-    homeDispatch({ field: 'globalPrompts', value: [...globalPrompts,prompt] });
+    homeDispatch({ field: 'globalPrompts', value: [...globalPrompts,{...prompt,downloadCount:0}] });
+    const response=await test()
+
     }
-
   }
   return (
     <div
