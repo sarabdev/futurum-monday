@@ -180,6 +180,7 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt,handleD
               onClick={() => {
                 if(isGlobal){
                   handleDownload();
+                  onClose()
                 }
                 else{
                 if(globalHappen){
