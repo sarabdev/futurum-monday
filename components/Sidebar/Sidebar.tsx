@@ -220,9 +220,10 @@ style={{
             color: lightMode=="light" ? "black" : "white",
             borderColor: lightMode=="light" ? "black" : "white",
             display:"flex",
-            justifyContent:'space-evenly'
+            justifyContent:'space-around',
+            width:"90%"
           }} 
-            className="text-sidebar flex w-[190px] flex-shrink-0 cursor-pointer select-none items-center gap-3 rounded-md border border-white/20 p-3 text-white transition-colors duration-200 hover:bg-gray-500/10"
+            className="text-sidebar flex flex-shrink-0 cursor-pointer select-none items-center gap-3 rounded-md  border-white/20 p-3 text-white transition-colors duration-200 hover:bg-gray-500/10"
             // onClick={() => {
             //   handleCreateItem();
             //   handleSearchTerm('');
@@ -262,6 +263,17 @@ style={{
             <span style={{width:'max-content'}} className="absolute top-5 right-(-1) scale-0 transition-all rounded bg-gray-800 p-2  text-white group-hover:scale-100">New Prompt</span>
 
 </div>
+{side=="right" && <div className="group relative">
+
+          <button
+            className=" flex flex-shrink-0 cursor-pointer items-center gap-3 rounded-md  p-3 text-sm text-white transition-colors duration-200 hover:bg-gray-500/10"
+            onClick={handleCreateFolder}
+          >
+            <IconFolderPlus size={16} />
+          </button>
+          <span style={{width:'max-content'}} className="absolute top-8 z-[100] right-3 scale-0 transition-all rounded bg-gray-800 p-2  text-white group-hover:scale-100">New Folder</span>
+
+</div>}
           </button>:
 
 <button
@@ -285,7 +297,7 @@ style={{
          }
 
          
-<div className="group relative">
+{side=="left" && <div className="group relative">
 
           <button
             className="ml-2 flex flex-shrink-0 cursor-pointer items-center gap-3 rounded-md  p-3 text-sm text-white transition-colors duration-200 hover:bg-gray-500/10"
@@ -295,7 +307,7 @@ style={{
           </button>
           <span style={{width:'max-content'}} className="absolute top-8 z-[100] right-3 scale-0 transition-all rounded bg-gray-800 p-2  text-white group-hover:scale-100">New Folder</span>
 
-</div>
+</div>}
         </div>
         {side === 'right' ? (isGlobal ? <p>Marketplace</p> : <p>My Templates</p>) : null}
         <Search
