@@ -221,7 +221,7 @@ style={{
             borderColor: lightMode=="light" ? "black" : "white",
             display:"flex",
             justifyContent:'space-around',
-            width:"90%"
+            width:"99%"
           }} 
             className="text-sidebar flex flex-shrink-0 cursor-pointer select-none items-center gap-3 rounded-md  border-white/20 p-3 text-white transition-colors duration-200 hover:bg-gray-500/10"
             // onClick={() => {
@@ -232,7 +232,7 @@ style={{
             {side=="right" &&
              <div className="group relative">
  
-            <Image width={20} onClick={()=>isGlobal?offGlobal():onGlobal()}  style={{background:'transparent'}} height={100} src={lightMode=="light"?"/cart.gif":"/cart.gif"} alt="gif"/>
+            <Image loading='lazy' width={20} onClick={()=>isGlobal?offGlobal():onGlobal()}  style={{background:'transparent'}} height={100} src={lightMode=="light"?"/cart.gif":"/cart.gif"} alt="gif"/>
             <span style={{width:'max-content'}} className="absolute top-5 scale-0 transition-all rounded bg-gray-800 p-2  text-white group-hover:scale-100">Marketplace</span>
 
              </div>}
@@ -266,12 +266,12 @@ style={{
 {side=="right" && <div className="group relative">
 
           <button
-            className=" flex flex-shrink-0 cursor-pointer items-center gap-3 rounded-md  p-3 text-sm text-white transition-colors duration-200 hover:bg-gray-500/10"
+            className=" flex flex-shrink-0 cursor-pointer items-center gap-3 rounded-md   text-sm text-white transition-colors duration-200 hover:bg-gray-500/10"
             onClick={handleCreateFolder}
           >
             <IconFolderPlus size={16} />
           </button>
-          <span style={{width:'max-content'}} className="absolute top-8 z-[100] right-3 scale-0 transition-all rounded bg-gray-800 p-2  text-white group-hover:scale-100">New Folder</span>
+          <span style={{width:'max-content'}} className="absolute top-5 z-[100] right-1 scale-0 transition-all rounded bg-gray-800 p-2  text-white group-hover:scale-100">New Folder</span>
 
 </div>}
           </button>:
