@@ -1,7 +1,7 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 const CORS_HEADERS = {
-  'Access-Control-Allow-Origin': "https://subscribe.futurum.one",
+  'Access-Control-Allow-Origin': "https://dev.futurum.one",
   'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
 }
 exports.handler = async (event) => {

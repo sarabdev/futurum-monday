@@ -9,6 +9,7 @@ import HomeContext from '@/pages/api/home/home.context';
 import { updatePrompt } from '@/utils/app/prompts';
 import { GlobalPrompt } from '@/types/globalPrompt';
 import axios from 'axios';
+import { AuthContext } from '@/contexts/authContext';
 interface Props {
   prompt: Prompt;
   onClose: () => void;
@@ -18,6 +19,8 @@ interface Props {
 
 export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt,handleDownload }) => {
   const { t } = useTranslation('promptbar');
+  const { user } = useContext(AuthContext);
+
   const {
     state: {
       apiKey,
@@ -71,9 +74,9 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt,handleD
   function test(){
     const config = {
       method: 'post',
-      url: `https://chat.futurum.one/.netlify/functions/addPrompts`,
+      url: `https://dev.futurum.one/.netlify/functions/addPrompts`,
       data: {
-        prompt: {...prompt,downloadCount:0}
+        prompt: {...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}
       },
      
     };
@@ -94,9 +97,9 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt,handleD
     e.stopPropagation();
     let res=confirm('Are you sure you want to make it global?')
     if(res){
-    localStorage.setItem('globalPrompts', JSON.stringify([...globalPrompts,{...prompt,downloadCount:0}]));
+    localStorage.setItem('globalPrompts', JSON.stringify([...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}]));
 
-    homeDispatch({ field: 'globalPrompts', value: [...globalPrompts,{...prompt,downloadCount:0}] });
+    homeDispatch({ field: 'globalPrompts', value: [...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}] });
     const response=await test()
 
     }

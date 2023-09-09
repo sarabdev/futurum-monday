@@ -94,7 +94,7 @@ const Folder = ({
   function test(){
     const config = {
       method: 'post',
-      url: `https://chat.futurum.one/.netlify/functions/addFolders`,
+      url: `https://dev.futurum.one/.netlify/functions/addFolders`,
       data: {
         folder:{...currentFolder,downloadCount:0}
       },
@@ -116,7 +116,7 @@ const Folder = ({
   function addFolderPrompts(myPrompts:Prompt[]){
     const config = {
       method: 'post',
-      url: `https://chat.futurum.one/.netlify/functions/addFolderPrompts`,
+      url: `https://dev.futurum.one/.netlify/functions/addFolderPrompts`,
       data: {
         prompts:myPrompts
       },
@@ -213,7 +213,7 @@ const Folder = ({
   const updatePromptCount=(updatedPrompt:GlobalFolderInterface|undefined)=>{
     const config = {
       method: 'post',
-      url: `https://chat.futurum.one/.netlify/functions/updateFolder`,
+      url: `https://dev.futurum.one/.netlify/functions/updateFolder`,
       data: {
         folder: updatedPrompt
       },

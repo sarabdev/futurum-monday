@@ -8,4 +8,5 @@ export interface GlobalPrompt {
   model: OpenAIModel;
   folderId: string | null;
   downloadCount:number;
+  userId:string;
 }

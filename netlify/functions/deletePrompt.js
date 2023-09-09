@@ -14,14 +14,9 @@ const handler = async (event) => {
         const database = (await clientPromise).db('futurum');
         const collection = database.collection('templates');
         const filter = { id: prompt.id };
-        const updateDocument = {
-             $set: {
-               ...prompt
-            },
-         };
-         delete updateDocument.$set._id;
 
-          await collection.updateOne(filter, updateDocument);
+        // Delete the prompt
+        await collection.deleteOne(filter);
         return {
             statusCode: 200,
             headers:CORS_HEADERS,

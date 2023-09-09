@@ -23,12 +23,15 @@ import PromptbarContext from '../PromptBar.context';
 import { PromptModal } from './PromptModal';
 import HomeContext from '@/pages/api/home/home.context';
 import { GlobalPrompt } from '@/types/globalPrompt';
+import { AuthContext } from '@/contexts/authContext';
 
 interface Props {
   prompt: Prompt;
 }
 
 export const PromptComponent = ({ prompt }: Props) => {
+  const { user } = useContext(AuthContext);
+
   const {
     state: {
       apiKey,
@@ -58,9 +61,40 @@ export const PromptComponent = ({ prompt }: Props) => {
     promptDispatch({ field: 'searchTerm', value: '' });
   };
 
-  const handleDelete: MouseEventHandler<HTMLButtonElement> = (e) => {
-   
-    if (isDeleting) {
+  const handleDeletePromptFromDb=()=>{
+    const config = {
+      method: 'post',
+      url: `https://dev.futurum.one/.netlify/functions/deletePrompt`,
+      data: {
+        prompt
+      },
+
+    };
+    return axios(config).then(response => {
+      return {
+        statusCode: 200,
+        body: JSON.stringify(response.data)
+      }
+    }).catch(error => {
+      console.log(error)
+      return {
+        statusCode: 422,
+        body: `Error: ${error}`,
+      }
+    })
+  }
+
+  const handleDelete: MouseEventHandler<HTMLButtonElement> = async(e) => {
+   if(isGlobal && isDeleting)
+    {
+      let updatedGlobalPrompts=globalPrompts.filter((prompt)=>prompt.id!=prompt.id)
+      localStorage.setItem('globalPrompts', JSON.stringify([...updatedGlobalPrompts]));
+
+      homeDispatch({ field: 'globalPrompts', value: [...updatedGlobalPrompts] });
+
+      await handleDeletePromptFromDb()
+    }
+    else if (isDeleting) {
       handleDeletePrompt(prompt);
       promptDispatch({ field: 'searchTerm', value: '' });
     }
@@ -70,9 +104,9 @@ export const PromptComponent = ({ prompt }: Props) => {
   function test(){
     const config = {
       method: 'post',
-      url: `https://chat.futurum.one/.netlify/functions/addPrompts`,
+      url: `https://dev.futurum.one/.netlify/functions/addPrompts`,
       data: {
-        prompt: {...prompt,downloadCount:0}
+        prompt: {...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}
       },
      
     };
@@ -93,9 +127,10 @@ export const PromptComponent = ({ prompt }: Props) => {
     e.stopPropagation();
     let res=confirm('Are you sure you want to make it global?')
     if(res){
-    localStorage.setItem('globalPrompts', JSON.stringify([...globalPrompts,{...prompt,downloadCount:0}]));
+    
+    localStorage.setItem('globalPrompts', JSON.stringify([...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}]));
 
-    homeDispatch({ field: 'globalPrompts', value: [...globalPrompts,{...prompt,downloadCount:0}] });
+    homeDispatch({ field: 'globalPrompts', value: [...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}] });
     const response=await test()
 
     }
@@ -136,7 +171,7 @@ export const PromptComponent = ({ prompt }: Props) => {
   const updatePromptCount=(updatedPrompt:GlobalPrompt|undefined)=>{
     const config = {
       method: 'post',
-      url: `https://chat.futurum.one/.netlify/functions/updatePrompt`,
+      url: `https://dev.futurum.one/.netlify/functions/updatePrompt`,
       data: {
         prompt: updatedPrompt
       },
@@ -210,7 +245,8 @@ export const PromptComponent = ({ prompt }: Props) => {
 
       {!isDeleting && !isRenaming && (
         <div className="absolute right-1 z-10 flex text-gray-300">
-          {!isGlobal && <SidebarActionButton handleClick={handleOpenDeleteModal}>
+       
+          {((isGlobal && (prompt as GlobalPrompt).userId==(user as null | {id:string})?.id) ||(!isGlobal)) && <SidebarActionButton handleClick={handleOpenDeleteModal}>
             <IconTrash size={18} />
             
           </SidebarActionButton>}
