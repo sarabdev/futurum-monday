@@ -106,7 +106,7 @@ const Folder = ({
         body: JSON.stringify(response.data)
       }
     }).catch(error => {
-      console.log(error)
+    //  console.log(error)
       return {
         statusCode: 422,
         body: `Error: ${error}`,
@@ -128,7 +128,7 @@ const Folder = ({
         body: JSON.stringify(response.data)
       }
     }).catch(error => {
-      console.log(error)
+     // console.log(error)
       return {
         statusCode: 422,
         body: `Error: ${error}`,
@@ -140,8 +140,8 @@ const Folder = ({
     let res=confirm('Are you sure you want to make it global?')
     if(res){
       const myPrompts=prompts.filter((prompt)=>prompt.folderId==currentFolder.id)
-      console.log(myPrompts)
-      console.log(currentFolder)
+     // console.log(myPrompts)
+      //console.log(currentFolder)
     localStorage.setItem('globalFolders', JSON.stringify([...globalFolders,{...currentFolder,downloadCount:0}]));
 
     homeDispatch({ field: 'globalFolders', value: [...globalFolders,{...currentFolder,downloadCount:0}] });
@@ -225,7 +225,7 @@ const Folder = ({
         body: JSON.stringify(response.data)
       }
     }).catch(error => {
-      console.log(error)
+     // console.log(error)
       return {
         statusCode: 422,
         body: `Error: ${error}`,

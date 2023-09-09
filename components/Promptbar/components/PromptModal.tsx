@@ -86,7 +86,7 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt,handleD
         body: JSON.stringify(response.data)
       }
     }).catch(error => {
-      console.log(error)
+     // console.log(error)
       return {
         statusCode: 422,
         body: `Error: ${error}`,

@@ -20,7 +20,7 @@ const AuthContextProvider = ({ children }) => {
         body: JSON.stringify(response.data)
       }
     }).catch(error => {
-      console.log(error)
+      //console.log(error)
       return {
         statusCode: 422,
         body: `Error: ${error}`,

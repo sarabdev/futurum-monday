@@ -29,7 +29,7 @@ export const SystemPrompt: FC<Props> = ({
   onChangePrompt,
 }) => {
   const { t } = useTranslation('chat');
-  console.log(prompts)
+//  console.log(prompts)
   const [value, setValue] = useState<string>('');
   const [activePromptIndex, setActivePromptIndex] = useState(0);
   const [showPromptList, setShowPromptList] = useState(false);
