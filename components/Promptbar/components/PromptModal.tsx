@@ -74,7 +74,7 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt,handleD
   function test(){
     const config = {
       method: 'post',
-      url: `https://dev.futurum.one/.netlify/functions/addPrompts`,
+      url: `https://chat.futurum.one/.netlify/functions/addPrompts`,
       data: {
         prompt: {...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}
       },

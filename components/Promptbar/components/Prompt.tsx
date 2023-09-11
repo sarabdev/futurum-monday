@@ -64,7 +64,7 @@ export const PromptComponent = ({ prompt }: Props) => {
   const handleDeletePromptFromDb=()=>{
     const config = {
       method: 'post',
-      url: `https://dev.futurum.one/.netlify/functions/deletePrompt`,
+      url: `https://chat.futurum.one/.netlify/functions/deletePrompt`,
       data: {
         prompt
       },
@@ -104,7 +104,7 @@ export const PromptComponent = ({ prompt }: Props) => {
   function test(){
     const config = {
       method: 'post',
-      url: `https://dev.futurum.one/.netlify/functions/addPrompts`,
+      url: `https://chat.futurum.one/.netlify/functions/addPrompts`,
       data: {
         prompt: {...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}
       },
@@ -171,7 +171,7 @@ export const PromptComponent = ({ prompt }: Props) => {
   const updatePromptCount=(updatedPrompt:GlobalPrompt|undefined)=>{
     const config = {
       method: 'post',
-      url: `https://dev.futurum.one/.netlify/functions/updatePrompt`,
+      url: `https://chat.futurum.one/.netlify/functions/updatePrompt`,
       data: {
         prompt: updatedPrompt
       },
