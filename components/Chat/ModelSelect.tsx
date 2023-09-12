@@ -12,7 +12,7 @@ export const ModelSelect = () => {
   const { t } = useTranslation('chat');
 
   const {
-    state: { selectedConversation, models, defaultModelId='gpt-4' , lightMode
+    state: { selectedConversation, models, defaultModelId='gpt-3.5-turbo' , lightMode
   },
     handleUpdateConversation,
     dispatch: homeDispatch,
