@@ -71,39 +71,39 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt,handleD
     nameInputRef.current?.focus();
   }, []);
 
-  function test(){
-    const config = {
-      method: 'post',
-      url: `https://chat.futurum.one/.netlify/functions/addPrompts`,
-      data: {
-        prompt: {...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}
-      },
+  // function test(){
+  //   const config = {
+  //     method: 'post',
+  //     url: `https://chat.futurum.one/.netlify/functions/addPrompts`,
+  //     data: {
+  //       prompt: {...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}
+  //     },
      
-    };
-    return axios(config).then(response => {
-      return {
-        statusCode: 200,
-        body: JSON.stringify(response.data)
-      }
-    }).catch(error => {
-     // console.log(error)
-      return {
-        statusCode: 422,
-        body: `Error: ${error}`,
-      }
-    })
-  }
-  const handleMakeGlobal:MouseEventHandler<HTMLButtonElement>=async(e)=>{
-    e.stopPropagation();
-    let res=confirm('Are you sure you want to make it global?')
-    if(res){
-    localStorage.setItem('globalPrompts', JSON.stringify([...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}]));
+  //   };
+  //   return axios(config).then(response => {
+  //     return {
+  //       statusCode: 200,
+  //       body: JSON.stringify(response.data)
+  //     }
+  //   }).catch(error => {
+  //    // console.log(error)
+  //     return {
+  //       statusCode: 422,
+  //       body: `Error: ${error}`,
+  //     }
+  //   })
+  // }
+  // const handleMakeGlobal:MouseEventHandler<HTMLButtonElement>=async(e)=>{
+  //   e.stopPropagation();
+  //   let res=confirm('Are you sure you want to make it global?')
+  //   if(res){
+  //   localStorage.setItem('globalPrompts', JSON.stringify([...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}]));
 
-    homeDispatch({ field: 'globalPrompts', value: [...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}] });
-    const response=await test()
+  //   homeDispatch({ field: 'globalPrompts', value: [...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}] });
+  //   const response=await test()
 
-    }
-  }
+  //   }
+  // }
   return (
     <div
       className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
@@ -202,9 +202,9 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt,handleD
             >
               {isGlobal?t('Add'):t('Save')}
             </button>
-          {!isGlobal &&  <SidebarActionButton   handleClick={handleMakeGlobal}>
+          {/*!isGlobal &&  <SidebarActionButton   handleClick={handleMakeGlobal}>
             <IconWorld size={34} onClick={()=>{setGlobalHappen(true);onUpdatePrompt({...prompt,name,description,content:content.trim()});onClose()}} />
-          </SidebarActionButton> } 
+            </SidebarActionButton>*/ } 
           </div>        </div>
         </div>
       </div>

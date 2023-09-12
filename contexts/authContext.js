@@ -11,7 +11,7 @@ export const AuthContext = createContext({
 });
 
 const AuthContextProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(true);
   const [userRole,setUserRole]=useState(null)
   function test(config){
     return axios(config).then(response => {
@@ -50,24 +50,24 @@ const callFunction=async(email,name)=>{
     console.log("An error occurred");
   }
 }
-  useEffect(() => {
-      // on login
-    netlifyIdentity.on("login", (user) => {
-      setUser(user);
-      callFunction(user.email,user.user_metadata.full_name)
+  // useEffect(() => {
+  //     // on login
+  //   netlifyIdentity.on("login", (user) => {
+  //     setUser(user);
+  //     callFunction(user.email,user.user_metadata.full_name)
      
-      netlifyIdentity.close();
-    });
+  //     netlifyIdentity.close();
+  //   });
 
-    // on logout
-    netlifyIdentity.on("logout", (user) => {
-      setUser(null);
-    });
+  //   // on logout
+  //   netlifyIdentity.on("logout", (user) => {
+  //     setUser(null);
+  //   });
 
 
-    // connect with Netlify Identity
-    netlifyIdentity.init();
-  }, []);
+  //   // connect with Netlify Identity
+  //   netlifyIdentity.init();
+  // }, []);
 
   const login = () => {
     netlifyIdentity.open();

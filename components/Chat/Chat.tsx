@@ -91,14 +91,14 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
       }
     })
   }
-  const manage=async()=>{
-    if(user && process.env.NEXT_PUBLIC_MANAGE_SUBSCRIPTION){
-      const {email}=user;
-      const response=await test(email)
-      const result=JSON.parse(response.body);
-      window.location.href=result?.link?.url
-    }
-  }
+  // const manage=async()=>{
+  //   if(user && process.env.NEXT_PUBLIC_MANAGE_SUBSCRIPTION){
+  //     const {email}=user;
+  //     const response=await test(email)
+  //     const result=JSON.parse(response.body);
+  //     window.location.href=result?.link?.url
+  //   }
+  // }
   const handleSend = useCallback(
     async (message: Message, deleteCount = 0, plugin: Plugin | null = null) => {
       if (selectedConversation) {

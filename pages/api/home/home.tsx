@@ -390,8 +390,8 @@ const Home = ({
       dispatch({ field: 'prompts', value: JSON.parse(prompts) });
     }
 
-    getGlobalTemplatesFromDb()
-    getGlobalFoldersFromDb()
+    //getGlobalTemplatesFromDb()
+    //getGlobalFoldersFromDb()
     setColors()
     checkAutoHideSidebar()
     const conversationHistory = localStorage.getItem('conversationHistory');

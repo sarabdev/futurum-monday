@@ -85,63 +85,63 @@ export const PromptComponent = ({ prompt }: Props) => {
   }
 
   const handleDelete: MouseEventHandler<HTMLButtonElement> = async(e) => {
-   if(isGlobal && isDeleting)
-    {
-      let updatedGlobalPrompts=globalPrompts.filter((prompt)=>prompt.id!=prompt.id)
-      localStorage.setItem('globalPrompts', JSON.stringify([...updatedGlobalPrompts]));
+  //  if(isGlobal && isDeleting)
+  //   {
+  //     let updatedGlobalPrompts=globalPrompts.filter((prompt)=>prompt.id!=prompt.id)
+  //     localStorage.setItem('globalPrompts', JSON.stringify([...updatedGlobalPrompts]));
 
-      homeDispatch({ field: 'globalPrompts', value: [...updatedGlobalPrompts] });
+  //     homeDispatch({ field: 'globalPrompts', value: [...updatedGlobalPrompts] });
 
-      await handleDeletePromptFromDb()
-    }
-    else if (isDeleting) {
+  //     await handleDeletePromptFromDb()
+  //   }
+   if (isDeleting) {
       handleDeletePrompt(prompt);
       promptDispatch({ field: 'searchTerm', value: '' });
     }
 
     setIsDeleting(false);
   };
-  function test(){
-    const config = {
-      method: 'post',
-      url: `https://chat.futurum.one/.netlify/functions/addPrompts`,
-      data: {
-        prompt: {...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}
-      },
+  // function test(){
+  //   const config = {
+  //     method: 'post',
+  //     url: `https://chat.futurum.one/.netlify/functions/addPrompts`,
+  //     data: {
+  //       prompt: {...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}
+  //     },
      
-    };
-    return axios(config).then(response => {
-      return {
-        statusCode: 200,
-        body: JSON.stringify(response.data)
-      }
-    }).catch(error => {
-     // console.log(error)
-      return {
-        statusCode: 422,
-        body: `Error: ${error}`,
-      }
-    })
-  }
-  const handleMakeGlobal:MouseEventHandler<HTMLButtonElement>=async(e)=>{
-    e.stopPropagation();
-    let res=confirm('Are you sure you want to make it global?')
-    if(res){
+  //   };
+  //   return axios(config).then(response => {
+  //     return {
+  //       statusCode: 200,
+  //       body: JSON.stringify(response.data)
+  //     }
+  //   }).catch(error => {
+  //    // console.log(error)
+  //     return {
+  //       statusCode: 422,
+  //       body: `Error: ${error}`,
+  //     }
+  //   })
+  // }
+  // const handleMakeGlobal:MouseEventHandler<HTMLButtonElement>=async(e)=>{
+  //   e.stopPropagation();
+  //   let res=confirm('Are you sure you want to make it global?')
+  //   if(res){
     
-    localStorage.setItem('globalPrompts', JSON.stringify([...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}]));
+  //   localStorage.setItem('globalPrompts', JSON.stringify([...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}]));
 
-    homeDispatch({ field: 'globalPrompts', value: [...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}] });
-    const response=await test()
+  //   homeDispatch({ field: 'globalPrompts', value: [...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}] });
+  //   const response=await test()
 
-    }
+  //   }
 
    
 
     
-    //    const result=JSON.parse(response.body);
+  //   //    const result=JSON.parse(response.body);
 
 
-  }
+  // }
 
   const handleCancelDelete: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.stopPropagation();
@@ -168,47 +168,47 @@ export const PromptComponent = ({ prompt }: Props) => {
   }, [isRenaming, isDeleting]);
 
 
-  const updatePromptCount=(updatedPrompt:GlobalPrompt|undefined)=>{
-    const config = {
-      method: 'post',
-      url: `https://chat.futurum.one/.netlify/functions/updatePrompt`,
-      data: {
-        prompt: updatedPrompt
-      },
+  // const updatePromptCount=(updatedPrompt:GlobalPrompt|undefined)=>{
+  //   const config = {
+  //     method: 'post',
+  //     url: `https://chat.futurum.one/.netlify/functions/updatePrompt`,
+  //     data: {
+  //       prompt: updatedPrompt
+  //     },
 
-    };
-    return axios(config).then(response => {
-      return {
-        statusCode: 200,
-        body: JSON.stringify(response.data)
-      }
-    }).catch(error => {
-    //  console.log(error)
-      return {
-        statusCode: 422,
-        body: `Error: ${error}`,
-      }
-    })
-  }
+  //   };
+  //   return axios(config).then(response => {
+  //     return {
+  //       statusCode: 200,
+  //       body: JSON.stringify(response.data)
+  //     }
+  //   }).catch(error => {
+  //   //  console.log(error)
+  //     return {
+  //       statusCode: 422,
+  //       body: `Error: ${error}`,
+  //     }
+  //   })
+  // }
 
-  const handleDownload=async()=>{
+  // const handleDownload=async()=>{
 
-    let foundObject = globalPrompts.find(obj => obj.id == prompt.id);
-    if(foundObject){
-      foundObject.downloadCount++;
-    }
+  //   let foundObject = globalPrompts.find(obj => obj.id == prompt.id);
+  //   if(foundObject){
+  //     foundObject.downloadCount++;
+  //   }
 
-     localStorage.setItem('globalPrompts',JSON.stringify(globalPrompts))
-    homeDispatch({ field: 'globalPrompts', value: [...globalPrompts] });
-
-
-    localStorage.setItem('prompts', JSON.stringify([...prompts,prompt]));
-
-    homeDispatch({ field: 'prompts', value: [...prompts,prompt] });
-    await updatePromptCount(foundObject)
+  //    localStorage.setItem('globalPrompts',JSON.stringify(globalPrompts))
+  //   homeDispatch({ field: 'globalPrompts', value: [...globalPrompts] });
 
 
-  }
+  //   localStorage.setItem('prompts', JSON.stringify([...prompts,prompt]));
+
+  //   homeDispatch({ field: 'prompts', value: [...prompts,prompt] });
+  //   await updatePromptCount(foundObject)
+
+
+  // }
   return (
     <div className="relative flex items-center">
       <button
@@ -246,11 +246,11 @@ export const PromptComponent = ({ prompt }: Props) => {
       {!isDeleting && !isRenaming && (
         <div className="absolute right-1 z-10 flex text-gray-300">
        
-          {((isGlobal && (prompt as GlobalPrompt).userId==(user as null | {id:string})?.id) ||(!isGlobal)) && <SidebarActionButton handleClick={handleOpenDeleteModal}>
+          {((!isGlobal)) && <SidebarActionButton handleClick={handleOpenDeleteModal}>
             <IconTrash size={18} />
             
           </SidebarActionButton>}
-          {isGlobal && !prompt.folderId && <SidebarActionButton
+          {/*isGlobal && !prompt.folderId && <SidebarActionButton
               handleClick={(e) => {
                 e.stopPropagation();
                handleDownload()
@@ -258,10 +258,10 @@ export const PromptComponent = ({ prompt }: Props) => {
               }}
             >
               <IconWorldDownload size={18} />
-            </SidebarActionButton>}
-          {!isGlobal && !prompt.folderId && <SidebarActionButton handleClick={handleMakeGlobal}>
+            </SidebarActionButton>*/}
+          {/*!isGlobal && !prompt.folderId && <SidebarActionButton handleClick={handleMakeGlobal}>
             <IconWorld size={18} />
-          </SidebarActionButton>}
+            </SidebarActionButton>*/}
         </div>
       )}
 
@@ -270,7 +270,7 @@ export const PromptComponent = ({ prompt }: Props) => {
           prompt={prompt}
           onClose={() => setShowModal(false)}
           onUpdatePrompt={handleUpdate}
-          handleDownload={handleDownload}
+          handleDownload={()=>{}}
         />
       )}
     </div>
