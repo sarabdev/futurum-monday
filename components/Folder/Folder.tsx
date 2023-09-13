@@ -28,6 +28,7 @@ import SidebarActionButton from '@/components/Buttons/SidebarActionButton';
 import PromptbarContext from '../Promptbar/PromptBar.context';
 import { Prompt } from '@/types/prompt';
 import { GlobalFolderInterface } from '@/types/globalFolder';
+import { AuthContext } from '@/contexts/authContext';
 
 interface Props {
   currentFolder: FolderInterface;
@@ -49,6 +50,8 @@ const Folder = ({
   // } = useContext(PromptbarContext);
   const [isDeleting, setIsDeleting] = useState(false);
   const [isRenaming, setIsRenaming] = useState(false);
+  const { user, login, logout,userRole ,setUser,setToken, authReady} = useContext(AuthContext);
+
   const [color,setColor]= useState({
     background:'',
     text:''
@@ -99,7 +102,7 @@ const Folder = ({
         'Content-Type': 'application/json',
       },
       signal: controller.signal,
-      body:JSON.stringify({...currentFolder, downloadCount:0})
+      body:JSON.stringify({...currentFolder, downloadCount:0, userId:(user as null | {id:string})?.id})
       
     });
   }

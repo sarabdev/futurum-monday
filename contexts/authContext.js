@@ -2,16 +2,22 @@ import { createContext, useState, useEffect,useContext } from "react";
 import netlifyIdentity from "netlify-identity-widget";
 
 import axios from 'axios'
+import { validate } from "uuid";
 export const AuthContext = createContext({
   user: null,
   login: () => {},
   logout: () => {},
   authReady: false,
-  userRole:null
+  userRole:null,
+  setUser:(user)=>{},
+  token:null,
+  setToken:(token)=>{},
 });
 
 const AuthContextProvider = ({ children }) => {
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState(null);
+  const [authReady,setAuthReady]=useState(false)
+  const [token,setToken]=useState(null)
   const [userRole,setUserRole]=useState(null)
   function test(config){
     return axios(config).then(response => {
@@ -50,24 +56,51 @@ const callFunction=async(email,name)=>{
     console.log("An error occurred");
   }
 }
-  // useEffect(() => {
-  //     // on login
-  //   netlifyIdentity.on("login", (user) => {
-  //     setUser(user);
-  //     callFunction(user.email,user.user_metadata.full_name)
-     
-  //     netlifyIdentity.close();
-  //   });
 
-  //   // on logout
-  //   netlifyIdentity.on("logout", (user) => {
-  //     setUser(null);
-  //   });
+  async function validateUser(){
+    console.log("Validating")
+    let tokenExist=JSON.parse(localStorage.getItem('token'))
+    let userExist=JSON.parse(localStorage.getItem('user'))
 
+    if(!tokenExist){
+      setUser(null)
+      setToken(null)
+      localStorage.removeItem('user')
+    localStorage.removeItem('token')
+    setAuthReady(true)
 
-  //   // connect with Netlify Identity
-  //   netlifyIdentity.init();
-  // }, []);
+    return
+    }
+    const controller = new AbortController();
+    const response = await fetch('/api/validateToken', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      signal: controller.signal,
+      body:JSON.stringify({
+        token:tokenExist,
+      })
+
+      
+    });
+    const result=await response.json()
+    if(result.error){
+      setUser(null)
+      setToken(null)
+      localStorage.removeItem('user')
+    localStorage.removeItem('token')
+    setAuthReady(true)
+
+    return
+    }
+     setUser(userExist)
+     setToken(tokenExist)
+     setAuthReady(true)
+   }
+  useEffect(() => {
+     validateUser()
+  }, []);
 
   const login = () => {
     netlifyIdentity.open();
@@ -75,7 +108,10 @@ const callFunction=async(email,name)=>{
 
 
   const logout = () => {
-    netlifyIdentity.logout();
+    setUser(null)
+    setToken(null)
+    localStorage.removeItem('user')
+    localStorage.removeItem('token')
   };
 
 
@@ -83,7 +119,11 @@ const callFunction=async(email,name)=>{
     login,
     logout,
     user,
-    userRole
+    userRole,
+    setUser,
+    token,
+    setToken,
+    authReady
   };
 
 

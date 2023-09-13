@@ -79,7 +79,7 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt,handleD
         'Content-Type': 'application/json',
       },
       signal: controller.signal,
-      body:JSON.stringify({...prompt, downloadCount:0})
+      body:JSON.stringify({...prompt, downloadCount:0,userId:(user as null | {id:string})?.id})
       
     });
   }

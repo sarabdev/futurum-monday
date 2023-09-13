@@ -17,7 +17,7 @@ import { PluginKeys } from './PluginKeys';
 import axios from "axios"
 export const ChatbarSettings = () => {
   const { t } = useTranslation('sidebar');
-  const { user, login, logout } = useContext(AuthContext);
+  const { user, login, logout} = useContext(AuthContext);
 
   const [showSettings, setShowSettings] = useState<boolean>(false);
   const [isSettingDialogOpen, setIsSettingDialog] = useState<boolean>(false);
