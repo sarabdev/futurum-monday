@@ -109,7 +109,7 @@ export const PromptComponent = ({ prompt }: Props) => {
         'Content-Type': 'application/json',
       },
       signal: controller.signal,
-      body:JSON.stringify({...prompt, downloadCount:0,userId:(user as null | {id:string})?.id})
+      body:JSON.stringify({...prompt, downloadCount:0,userId:(user as null | {_id:string})?._id})
       
     });
   }
