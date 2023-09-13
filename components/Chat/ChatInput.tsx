@@ -411,7 +411,9 @@ const defaultOption = options[0];
                 activePromptIndex={activePromptIndex}
                 prompts={filteredPrompts}
                 onSelect={handleInitModal}
-                onMouseOver={setActivePromptIndex}
+                onMouseOver={(index)=>{
+                  setActivePromptIndex(index)
+                }}
                 promptListRef={promptListRef}
               />
             </div>
@@ -420,7 +422,7 @@ const defaultOption = options[0];
           {isModalVisible && (
             <VariableModal
               prompt={filteredPrompts[activePromptIndex]}
-              variables={variables}
+              variables={parseVariables(filteredPrompts[activePromptIndex].content)}
               onSubmit={handleSubmit}
               onClose={() => setIsModalVisible(false)}
             />
