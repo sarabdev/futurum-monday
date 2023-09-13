@@ -313,18 +313,35 @@ const Home = ({
 
   }
   const getGlobalTemplatesFromDb=async()=>{
-    const response=await test();
-       const result=JSON.parse(response.body);
-       console.log(result)
-       localStorage.setItem('globalPrompts',JSON.stringify(result.templates));
-      dispatch({ field: 'globalPrompts', value: result.templates });
+   // const response=await test();
+   const controller = new AbortController();
+   const response = await fetch('/api/getPrompts', {
+     method: 'GET',
+     headers: {
+       'Content-Type': 'application/json',
+     },
+     signal: controller.signal,
+     
+   });
+       const result=await response.json();
+       localStorage.setItem('globalPrompts',JSON.stringify(result));
+      dispatch({ field: 'globalPrompts', value: result });
     
   }
   const getGlobalFoldersFromDb=async()=>{
-    const response=await test2();
-       const result=JSON.parse(response.body);
-       localStorage.setItem('globalFolders',JSON.stringify(result.folders));
-      dispatch({ field: 'globalFolders', value: result.folders });
+    //const response=await test2();
+    const controller = new AbortController();
+   const response = await fetch('/api/getFolders', {
+     method: 'GET',
+     headers: {
+       'Content-Type': 'application/json',
+     },
+     signal: controller.signal,
+     
+   });
+       const result=await response.json();
+       localStorage.setItem('globalFolders',JSON.stringify(result));
+      dispatch({ field: 'globalFolders', value: result });
     
   }
   
@@ -338,6 +355,18 @@ const Home = ({
     }
   }
 
+  const myTest=async()=>{
+    const controller = new AbortController();
+        const response = await fetch('/api/getPrompts', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          signal: controller.signal,
+          
+        });
+        console.log(await response.json())
+  }
   useEffect(() => {
     const settings = getSettings();
     if (settings.theme) {
@@ -389,9 +418,9 @@ const Home = ({
     if (prompts) {
       dispatch({ field: 'prompts', value: JSON.parse(prompts) });
     }
-
-    //getGlobalTemplatesFromDb()
-    //getGlobalFoldersFromDb()
+    // myTest()
+    getGlobalTemplatesFromDb()
+    getGlobalFoldersFromDb()
     setColors()
     checkAutoHideSidebar()
     const conversationHistory = localStorage.getItem('conversationHistory');

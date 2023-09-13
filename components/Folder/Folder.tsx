@@ -91,66 +91,44 @@ const Folder = ({
   const removeHighlight = (e: any) => {
     e.target.style.background = 'none';
   };
-  function test(){
-    const config = {
-      method: 'post',
-      url: `https://chat.futurum.one/.netlify/functions/addFolders`,
-      data: {
-        folder:{...currentFolder,downloadCount:0}
+  async function test(){
+    const controller = new AbortController();
+    const response = await fetch('/api/addFolders', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
       },
-     
-    };
-    return axios(config).then(response => {
-      return {
-        statusCode: 200,
-        body: JSON.stringify(response.data)
-      }
-    }).catch(error => {
-    //  console.log(error)
-      return {
-        statusCode: 422,
-        body: `Error: ${error}`,
-      }
-    })
+      signal: controller.signal,
+      body:JSON.stringify({...currentFolder, downloadCount:0})
+      
+    });
   }
-  // function addFolderPrompts(myPrompts:Prompt[]){
-  //   const config = {
-  //     method: 'post',
-  //     url: `https://chat.futurum.one/.netlify/functions/addFolderPrompts`,
-  //     data: {
-  //       prompts:myPrompts
-  //     },
-     
-  //   };
-  //   return axios(config).then(response => {
-  //     return {
-  //       statusCode: 200,
-  //       body: JSON.stringify(response.data)
-  //     }
-  //   }).catch(error => {
-  //    // console.log(error)
-  //     return {
-  //       statusCode: 422,
-  //       body: `Error: ${error}`,
-  //     }
-  //   })
-  // }
-  // const handleMakeGlobal:MouseEventHandler<HTMLButtonElement>=async(e)=>{
-  //   e.stopPropagation();
-  //   let res=confirm('Are you sure you want to make it global?')
-  //   if(res){
-  //     const myPrompts=prompts.filter((prompt)=>prompt.folderId==currentFolder.id)
-  //    // console.log(myPrompts)
-  //     //console.log(currentFolder)
-  //   localStorage.setItem('globalFolders', JSON.stringify([...globalFolders,{...currentFolder,downloadCount:0}]));
+  async function addFolderPrompts(myPrompts:Prompt[]){
+    const controller = new AbortController();
+    const response = await fetch('/api/addFolderPrompts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      signal: controller.signal,
+      body:JSON.stringify(myPrompts)
+      
+    });
+  }
+  const handleMakeGlobal:MouseEventHandler<HTMLButtonElement>=async(e)=>{
+    e.stopPropagation();
+    let res=confirm('Are you sure you want to make it global?')
+    if(res){
+      const myPrompts=prompts.filter((prompt)=>prompt.folderId==currentFolder.id)
+    localStorage.setItem('globalFolders', JSON.stringify([...globalFolders,{...currentFolder,downloadCount:0}]));
 
-  //   homeDispatch({ field: 'globalFolders', value: [...globalFolders,{...currentFolder,downloadCount:0}] });
-  //   await test()
-  //   await addFolderPrompts(myPrompts)
+    homeDispatch({ field: 'globalFolders', value: [...globalFolders,{...currentFolder,downloadCount:0}] });
+    await test()
+    await addFolderPrompts(myPrompts)
 
-  //   }
+    }
 
-  // }
+  }
 
   useEffect(() => {
     if (isRenaming) {
@@ -210,63 +188,53 @@ const Folder = ({
   },[])
 
   
-  // const updatePromptCount=(updatedPrompt:GlobalFolderInterface|undefined)=>{
-  //   const config = {
-  //     method: 'post',
-  //     url: `https://chat.futurum.one/.netlify/functions/updateFolder`,
-  //     data: {
-  //       folder: updatedPrompt
-  //     },
+  const updatePromptCount=async(updatedPrompt:GlobalFolderInterface|undefined)=>{
+    const controller = new AbortController();
+    const response = await fetch('/api/updateFolder', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      signal: controller.signal,
+      body:JSON.stringify(updatedPrompt)
+      
+    });
+  }
+  const handleDownload=async()=>{
 
-  //   };
-  //   return axios(config).then(response => {
-  //     return {
-  //       statusCode: 200,
-  //       body: JSON.stringify(response.data)
-  //     }
-  //   }).catch(error => {
-  //    // console.log(error)
-  //     return {
-  //       statusCode: 422,
-  //       body: `Error: ${error}`,
-  //     }
-  //   })
-  // }
-//   const handleDownload=async()=>{
-
-//     let foundObject = globalFolders.find(obj => obj.id == currentFolder.id);
-//     if(foundObject){
-//       foundObject.downloadCount++;
-//     }
+    let foundObject = globalFolders.find(obj => obj.id == currentFolder.id);
+    if(foundObject){
+      foundObject.downloadCount++;
+    }
      
-//      localStorage.setItem('globalFolders',JSON.stringify([...globalFolders]))
-//     homeDispatch({ field: 'globalFolders', value: [...globalFolders] });
+     localStorage.setItem('globalFolders',JSON.stringify([...globalFolders]))
+    homeDispatch({ field: 'globalFolders', value: [...globalFolders] });
 
 
-//     const currentFolderPrompts=globalPrompts.filter((prompt)=>prompt.folderId==currentFolder.id)
-//    // The property you want to remove
-// const propertyToRemove = 'downloadCount';
+    const currentFolderPrompts=globalPrompts.filter((prompt)=>prompt.folderId==currentFolder.id)
+   // The property you want to remove
+const propertyToRemove = 'downloadCount';
 
-// // Create a new array with the property removed from each object
-// const newArray =currentFolderPrompts.map((obj) => {
-//   // Destructure the object and create a new one without the specified property
-//   const { [propertyToRemove]: _, ...newObj } = obj;
-//   return newObj;
-// });
-//      localStorage.setItem('prompts', JSON.stringify([...prompts,...newArray]));
+// Create a new array with the property removed from each object
+const newArray =currentFolderPrompts.map((obj) => {
+  // Destructure the object and create a new one without the specified property
+  const { [propertyToRemove]: _, ...newObj } = obj;
+  return newObj;
+});
+     localStorage.setItem('prompts', JSON.stringify([...prompts,...newArray]));
 
-//      homeDispatch({ field: 'prompts', value: [...prompts,...newArray] });
-
-
+     homeDispatch({ field: 'prompts', value: [...prompts,...newArray] });
 
 
 
-//      localStorage.setItem('folders',JSON.stringify([...folders,{id:currentFolder.id, name:currentFolder.name, type:currentFolder.type}]))
-//      homeDispatch({ field: 'folders', value: [...folders,{id:currentFolder.id, name:currentFolder.name, type:currentFolder.type}] });
-//       await updatePromptCount(foundObject)
 
 
-// }
+     localStorage.setItem('folders',JSON.stringify([...folders,{id:currentFolder.id, name:currentFolder.name, type:currentFolder.type}]))
+     homeDispatch({ field: 'folders', value: [...folders,{id:currentFolder.id, name:currentFolder.name, type:currentFolder.type}] });
+      await updatePromptCount(foundObject)
+
+
+}
   return (
     <>
 
@@ -380,7 +348,7 @@ const Folder = ({
 
             </SidebarActionButton>}
 
-            {/*isGlobal && currentFolder.type=="prompt" && <SidebarActionButton
+            {isGlobal && currentFolder.type=="prompt" && <SidebarActionButton
               handleClick={(e) => {
                 e.stopPropagation();
                handleDownload()
@@ -388,8 +356,8 @@ const Folder = ({
               }}
             >
               <IconWorldDownload size={18} />
-            </SidebarActionButton>*/}
-          {/*!isGlobal && currentFolder.type=="prompt" &&  <SidebarActionButton
+            </SidebarActionButton>}
+          {!isGlobal && currentFolder.type=="prompt" &&  <SidebarActionButton
               handleClick={(e) => {
                 // e.stopPropagation();
                 // setIsDeleting(true);
@@ -397,7 +365,7 @@ const Folder = ({
               }}
             >
               <IconWorld size={18}/>
-            </SidebarActionButton>*/}
+            </SidebarActionButton>}
           </div>
         )}
       </div>

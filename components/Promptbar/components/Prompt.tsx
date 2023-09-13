@@ -101,39 +101,29 @@ export const PromptComponent = ({ prompt }: Props) => {
 
     setIsDeleting(false);
   };
-  // function test(){
-  //   const config = {
-  //     method: 'post',
-  //     url: `https://chat.futurum.one/.netlify/functions/addPrompts`,
-  //     data: {
-  //       prompt: {...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}
-  //     },
-     
-  //   };
-  //   return axios(config).then(response => {
-  //     return {
-  //       statusCode: 200,
-  //       body: JSON.stringify(response.data)
-  //     }
-  //   }).catch(error => {
-  //    // console.log(error)
-  //     return {
-  //       statusCode: 422,
-  //       body: `Error: ${error}`,
-  //     }
-  //   })
-  // }
-  // const handleMakeGlobal:MouseEventHandler<HTMLButtonElement>=async(e)=>{
-  //   e.stopPropagation();
-  //   let res=confirm('Are you sure you want to make it global?')
-  //   if(res){
+  async function test(){
+    const controller = new AbortController();
+    const response = await fetch('/api/addPrompts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      signal: controller.signal,
+      body:JSON.stringify({...prompt, downloadCount:0})
+      
+    });
+  }
+  const handleMakeGlobal:MouseEventHandler<HTMLButtonElement>=async(e)=>{
+    e.stopPropagation();
+    let res=confirm('Are you sure you want to make it global?')
+    if(res){
     
-  //   localStorage.setItem('globalPrompts', JSON.stringify([...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}]));
+    localStorage.setItem('globalPrompts', JSON.stringify([...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}]));
 
-  //   homeDispatch({ field: 'globalPrompts', value: [...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}] });
-  //   const response=await test()
+    homeDispatch({ field: 'globalPrompts', value: [...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}] });
+    const response=await test()
 
-  //   }
+    }
 
    
 
@@ -141,8 +131,7 @@ export const PromptComponent = ({ prompt }: Props) => {
   //   //    const result=JSON.parse(response.body);
 
 
-  // }
-
+  }
   const handleCancelDelete: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.stopPropagation();
     setIsDeleting(false);
@@ -168,47 +157,37 @@ export const PromptComponent = ({ prompt }: Props) => {
   }, [isRenaming, isDeleting]);
 
 
-  // const updatePromptCount=(updatedPrompt:GlobalPrompt|undefined)=>{
-  //   const config = {
-  //     method: 'post',
-  //     url: `https://chat.futurum.one/.netlify/functions/updatePrompt`,
-  //     data: {
-  //       prompt: updatedPrompt
-  //     },
+  const updatePromptCount=async(updatedPrompt:GlobalPrompt|undefined)=>{
+    const controller = new AbortController();
+    const response = await fetch('/api/updatePrompt', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      signal: controller.signal,
+      body:JSON.stringify(updatedPrompt)
+      
+    });
+  }
 
-  //   };
-  //   return axios(config).then(response => {
-  //     return {
-  //       statusCode: 200,
-  //       body: JSON.stringify(response.data)
-  //     }
-  //   }).catch(error => {
-  //   //  console.log(error)
-  //     return {
-  //       statusCode: 422,
-  //       body: `Error: ${error}`,
-  //     }
-  //   })
-  // }
+  const handleDownload=async()=>{
 
-  // const handleDownload=async()=>{
+    let foundObject = globalPrompts.find(obj => obj.id == prompt.id);
+    if(foundObject){
+      foundObject.downloadCount++;
+    }
 
-  //   let foundObject = globalPrompts.find(obj => obj.id == prompt.id);
-  //   if(foundObject){
-  //     foundObject.downloadCount++;
-  //   }
-
-  //    localStorage.setItem('globalPrompts',JSON.stringify(globalPrompts))
-  //   homeDispatch({ field: 'globalPrompts', value: [...globalPrompts] });
+     localStorage.setItem('globalPrompts',JSON.stringify(globalPrompts))
+    homeDispatch({ field: 'globalPrompts', value: [...globalPrompts] });
 
 
-  //   localStorage.setItem('prompts', JSON.stringify([...prompts,prompt]));
+    localStorage.setItem('prompts', JSON.stringify([...prompts,prompt]));
 
-  //   homeDispatch({ field: 'prompts', value: [...prompts,prompt] });
-  //   await updatePromptCount(foundObject)
+    homeDispatch({ field: 'prompts', value: [...prompts,prompt] });
+    await updatePromptCount(foundObject)
 
 
-  // }
+  }
   return (
     <div className="relative flex items-center">
       <button
@@ -250,7 +229,7 @@ export const PromptComponent = ({ prompt }: Props) => {
             <IconTrash size={18} />
             
           </SidebarActionButton>}
-          {/*isGlobal && !prompt.folderId && <SidebarActionButton
+          {isGlobal && !prompt.folderId && <SidebarActionButton
               handleClick={(e) => {
                 e.stopPropagation();
                handleDownload()
@@ -258,10 +237,10 @@ export const PromptComponent = ({ prompt }: Props) => {
               }}
             >
               <IconWorldDownload size={18} />
-            </SidebarActionButton>*/}
-          {/*!isGlobal && !prompt.folderId && <SidebarActionButton handleClick={handleMakeGlobal}>
+            </SidebarActionButton>}
+          {!isGlobal && !prompt.folderId && <SidebarActionButton handleClick={handleMakeGlobal}>
             <IconWorld size={18} />
-            </SidebarActionButton>*/}
+            </SidebarActionButton>}
         </div>
       )}
 
