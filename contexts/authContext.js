@@ -53,12 +53,12 @@ const callFunction=async(email,name)=>{
       setUserRole(result?.userRole)
     
   } catch (error) {
-    console.log("An error occurred");
+    // console.log("An error occurred");
   }
 }
 
   async function validateUser(){
-    console.log("Validating")
+    // console.log("Validating")
     let tokenExist=JSON.parse(localStorage.getItem('token'))
     let userExist=JSON.parse(localStorage.getItem('user'))
 

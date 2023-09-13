@@ -365,7 +365,7 @@ const Home = ({
           signal: controller.signal,
           
         });
-        console.log(await response.json())
+        // console.log(await response.json())
   }
   useEffect(() => {
     const settings = getSettings();

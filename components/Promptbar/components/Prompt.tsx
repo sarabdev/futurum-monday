@@ -118,9 +118,9 @@ export const PromptComponent = ({ prompt }: Props) => {
     let res=confirm('Are you sure you want to make it global?')
     if(res){
     
-    localStorage.setItem('globalPrompts', JSON.stringify([...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}]));
+    localStorage.setItem('globalPrompts', JSON.stringify([...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {_id:string})?._id}]));
 
-    homeDispatch({ field: 'globalPrompts', value: [...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}] });
+    homeDispatch({ field: 'globalPrompts', value: [...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {_id:string})?._id}] });
     const response=await test()
 
     }
