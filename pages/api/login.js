@@ -17,6 +17,10 @@ export default async (req, res) => {
         res.json({error:true, message:"Email or password is incorrect."})
         return
     }
+    if(!userExist.isVerified){
+      res.json({error:true, message:"Your email verification is pending. Check your email!"})
+      return
+    }
     const token=jwt.sign({_id:userExist._id, email:userExist.email},'futurumString')
     res.json({error:false, message:"Login Success.", token, user:{_id:userExist._id, username:userExist.username}})
 

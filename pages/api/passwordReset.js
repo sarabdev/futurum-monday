@@ -15,7 +15,6 @@ export default async (req, res) => {
         res.json({error:true, message:"User does not with this email."})
         return
     }
-    delete userExist._id
     const token=jwt.sign({email:userExist.email},'futurumString')
     const updateDocument = {
         $set: {

@@ -461,8 +461,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
 
     }
     else{
-      setError('')
-      setToggleAction('login')
+      setError(result.message)
       setLoadingResponse(false)
     }
   }
