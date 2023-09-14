@@ -13,7 +13,7 @@ export default async (req, res) => {
         return
     }
     const hashedPassword=await bcrypt.hash(user.password,10)
-    await db.collection('users').insertOne({...user, password:hashedPassword})
+    await db.collection('users').insertOne({...user, password:hashedPassword, resetToken:null})
     res.json({error:false, message:"User account created successfully please login."})
 
   } catch (e) {

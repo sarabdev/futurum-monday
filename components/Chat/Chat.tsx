@@ -1,5 +1,5 @@
 import { IconClearAll, IconSettings } from '@tabler/icons-react';
-import {
+import React, {
   MutableRefObject,
   memo,
   useCallback,
@@ -396,6 +396,41 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
       setLoadingResponse(false)
     }
   }
+
+  const handleReset=async(e:React.SyntheticEvent)=>{
+    e.preventDefault()
+    setError('')
+
+    setLoadingResponse(true)
+    const controller = new AbortController();
+    const response = await fetch('/api/passwordReset', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      signal: controller.signal,
+      body:JSON.stringify({
+        email:inputValues.email,
+      })
+
+      
+    });
+    const result=await response.json()
+    setInputValues({
+      username:'', 
+      email:'',
+      password:''
+    })
+    if(result.error){
+      setLoadingResponse(false)
+      setError(result.message)
+
+    }
+    else{
+      setError(result.message)
+      setLoadingResponse(false)
+    }
+  }
   const handleSignup=async(e:React.SyntheticEvent)=>{
     e.preventDefault()
     setError('')
@@ -690,10 +725,12 @@ style={{
             role="dialog"
           >
             <div className="text-lg pb-4 font-bold text-center text-black dark:text-neutral-200">
-            {toggleAction=='login'?t('Login'):t('Signup')}
+            {toggleAction=='login' && t('Login')}
+              {toggleAction=='signup' && t('Signup')}
+              {toggleAction=='reset' && t('Forgot Password')}
             </div>
             <div className='flex justify-center'>
-            <form className='w-4/5'  onSubmit={toggleAction=='login'?handleLogin:handleSignup} style={{
+            <form className='w-4/5'  onSubmit={toggleAction=='login'?handleLogin:toggleAction=='signup'?handleSignup:handleReset} style={{
   backgroundColor: lightMode=="light" ? "white" : "black",
   color: lightMode=="light" ? "white" : "black",
   borderColor: lightMode=="light" ? "black" : "white"
@@ -702,22 +739,33 @@ style={{
               <input required minLength={6} placeholder='enter username' name='username' value={inputValues.username} onChange={handleChange} className='p-2 rounded mb-2 w-full' type="text" /><br/></>}
               <label>Email:</label><br/>
               <input required minLength={2} placeholder='enter email' name="email" value={inputValues.email} onChange={handleChange} className='p-2 rounded mb-2 w-full' type="email" /><br/>
-              <label>Password:</label><br/>
-              <input required minLength={6} placeholder='enter password' name="password" value={inputValues.password} onChange={handleChange} className='p-2 rounded w-full' type='password'/>
+             {(toggleAction=='login' || toggleAction=='signup') && <> <label>Password:</label><br/>
+              <input required minLength={6} placeholder='enter password' name="password" value={inputValues.password} onChange={handleChange} className='p-2 rounded w-full' type='password'/></>}
               {loadingResponse && <div className="h-4 w-4 mt-5 mx-auto animate-spin rounded-full border-t-2 border-neutral-800 opacity-60 dark:border-neutral-100"></div>}
               {error.length>0 && <p className='pt-3 w-full text-center' style={{
                 backgroundColor: lightMode=="light" ? "white" : "black",
                 color: lightMode=="light" ? "black" : "white",
                 borderColor: lightMode=="light" ? "black" : "white"
               }}>{error}</p>}
-                 <div className='w-full flex justify-center items-baseline'>
+                 <div style={{
+                  flexDirection:toggleAction=='reset'?'row':'column',
+                  justifyContent:toggleAction=='reset'?'space-evenly':'center',
+                  alignItems:'center'
+                 }} className='w-full flex items-center flex-col justify-center '>
             <button
               type="submit"
               className="w-2/5 text-center px-4 py-2 mt-6 border rounded-lg shadow border-neutral-500 text-neutral-900 hover:bg-neutral-100 focus:outline-none dark:border-neutral-800 dark:border-opacity-50 dark:bg-white dark:text-black dark:hover:bg-neutral-300"
              
             >
-              {toggleAction=='login'?t('Login'):t('Signup')}
+              {toggleAction=='login' && t('Login')}
+              {toggleAction=='signup' && t('Signup')}
+              {toggleAction=='reset' && t('Forgot Password')}
+
+
             </button>
+            <div style={{
+              width:toggleAction=='reset'?'15%':'60%'
+            }} className='w-3/5 flex justify-around mt-3 '>
             <button
             style={{
               backgroundColor: lightMode=="light" ? "white" : "black",
@@ -736,6 +784,19 @@ style={{
             }} className='ml-5 underline'>
               {toggleAction=='login'?'Signup':'Login'}
             </button>
+          {toggleAction!='reset' &&  <button
+            style={{
+              backgroundColor: lightMode=="light" ? "white" : "black",
+              color: lightMode=="light" ? "black" : "white",
+              borderColor: lightMode=="light" ? "black" : "white"
+            }} 
+            onClick={(e)=>{
+              e.preventDefault()
+              setToggleAction('reset')
+            }} className='ml-5 underline'>
+              {'Forgot Password?'}
+            </button>}
+            </div>
             </div>
             </form>
 

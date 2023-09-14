@@ -25,6 +25,7 @@
     "next": "13.2.4",
     "next-i18next": "^13.2.2",
     "node-fetch": "^3.3.2",
+    "nodemailer": "^6.9.5",
     "openai": "^3.2.1",
     "react": "18.2.0",
     "react-color": "^2.19.3",
