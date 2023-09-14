@@ -177,7 +177,7 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt,handleD
                   onClose()
                 }
                 else{
-                if(globalHappen){
+               // if(globalHappen){
                 const updatedPrompt = {
                   ...prompt,
                   name,
@@ -186,7 +186,7 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt,handleD
                 };
 
                 onUpdatePrompt(updatedPrompt);
-              }
+             // }
                 onClose();
             }
               }}

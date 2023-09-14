@@ -249,7 +249,7 @@ export const PromptComponent = ({ prompt }: Props) => {
           prompt={prompt}
           onClose={() => setShowModal(false)}
           onUpdatePrompt={handleUpdate}
-          handleDownload={()=>{}}
+          handleDownload={handleDownload}
         />
       )}
     </div>
