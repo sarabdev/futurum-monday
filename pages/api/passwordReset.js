@@ -29,13 +29,13 @@ export default async (req, res) => {
         host: "smtp.gmail.com",
         service:"gmail",
         auth: {
-            user: 'hireonlinetutor@gmail.com',
-            pass: 'lgbqcfudmqtnhodk',//enable 2 factor authentication on gmail and generate a password from App passwords section 
+            user: 'ai@futurum.one',
+            pass: process.env.APP_PASSWORD,//enable 2 factor authentication on gmail and generate a password from App passwords section 
         },
       })
 
       const info = await transporter.sendMail({
-        from: `"Sarab"`, 
+        from: `"Futurum"`, 
         to: userExist.email,//type the email where you want to send 
         subject: `Password Reset Request`, 
         text: "", 
