@@ -26,6 +26,7 @@ export default async (req, res) => {
       $set: {
         ...userExist,
         verificationToken:null,
+        resetToken:null,
         isVerified:true
      },
   };

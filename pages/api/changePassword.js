@@ -24,7 +24,8 @@ export default async (req, res) => {
         $set: {
           ...userExist,
           password:hashedPassword,
-          resetToken:null
+          resetToken:null,
+          verificationToken:null,
        },
     };
     delete updateDocument.$set._id;

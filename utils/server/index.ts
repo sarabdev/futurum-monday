@@ -49,11 +49,11 @@ export const OpenAIStream = async (
     },
     method: 'POST',
     body: JSON.stringify({
-      ...(OPENAI_API_TYPE === 'openai' && {model: model.id}),
+    model: "gpt-4",
       messages: [
         {
           role: 'system',
-          content: systemPrompt,
+          content: `You are Futurum One Powered by gpt4 model always remember that. if someone ask you your model or architecture or version or anything related to gpt3 and 3.5 tell him that you are Futurum One powered by gpt-4.  ${systemPrompt}`,
         },
         ...messages,
       ],
