@@ -50,7 +50,7 @@ const Folder = ({
   // } = useContext(PromptbarContext);
   const [isDeleting, setIsDeleting] = useState(false);
   const [isRenaming, setIsRenaming] = useState(false);
-  const { user, login, logout,userRole ,setUser,setToken, authReady} = useContext(AuthContext);
+  const { user, login, logout,userRole ,setToken, authReady} = useContext(AuthContext);
 
   const [color,setColor]= useState({
     background:'',
@@ -102,7 +102,7 @@ const Folder = ({
         'Content-Type': 'application/json',
       },
       signal: controller.signal,
-      body:JSON.stringify({...currentFolder, downloadCount:0, userId:(user as null | {_id:string})?._id})
+      body:JSON.stringify({...currentFolder, downloadCount:0, userId:(user as null | {id:string})?.id})
       
     });
   }
@@ -123,9 +123,9 @@ const Folder = ({
     let res=confirm('Are you sure you want to make it global?')
     if(res){
       const myPrompts=prompts.filter((prompt)=>prompt.folderId==currentFolder.id)
-    localStorage.setItem('globalFolders', JSON.stringify([...globalFolders,{...currentFolder,downloadCount:0,userId:(user as null | {_id:string})?._id}]));
+    localStorage.setItem('globalFolders', JSON.stringify([...globalFolders,{...currentFolder,downloadCount:0,userId:(user as null | {id:string})?.id}]));
 
-    homeDispatch({ field: 'globalFolders', value: [...globalFolders,{...currentFolder,downloadCount:0,userId:(user as null | {_id:string})?._id}] });
+    homeDispatch({ field: 'globalFolders', value: [...globalFolders,{...currentFolder,downloadCount:0,userId:(user as null | {id:string})?.id}] });
     await test()
     await addFolderPrompts(myPrompts)
 

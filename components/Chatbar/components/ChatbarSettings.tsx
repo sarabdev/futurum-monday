@@ -14,8 +14,12 @@ import { SidebarButton } from '../../Sidebar/SidebarButton';
 import ChatbarContext from '../Chatbar.context';
 import { ClearConversations } from './ClearConversations';
 import { PluginKeys } from './PluginKeys';
+import { useClerk } from "@clerk/clerk-react";
+
 import axios from "axios"
 export const ChatbarSettings = () => {
+  const { signOut } = useClerk();
+
   const { t } = useTranslation('sidebar');
   const { user, login, logout} = useContext(AuthContext);
  const [showPasswordReset,setShowPasswordReset]=useState(false)

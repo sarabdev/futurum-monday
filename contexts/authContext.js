@@ -1,5 +1,8 @@
 import { createContext, useState, useEffect,useContext } from "react";
 import netlifyIdentity from "netlify-identity-widget";
+import { useAuth } from "@clerk/nextjs";
+import { useUser } from "@clerk/nextjs";
+import { useClerk } from "@clerk/clerk-react";
 
 import axios from 'axios'
 import { validate } from "uuid";
@@ -9,14 +12,17 @@ export const AuthContext = createContext({
   logout: () => {},
   authReady: false,
   userRole:null,
-  setUser:(user)=>{},
   token:null,
   setToken:(token)=>{},
 });
 
 const AuthContextProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
-  const [authReady,setAuthReady]=useState(false)
+  const { isLoaded, userId, sessionId, getToken } = useAuth();
+  const { isSignedIn, user } = useUser();
+  const { signOut } = useClerk();
+
+  // const [user, setUser] = useState(null);
+  const [authReady,setAuthReady]=useState(true)
   const [token,setToken]=useState(null)
   const [userRole,setUserRole]=useState(null)
   function test(config){
@@ -33,6 +39,14 @@ const AuthContextProvider = ({ children }) => {
       }
     })
   }
+
+  useEffect(()=>{
+    // console.log(userId)
+    // console.log(user)
+    // if(userId)
+    // console.log(user)
+    //setUser(true)
+  },[userId])
 const callFunction=async(email,name)=>{
   try {
   
@@ -63,7 +77,7 @@ const callFunction=async(email,name)=>{
     let userExist=JSON.parse(localStorage.getItem('user'))
 
     if(!tokenExist){
-      setUser(null)
+    //  setUser(null)
       setToken(null)
       localStorage.removeItem('user')
     localStorage.removeItem('token')
@@ -86,7 +100,7 @@ const callFunction=async(email,name)=>{
     });
     const result=await response.json()
     if(result.error){
-      setUser(null)
+      //setUser(null)
       setToken(null)
       localStorage.removeItem('user')
     localStorage.removeItem('token')
@@ -94,12 +108,12 @@ const callFunction=async(email,name)=>{
 
     return
     }
-     setUser(userExist)
+     //setUser(userExist)
      setToken(tokenExist)
      setAuthReady(true)
    }
   useEffect(() => {
-     validateUser()
+     //validateUser()
   }, []);
 
   const login = () => {
@@ -108,8 +122,9 @@ const callFunction=async(email,name)=>{
 
 
   const logout = () => {
-    setUser(null)
+  //  setUser(null)
     setToken(null)
+    signOut()
     localStorage.removeItem('user')
     localStorage.removeItem('token')
   };
@@ -120,7 +135,7 @@ const callFunction=async(email,name)=>{
     logout,
     user,
     userRole,
-    setUser,
+    //setUser,
     token,
     setToken,
     authReady

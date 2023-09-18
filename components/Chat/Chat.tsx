@@ -35,6 +35,7 @@ import { SystemPrompt } from './SystemPrompt';
 import { TemperatureSlider } from './Temperature';
 import { MemoizedChatMessage } from './MemoizedChatMessage';
 import Image from 'next/image';
+import { SignIn } from '@clerk/nextjs';
 
 interface Props {
   stopConversationRef: MutableRefObject<boolean>;
@@ -60,7 +61,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
     handleUpdateConversation,
     dispatch: homeDispatch,
   } = useContext(HomeContext);
-  const { user, login, logout,userRole ,setUser,setToken, authReady} = useContext(AuthContext);
+  const { user, login, logout,userRole ,setToken, authReady} = useContext(AuthContext);
   const [showSignin,setShowSignin]=useState(false)
   const [currentMessage, setCurrentMessage] = useState<Message>();
   const [autoScrollEnabled, setAutoScrollEnabled] = useState<boolean>(true);
@@ -389,7 +390,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
     }
     else{
       setError('')
-      setUser(result.user)
+      //setUser(result.user)
       setToken(result.token)
       localStorage.setItem('user',JSON.stringify(result.user))
       localStorage.setItem('token',JSON.stringify(result.token))
@@ -557,7 +558,7 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
 
             </div>}  */}
             
-            {!user && authReady && <div className=''>
+            {!user && <div className=''>
               <button className='bg-gradient-to-l from-pink-500 via-blue-300 to-orange-400 text-white text-bold mt-3 bg-clip-text text-transparent text-[15px] bg-white' style={{backgroundColor:"white",padding:'10px', border:"1px solid white", borderRadius:'10px', fontWeight:'bold'}} onClick={()=>setShowSignin(true)}>Signup / Login</button>
               </div>}
             {/* <div className="mb-2">
@@ -706,107 +707,8 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
       )}
     </div>
  {showSignin && !user &&
-    <div  className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="fixed inset-0 z-10 overflow-hidden">
-        <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
-          <div
-            className="hidden sm:inline-block sm:h-screen sm:align-middle"
-            aria-hidden="true"
-          />
-
-          <div
-style={{
-  backgroundColor: lightMode=="light" ? "white" : "black",
-  color: lightMode=="light" ? "black" : "white",
-  borderColor: lightMode=="light" ? "black" : "white"
-}}              
-            className="dark:border-netural-400 inline-block max-h-[400px] transform overflow-y-auto rounded-lg border border-gray-300 bg-white px-4 pt-5 pb-4 text-left align-bottom shadow-xl transition-all dark:bg-[#202123] sm:my-8 sm:max-h-[600px] sm:w-full sm:max-w-lg sm:p-6 sm:align-middle"
-            role="dialog"
-          >
-            <div className="text-lg pb-4 font-bold text-center text-black dark:text-neutral-200">
-            {toggleAction=='login' && t('Login')}
-              {toggleAction=='signup' && t('Signup')}
-              {toggleAction=='reset' && t('Forgot Password')}
-            </div>
-            <div className='flex justify-center'>
-            <form className='w-4/5'  onSubmit={toggleAction=='login'?handleLogin:toggleAction=='signup'?handleSignup:handleReset} style={{
-  backgroundColor: lightMode=="light" ? "white" : "black",
-  color: lightMode=="light" ? "white" : "black",
-  borderColor: lightMode=="light" ? "black" : "white"
-}} >
-              {toggleAction=='signup' &&  <><label>Username:</label><br/>
-              <input required minLength={6} placeholder='enter username' name='username' value={inputValues.username} onChange={handleChange} className='p-2 rounded mb-2 w-full' type="text" /><br/></>}
-              <label>Email:</label><br/>
-              <input required minLength={2} placeholder='enter email' name="email" value={inputValues.email} onChange={handleChange} className='p-2 rounded mb-2 w-full' type="email" /><br/>
-             {(toggleAction=='login' || toggleAction=='signup') && <> <label>Password:</label><br/>
-              <input required minLength={6} placeholder='enter password' name="password" value={inputValues.password} onChange={handleChange} className='p-2 rounded w-full' type='password'/></>}
-              {loadingResponse && <div className="h-4 w-4 mt-5 mx-auto animate-spin rounded-full border-t-2 border-neutral-800 opacity-60 dark:border-neutral-100"></div>}
-              {error.length>0 && <p className='pt-3 w-full text-center' style={{
-                backgroundColor: lightMode=="light" ? "white" : "black",
-                color: lightMode=="light" ? "black" : "white",
-                borderColor: lightMode=="light" ? "black" : "white"
-              }}>{error}</p>}
-                 <div style={{
-                  flexDirection:toggleAction=='reset'?'row':'column',
-                  justifyContent:toggleAction=='reset'?'space-evenly':'center',
-                  alignItems:'center'
-                 }} className='w-full flex items-center flex-col justify-center '>
-            <button
-              type="submit"
-              className="w-2/5 text-center px-4 py-2 mt-6 border rounded-lg shadow border-neutral-500 text-neutral-900 hover:bg-neutral-100 focus:outline-none dark:border-neutral-800 dark:border-opacity-50 dark:bg-white dark:text-black dark:hover:bg-neutral-300"
-             
-            >
-              {toggleAction=='login' && t('Login')}
-              {toggleAction=='signup' && t('Signup')}
-              {toggleAction=='reset' && t('Forgot Password')}
-
-
-            </button>
-            <div style={{
-              width:toggleAction=='reset'?'15%':'60%'
-            }} className='w-3/5 flex justify-around mt-3 '>
-            <button
-            style={{
-              backgroundColor: lightMode=="light" ? "white" : "black",
-              color: lightMode=="light" ? "black" : "white",
-              borderColor: lightMode=="light" ? "black" : "white"
-            }} 
-            onClick={(e)=>{
-              e.preventDefault()
-              if(toggleAction=='login'){
-                setToggleAction('signup')
-              }
-              else{
-                setToggleAction('login')
-
-              }
-            }} className='ml-5 underline'>
-              {toggleAction=='login'?'Signup':'Login'}
-            </button>
-          {toggleAction!='reset' &&  <button
-            style={{
-              backgroundColor: lightMode=="light" ? "white" : "black",
-              color: lightMode=="light" ? "black" : "white",
-              borderColor: lightMode=="light" ? "black" : "white"
-            }} 
-            onClick={(e)=>{
-              e.preventDefault()
-              setToggleAction('reset')
-            }} className='ml-5 underline'>
-              {'Forgot Password?'}
-            </button>}
-            </div>
-            </div>
-            </form>
-
-            </div>
-            
-
-          
-          </div>
-        </div>
-      </div>
-    </div>}
+    <SignIn/>
+  }
     </>
 
   );
