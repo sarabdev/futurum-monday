@@ -77,7 +77,7 @@ export const PromptComponent = ({ prompt }: Props) => {
   const handleDelete: MouseEventHandler<HTMLButtonElement> = async(e) => {
    if(isGlobal && isDeleting)
     {
-      let updatedGlobalPrompts=globalPrompts.filter((prompt)=>prompt.id!=prompt.id)
+      let updatedGlobalPrompts=globalPrompts.filter((p)=>p.id!=prompt.id)
       localStorage.setItem('globalPrompts', JSON.stringify(updatedGlobalPrompts));
 
       homeDispatch({ field: 'globalPrompts', value: updatedGlobalPrompts });
