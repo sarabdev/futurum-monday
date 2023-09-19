@@ -119,7 +119,11 @@ const Folder = ({
     });
   }
   const handleMakeGlobal:MouseEventHandler<HTMLButtonElement>=async(e)=>{
-    
+    const isExist=globalFolders.filter((folder)=>folder.id==currentFolder.id)
+    if(isExist.length>0){
+      alert("This folder is already present in marketplace.")
+    }
+    else{
     e.stopPropagation();
     let res=confirm('Are you sure you want to make it global?')
     if(res){
@@ -129,7 +133,7 @@ const Folder = ({
     homeDispatch({ field: 'globalFolders', value: [...globalFolders,{...currentFolder,downloadCount:0,userId:(user as null | {id:string})?.id}] });
     await test()
     await addFolderPrompts(myPrompts)
-
+    }
     }
 
   }

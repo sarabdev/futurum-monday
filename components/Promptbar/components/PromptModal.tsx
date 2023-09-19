@@ -85,6 +85,12 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt,handleD
   }
   const handleMakeGlobal:MouseEventHandler<HTMLButtonElement>=async(e)=>{
     e.stopPropagation();
+    const isExist=globalPrompts.filter((p)=>p.id==prompt.id)
+    if(isExist.length>0){
+      alert("This prompt is already present in marketplace.")
+
+    }
+    else{
     let res=confirm('Are you sure you want to make it global?')
     if(res){
     
@@ -94,6 +100,7 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt,handleD
     const response=await test()
 
     }
+  }
   }
   return (
     <div
