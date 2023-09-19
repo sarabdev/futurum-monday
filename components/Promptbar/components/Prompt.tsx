@@ -61,40 +61,30 @@ export const PromptComponent = ({ prompt }: Props) => {
     promptDispatch({ field: 'searchTerm', value: '' });
   };
 
-  const handleDeletePromptFromDb=()=>{
-    const config = {
-      method: 'post',
-      url: `https://chat.futurum.one/.netlify/functions/deletePrompt`,
-      data: {
-        prompt
+  const handleDeletePromptFromDb=async()=>{
+    const controller = new AbortController();
+    const response = await fetch('/api/deletePrompt', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
       },
-
-    };
-    return axios(config).then(response => {
-      return {
-        statusCode: 200,
-        body: JSON.stringify(response.data)
-      }
-    }).catch(error => {
-    //  console.log(error)
-      return {
-        statusCode: 422,
-        body: `Error: ${error}`,
-      }
-    })
+      signal: controller.signal,
+      body:JSON.stringify(prompt)
+      
+    });
   }
 
   const handleDelete: MouseEventHandler<HTMLButtonElement> = async(e) => {
-  //  if(isGlobal && isDeleting)
-  //   {
-  //     let updatedGlobalPrompts=globalPrompts.filter((prompt)=>prompt.id!=prompt.id)
-  //     localStorage.setItem('globalPrompts', JSON.stringify([...updatedGlobalPrompts]));
+   if(isGlobal && isDeleting)
+    {
+      let updatedGlobalPrompts=globalPrompts.filter((prompt)=>prompt.id!=prompt.id)
+      localStorage.setItem('globalPrompts', JSON.stringify(updatedGlobalPrompts));
 
-  //     homeDispatch({ field: 'globalPrompts', value: [...updatedGlobalPrompts] });
+      homeDispatch({ field: 'globalPrompts', value: updatedGlobalPrompts });
 
-  //     await handleDeletePromptFromDb()
-  //   }
-   if (isDeleting) {
+      await handleDeletePromptFromDb()
+    }
+   if (!isGlobal && isDeleting) {
       handleDeletePrompt(prompt);
       promptDispatch({ field: 'searchTerm', value: '' });
     }
@@ -225,7 +215,7 @@ export const PromptComponent = ({ prompt }: Props) => {
       {!isDeleting && !isRenaming && (
         <div className="absolute right-1 z-10 flex text-gray-300">
        
-          {((!isGlobal)) && <SidebarActionButton handleClick={handleOpenDeleteModal}>
+          {((!isGlobal) || (isGlobal && (user as null | {id:string})?.id==(prompt as any).userId)) && <SidebarActionButton handleClick={handleOpenDeleteModal}>
             <IconTrash size={18} />
             
           </SidebarActionButton>}

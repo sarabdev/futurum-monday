@@ -119,6 +119,7 @@ const Folder = ({
     });
   }
   const handleMakeGlobal:MouseEventHandler<HTMLButtonElement>=async(e)=>{
+    
     e.stopPropagation();
     let res=confirm('Are you sure you want to make it global?')
     if(res){
@@ -238,6 +239,39 @@ const newArray =currentFolderPrompts.map((obj) => {
 
 
 }
+const deleteGlobalFolder=async(folderId:string)=>{
+  const updatedFolders =globalFolders.filter((f) => f.id !== folderId);
+  homeDispatch({ field: 'globalFolders', value: updatedFolders });
+  localStorage.setItem('globalFolders',JSON.stringify(updatedFolders))
+  const controller = new AbortController();
+
+  const currentFolderPrompts=globalPrompts.filter((prompt)=>prompt.folderId==currentFolder.id)
+  const latestGlobalPrompts=globalPrompts.filter((prompt)=>prompt.folderId!=currentFolder.id)
+  localStorage.setItem('globalPrompts', JSON.stringify(latestGlobalPrompts));
+
+  homeDispatch({ field: 'globalPrompts', value: latestGlobalPrompts });
+  const response = await fetch('/api/deleteFolder', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    signal: controller.signal,
+    body:JSON.stringify(currentFolder)
+    
+  });
+  const controller2 = new AbortController();
+
+  await fetch('/api/deleteFolderPrompts', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    signal: controller2.signal,
+    body:JSON.stringify(currentFolder)
+    
+  });
+
+}
   return (
     <>
 
@@ -336,13 +370,17 @@ const newArray =currentFolderPrompts.map((obj) => {
             >
               <IconPencil size={18} />
             </SidebarActionButton>}
-         {(currentFolder.type=="chat" || (currentFolder.type=="prompt" && !isGlobal) ) && <SidebarActionButton
+         {(currentFolder.type=="chat" || (currentFolder.type=="prompt" && !isGlobal) || (isGlobal && (user as null | {id:string})?.id==(currentFolder as any).userId))  && <SidebarActionButton
               handleClick={(e) => {
                 let response=confirm("Are you sure you want to delete folder and all of its content?")
                 if(response){
                 e.stopPropagation();
                 //setIsDeleting(true);
+                if(!isGlobal)
                 handleDeleteFolder(currentFolder.id);
+                else{
+                  deleteGlobalFolder(currentFolder.id)
+                }
 
                 }
               }}
