@@ -241,6 +241,31 @@ export const ChatInput = ({
     if (textareaRef && textareaRef.current) {
       textareaRef.current.focus();
     }
+
+    //auto send after setting variable values
+    if (messageIsStreaming) {
+      return;
+    }
+
+    if (!content) {
+      alert(t('Please enter a message'));
+      return;
+    }
+
+    if (newContent !== undefined) {
+      const message: Message = {
+        role: 'user',
+        content: newContent,
+      };
+      // Now you can use the message object as needed
+      onSend(message, plugin);
+    }
+    setContent('');
+    setPlugin(null);
+
+    if (window.innerWidth < 640 && textareaRef && textareaRef.current) {
+      textareaRef.current.blur();
+    }
   };
 
   useEffect(() => {
