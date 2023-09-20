@@ -131,31 +131,33 @@ const Home = ({
     dispatch({ field: 'folders', value: updatedFolders });
     saveFolders(updatedFolders);
 
-    const updatedConversations: Conversation[] = conversations.map((c) => {
-      if (c.folderId === folderId) {
-        return {
-          ...c,
-          folderId: null,
-        };
-      }
+    // const updatedConversations: Conversation[] = conversations.map((c) => {
+    //   if (c.folderId === folderId) {
+    //     return {
+    //       ...c,
+    //       folderId: null,
+    //     };
+    //   }
 
-      return c;
-    });
+    //   return c;
+    // });
+    const updatedConversations=conversations.filter(c=>c.folderId!=folderId)
 
     dispatch({ field: 'conversations', value: updatedConversations });
     saveConversations(updatedConversations);
 
-    const updatedPrompts: Prompt[] = prompts.map((p) => {
-      if (p.folderId === folderId) {
-        return {
-          ...p,
-          folderId: null,
-        };
-      }
+    // const updatedPrompts: Prompt[] = prompts.map((p) => {
+    //   if (p.folderId === folderId) {
+    //     return {
+    //       ...p,
+    //       folderId: null,
+    //     };
+    //   }
 
-      return p;
-    });
+    //   return p;
+    // });
 
+    const updatedPrompts=prompts.filter(p=>p.folderId!=folderId)
     dispatch({ field: 'prompts', value: updatedPrompts });
     savePrompts(updatedPrompts);
   };
