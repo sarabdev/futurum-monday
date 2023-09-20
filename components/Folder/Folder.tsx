@@ -214,7 +214,7 @@ const Folder = ({
     if(foundObject){
       foundObject.downloadCount++;
     }
-     
+   
      localStorage.setItem('globalFolders',JSON.stringify([...globalFolders]))
     homeDispatch({ field: 'globalFolders', value: [...globalFolders] });
 

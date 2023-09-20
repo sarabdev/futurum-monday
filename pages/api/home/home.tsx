@@ -40,6 +40,8 @@ import HomeContext from './home.context';
 import { HomeInitialState, initialState } from './home.state';
 
 import { v4 as uuidv4 } from 'uuid';
+import { GlobalPrompt } from '@/types/globalPrompt';
+import { GlobalFolderInterface } from '@/types/globalFolder';
 
 interface Props {
   serverSideApiKeyIsSet: boolean;
@@ -326,7 +328,13 @@ const Home = ({
      
    });
        const result=await response.json();
-       localStorage.setItem('globalPrompts',JSON.stringify(result));
+       result.sort((a:GlobalPrompt, b:GlobalPrompt) => {
+        const downloadCountA = a.downloadCount || 0; // Default to 0 if downloadCount is missing or falsy
+        const downloadCountB = b.downloadCount || 0; // Default to 0 if downloadCount is missing or falsy
+      
+        return downloadCountA - downloadCountB;
+      });
+            localStorage.setItem('globalPrompts',JSON.stringify(result));
       dispatch({ field: 'globalPrompts', value: result });
     
   }

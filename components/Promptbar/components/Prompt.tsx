@@ -172,7 +172,12 @@ export const PromptComponent = ({ prompt }: Props) => {
     if(foundObject){
       foundObject.downloadCount++;
     }
-
+    globalPrompts.sort((a:GlobalPrompt, b:GlobalPrompt) => {
+      const downloadCountA = a.downloadCount || 0; // Default to 0 if downloadCount is missing or falsy
+      const downloadCountB = b.downloadCount || 0; // Default to 0 if downloadCount is missing or falsy
+    
+      return downloadCountA - downloadCountB;
+    });
      localStorage.setItem('globalPrompts',JSON.stringify(globalPrompts))
     homeDispatch({ field: 'globalPrompts', value: [...globalPrompts] });
 

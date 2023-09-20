@@ -64,7 +64,11 @@ const uniquePrompts = combinedPrompts.reduce((accumulator:Prompt[], currentPromp
       {isGlobal ? 
       globalFolders && globalFolders
       .filter((folder) => folder.type === 'prompt')
-      .sort((a, b) => a.name.localeCompare(b.name))
+      .sort((a, b) => {
+        const downloadCountA = a.downloadCount || 0;
+        const downloadCountB = b.downloadCount || 0;
+        return downloadCountB - downloadCountA; // Sort in descending order
+      })
       .map((folder, index) => (
         <Folder
           key={index}
