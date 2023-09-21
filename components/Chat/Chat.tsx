@@ -558,8 +558,18 @@ export const Chat = memo(({ stopConversationRef }: Props) => {
 
             </div>}  */}
             
-            {!user && <div className=''>
-              <button className='bg-gradient-to-l from-pink-500 via-blue-300 to-orange-400 text-white text-bold mt-3 bg-clip-text text-transparent text-[15px] bg-white' style={{backgroundColor:"white",padding:'10px', border:"1px solid white", borderRadius:'10px', fontWeight:'bold'}} onClick={()=>setShowSignin(true)}>Signup / Login</button>
+            {!user && <div className='' style={{
+      backgroundColor: lightMode=="light" ? "white" : "black",
+      color: lightMode=="light" ? "black" : "white",
+      borderColor: lightMode=="light" ? "black" : "white"
+    }}>
+              <button style={{
+      backgroundColor: lightMode=="light" ? "white" : "black",
+      color: lightMode=="light" ? "black" : "white",
+      borderColor: lightMode=="light" ? "black" : "white",
+      padding:'10px', border:"1px solid",
+      borderRadius:'10px', fontWeight:'bold'
+    }} className='bg-gradient-to-l from-pink-500 via-blue-300 to-orange-400 text-white text-bold mt-3 bg-clip-text text-transparent text-[15px] '  onClick={()=>setShowSignin(true)}>Signup / Login</button>
               </div>}
             {/* <div className="mb-2">
               {t(

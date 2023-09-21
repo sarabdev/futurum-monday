@@ -46,7 +46,7 @@ export const initialState: HomeInitialState = {
   isGlobal: false,
   showPluginSelect:false,
   pluginKeys: [],
-  lightMode: 'dark',
+  lightMode: 'light',
   messageIsStreaming: false,
   modelError: null,
   models: [],

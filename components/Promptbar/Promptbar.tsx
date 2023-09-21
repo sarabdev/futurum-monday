@@ -28,7 +28,7 @@ const Promptbar = () => {
   });
   
   const {
-    state: { prompts, defaultModelId, showPromptbar, globalPrompts },
+    state: { prompts, defaultModelId, showPromptbar, globalPrompts, isGlobal },
     dispatch: homeDispatch,
     handleCreateFolder,
   } = useContext(HomeContext);
@@ -65,6 +65,7 @@ const Promptbar = () => {
     const updatedPrompts = prompts.filter((p) => p.id !== prompt.id);
 
     homeDispatch({ field: 'prompts', value: updatedPrompts });
+    alert("Prompt delete successfully.")
     savePrompts(updatedPrompts);
   };
 
@@ -98,15 +99,29 @@ const Promptbar = () => {
 
   useEffect(() => {
     if (searchTerm) {
+      if(!isGlobal)
       promptDispatch({
         field: 'filteredPrompts',
         value: prompts.filter((prompt) => {
-          const searchable =
-            prompt.name.toLowerCase() +
-            ' ' +
-            prompt.description.toLowerCase() +
-            ' ' +
-            prompt.content.toLowerCase();
+          const searchable =prompt.name.toLowerCase() 
+          //+
+            // ' ' +
+            // prompt.description.toLowerCase() +
+            // ' ' +
+            // prompt.content.toLowerCase();
+          return searchable.includes(searchTerm.toLowerCase());
+        }),
+      });
+      else
+      promptDispatch({
+        field: 'filteredGlobalPrompts',
+        value: prompts.filter((prompt) => {
+          const searchable =prompt.name.toLowerCase() 
+          //+
+            // ' ' +
+            // prompt.description.toLowerCase() +
+            // ' ' +
+            // prompt.content.toLowerCase();
           return searchable.includes(searchTerm.toLowerCase());
         }),
       });

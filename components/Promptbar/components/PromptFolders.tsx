@@ -32,20 +32,46 @@ export const PromptFolders = () => {
       handleUpdatePrompt(updatedPrompt);
     }
   };
+  
+  const PromptGlobalFolders = (currentFolder: FolderInterface) =>{
+    const combinedPrompts = filteredGlobalPrompts.concat(globalPrompts);
+
+// const uniquePrompts = combinedPrompts.reduce((accumulator:Prompt[], currentPrompt:Prompt) => {
+//   const isPromptAlreadyAdded = accumulator.some((uniquePrompt:Prompt) => uniquePrompt.id === currentPrompt.id);
+
+//   if (!isPromptAlreadyAdded && currentPrompt.folderId === currentFolder.id) {
+//     accumulator.push(currentPrompt);
+//   }
+
+//   return accumulator;
+// }, []);
+  return filteredGlobalPrompts
+  // .concat(globalPrompts)
+  //     .filter((p) => p.folderId)
+      .map((prompt, index) => {
+        if (prompt.folderId === currentFolder.id) {
+          return (
+            <div key={index} className="ml-5 gap-2 border-l pl-2">
+              <PromptComponent prompt={prompt} />
+            </div>
+          );
+        }
+      });
+    }
 
   const PromptFolders = (currentFolder: FolderInterface) =>{
     const combinedPrompts = filteredPrompts.concat(globalPrompts);
 
-const uniquePrompts = combinedPrompts.reduce((accumulator:Prompt[], currentPrompt:Prompt) => {
-  const isPromptAlreadyAdded = accumulator.some((uniquePrompt:Prompt) => uniquePrompt.id === currentPrompt.id);
+// const uniquePrompts = combinedPrompts.reduce((accumulator:Prompt[], currentPrompt:Prompt) => {
+//   const isPromptAlreadyAdded = accumulator.some((uniquePrompt:Prompt) => uniquePrompt.id === currentPrompt.id);
 
-  if (!isPromptAlreadyAdded && currentPrompt.folderId === currentFolder.id) {
-    accumulator.push(currentPrompt);
-  }
+//   if (!isPromptAlreadyAdded && currentPrompt.folderId === currentFolder.id) {
+//     accumulator.push(currentPrompt);
+//   }
 
-  return accumulator;
-}, []);
-  return uniquePrompts
+//   return accumulator;
+// }, []);
+  return filteredPrompts
   // .concat(globalPrompts)
   //     .filter((p) => p.folderId)
       .map((prompt, index) => {
@@ -75,7 +101,7 @@ const uniquePrompts = combinedPrompts.reduce((accumulator:Prompt[], currentPromp
           searchTerm={searchTerm}
           currentFolder={folder}
           handleDrop={handleDrop}
-          folderComponent={PromptFolders(folder)}
+          folderComponent={PromptGlobalFolders(folder)}
         />
       )) :
       folders

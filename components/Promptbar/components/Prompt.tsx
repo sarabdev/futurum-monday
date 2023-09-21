@@ -44,6 +44,7 @@ export const PromptComponent = ({ prompt }: Props) => {
       isGlobal
     },
     dispatch: homeDispatch,
+    offGlobal,onGlobal
   } = useContext(HomeContext);
   const {
     dispatch: promptDispatch,
@@ -81,7 +82,7 @@ export const PromptComponent = ({ prompt }: Props) => {
       localStorage.setItem('globalPrompts', JSON.stringify(updatedGlobalPrompts));
 
       homeDispatch({ field: 'globalPrompts', value: updatedGlobalPrompts });
-
+      alert("Prompt deleted successfully from marketplace.")
       await handleDeletePromptFromDb()
     }
    if (!isGlobal && isDeleting) {
@@ -117,6 +118,8 @@ export const PromptComponent = ({ prompt }: Props) => {
     localStorage.setItem('globalPrompts', JSON.stringify([...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}]));
 
     homeDispatch({ field: 'globalPrompts', value: [...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}] });
+    alert("Prompt added to marketplace successfully.")
+    onGlobal()
     const response=await test()
 
     }
@@ -143,7 +146,7 @@ export const PromptComponent = ({ prompt }: Props) => {
       e.dataTransfer.setData('prompt', JSON.stringify(prompt));
     }
   };
-
+ 
   useEffect(() => {
     if (isRenaming) {
       setIsDeleting(false);
@@ -185,7 +188,10 @@ export const PromptComponent = ({ prompt }: Props) => {
     localStorage.setItem('prompts', JSON.stringify([...prompts,prompt]));
 
     homeDispatch({ field: 'prompts', value: [...prompts,prompt] });
+    alert("Prompt downloaded successfully.")
+    offGlobal()  
     await updatePromptCount(foundObject)
+
 
 
   }

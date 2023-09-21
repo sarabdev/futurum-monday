@@ -131,14 +131,14 @@ export const ChatMessage: FC<Props> = memo(({ message, messageIndex, onEdit }) =
     <div
     style={{
       //  backgroundColor: message.role=="assistant" ? "white" : "black",
-      //  color: message.role=="assistant"  ? "black" : "white",
+        color: message.role=="assistant"  ? "black" : "white",
       // borderColor: lightMode=="light" ? "black" : "white",
       overflowWrap: 'anywhere'
     }} 
       className={`group md:px-4 ${
         message.role === 'assistant'
-          ? 'border-b border-black/10 bg-black-50 text-gray-800 dark:border-gray-900/50 dark:bg-white dark:text-black-100'
-          : 'border-b border-black/10 bg-white-50 text-gray-800 dark:border-gray-900/50 dark:bg-black dark:text-gray-100'
+          ? 'border-b border-black/10 dark:border-gray-900/50 bg-white text-black-100'
+          : 'border-b border-black/10  dark:border-gray-900/50 bg-black text-white-100'
       }`}
     
     >
@@ -154,7 +154,7 @@ export const ChatMessage: FC<Props> = memo(({ message, messageIndex, onEdit }) =
 
         <div className="prose mt-[-2px] w-full dark:prose-invert">
           {message.role === 'user' ? (
-            <div  className="flex w-full">
+            <div  className="flex w-full ">
               {isEditing ? (
                 <div className="flex w-full flex-col">
                   <textarea
@@ -197,7 +197,7 @@ export const ChatMessage: FC<Props> = memo(({ message, messageIndex, onEdit }) =
                   </div>
                 </div>
               ) : (
-                <div className="prose whitespace-pre-wrap dark:prose-invert flex-1">
+                <div className="prose text-white whitespace-pre-wrap dark:prose-invert flex-1">
                   {message.content}
                 </div>
               )}

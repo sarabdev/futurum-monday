@@ -43,7 +43,7 @@ const Folder = ({
   handleDrop,
   folderComponent,
 }: Props) => {
-  const { state:{isGlobal, globalFolders, globalPrompts,prompts,folderColors, lightMode, folders},handleDeleteFolder, handleUpdateFolder, dispatch:homeDispatch } = useContext(HomeContext);
+  const { state:{isGlobal, globalFolders, globalPrompts,prompts,folderColors, lightMode, folders},handleDeleteFolder, handleUpdateFolder, dispatch:homeDispatch ,onGlobal,offGlobal} = useContext(HomeContext);
   // const {
   //   state,
   //   handleUpdatePrompt,
@@ -131,6 +131,8 @@ const Folder = ({
     localStorage.setItem('globalFolders', JSON.stringify([...globalFolders,{...currentFolder,downloadCount:0,userId:(user as null | {id:string})?.id}]));
 
     homeDispatch({ field: 'globalFolders', value: [...globalFolders,{...currentFolder,downloadCount:0,userId:(user as null | {id:string})?.id}] });
+    alert("Folder added to marketplace successfully.")
+    onGlobal()
     await test()
     await addFolderPrompts(myPrompts)
     }
@@ -239,7 +241,9 @@ const newArray =currentFolderPrompts.map((obj) => {
 
      localStorage.setItem('folders',JSON.stringify([...folders,{id:currentFolder.id, name:currentFolder.name, type:currentFolder.type}]))
      homeDispatch({ field: 'folders', value: [...folders,{id:currentFolder.id, name:currentFolder.name, type:currentFolder.type}] });
-      await updatePromptCount(foundObject)
+     alert("Folder downloaded successfully.")
+     offGlobal() 
+     await updatePromptCount(foundObject)
 
 
 }
@@ -254,6 +258,7 @@ const deleteGlobalFolder=async(folderId:string)=>{
   localStorage.setItem('globalPrompts', JSON.stringify(latestGlobalPrompts));
 
   homeDispatch({ field: 'globalPrompts', value: latestGlobalPrompts });
+  alert("Folder successfully deleted from marketplace.")
   const response = await fetch('/api/deleteFolder', {
     method: 'POST',
     headers: {

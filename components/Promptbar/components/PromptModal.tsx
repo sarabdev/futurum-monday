@@ -32,7 +32,7 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt,handleD
       prompts,
       isGlobal
     },
-    dispatch: homeDispatch,
+    dispatch: homeDispatch,onGlobal, offGlobal
   } = useContext(HomeContext);
   const [name, setName] = useState(prompt.name);
   const [description, setDescription] = useState(prompt.description);
@@ -97,6 +97,8 @@ export const PromptModal: FC<Props> = ({ prompt, onClose, onUpdatePrompt,handleD
     localStorage.setItem('globalPrompts', JSON.stringify([...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}]));
 
     homeDispatch({ field: 'globalPrompts', value: [...globalPrompts,{...prompt,downloadCount:0,userId:(user as null | {id:string})?.id}] });
+    alert("Prompt added to marketplace successfully.")
+    onGlobal()
     const response=await test()
 
     }

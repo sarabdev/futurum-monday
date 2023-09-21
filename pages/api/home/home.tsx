@@ -161,6 +161,7 @@ const Home = ({
 
     const updatedPrompts=prompts.filter(p=>p.folderId!=folderId)
     dispatch({ field: 'prompts', value: updatedPrompts });
+    alert("Folder delete successfully.")
     savePrompts(updatedPrompts);
   };
 
