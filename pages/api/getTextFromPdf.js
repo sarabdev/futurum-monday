@@ -18,10 +18,7 @@ export default async function handler(req, res) {
     }
 
     try {
-      console.log(req.file);
       const converted = await pdf(req.file.buffer);
-      // do something with the data
-      console.log(converted.text);
       res.status(200).json({ error: false, text: converted.text.trim() });
     } catch (error) {
       console.error(`Error reading file from disk: ${error}`);
