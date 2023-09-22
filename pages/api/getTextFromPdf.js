@@ -28,7 +28,7 @@ export default async function handler(req, res) {
       res.status(200).json({ error: false, text: converted.text.trim() });
 
       // delete the file after reading
-      fs.unlinkSync(req.file.path);
+      // fs.unlinkSync(req.file.path);
     } catch (error) {
       console.error(`Error reading file from disk: ${error}`);
       return res.status(500).json({ error: true });
