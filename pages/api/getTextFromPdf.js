@@ -1,5 +1,3 @@
-// Go to your terminal and install multer and fs
-// npm install multer fs
 import fs from 'fs';
 import multer from 'multer';
 import pdf from 'pdf-parse';
@@ -25,9 +23,6 @@ export default async function handler(req, res) {
       // do something with the data
       console.log(converted.text);
       res.status(200).json({ error: false, text: converted.text.trim() });
-
-      // delete the file after reading
-      fs.unlinkSync(req.file.path);
     } catch (error) {
       console.error(`Error reading file from disk: ${error}`);
       return res.status(500).json({ error: true });
