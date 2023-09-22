@@ -73,22 +73,24 @@ export const PluginSelect: FC<Props> = ({
       //const fileURL = URL.createObjectURL(file);
       //console.log(fileURL)
       const formData = new FormData();
-      formData.append('pdf', file);
+      formData.append('file', file);
       console.log(formData)
        const data = Object.fromEntries(formData.entries());
        console.log(data);
       const controller = new AbortController();
    const response = await fetch('/api/getTextFromPdf', {
     method: 'POST',
-    body: formData,
-     
-     signal: controller.signal,
-     
+    // headers:{
+    //   'Content-Type': 'multipart/form-data ',
+    // },
+    body: formData     
    });
+   const result=await response.json();
+  if(!result.error)
       if(selectedConversation)
       {
-      //handleUpdateConversation(selectedConversation,{key:'prompt',value:extractedText})
-    /// setValue(extractedText)  
+      handleUpdateConversation(selectedConversation,{key:'prompt',value:result.text})
+      setValue(result.text)  
     }
     } catch (error) {
       console.error('Error converting PDF to text:', error);

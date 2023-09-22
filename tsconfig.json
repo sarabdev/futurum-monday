@@ -19,6 +19,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/verifyEmail.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/api/verifyEmail.js", "pages/api/getTextFromPdf.js"],
   "exclude": ["node_modules"]
 }
