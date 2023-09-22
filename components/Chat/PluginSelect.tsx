@@ -1,4 +1,4 @@
-import { FC, useContext, useEffect, useRef ,useState} from 'react';
+import { ChangeEvent, FC, useContext, useEffect, useRef ,useState} from 'react';
 
 import { useTranslation } from 'next-i18next';
 import Modal from './Modal';
@@ -25,7 +25,7 @@ export const PluginSelect: FC<Props> = ({
     dispatch: homeDispatch,
   } = useContext(HomeContext);
 
-
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const { t } = useTranslation('chat');
   const [plugin,setPlugin]=useState({id:'', name:''})
   const [value,setValue]=useState('')
@@ -34,10 +34,10 @@ export const PluginSelect: FC<Props> = ({
     //   id:1,
     //   name:"Image"
     // },
-    // {
-    //   id:2,
-    //   name:"File"
-    // },
+    {
+      id:2,
+      name:"File"
+    },
     {
       id:"3",
       name:"Text"
@@ -65,6 +65,46 @@ export const PluginSelect: FC<Props> = ({
       selectRef.current.focus();
     }
   }, []);
+
+
+  async function convertPdfToText(file:File) {
+    try {
+      console.log(file)
+      //const fileURL = URL.createObjectURL(file);
+      //console.log(fileURL)
+      const formData = new FormData();
+      formData.append('pdf', file);
+      console.log(formData)
+       const data = Object.fromEntries(formData.entries());
+       console.log(data);
+      const controller = new AbortController();
+   const response = await fetch('/api/getTextFromPdf', {
+    method: 'POST',
+    body: formData,
+     
+     signal: controller.signal,
+     
+   });
+      if(selectedConversation)
+      {
+      //handleUpdateConversation(selectedConversation,{key:'prompt',value:extractedText})
+    /// setValue(extractedText)  
+    }
+    } catch (error) {
+      console.error('Error converting PDF to text:', error);
+    }
+  }
+
+  const handleUploadFile=(event: ChangeEvent<HTMLInputElement>)=>{
+    const file = event.target.files?.[0];
+    if (file && file.type === 'application/pdf') {
+      setSelectedFile(file);
+      convertPdfToText(file)
+    } else {
+      setSelectedFile(null);
+      alert('Please select a valid PDF file.');
+    }
+  }
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
   const updatedContent=e.target.value;
   setValue(updatedContent)
@@ -91,6 +131,7 @@ export const PluginSelect: FC<Props> = ({
                 role="dialog"
               >
                 <div className="mb-4 text-2xl">Prepare AI</div>
+                <input type='file' accept=".pdf" onChange={handleUploadFile}/>
                   <textarea
                   onChange={handleChange}
                   rows={20}
